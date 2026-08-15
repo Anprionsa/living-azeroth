@@ -19,12 +19,11 @@ python -m http.server 8000
 | `index.html` | the site, a copy of `DocumentPage.dc.html` |
 | `DocumentPage.dc.html` | the working page; after editing it, re-copy to `index.html` |
 | `data/` | canonical data. `talent-data.json` is canonical for what a talent does |
-| `files/` | the design record: documents, simulators, validators, working notes |
-| `tools/` | runnable copies of the validators and renderers, with repo-relative paths |
+| `tools/` | validators, renderers, and the rank audit, with repo-relative paths |
 | `assets/`, `icons/`, `_ds/`, `vendor/` | images, talent icons, the design system, vendored React |
 | `.image-slots.state.json` | image payloads for the page's six map and reference slots |
 
-`files/MANIFEST.md` is the reading order for the record. `files/SCHEMA.md` explains the data shape. The documents are canonical for why; the data is canonical for what.
+The data is canonical for what a talent does; the documents rendered on the page are canonical for why. `data/rank-audit.md` lists what the tooltip data still leaves unbound.
 
 ## Provenance
 

@@ -14,7 +14,6 @@ There is one product and one surface: the document itself.
 
 Three files, supplied in a mounted read-only folder. Copies live in `assets/`:
 
-- `claude-design-brief.md` — the original brief. `assets/source/claude-design-brief.md`.
 - `art-direction-revision.md` — the revision that replaced the art direction. Structure,
   components, and interactive views were kept; the visual register was rebuilt.
   `assets/source/art-direction-revision.md`.

@@ -6,6 +6,7 @@ document can be restructured freely without breaking regeneration.
 """
 import os as _os
 _ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+# files/ is a local working directory and is not part of the published repo.
 import json, re, sys
 DATA=_ROOT + "/data/talent-data.json"
 D=json.load(open(DATA)); BY={t["id"]:t for t in D["trees"]}

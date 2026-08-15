@@ -3,6 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Living Azeroth</title>
+<meta name="description" content="Design notes for WoW Classic+ world systems: 74 proposals across 14 sections, all 27 vanilla talent trees rebuilt, ten post-vanilla classes absorbed as talent trees, and the simulation that tuned them. A design proposal, not a prediction.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="A Living Azeroth">
+<meta property="og:title" content="A Living Azeroth">
+<meta property="og:description" content="Systems design for a WoW Classic+ world that reads as inhabited rather than as a static diorama. 74 proposals, 14 sections, 64 talent trees, 45 cited sources.">
+<meta property="og:url" content="https://anprionsa.github.io/living-azeroth/">
+<meta property="og:image" content="https://anprionsa.github.io/living-azeroth/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A Living Azeroth: design notes for WoW Classic+ world systems">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Living Azeroth">
+<meta name="twitter:description" content="Systems design for a WoW Classic+ world that reads as inhabited rather than as a static diorama. 74 proposals, 14 sections, 64 talent trees, 45 cited sources.">
+<meta name="twitter:image" content="https://anprionsa.github.io/living-azeroth/assets/og-card.png">
+<meta name="theme-color" content="#F0E6D2">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://anprionsa.github.io/living-azeroth/">
 <script>
 window.__resources = {
   "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "vendor/react.production.min.js",
@@ -107,7 +127,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">The same argument runs through Bloodsail camps that are patrol grids instead of camps, Dark Iron crews probing Loch Modan toward Ironforge, and the Booty Bay docks, which are a functioning port in fiction and a static backdrop in practice.</p>
 </div>
 <figure style="margin:40px 0 0;max-width:940px">
-<img src="assets/plate-working-camp.png" alt="A working camp with NPCs mid-task rather than standing at posts" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
+<img src="assets/plate-working-camp.webp" alt="A working camp with NPCs mid-task rather than standing at posts" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
 <figcaption style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin-top:10px;letter-spacing:.02em">Same mobs, same spawn points, same everything. They are just busy. The animations this needs are already in the client.</figcaption>
 </figure>
 <div style="max-width:68ch;margin-top:36px">
@@ -122,7 +142,7 @@ main img{max-width:100%;height:auto}
 </div>
 </section>
 
-<div style="max-width:460px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-veron-amberstill.jpg" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Veron Amberstill breeds rams outside Kharanos. The job is in the quest text and the title over his head, and nowhere in what he actually does with his hands.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Dun Morogh</span></div></div>
+<div style="max-width:460px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-veron-amberstill.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Veron Amberstill breeds rams outside Kharanos. The job is in the quest text and the title over his head, and nowhere in what he actually does with his hands.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Dun Morogh</span></div></div>
 <section id="s-2" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="2" title="Roads and traffic" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
@@ -166,7 +186,7 @@ main img{max-width:100%;height:auto}
 </div>
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-gizelton-caravan.jpg" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Gizelton Caravan in Desolace is the precedent. An escorted cargo train that walks a real route and can be attacked on it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Desolace</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-winterspring-caravan.png" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Pack kodo and a loaded cart outside Everlook. The cargo network the document proposes is a generalisation of what this camp already implies.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-gizelton-caravan.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Gizelton Caravan in Desolace is the precedent. An escorted cargo train that walks a real route and can be attacked on it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Desolace</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-winterspring-caravan.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Pack kodo and a loaded cart outside Everlook. The cargo network the document proposes is a generalisation of what this camp already implies.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div></div>
 <section id="s-4" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="4" title="Wildlife and ecology" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
@@ -182,7 +202,7 @@ main img{max-width:100%;height:auto}
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">A stretch of road where players keep dying silently accrues attention, and past a threshold the place starts to feel wrong: more carrion birds circling than the zone should carry, a ghoul that wandered in from further out than its normal range. Attention decays, which is what keeps it from becoming a farm. A veteran rides down a road, notices the birds are heavier than they should be, and understands that people have been dying here. That is the world telling the player something true about itself, expressed as circling crows.</p>
 </div>
 <figure style="margin:40px 0 0;max-width:940px">
-<img src="assets/plate-scavenger-arrival.png" alt="Scavengers arriving at a body some time after the kill" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
+<img src="assets/plate-scavenger-arrival.webp" alt="Scavengers arriving at a body some time after the kill" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
 <figcaption style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin-top:10px;letter-spacing:.02em">Kill something and walk away. Thirty seconds to two minutes later, something shows up for the body. Most of the time you never see it, and that is the design working rather than failing.</figcaption>
 </figure>
 <div style="max-width:68ch;margin-top:32px">
@@ -206,7 +226,7 @@ main img{max-width:100%;height:auto}
 </div>
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-razorfen-downs.jpg" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Razorfen Downs. The quilboar warrens are built as settlements rather than as spawn grids, which is the standard the middle tier should hold.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Razorfen Downs</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-razorfen-downs.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Razorfen Downs. The quilboar warrens are built as settlements rather than as spawn grids, which is the standard the middle tier should hold.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Razorfen Downs</span></div></div></div>
 <section id="s-6" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="6" title="Emergent conflict" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
@@ -256,7 +276,7 @@ main img{max-width:100%;height:auto}
 
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-defias-highwayman.jpg" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">A Defias highwayman carries the tools of the job he is doing. Loot logic asks only that what drops is what he was seen holding.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-defias-pillager.jpg" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The pillager casts, so she should drop what a caster carries. The rule is legibility rather than generosity.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-defias-highwayman.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">A Defias highwayman carries the tools of the job he is doing. Loot logic asks only that what drops is what he was seen holding.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-defias-pillager.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The pillager casts, so she should drop what a caster carries. The rule is legibility rather than generosity.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div></div>
 <section id="s-8" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="8" title="Professions" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
@@ -304,11 +324,11 @@ main img{max-width:100%;height:auto}
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">The Hinterlands, as shipped</span>
-<img src="assets/ref-hinterlands-summer.jpg" alt="The Hinterlands in its permanent late-summer state" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
+<img src="assets/ref-hinterlands-summer.webp" alt="The Hinterlands in its permanent late-summer state" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
 </div>
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">The same ground under snow</span>
-<img src="assets/ref-hinterlands-snow.png" alt="The Hinterlands under snow" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
+<img src="assets/ref-hinterlands-snow.webp" alt="The Hinterlands under snow" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
 </div>
 </div>
 <figcaption style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin-top:12px;letter-spacing:.02em">The Hinterlands are deciduous, primarily oak and maple, and the lore explicitly notes it is remarkable they thrive so close to the wasted Plaguelands. Put the zone under snow and the Plaguelands border becomes the sharpest visual argument in the world: a forest that carries the year on one side of the line, dead ground registering nothing on the other.</figcaption>
@@ -318,7 +338,7 @@ main img{max-width:100%;height:auto}
 </div>
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-winterspring.jpg" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Winterspring is already permanently in one season, which is why it is the control case rather than a candidate. Snow here means nothing changed.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-westfall-dagger-hills.jpg" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Westfall does the thematic work by itself. The fields still turn while nobody is left to harvest them.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Westfall</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-winterspring.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Winterspring is already permanently in one season, which is why it is the control case rather than a candidate. Snow here means nothing changed.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-westfall-dagger-hills.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Westfall does the thematic work by itself. The fields still turn while nobody is left to harvest them.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Westfall</span></div></div></div>
 <section id="s-11" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="11" title="Implementation tiers and rollout" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
@@ -358,15 +378,15 @@ main img{max-width:100%;height:auto}
 <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Shipped kit</span>
-<img src="assets/ref-inn-client.png" alt="The Lion's Pride Inn as it exists in the client" style="display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--surface-sunk);border:1px solid var(--border-hairline)">
+<img src="assets/ref-inn-client.webp" alt="The Lion's Pride Inn as it exists in the client" style="display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--surface-sunk);border:1px solid var(--border-hairline)">
 </div>
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Variation</span>
-<img src="assets/ref-inn-variant-a.png" alt="The same inn rebuilt in a different material and roof pitch" style="display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--surface-sunk);border:1px solid var(--border-hairline)">
+<img src="assets/ref-inn-variant-a.webp" alt="The same inn rebuilt in a different material and roof pitch" style="display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--surface-sunk);border:1px solid var(--border-hairline)">
 </div>
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Variation</span>
-<img src="assets/ref-inn-variant-b.png" alt="A third treatment of the same building function" style="display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--surface-sunk);border:1px solid var(--border-hairline)">
+<img src="assets/ref-inn-variant-b.webp" alt="A third treatment of the same building function" style="display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--surface-sunk);border:1px solid var(--border-hairline)">
 </div>
 </div>
 <figcaption style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin-top:12px;letter-spacing:.02em">Three plans for one function. The footprint, the room arrangement, and the position of the hearth and the door all move; the vocabulary they are drawn from does not. A settlement built on a kit of parts with consistent rules generates far more distinct buildings than a set of finished models, which is what makes the proposal affordable.</figcaption>
@@ -404,12 +424,12 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">Everything above this point is behavior laid over the world as it already exists. This view is the other half of the argument: the map has room, and most of the room is land vanilla shipped as a border rather than as a place. Each of these is a community map of a proposed zone, drawn against the real terrain and marked with the same vocabulary the client uses for quest hubs, dungeons, and raids.</p>
 <p style="margin:0 0 20px">They are included as scope, not as specification. A living world that gains nine zones needs the systems in sections 1 through 10 more than a static one does, because nine empty zones is nine times the emptiness. The dependency runs in that direction and not the other.</p>
 </div>
-<div style="max-width:940px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-continent-comparison.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Vanilla, the expanded proposal, and retail side by side. The middle column is what the map looks like when the borders become zones. New zones and expanded zones are keyed separately in the inset.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Overview · Eastern Kingdoms and Kalimdor</span></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-northern-lordaeron.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Northern Lordaeron, level 55 to 60, contested. The Scarlet Citadel as a raid, Hearth Stead and Ash Hollow as the two hubs, and Scourge holding the middle.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-wildhammer-highlands.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Wildhammer Highlands, level 35 to 50. Grim Batol as a dungeon and a raid, Thundermar and Bloodgulch facing each other across the same river.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-savage-coast.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Savage Coast, level 45 to 60. Trolls, naga, pirates, and Venture Company on one shoreline, with the retail and vanilla terrain shown underneath for comparison.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-blackened-marches.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Blackened Marches at 40 to 50 and The Headland at 45 to 55. Dark Irons, troggs, and the Blackrock orcs on one side of the water, gnolls and pirates on the other.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones</span></div></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-ships-end-cove.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Ships End Cove, level 55 to 60. A working harbour north of Stormwind, Corsair’s Refuge on the Deeprun line, and Frostmane trolls above it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-veiled-strand.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Veiled Strand, level 35 to 45. Lor’danel, Shatterspear Village, and the Twilight’s Hammer dungeon on the north Darkshore coast.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-verdant-breach.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Verdant Breach, level 45 to 50. Un’Goro pushed outward into sand troll and dinosaur country, with Marshal’s Refuge still the neutral hub.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-gilneas.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Gilneas, no band assigned yet. The wall exists in vanilla as a closed door, and the land behind it is drawn here against the retail terrain. It waits on a reason to enter at sixty.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
-<div style="max-width:940px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-zone-sheet.png" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Five more at a glance: Arathi Hilltops, the Amani Plaguelands, Uldum as a raid, the Scarlet Foothills, and Stonetalon Peaks. Uldum is the only entry on these maps that is a raid rather than a zone.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones · Sheet</span></div></div>
+<div style="max-width:940px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-continent-comparison.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Vanilla, the expanded proposal, and retail side by side. The middle column is what the map looks like when the borders become zones. New zones and expanded zones are keyed separately in the inset.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Overview · Eastern Kingdoms and Kalimdor</span></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-northern-lordaeron.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Northern Lordaeron, level 55 to 60, contested. The Scarlet Citadel as a raid, Hearth Stead and Ash Hollow as the two hubs, and Scourge holding the middle.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-wildhammer-highlands.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Wildhammer Highlands, level 35 to 50. Grim Batol as a dungeon and a raid, Thundermar and Bloodgulch facing each other across the same river.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-savage-coast.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Savage Coast, level 45 to 60. Trolls, naga, pirates, and Venture Company on one shoreline, with the retail and vanilla terrain shown underneath for comparison.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-blackened-marches.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Blackened Marches at 40 to 50 and The Headland at 45 to 55. Dark Irons, troggs, and the Blackrock orcs on one side of the water, gnolls and pirates on the other.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-ships-end-cove.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Ships End Cove, level 55 to 60. A working harbour north of Stormwind, Corsair’s Refuge on the Deeprun line, and Frostmane trolls above it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-veiled-strand.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Veiled Strand, level 35 to 45. Lor’danel, Shatterspear Village, and the Twilight’s Hammer dungeon on the north Darkshore coast.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-verdant-breach.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Verdant Breach, level 45 to 50. Un’Goro pushed outward into sand troll and dinosaur country, with Marshal’s Refuge still the neutral hub.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-gilneas.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Gilneas, no band assigned yet. The wall exists in vanilla as a closed door, and the land behind it is drawn here against the retail terrain. It waits on a reason to enter at sixty.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
+<div style="max-width:940px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-zone-sheet.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Five more at a glance: Arathi Hilltops, the Amani Plaguelands, Uldum as a raid, the Scarlet Foothills, and Stonetalon Peaks. Uldum is the only entry on these maps that is a raid rather than a zone.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones · Sheet</span></div></div>
 <div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:52px">
 <h3 style="font-family:var(--font-display);font-size:26px;font-weight:600;line-height:1.16;margin:0 0 12px;color:var(--text-heading)">Two more, not yet drawn</h3>
 <p style="margin:0 0 20px">Northrend and Outland both sit outside the nine zones above, and both are deliberately different propositions. Northrend here is a reworked continent at much smaller scope than the one Wrath shipped, closer to a handful of zones than to a full expansion. Outland is the older question and the harder one, because the Dark Portal is already standing in Blasted Lands and already goes somewhere.</p>
@@ -620,6 +640,36 @@ main img{max-width:100%;height:auto}
 </div>
 </section>
 
+<section id="s-appa" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
+<x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="Appendix A" title="Proposals by tier" level="{{ two }}" hint-size="100%,80px"></x-import>
+<div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
+<p style="margin:0 0 20px">The document closes with every proposal sorted by tier, and the listing here is generated from the same dataset the browser in <a href="#s-browser">View 4</a> reads, so the two cannot disagree. Tier is architectural risk and reversibility and nothing else. Where the document's own table gives a compound reading, Tier 1 by risk and Tier 3 by cost for inward zone additions, or Tier 2 and revisionary for the quest text audit, the split survives here as the cost and change marks under each title.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px;margin-top:40px;align-items:start">
+<sc-for list="{{ tierGroups }}" as="col" hint-placeholder-count="3">
+<div style="border-top:2px solid {{ col.color }};padding-top:16px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+<x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.TierBadge" tier="{{ col.tier }}" hint-size="72px,22px"></x-import>
+<span style="font-family:var(--font-ui);font-size:26px;line-height:1;color:var(--text-heading)">{{ col.count }}</span>
+</div>
+<h3 style="font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.14;margin:12px 0 0;color:var(--text-heading)">{{ col.title }}</h3>
+<p style="font-size:14.5px;line-height:1.5;margin:10px 0 0;color:var(--text-muted);text-wrap:pretty">{{ col.blurb }}</p>
+<div style="display:flex;flex-direction:column;margin-top:20px">
+<sc-for list="{{ col.items }}" as="p" hint-placeholder-count="10">
+<div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:1px solid var(--border-faint)">
+<span style="font-family:var(--font-ui);font-size:12.5px;color:var(--text-faint);letter-spacing:.04em;padding-top:2px">{{ p.section }}</span>
+<div>
+<p style="font-family:var(--font-ui);font-size:15px;line-height:1.32;margin:0;color:var(--text-heading);text-wrap:pretty">{{ p.title }}</p>
+<span style="font-family:var(--font-ui);font-size:12px;color:var(--text-faint);letter-spacing:.04em;display:block;margin-top:5px">{{ p.meta }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
 <section id="s-appb" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="Appendix B" title="Lore accuracy notes" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
@@ -630,6 +680,143 @@ main img{max-width:100%;height:auto}
 <div style="background:var(--surface-page);padding:20px 22px 22px">
 <p style="font-family:var(--font-ui);font-size:15.5px;line-height:1.34;margin:0 0 10px;color:var(--text-heading);text-wrap:pretty">{{ ln.claim }}</p>
 <p style="font-size:15px;line-height:1.55;margin:0;color:var(--text-muted);text-wrap:pretty">{{ ln.body }}</p>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="s-appc" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
+<x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="Appendix C" title="Visual reference index" level="{{ two }}" hint-size="100%,80px"></x-import>
+<div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
+<p style="margin:0 0 20px">For the inward additions in Section 13, ChromedDragon's Classic zone mockups are the most useful visual reference available for what several of these would look like built to vanilla's art standard rather than a later one. The set is <a href="https://imgur.com/a/chromeddragons-classic-wow-zones-tvpk9SS">an album on Imgur</a>.</p>
+<p style="margin:0 0 20px">Direct links per named location follow, for screenshots, zone maps, and terrain reference. Where a Classic-specific page exists, the index uses it: Stonetalon, Thousand Needles, Desolace, and Silverpine were all geographically rebuilt in Cataclysm, and the modern pages show terrain that does not exist in vanilla. The links follow the standard Wowpedia URL pattern, and a few may redirect to a merged or renamed page. Where this page carries a plate of the same ground, the entry also points to the section that holds it.</p>
+<p style="margin:0 0 20px">Wowhead's Classic zone pages carry interactive maps with NPC and resource-node overlays, which is the better tool for route and density work and more useful than static screenshots for anything in Sections 2, 3, and 6. The base path is <a href="https://www.wowhead.com/classic/zone=">wowhead.com/classic/zone=</a>.</p>
+</div>
+<div style="max-width:820px;margin-top:36px">
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Plates carried on this page</span>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-1" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">A working camp, with NPCs mid-task rather than at posts</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Plate · Section 1</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-1" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Veron Amberstill outside Kharanos, the job in the title and not in the hands</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Dun Morogh · Section 1</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-2" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The human and Quel’dorei carriage models, both already in the client</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Model · Section 2</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-3" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Gizelton Caravan in Desolace, and pack kodo with a loaded cart outside Everlook</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Desolace and Winterspring · Section 3</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-4" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Scavengers arriving at a body some time after the kill</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Plate · Section 4</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-5" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Razorfen Downs, quilboar warrens built as settlements</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Razorfen Downs · Section 5</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-7" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">A Defias highwayman and a Defias pillager, each carrying what they drop</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood · Section 7</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-10" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Hinterlands as shipped, and the same ground under snow</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference and treatment · Section 10</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-10" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Winterspring as the control case, and Westfall’s fields turning with nobody to harvest them</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring and Westfall · Section 10</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-12" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Lion’s Pride Inn as shipped, and two variations from the same kit of parts</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Shipped kit and variation · Section 12</span></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-maps" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Nine proposed zones and the continent comparison, community maps supplied with the brief</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones · Maps</span></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:40px;align-items:start">
+<div>
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Section 1: Ambient life</span>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Tranquil_Gardens_Cemetery" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Tranquil Gardens Cemetery</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Raven_Hill_Cemetery" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Raven Hill Cemetery</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/The_Rotting_Orchard" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Rotting Orchard</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Darkshire" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Darkshire</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Booty_Bay" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Booty Bay</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Windshear_Crag" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Windshear Crag</a><a href="#s-1" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Plate · Section 1</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Stonewrought_Dam" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Stonewrought Dam</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Gol%27Bolar_Quarry" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Gol'Bolar Quarry</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Valley_of_Strength" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Valley of Strength</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Ring_of_Valor" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Ring of Valor</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Marshal%27s_Refuge" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Marshal's Refuge</a><a href="#s-maps" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Map · Verdant Breach</a></div>
+</div>
+<div>
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Sections 2 and 3: Routes and trade</span>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Gold_Road" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Gold Road</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/The_Crossroads" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Crossroads</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Camp_Taurajo" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Camp Taurajo</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Ratchet" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Ratchet</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Northwatch_Hold" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Northwatch Hold</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Talondeep_Path" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Talondeep Path</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Gadgetzan" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Gadgetzan</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Everlook" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Everlook</a><a href="#s-3" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Plate · Section 3</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Shimmering_Flats" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Shimmering Flats</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Mirage_Raceway" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Mirage Raceway</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Dun_Algaz" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Dun Algaz</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Menethil_Harbor" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Menethil Harbor</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Dun_Modr" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Dun Modr</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Thandol_Span" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Thandol Span</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Grim_Batol" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Grim Batol</a><a href="#s-maps" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Map · Wildhammer Highlands</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Thelsamar" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Thelsamar</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Lakeshire" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Lakeshire</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/The_Sepulcher" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Sepulcher</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Southshore" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Southshore</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Tarren_Mill" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Tarren Mill</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Lost_Rigger_Cove" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Lost Rigger Cove</a></div>
+</div>
+<div>
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Sections 4 through 6: Ecology and emergent conflict</span>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Un%27Goro_Crater" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Un'goro Crater (Classic)</a><a href="#s-maps" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Map · Verdant Breach</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/The_Charred_Vale" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Charred Vale</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Mirkfallon_Lake" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Mirkfallon Lake</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Sentinel_Hill" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Sentinel Hill</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Moonbrook" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Moonbrook</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Jangolode_Mine" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Jangolode Mine</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Gold_Coast_Quarry" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Gold Coast Quarry</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/The_Dagger_Hills" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Dagger Hills</a><a href="#s-10" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Plate · Section 10</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Klaven%27s_Tower" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Klaven's Tower</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Mo%27grosh_Stronghold" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Mo'grosh Stronghold</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Freewind_Post" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Freewind Post</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Highperch" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Highperch</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Darkcloud_Pinnacle" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Darkcloud Pinnacle</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Whitereach_Post" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Whitereach Post</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Magram_Village" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Magram Village</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Gelkis_Village" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Gelkis Village</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Kolkar_Village" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Kolkar Village</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Fenris_Isle" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Fenris Isle</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Ambermill" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Ambermill</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Pyrewood_Village" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Pyrewood Village</a></div>
+</div>
+<div>
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Section 8: Professions and wandering trainers</span>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Thalanaar" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Thalanaar</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Tanner_Camp" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Tanner Camp</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Ruins_of_Eldarath" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Ruins of Eldarath</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Stromgarde_Keep" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Stromgarde Keep</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Grom%27gol_Base_Camp" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Grom'gol Base Camp</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Lethlor_Ravine" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Lethlor Ravine</a></div>
+</div>
+<div>
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Zone-level maps</span>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Stonetalon_Mountains_(Classic)" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Stonetalon Mountains (Classic)</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Thousand_Needles_(Classic)" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Thousand Needles (Classic)</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Silverpine_Forest_(Classic)" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Silverpine Forest (Classic)</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Westfall_(Classic)" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Westfall (Classic)</a><a href="#s-10" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Plate · Section 10</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Barrens_(Classic)" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Barrens (Classic)</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Wetlands_(Classic)" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Wetlands (Classic)</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Desolace" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Desolace</a><a href="#s-3" style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;border-bottom-color:transparent">Plate · Section 3</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Duskwood" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Duskwood</a></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Loch_Modan" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Loch Modan</a></div>
+</div>
+</div>
+</section>
+
+<section id="s-appd" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
+<x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="Appendix D" title="Provenance" level="{{ two }}" hint-size="100%,80px"></x-import>
+<div style="max-width:68ch;font-size:18px;line-height:1.62;margin-top:16px">
+<p style="margin:0 0 20px">This appendix was added retroactively, and its labels are the ones defined in the talent design document, <span style="font-family:var(--font-ui);font-size:16px">classic-plus-talent-design.md</span>, so the whole suite is graded on one scale.</p>
+<p style="margin:0 0 20px">Almost everything in this document is one of two things: an idea Brendan raised in conversation, or a piece of vanilla lore the world already asserts and does not show. That second category is the document's whole method, so vanilla precedent is the default and the interesting entries are the ones that are not.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
+<sc-for list="{{ provLabels }}" as="pl" hint-placeholder-count="7">
+<div style="background:var(--surface-page);padding:18px 20px">
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-heading);display:block;margin-bottom:8px">{{ pl.label }}</span>
+<p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">{{ pl.meaning }}</p>
+</div>
+</sc-for>
+</div>
+<div style="max-width:820px;margin-top:40px">
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Element by element</span>
+<sc-for list="{{ provRows }}" as="r" hint-placeholder-count="8">
+<div style="padding:14px 0;border-bottom:1px solid var(--border-faint)">
+<div style="display:flex;justify-content:space-between;gap:16px;align-items:baseline">
+<p style="font-family:var(--font-ui);font-size:15px;line-height:1.34;margin:0;color:var(--text-heading);text-wrap:pretty">{{ r.element }}</p>
+<span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">{{ r.label }}</span>
+</div>
+<sc-if value="{{ r.hasDetail }}" hint-placeholder-val="{{ true }}">
+<p style="font-size:14.5px;line-height:1.5;margin:6px 0 0;color:var(--text-muted);text-wrap:pretty">{{ r.detail }}</p>
+</sc-if>
 </div>
 </sc-for>
 </div>
@@ -935,12 +1122,12 @@ main img{max-width:100%;height:auto}
 <p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">They were rewritten to satisfy a measurement, and their text should be checked against the voice of the trees around them. The list is in the simulation document above.</p>
 </div>
 <div style="background:var(--surface-page);padding:18px 20px">
-<p style="font-family:var(--font-ui);font-size:15px;line-height:1.3;margin:0 0 8px;color:var(--text-heading)">Warrior’s narrowness is a decision to make</p>
-<p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">One capstone-free shape within seven percent, because its third tree is Protection and a damage build correctly gets nothing from it. Whether Warrior should have a third damage-relevant tree is a question the simulator surfaced and cannot settle.</p>
+<p style="font-family:var(--font-ui);font-size:15px;line-height:1.3;margin:0 0 8px;color:var(--text-heading)">Warrior’s third damage tree is Runeblade</p>
+<p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">In core, one capstone-free shape within seven percent, because its third tree is Protection and a damage build correctly gets nothing from it. The simulator surfaced the narrowness and could not settle it; the expanded configuration does. Runeblade is the third damage-relevant tree, and the core-only shape is accepted as what a tank tree costs.</p>
 </div>
 <div style="background:var(--surface-page);padding:18px 20px">
-<p style="font-family:var(--font-ui);font-size:15px;line-height:1.3;margin:0 0 8px;color:var(--text-heading)">Dreamer and Radiance await a decision</p>
-<p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Authored, validated and simulated to the same standard as everything else, and deliberately held out of the default expanded set. Switching them on is a configuration change, not rework. They appear in the calculator badged as candidates.</p>
+<p style="font-family:var(--font-ui);font-size:15px;line-height:1.3;margin:0 0 8px;color:var(--text-heading)">Dreamer and Radiance are in</p>
+<p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Authored, validated and simulated to the same standard as everything else, and held out of the expanded set while the rest settled. Switching them on was a configuration change, not rework, and it happened in August 2026. Both still owe a tuning pass against the band.</p>
 </div>
 <div style="background:var(--surface-page);padding:18px 20px">
 <p style="font-family:var(--font-ui);font-size:15px;line-height:1.3;margin:0 0 8px;color:var(--text-heading)">Leveling feel is untested</p>
@@ -959,7 +1146,7 @@ main img{max-width:100%;height:auto}
 <p style="font-size:22px;line-height:1.5;max-width:40ch;margin:0 0 24px;color:var(--text-muted);text-wrap:pretty">New archetypes as trees, not classes. Version 1.2, August 2026.</p>
 <div style="max-width:68ch;font-size:18px;line-height:1.62">
 <p style="margin:0 0 20px">One document describes the world. This one describes something you go into that world to get. Every tree here is acquired through a chain running through named vanilla locations, which is why they share a page.</p>
-<p style="margin:0 0 20px;color:var(--text-heading)">Ten trees now, of two kinds, and the distinction matters enough that the document gives it its own section. Seven are absorbed: a post-vanilla class collapsed into a tree its host class acquires. Three are original, built for classes that absorb nothing: Chronomancer for mage, Dreamer for druid, Radiance for priest. Chronomancer ships in the default expanded set; Dreamer and Radiance are authored, validated and simulated, and held out pending a decision.</p>
+<p style="margin:0 0 20px;color:var(--text-heading)">Ten trees now, of two kinds, and the distinction matters enough that the document gives it its own section. Seven are absorbed: a post-vanilla class collapsed into a tree its host class acquires. Three are original, built for classes that absorb nothing: Chronomancer for mage, Dreamer for druid, Radiance for priest. All three ship in the expanded set. Dreamer and Radiance were held out as candidates while the rest settled, and joined in August 2026 with a tuning pass still owed.</p>
 </div>
 </div>
 
@@ -1675,6 +1862,43 @@ const LORE = [
   ['Thousand Needles has no coastline.', 'It is a dry canyon and salt flat. The Bloodsail operate along the Stranglethorn coast and the Southsea Freebooters hold Lost Rigger Cove in Tanaris, east of the Caverns of Time.']
 ];
 
+const TIER_META = {
+  1: ['Cosmetic and behavioral', 'Animation states, pathing, spawn logic, bark cycles. Nothing touches drop tables, itemization, or the economy. Patchable at any time, incrementally, zone by zone.'],
+  2: ['Contained new systems', 'New spawn logic, trigger conditions, pathing infrastructure, and new content that rebalances nothing already in the game. Post-launch content, but planned, because these need engineering rather than assets.'],
+  3: ['Architectural', 'Changes to how gold and materials flow for the entire playerbase. Launch decisions, since retrofitting them onto an established economy is disruptive in ways that cannot be reversed cleanly.']
+};
+
+const PROV_LABELS = [
+  ['Taken', 'Lifted essentially whole from a named source.'],
+  ['Adapted', 'The mechanism is someone else’s, changed to fit vanilla’s constraints.'],
+  ['Inspired by', 'The principle is someone else’s, the implementation here is different.'],
+  ['Vanilla precedent', 'Already exists somewhere in vanilla. This document systematizes it.'],
+  ['Brendan', 'Specified by the author in conversation, not derived from a source.'],
+  ['Derived here', 'Follows from analysis performed in this project.'],
+  ['Original', 'No known source. Treat with the least confidence.']
+];
+
+const PROVENANCE = [
+  ['The core method: find what vanilla lore already asserts and make the world show it', 'Brendan', 'The organising principle, raised in conversation before any section existed.'],
+  ['Ambient NPC behavior, trade routes, wildlife ecology, middle-tier humanoids, loot logic, professions, vendor economy', 'Brendan', 'Raised and developed in conversation. The document contributes grounding in named locations and the tier sorting.'],
+  ['Every named location, faction, and NPC anchor', 'Vanilla precedent', 'Verified against wikis. Appendix B records where common assumptions turned out to belong to later expansions.'],
+  ['Three implementation tiers', 'Brendan', 'Cost as a first-class design input. Now shared vocabulary across the whole suite.'],
+  ['Seasons as a world system', 'Brendan', ''],
+  ['Growing season marching by latitude rather than two hemispheres flipping', 'Derived here', 'Brendan proposed offset hemispheres on the Earth model. Azeroth’s warm band sits south on both continents, so latitude works without special-casing. Brendan accepted the revision.'],
+  ['Nothing disappears, it migrates', 'Brendan', 'Load-bearing for the whole seasonal economy.'],
+  ['Arrested zones reading as wounded because they do not turn', 'Derived here', 'Falls out of the seasonal system once zones that do not cycle need an explanation.'],
+  ['Quests scaling to seasonal density', 'Brendan', 'Raised immediately on hearing that wildlife density would move.'],
+  ['Weather changes what is available, not what you are capable of', 'Brendan', ''],
+  ['The cooldown-is-planning, weather-is-waiting distinction', 'Derived here', 'The reason weather may gate a bonus but never a prerequisite.'],
+  ['World-indexed versus player-indexed change', 'Derived here', 'Design constraint six.'],
+  ['Seasonal year snapped to the vanilla holiday calendar', 'Vanilla precedent', 'The Lunar Festival is already held in the one zone that never has winter. Nobody had to write it.'],
+  ['The seasonal visual pass as a separable Tier 1 subset', 'Derived here', 'Follows from the tier logic. Later found to be the highest-reach node in the proposals graph, which makes a cosmetic job structurally critical.'],
+  ['Variety-over-fidelity art stance', 'Brendan', ''],
+  ['Material sourcing made visible on the map', 'Derived here', 'When a zone’s poverty is the point, the source must be external.'],
+  ['Inward zone additions through existing vanilla doors', 'Brendan', ''],
+  ['World-state architecture: cyclical, permanent, phasing', 'Derived here', 'Needed once several systems all wanted to change the world and had to be told apart.']
+];
+
 const DEPLOY_META = {
   live: { title: 'Ships to live realms', blurb: 'No new logic, no server load at scale, nothing to exploit. The failure mode is a visual bug, which is a hotfix.' },
   ptr: { title: 'Needs a PTR', blurb: 'Four distinct reasons, and it is worth knowing which one applies, because they need four different test plans.' },
@@ -1720,7 +1944,7 @@ class Component extends DCLogic {
     spineId: null, activeSection: 's-0',
     trees: [], treeMeta: null, openItems: [], activeTree: 'blackguard', weapon: 'bladed', icons: [],
     points: {}, hoverTalent: null,
-    vanilla: null, armsRebuilt: null, specsBase: null,
+    vanilla: null,
     auditClass: 'Warrior', auditTree: 'Arms', auditHover: null,
     vIconIdx: null, calcClass: 'Warrior', calcPoints: {}, calcHover: null,
     TD: null, iconMap: {}, simF: null, griev: null, digestsD: null, calcConfig: 'expanded',
@@ -1739,10 +1963,6 @@ class Component extends DCLogic {
       .catch(() => this.setState({ failed: true }));
     fetch('data/talents-classified.json').then(r => r.json())
       .then(d => this.setState({ vanilla: d })).catch(() => {});
-    fetch('data/trees-revised.json').then(r => r.json())
-      .then(d => this.setState({ treesRevised: d })).catch(() => {});
-    fetch('data/trees-rebuilt.json').then(r => r.json())
-      .then(d => this.setState({ treesRebuilt: d })).catch(() => {});
     fetch('data/vanilla-icon-index.json').then(r => r.json())
       .then(d => this.setState({ vIconIdx: d })).catch(() => {});
     fetch('data/talent-data.json').then(r => r.json())
@@ -1805,8 +2025,7 @@ class Component extends DCLogic {
 
   treeVals() {
     const s = this.state;
-    const revised = s.treeSet === 'revised' && s.treesRevised;
-    const trees = revised ? s.treesRevised.trees : s.trees;
+    const trees = s.trees;
     if (!trees.length) return { treeTabs: [], treeRows: [], cells: [], arrows: [], gateRail: [], verbGroups: [], openItems: s.openItems, joinRows: [], hasFork: false, tree: null };
 
     const slugOf = (id, n) => 'talent-' + id + '-' + n.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -1972,12 +2191,6 @@ class Component extends DCLogic {
       tree: t,
       treeTabs: trees.map(x => ({ key: x.id, label: x.name, host: x.host,
         pressed: x.id === t.id, onToggle: () => this.setState({ activeTree: x.id }) })),
-      setChips: [['audited', 'As audited'], ['revised', 'Revised']].map(([v, l]) => ({
-        key: v, label: l, pressed: s.treeSet === v, onToggle: () => this.setState({ treeSet: v, hoverTalent: null, points: {} })
-      })),
-      setNote: revised
-        ? 'Revised. Gate 20 grown to eight points, a cross-tree conditional added at that seat in all seven, flat nodes deleted with their budget returned to local-mechanic scaling, Metamorphosis rebuilt around fel corruption, and Survival replaced by the Section 17.2 rebuild.'
-        : 'As audited. The original seven trees, before the revisions in absorbed-revisions.md were applied.',
       treeName: t.name, treeHost: t.host, treeConcept: t.concept,
       treeSource: t.retailSource, treeMechanic: t.localMechanic,
       treeVerb: t.verb, treeVerbNote: t.verbNote,
@@ -2127,26 +2340,8 @@ class Component extends DCLogic {
     const slugOf = (id, n) => 'talent-' + id + '-' + n.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const have = new Set(s.icons);
 
-    const useRebuilt = s.treeSet === 'revised' && s.treesRebuilt;
-    const iconByName = {};
-    Object.keys(idx).forEach(k => { const n = k.split('|')[2]; if (iconByName[n] === undefined) iconByName[n] = idx[k]; });
     const trees = [];
     Object.keys(V.classes[cls]).forEach(tn => {
-      const rb = useRebuilt && s.treesRebuilt.classes[cls] && s.treesRebuilt.classes[cls][tn];
-      if (rb) {
-        const nodes = [];
-        rb.rows.forEach(r => r.talents.forEach((t, i) => {
-          const key = idx[cls + '|' + tn + '|' + t.name];
-          const ic = key === undefined ? iconByName[t.name] : key;
-          nodes.push({
-            name: t.name, row: r.row, col: Math.min(3, (t.col || i + 1) - 1),
-            ranks: t.ranks, gate: r.points, prereq: null, text: t.text, note: t.note || '', kind: 'effect', status: t.status || null,
-            icon: t.icon || (ic === undefined ? '' : 'icons/v/' + ic + '.png')
-          });
-        }));
-        trees.push({ name: tn, origin: 'rebuilt', nodes: nodes });
-        return;
-      }
       const nodes = Object.values(V.classes[cls][tn]).map(t => {
         const i = idx[cls + '|' + tn + '|' + t.name];
         return {
@@ -2158,8 +2353,7 @@ class Component extends DCLogic {
       });
       trees.push({ name: tn, origin: 'vanilla', nodes: nodes });
     });
-    const absorbedSrc = (s.treeSet === 'revised' && s.treesRevised) ? s.treesRevised.trees : (s.trees || []);
-    absorbedSrc.filter(t => t.host === cls).forEach(t => {
+    (s.trees || []).filter(t => t.host === cls).forEach(t => {
       const nodes = [];
       (t.rows || []).forEach(r => (r.talents || []).forEach((ta, i) => {
         nodes.push({
@@ -2252,8 +2446,8 @@ class Component extends DCLogic {
       }));
       return {
         key: t.name, name: t.name,
-        origin: t.origin === 'absorbed' ? 'Absorbed tree' : t.origin === 'rebuilt' ? 'Rebuilt tree' : 'Vanilla tree',
-        originColor: t.origin === 'absorbed' ? 'var(--quality-epic)' : t.origin === 'rebuilt' ? 'var(--gold)' : 'var(--ink-inverse-50)',
+        origin: t.origin === 'absorbed' ? 'Absorbed tree' : 'Vanilla tree',
+        originColor: t.origin === 'absorbed' ? 'var(--quality-epic)' : 'var(--ink-inverse-50)',
         spent: String(spent), cells: cells, arrows: arrows, gate: gate,
         bandY: 4 * STEPY - 5, gridW: RAIL + 4 * STEPX, gridH: 7 * STEPY - (STEPY - ICON)
       };
@@ -2272,9 +2466,7 @@ class Component extends DCLogic {
       calcTrees: view,
       calcTreeCount: view.length + ' trees',
       calcSpentLabel: totalSpent + ' of 51 points spent',
-      calcSetNote: s.treeSet === 'revised'
-        ? 'All 27 trees rebuilt. Twenty-two are taken from the talent document\u2019s per-gate listings; Fire, Arms, Subtlety, Destruction, and Protection warrior are built from their prose sections, which describe the changes without listing gates.'
-        : 'Vanilla 1.12 as shipped, plus the absorbed tree as originally audited.',
+      calcSetNote: 'Vanilla 1.12 as shipped, plus the absorbed tree as originally audited.',
       calcRemaining: String(BUDGET - totalSpent),
       calcBuild: view.map(t => t.spent).join(' / '),
       calcHasAbsorbed: !!absorbed,
@@ -2306,7 +2498,7 @@ class Component extends DCLogic {
 
   auditVals() {
     const s = this.state, V = s.vanilla;
-    const empty = { auditClassChips: [], auditTreeChips: [], auditCells: [], auditArrows: [], auditGate: [], auditLegend: [], armsChips: [], armsCells: [], armsArrows: [], armsGate: [], simSpecs: [], simForks: [] };
+    const empty = { auditClassChips: [], auditTreeChips: [], auditCells: [], auditArrows: [], auditGate: [], auditLegend: [], armsChips: [], armsCells: [], armsArrows: [], armsGate: [] };
     const fmt = d => String(d).replace(/\$\{\s*\[([^\]]*)\]\s*\}/g, (m, g) => g.split(',').map(x => x.trim()).filter(Boolean).join('/'));
     const kindOf = t => t.candidateActive ? 'button' : (t.buys === 'flat' ? 'number' : 'effect');
     const vidx = s.vIconIdx || {};
@@ -2338,7 +2530,6 @@ class Component extends DCLogic {
       : Object.values(V.classes.Warrior.Arms).map(t => norm(t, 'Warrior', 'Arms'));
     const B = this.auditFrame(armsNodes, s.armsHover, n => this.setState({ armsHover: n }));
 
-    const specs = (s.specsBase && s.specsBase.specs) || [];
     return {
       auditClassChips: classes.map(c => ({ key: c, label: c, pressed: c === cls,
         onToggle: () => this.setState({ auditClass: c, auditTree: Object.keys(V.classes[c])[0], auditHover: null }) })),
@@ -2357,16 +2548,7 @@ class Component extends DCLogic {
       armsBandY: B.band.y,
       armsCount: B.nodeCount + ' nodes, ' + B.pointCount + ' available points',
       armsDetName: B.detName, armsDetKind: B.detKind, armsDetColor: B.detColor,
-      armsDetRanks: B.detRanks, armsDetGate: B.detGate, armsDetReq: B.detReq, armsDetText: B.detText,
-      simSpecs: specs.map(x => ({
-        key: x.id, cls: x.class, spec: x.spec, role: x.role, build: x.build,
-        confidence: x.buildConfidence,
-        roleLine: x.role + ' \u00b7 ' + x.buildConfidence,
-        confColor: x.buildConfidence === 'verified' ? 'var(--tier-1)' : x.buildConfidence === 'likely' ? 'var(--tier-2)' : 'var(--text-faint)',
-        keys: (x.keyTalents || []).join(' \u00b7 '),
-        note: x.note || ''
-      })),
-      simCount: specs.length + ' specs, ' + specs.filter(x => x.buildConfidence === 'verified').length + ' verified, ' + specs.filter(x => x.buildConfidence === 'needs-check').length + ' needing confirmation'
+      armsDetRanks: B.detRanks, armsDetGate: B.detGate, armsDetReq: B.detReq, armsDetText: B.detText
     };
   }
 
@@ -2396,6 +2578,14 @@ class Component extends DCLogic {
         count: list.length, items: list.map(p => this.card(p)) };
     });
 
+    const tierGroups = [1, 2, 3].map(t => {
+      const list = all.filter(p => p.tier === t);
+      return { key: 'T' + t, tier: t, color: 'var(--tier-' + t + ')', title: TIER_META[t][0], blurb: TIER_META[t][1],
+        count: list.length,
+        items: list.map(p => ({ id: p.id, section: p.section, title: p.title,
+          meta: p.cost + ' cost' + (p.change === 'revisionary' ? ' · revisionary' : '') })) };
+    });
+
     const zc = new Map();
     all.forEach(p => (p.zones || []).forEach(z => zc.set(z, (zc.get(z) || 0) + 1)));
     const zones = Array.from(zc, ([name, count]) => ({ name, count }))
@@ -2421,7 +2611,10 @@ class Component extends DCLogic {
           { id: 's-browser', number: 'V4', title: 'All 74 proposals', group: 'Views' },
           { id: 's-zones', number: 'V5', title: 'Zone index', group: 'Views' },
           { id: 's-seasons', number: 'V6', title: 'Azeroth by season', group: 'Views' },
+          { id: 's-appa', number: 'A', title: 'Proposals by tier', group: 'Appendices' },
           { id: 's-appb', number: 'B', title: 'Lore accuracy notes', group: 'Appendices' },
+          { id: 's-appc', number: 'C', title: 'Visual reference index', group: 'Appendices' },
+          { id: 's-appd', number: 'D', title: 'Provenance', group: 'Appendices' },
           { id: 't-0', number: '0', title: 'Five constraints', group: 'Behavior over numbers' },
           { id: 't-audit', number: 'V7', title: 'What a point buys', group: 'Behavior over numbers' },
           { id: 't-arms', number: 'V8', title: 'Arms, before and after', group: 'Behavior over numbers' },
@@ -2453,6 +2646,9 @@ class Component extends DCLogic {
       seasons: SEASONS.map(t => ({ key: t.key, title: t.title, count: t.count, blurb: t.blurb,
         groups: t.groups.map(g => ({ label: g.label, zones: g.zones.map(z => ({ name: z[0], note: z[1] })) })) })),
       loreNotes: LORE.map(l => ({ claim: l[0], body: l[1] })),
+      tierGroups,
+      provLabels: PROV_LABELS.map(l => ({ label: l[0], meaning: l[1] })),
+      provRows: PROVENANCE.map(r => ({ element: r[0], label: r[1], detail: r[2], hasDetail: !!r[2] })),
       zones,
       zoneValue: s.zone,
       onZone: z => this.setState({ zone: z }),
@@ -2750,7 +2946,7 @@ class Component extends DCLogic {
       key: v, label: l, pressed: cfg === v, onToggle: () => this.setState({ calcConfig: v, calcHover2: null, calcPoints: {} }) }));
     out.setNote = cfg === 'core'
       ? 'Core: the 27 rebuilt vanilla trees, three per class. Complete, shippable alone, and checkable that it is.'
-      : 'Expanded: core plus the seven absorbed trees and Chronomancer. Dreamer and Radiance appear badged as candidates: authored, validated and simulated, held out of the default set pending a decision.';
+      : 'Expanded: core plus the seven absorbed trees and the three original trees, Chronomancer, Dreamer, and Radiance. A fourth tree per class, a fifth for mage.';
     out.calcSetNote = out.setNote;
     const classes = [...new Set(TD.trees.filter(t => t.kind === 'rebuilt').map(t => t.class))].sort();
     const cls = classes.indexOf(s.calcClass) >= 0 ? s.calcClass : classes[0];

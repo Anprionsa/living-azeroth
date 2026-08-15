@@ -6,6 +6,7 @@ they contain, so the document can be restructured without breaking regeneration.
 """
 import os as _os
 _ROOT = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+# files/ is a local working directory and is not part of the published repo.
 import json, re
 P=_ROOT + "/data/talent-data.json"
 D=json.load(open(P))

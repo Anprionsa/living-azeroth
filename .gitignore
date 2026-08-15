@@ -1,4 +1,5 @@
-# Chat-era archive, byte-redundant with files/ and data/ (audited 2026-08-14)
+# Working record and its raw archive; the site fetches nothing from either
+files/
 uploads/
 
 # Icon source art; the site serves only the .png files
