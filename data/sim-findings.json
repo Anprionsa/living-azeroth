@@ -1,0 +1,498 @@
+{
+ "meta": {
+  "date": "2026-08",
+  "band": "-7% to +7%",
+  "cells": 94,
+  "note": "Curated from final-state.md, band-policy.md, sim-instruments.md, flags-closed.md, handoff.md, open-register.md. Final numbers; earlier runs in sim-results.md were superseded."
+ },
+ "instruments": [
+  {
+   "id": "sim.py",
+   "name": "Damage",
+   "measures": "Damage per second across five fight scenarios",
+   "covers": "The damage trees",
+   "cells": "50 core, 30 expanded"
+  },
+  {
+   "id": "tank.py",
+   "name": "Tanking",
+   "measures": "Threat, damage taken, effective health, crit immunity",
+   "covers": "Four tank trees",
+   "cells": "4 builds"
+  },
+  {
+   "id": "heal.py",
+   "name": "Healing",
+   "measures": "Effective healing, healing per mana, overheal, time to out of mana",
+   "covers": "Five healing trees",
+   "cells": "4 classes"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "patchwerk",
+   "shape": "300s, one target, no movement",
+   "exposes": "Raw throughput. The default, and the wrong instrument for everything else"
+  },
+  {
+   "id": "burst",
+   "shape": "45s, one target",
+   "exposes": "Cooldowns, which are a large share of a short fight"
+  },
+  {
+   "id": "movement",
+   "shape": "300s, 30% unable to hard cast",
+   "exposes": "Instant casts, cast-while-moving, mobility"
+  },
+  {
+   "id": "cleave",
+   "shape": "300s, three targets",
+   "exposes": "Extra-target and spread effects"
+  },
+  {
+   "id": "switching",
+   "shape": "300s, new target every 30s",
+   "exposes": "Ramp, periodic effects, instant application"
+  }
+ ],
+ "bandPolicy": {
+  "adopted": "A single band of -7% to +7%, every scenario",
+  "candidates": [
+   {
+    "policy": "One band, -5 to +5, every scenario",
+    "violations": "8 of 50 cells"
+   },
+   {
+    "policy": "One band, -8 to +8, every scenario",
+    "violations": "4 of 50 cells"
+   },
+   {
+    "policy": "Signature-scenario exemption at -15 to +20",
+    "violations": "6 of 50 cells"
+   },
+   {
+    "policy": "Judged on sustained alone",
+    "violations": "1 of 10 pairs, but blind to a capstone useless in a whole encounter category"
+   }
+  ],
+  "note": "The exemption policy, argued for across four passes, performed worse than simply widening the band and was dropped. -7 was free: both -7 and -8 failed the same four cells before tuning, and tuning cleared them."
+ },
+ "core": {
+  "headline": "Zero violations of fifty cells",
+  "columns": [
+   "patchwerk",
+   "burst",
+   "movement",
+   "cleave",
+   "switching"
+  ],
+  "rows": [
+   {
+    "pair": "Arms",
+    "cells": [
+     "+1.2%",
+     "-6.6%",
+     "+1.2%",
+     "-0.6%",
+     "+2.9%"
+    ]
+   },
+   {
+    "pair": "Fury",
+    "cells": [
+     "+3.4%",
+     "+0.7%",
+     "+3.4%",
+     "+1.5%",
+     "+2.9%"
+    ]
+   },
+   {
+    "pair": "Combat",
+    "cells": [
+     "+0.6%",
+     "-1.9%",
+     "+0.6%",
+     "+0.6%",
+     "+0.3%"
+    ]
+   },
+   {
+    "pair": "Fire",
+    "cells": [
+     "+1.0%",
+     "+4.3%",
+     "+0.8%",
+     "+1.0%",
+     "+1.1%"
+    ]
+   },
+   {
+    "pair": "Arcane",
+    "cells": [
+     "+2.0%",
+     "+6.1%",
+     "+1.1%",
+     "+1.9%",
+     "+2.0%"
+    ]
+   },
+   {
+    "pair": "Affliction",
+    "cells": [
+     "-1.2%",
+     "+6.5%",
+     "-1.2%",
+     "-6.5%",
+     "+5.5%"
+    ]
+   },
+   {
+    "pair": "Destruction",
+    "cells": [
+     "+0.9%",
+     "+5.7%",
+     "-1.1%",
+     "-0.4%",
+     "+1.6%"
+    ]
+   },
+   {
+    "pair": "Shadow",
+    "cells": [
+     "+4.5%",
+     "+2.4%",
+     "+3.2%",
+     "+4.5%",
+     "+4.2%"
+    ]
+   },
+   {
+    "pair": "Marksmanship",
+    "cells": [
+     "-1.2%",
+     "+2.4%",
+     "-1.7%",
+     "-2.8%",
+     "+0.0%"
+    ]
+   },
+   {
+    "pair": "Balance",
+    "cells": [
+     "+0.9%",
+     "+0.8%",
+     "+0.9%",
+     "+1.0%",
+     "+0.9%"
+    ]
+   }
+  ],
+  "note": "Each row is a capstone build against its mid-tree alternative. The tuning rule from talent design 5.6 holds: fifty cells, zero outside the band."
+ },
+ "expanded": {
+  "headline": "Thirty of thirty cells in band",
+  "columns": [
+   "patchwerk",
+   "burst",
+   "movement",
+   "cleave",
+   "switching"
+  ],
+  "rows": [
+   {
+    "pair": "Blackguard",
+    "cells": [
+     "+6.0%",
+     "+3.2%",
+     "+6.0%",
+     "+6.0%",
+     "+4.8%"
+    ]
+   },
+   {
+    "pair": "Necromancy",
+    "cells": [
+     "+3.6%",
+     "-2.0%",
+     "-0.8%",
+     "+3.2%",
+     "+0.8%"
+    ]
+   },
+   {
+    "pair": "Bladedancer",
+    "cells": [
+     "+0.3%",
+     "-0.2%",
+     "+0.3%",
+     "+0.3%",
+     "+0.3%"
+    ]
+   },
+   {
+    "pair": "Conduit",
+    "cells": [
+     "+3.7%",
+     "+4.7%",
+     "+3.7%",
+     "+5.3%",
+     "+2.5%"
+    ]
+   },
+   {
+    "pair": "Runeblade",
+    "cells": [
+     "+2.2%",
+     "-3.8%",
+     "+2.2%",
+     "-3.3%",
+     "+0.9%"
+    ]
+   },
+   {
+    "pair": "Survival",
+    "cells": [
+     "+0.7%",
+     "+4.4%",
+     "+6.8%",
+     "+5.9%",
+     "-1.4%"
+    ]
+   }
+  ],
+  "note": "Each new tree’s best build against its class’s best core build. Metamorphosis is a tank tree and is measured by the tank instrument below.",
+  "before": "Before tuning these spanned -21% to +29.4%: Necromancy was a burst outlier, Blackguard was weak in every scenario, Runeblade had no cash-out. Three trees needed three different fixes and only one was a magnitude."
+ },
+ "tank": {
+  "headline": "Four of four in band",
+  "band": "The mean of the threat gap and the effective-health gap, held between -7% and +7%. Banding each separately would forbid a capstone that trades one for the other, which is a legitimate shape.",
+  "columns": [
+   "TPS",
+   "EHP",
+   "Mean"
+  ],
+  "rows": [
+   {
+    "pair": "Protection warrior",
+    "cells": [
+     "+13.0%",
+     "+0.0%",
+     "+6.5%"
+    ],
+    "before": "+28.4%"
+   },
+   {
+    "pair": "Protection paladin",
+    "cells": [
+     "+12.0%",
+     "+0.0%",
+     "+6.0%"
+    ],
+    "before": "+12.0%"
+   },
+   {
+    "pair": "Bear",
+    "cells": [
+     "+7.4%",
+     "+5.6%",
+     "+6.5%"
+    ],
+    "before": "+9.4%"
+   },
+   {
+    "pair": "Metamorphosis",
+    "cells": [
+     "+3.5%",
+     "+9.6%",
+     "+6.6%"
+    ],
+    "before": "+23.2%"
+   }
+  ]
+ },
+ "heal": {
+  "headline": "Four of four in band",
+  "columns": [
+   "HPS gap",
+   "HPM gap"
+  ],
+  "rows": [
+   {
+    "pair": "Priest",
+    "cells": [
+     "-0.1%",
+     "-0.1%"
+    ]
+   },
+   {
+    "pair": "Druid",
+    "cells": [
+     "+2.1%",
+     "+1.6%"
+    ]
+   },
+   {
+    "pair": "Paladin",
+    "cells": [
+     "+0.0%",
+     "+0.0%"
+    ]
+   },
+   {
+    "pair": "Shaman",
+    "cells": [
+     "+5.3%",
+     "tuned from +27.9%"
+    ]
+   }
+  ],
+  "note": "Restoration shaman is the only healer whose capstone changes anything, and it has held the same shape across five runs: more throughput, materially worse efficiency. Overheal separates sensibly: Chain Heal into a raid overheals at 37 to 49%, a druid’s heals over time at 0 to 5%."
+ },
+ "hybrids": {
+  "headline": "Every class has a capstone-free build within 6.3% of its best capstone build, and four of six have one that beats it.",
+  "items": [
+   "Rogue’s best is a three-tree split, Assassination 25 / Subtlety 20 / Combat 6, at +5.3% over the best capstone build. Poison talents exist in all three rogue trees, so spreading collects them rather than choosing between them: a mechanic that spans trees makes spreading a real strategy.",
+   "Druid is the opposite pole: the most capstone-dependent class measured, with a capstone-free median of -34.8%. Both findings survived four structural fixes to the simulator, which makes them the most stable results in the project.",
+   "Warrior’s narrowness is a design decision, not a fault: its third tree is Protection, and a damage build correctly gets nothing from it. Whether Warrior should have a third damage-relevant tree is a question the simulator surfaced and cannot settle."
+  ]
+ },
+ "rewrites": {
+  "headline": "Eleven talents were rewritten because measurement showed they did not work, not because anyone disliked them.",
+  "named": [
+   {
+    "talent": "Dark Pact",
+    "tree": "warlock-affliction",
+    "story": "Returned mana to a build that had enough, so the 31-point build measured as worse than the 30-point one. Its driver turned out to be a consume effect, not the cooldown: tuning the obvious lever three times would have gutted the capstone and left the outlier in place. It now strikes a second enemy during its window."
+   },
+   {
+    "talent": "Shadow and Flame",
+    "tree": "warlock-destruction",
+    "story": "Paid for alternating two spells that were cast thirty-nine times and three. A reward for a rotation nobody runs is not a talent, it is a trap."
+   },
+   {
+    "talent": "Unbound",
+    "tree": "warlock-demonology",
+    "story": "Said “you may have two demons active at once” and was authored as a damage percentage, so the talent that makes a Demonology splash worth taking did not do the thing it describes."
+   },
+   {
+    "talent": "Death Wish",
+    "tree": "warrior-fury",
+    "story": "Carried both a permanent bonus and a cooldown, which made one point worth ten percent and left Warrior a single viable hybrid."
+   }
+  ],
+  "levers": "Fifteen genuinely inert talents were rewritten as scenario levers: opening windows for Unbridled Wrath, Improved Berserker Rage, Opportunity, Pyroclasm, Natural Shapeshifter and Convection; movement bonuses for Ruthlessness, Distracting Fire and Improved Nature’s Grasp; periodic cleave for Crippling Grip, Relentless Strikes, Trapline and Storm Reach.",
+  "poison": "Separately, nine rogue talents modified a poison tag no ability carried, so Assassination read exactly 0.0% on every scenario since the project began. The fix made poison a mechanic that spans all three rogue trees, which is what makes the three-tree split work."
+ },
+ "levers": {
+  "rule": "A lever that pays everywhere is a buff. A lever that pays in one place is a fix. And it must sit on the talent that differs between the two builds, or it lifts both and closes nothing.",
+  "examples": [
+   {
+    "lever": "Periodic cleave (every third strike sweeps two)",
+    "gain": "+18.8 points on three targets",
+    "cost": "Zero on one target"
+   },
+   {
+    "lever": "Opening window (charge held between fights)",
+    "gain": "+4.8 burst per point of sustained",
+    "cost": "Nothing sustained"
+   },
+   {
+    "lever": "Pet amplifier",
+    "gain": "+2.4",
+    "cost": "Nothing without the pet"
+   },
+   {
+    "lever": "Making the capstone itself hit more targets",
+    "gain": "+2.0",
+    "cost": "Cast too rarely to matter"
+   }
+  ],
+  "arms": "Arms read -16.7% on three targets. Making Mortal Strike hit three targets gained two points. A periodic cleave on every third strike gained 18.8 at zero cost on one, because cleaving is worth nothing when there is nothing to cleave into. That is the cleanest lever shape in the project: it moves one scenario and touches no other."
+ },
+ "cannotAnswer": [
+  "Absolute numbers. The figures are relative and the gear blocks are invented. A real balance pass needs Warcraft Logs Season of Mastery data as the control, which sim-baseline-protocol.md specified from the start and which has never been done.",
+  "Anything not throughput, threat or healing. Twelve talents carry simulable: false. Repentance is a stun, and no damage simulator will ever measure it. Producing a number for it that looks like evidence would be worse than admitting the gap.",
+  "Whether the design is fun. The instrument says a hybrid is within six percent. It cannot say whether anyone wants to play one."
+ ],
+ "pairs": {
+  "core": {
+   "edges": 53,
+   "mutual": 26,
+   "oneWay": 0,
+   "note": "Vanilla, measured the same way, has effectively one: warlock. Priest’s Holy plus Shadow is left unwired on purpose because Shadowform forbids casting Holy spells; wiring it would be symmetry against the game."
+  },
+  "expanded": {
+   "edges": 73,
+   "mutual": 32,
+   "oneWay": 0
+  },
+  "named": [
+   {
+    "cls": "Warlock",
+    "split": "Affliction 26 / Destruction 25",
+    "name": "SL/Ruin",
+    "precedent": "DS/Ruin",
+    "reaches": "Siphon Life and Shadow Mastery on one side, Ruin on the other"
+   },
+   {
+    "cls": "Mage",
+    "split": "Arcane 26 / Frost 25",
+    "name": "PoM/Shatter",
+    "precedent": "PoM/Pyro",
+    "reaches": "Presence of Mind and Shatter"
+   },
+   {
+    "cls": "Druid",
+    "split": "Feral 30 / Balance 21",
+    "name": "Wildheart",
+    "precedent": "Dreamstate",
+    "reaches": "Heart of the Wild, Wild Aspect, Wild Growth"
+   },
+   {
+    "cls": "Paladin",
+    "split": "Retribution 26 / Holy 25",
+    "name": "Hammerdin",
+    "precedent": "Shockadin",
+    "reaches": "Crusade and Hammer of Wrath, plus Divine Favor"
+   },
+   {
+    "cls": "Rogue",
+    "split": "Assassination 21 / Subtlety 20 / Combat 10",
+    "name": "Hemo/Envenom",
+    "precedent": "Hemo rogue",
+    "reaches": "Toxicology, Envenom, Hemorrhage, Setup, Riposte"
+   },
+   {
+    "cls": "Shaman",
+    "split": "Elemental 30 / Enhancement 21",
+    "name": "Tempest",
+    "precedent": "None, new shape",
+    "reaches": "Lightning Mastery, Elemental Fury, Elemental Weapons"
+   },
+   {
+    "cls": "Hunter",
+    "split": "Marksmanship 30 / Survival 21",
+    "name": "Trapline",
+    "precedent": "Talent as name, like Boomkin",
+    "reaches": "Rapid Killing and Trapline, plus Counterattack"
+   },
+   {
+    "cls": "Priest",
+    "split": "Shadow 26 / Discipline 25",
+    "name": "Silence/Spirit",
+    "precedent": "Weak, needs better",
+    "reaches": "Silence and Darkness, plus Divine Spirit"
+   }
+  ],
+  "caveat": "These names should not ship in the documents. Vanilla build names were earned rather than assigned: DS/Ruin exists because players found it. The useful version is the reverse, build the talents so the names are available. A build nobody can name in three words is probably a build nobody will remember."
+ },
+ "sequence": [
+  "The first sweep reported 176 of 277 talents worth exactly zero, including Bloodthirst and Arcane Power. The sweep was wrong twice: it kept grant effects when stripping a talent, and it measured healing and tank trees with the damage simulator.",
+  "A Fire mage cast only Frostbolt, because raw throughput scored marginally higher, so all eight Fire talents read exactly zero. A spec now prefers its own school.",
+  "Druid had a feral rotation that had never been used, so Feral builds were measured casting Wrath. Fixed, ten Feral talents went from zero to contributing.",
+  "Ruin, encoded as a flat multiplier instead of crit-conditional, paid fifty percent on every hit: a one-point talent worth half a tree.",
+  "The rotation ranked area abilities as if they hit every target while the damage calculation multiplied only when maxTargets was set, so every cleave number before the fix was wrong in proportion to how much a build relied on area abilities.",
+  "When a measurement returns exactly zero, suspect the consumer before the data. This happened four times: the extractor, the tag lookup, the build selector, and the value function."
+ ]
+}

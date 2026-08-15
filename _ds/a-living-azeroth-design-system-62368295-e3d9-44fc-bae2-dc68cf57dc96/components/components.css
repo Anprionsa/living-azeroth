@@ -1,0 +1,163 @@
+/* Component classes. Prose reads like a chronicle, data reads like the client.
+   Flat panel colour only: no texture, no bevel, no glow. */
+
+/* --- Tier badge: item quality --- */
+.az-tier{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-ui);font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;padding:2px 7px 2px 6px;border:1px solid currentColor;border-radius:var(--radius-1);line-height:1.5;white-space:nowrap;vertical-align:1px}
+.az-tier--1{color:var(--tier-1);background:var(--tier-1-wash)}
+.az-tier--2{color:var(--tier-2);background:var(--tier-2-wash)}
+.az-tier--3{color:var(--tier-3);background:var(--tier-3-wash)}
+.az-tier__dot{width:6px;height:6px;flex:none;background:currentColor;border-radius:var(--radius-pill)}
+.az-tier--bare{border-color:transparent;background:none;padding-left:0;padding-right:0}
+.az-tier--sm{font-size:10px;padding:1px 5px}
+
+/* --- Eyebrow and heading --- */
+.az-eyebrow{font-family:var(--font-ui);font-size:var(--eyebrow-size);letter-spacing:var(--eyebrow-tracking);text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:var(--s-4)}
+.az-heading{scroll-margin-top:var(--s-10)}
+.az-heading__title{margin:0}
+.az-heading__rule{margin:var(--s-6) 0 0;border-top:1px solid var(--gold-dim)}
+
+/* --- Prose --- */
+.az-prose{max-width:var(--measure);font-size:var(--body);line-height:var(--body-line)}
+.az-prose--narrow{max-width:var(--measure-narrow)}
+.az-prose strong{font-weight:600}
+.az-prose ul,.az-prose ol{padding-left:1.15em;margin:0 0 var(--para-gap)}
+.az-prose li{margin-bottom:var(--s-3)}
+
+/* --- Citation --- */
+.az-cite{font-family:var(--font-ui);font-size:var(--ui-xs);color:var(--link);text-decoration:none;vertical-align:3px;padding:0 1px}
+.az-cite:hover{text-decoration:underline}
+
+/* --- Field: the tooltip attribute line, reused everywhere --- */
+.az-field{display:flex;flex-direction:column;gap:3px}
+.az-field__label{font-family:var(--font-ui);font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;color:var(--text-faint)}
+.az-field__value{font-family:var(--font-ui);font-size:var(--ui-sm);color:var(--text-body)}
+.az-field--inline{flex-direction:row;align-items:baseline;gap:var(--s-4)}
+
+/* --- Note --- */
+.az-note{border-left:2px solid var(--gold-dim);padding:var(--s-2) 0 var(--s-2) var(--s-6);margin:0 0 var(--para-gap);max-width:var(--measure)}
+.az-note__label{font-family:var(--font-ui);font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:var(--s-3)}
+.az-note__body{font-size:var(--body-sm);line-height:var(--body-line);color:var(--text-muted)}
+.az-note--route{border-left-color:var(--gold-deep)}
+.az-note--1{border-left-color:var(--tier-1)}
+.az-note--2{border-left-color:var(--tier-2)}
+.az-note--3{border-left-color:var(--tier-3)}
+
+/* --- Button: flat panel edge, no bevel --- */
+.az-btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-4);height:var(--control-h);padding:0 var(--s-5);font-family:var(--font-ui);font-size:var(--ui-sm);letter-spacing:var(--ui-tracking);background:transparent;color:var(--text-body);border:1px solid var(--border-strong);border-radius:var(--radius-1);cursor:pointer;transition:background var(--dur-fast) var(--ease),border-color var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}
+.az-btn:hover{background:var(--row-hover);border-color:var(--gold-dim)}
+.az-btn:active{background:var(--surface-band)}
+.az-btn--primary{background:var(--gold-deep);border-color:var(--gold-deep);color:var(--parchment)}
+.az-btn--primary:hover{background:var(--link-hover);border-color:var(--link-hover);color:var(--parchment)}
+.az-btn--quiet{border-color:transparent;color:var(--text-muted);padding:0 var(--s-4)}
+.az-btn--quiet:hover{color:var(--text-body);background:var(--row-hover);border-color:transparent}
+.az-btn--sm{height:var(--control-h-sm);font-size:var(--ui-xs);padding:0 var(--s-4)}
+.az-btn[disabled]{opacity:.4;cursor:not-allowed}
+
+/* --- Filter chip --- */
+.az-chip{display:inline-flex;align-items:center;gap:6px;height:var(--control-h-sm);padding:0 10px;font-family:var(--font-ui);font-size:var(--ui-sm);letter-spacing:var(--ui-tracking);background:transparent;color:var(--text-muted);border:1px solid var(--border-hairline);border-radius:var(--radius-1);cursor:pointer;transition:background var(--dur-fast) var(--ease),border-color var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}
+.az-chip:hover{border-color:var(--gold-dim);color:var(--text-body)}
+.az-chip[aria-pressed="true"]{color:var(--link);border-color:var(--gold-dim);background:var(--gold-wash)}
+.az-chip__count{font-size:var(--ui-xs);color:var(--text-faint)}
+.az-chip[aria-pressed="true"] .az-chip__count{color:inherit;opacity:.75}
+.az-chip--tier-1[aria-pressed="true"]{color:var(--tier-1);border-color:var(--tier-1);background:var(--tier-1-wash)}
+.az-chip--tier-2[aria-pressed="true"]{color:var(--tier-2);border-color:var(--tier-2);background:var(--tier-2-wash)}
+.az-chip--tier-3[aria-pressed="true"]{color:var(--tier-3);border-color:var(--tier-3);background:var(--tier-3-wash)}
+
+/* --- Select --- */
+.az-select{display:inline-flex;flex-direction:column;gap:var(--s-3)}
+.az-select__label{font-family:var(--font-ui);font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;color:var(--text-faint)}
+.az-select__control{appearance:none;height:var(--control-h);padding:0 30px 0 10px;font-family:var(--font-ui);font-size:var(--ui-sm);background:var(--surface-page);color:var(--text-body);border:1px solid var(--border-hairline);border-radius:var(--radius-1);cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 15px) calc(50% + 1px),calc(100% - 10px) calc(50% + 1px);background-size:5px 5px,5px 5px;background-repeat:no-repeat;transition:border-color var(--dur-fast) var(--ease)}
+.az-select__control:hover{border-color:var(--gold-dim)}
+
+/* --- Search --- */
+.az-search{display:flex;align-items:center;height:var(--control-h);border:1px solid var(--border-hairline);border-radius:var(--radius-1);background:var(--surface-page);transition:border-color var(--dur-fast) var(--ease)}
+.az-search:focus-within{border-color:var(--gold-dim)}
+.az-search__input{flex:1;min-width:0;height:100%;padding:0 10px;font-family:var(--font-ui);font-size:var(--ui-sm);background:none;border:0;outline:none;color:var(--text-body)}
+.az-search__input::placeholder{color:var(--text-faint)}
+.az-search__clear{height:100%;padding:0 10px;background:none;border:0;color:var(--text-faint);font-family:var(--font-ui);font-size:var(--ui);cursor:pointer}
+.az-search__clear:hover{color:var(--text-body)}
+
+/* --- Proposal list: quest-log rows. No banding. --- */
+.az-table{width:100%;border-collapse:collapse;font-size:var(--body-sm)}
+.az-table caption{text-align:left;font-family:var(--font-ui);font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;color:var(--text-faint);padding-bottom:var(--s-4)}
+.az-table th{text-align:left;font-family:var(--font-ui);font-weight:700;font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;color:var(--text-faint);padding:var(--s-3) var(--row-pad-x);border-bottom:1px solid var(--gold-dim);white-space:nowrap}
+.az-table th[aria-sort]{cursor:pointer}
+.az-table th[aria-sort]:hover{color:var(--text-body)}
+.az-table th .az-sortmark{opacity:.5;margin-left:4px;font-size:9px}
+.az-table th[aria-sort="ascending"],.az-table th[aria-sort="descending"]{color:var(--link)}
+.az-table th[aria-sort="ascending"] .az-sortmark,.az-table th[aria-sort="descending"] .az-sortmark{opacity:1}
+.az-table td{padding:var(--row-pad-y) var(--row-pad-x);border-bottom:var(--hairline-faint);vertical-align:baseline}
+.az-row{cursor:pointer;transition:background var(--dur-fast) var(--ease)}
+.az-row:hover{background:var(--row-hover)}
+.az-row--open{background:var(--row-hover)}
+.az-row__title{font-family:var(--font-ui);font-size:var(--ui-lg);color:var(--text-body)}
+.az-row--open .az-row__title,.az-row:hover .az-row__title{color:var(--link)}
+.az-row__section,.az-row__cost,.az-row__zones{font-family:var(--font-ui);font-size:var(--ui-sm);color:var(--text-muted);white-space:nowrap}
+.az-row__marker{font-family:var(--font-ui);font-size:var(--ui-xs);color:var(--text-faint);width:1em;display:inline-block}
+.az-row__detail td{padding:0 var(--row-pad-x) var(--s-7);border-bottom:var(--hairline-faint)}
+
+/* --- Item tooltip --- */
+.az-tooltip{display:inline-block;min-width:280px;max-width:380px;background:var(--stone-sunk);border:1px solid var(--gold-dim);border-radius:var(--radius-1);padding:var(--s-6) var(--s-7);font-family:var(--font-ui);color:var(--ink-inverse);text-align:left}
+.az-tooltip__name{font-size:var(--ui-lg);line-height:1.3;margin:0 0 var(--s-4)}
+.az-tooltip__name--1{color:var(--quality-uncommon)}
+.az-tooltip__name--2{color:var(--quality-rare)}
+.az-tooltip__name--3{color:var(--quality-epic)}
+.az-tooltip__lines{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:3px}
+.az-tooltip__line{font-size:var(--ui-sm);color:var(--ink-inverse);display:flex;gap:var(--s-5);line-height:1.45}
+.az-tooltip__key{color:var(--ink-inverse-50);flex:none;min-width:74px}
+.az-tooltip__line--dim{color:var(--ink-inverse-70)}
+.az-tooltip__flavor{margin:var(--s-5) 0 0;font-family:var(--font-body);font-style:italic;font-size:var(--body-xs);line-height:1.5;color:var(--flavor)}
+.az-tooltip__req{margin:var(--s-4) 0 0;font-size:var(--ui-sm);color:var(--ink-inverse-70)}
+
+/* --- Empty state --- */
+.az-empty{border:1px dashed var(--border-strong);border-radius:var(--radius-1);padding:var(--s-9);text-align:left;color:var(--text-muted)}
+.az-empty__title{font-family:var(--font-ui);font-size:var(--ui);letter-spacing:var(--ui-tracking);color:var(--text-body);margin:0 0 var(--s-4)}
+.az-empty__hint{font-size:var(--body-sm);margin:0}
+
+/* --- Zone picker --- */
+.az-zones{display:flex;flex-wrap:wrap;gap:var(--s-3)}
+.az-zone{display:flex;align-items:baseline;gap:8px;padding:5px 9px;font-family:var(--font-ui);font-size:var(--ui-sm);border:1px solid var(--border-faint);border-radius:var(--radius-1);background:transparent;color:var(--text-muted);cursor:pointer;transition:border-color var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease)}
+.az-zone:hover{border-color:var(--gold-dim);color:var(--text-body)}
+.az-zone__n{font-size:var(--ui-xs);opacity:.65}
+.az-zone[aria-pressed="true"]{background:var(--gold-deep);border-color:var(--gold-deep);color:var(--parchment)}
+
+/* --- Talent tree --- */
+.az-tree{display:block;overflow:visible;flex:none}
+.az-tree__tierlabel{font-family:var(--font-ui);font-size:12px;letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;fill:var(--gold)}
+.az-tree__tiersub{font-family:var(--font-ui);font-size:10.5px;fill:var(--text-on-panel-faint)}
+.az-tree__tierrule{stroke:var(--border-panel);stroke-width:1}
+.az-tree__node{cursor:pointer}
+.az-tree__icon{fill:var(--tree-node);stroke-width:2}
+.az-tree__node:hover .az-tree__icon{fill:var(--stone-raised)}
+.az-tree__num{font-family:var(--font-ui);font-size:13px;text-anchor:middle;dominant-baseline:central}
+.az-tree__rank{fill:var(--stone-sunk);stroke:var(--gold-dim);stroke-width:1}
+.az-tree__rankn{font-family:var(--font-ui);font-size:9.5px;fill:var(--gold);text-anchor:middle;dominant-baseline:central}
+.az-tree__label{font-family:var(--font-ui);font-size:11px;fill:var(--text-on-panel-muted);text-anchor:middle}
+.az-tree__node[data-active="true"] .az-tree__label{fill:var(--text-on-panel)}
+.az-tree__node:focus-visible{outline:none}
+.az-tree__node:focus-visible .az-tree__icon{stroke:var(--gold);stroke-width:3}
+.az-tree__arrow{fill:none;stroke-linecap:butt}
+.az-tree__arrow--cargo{stroke:var(--tree-cargo)}
+.az-tree__arrow--enables{stroke:var(--tree-enables);stroke-width:1;stroke-dasharray:3 4;opacity:.7}
+.az-tree__head{fill:var(--tree-cargo)}
+.az-tree__head--enables{fill:var(--tree-enables);opacity:.7}
+.az-tree__cargo{font-family:var(--font-ui);font-size:10px;fill:var(--gold-dim);text-anchor:middle;stroke:var(--stone);stroke-width:3.5;paint-order:stroke}
+.az-tree__draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:az-draw var(--dur-spine) var(--ease-out) forwards}
+@keyframes az-draw{to{stroke-dashoffset:0}}
+
+/* --- Sidebar TOC --- */
+.az-toc{font-family:var(--font-ui);font-size:var(--ui-sm);line-height:1.45}
+.az-toc__group{margin-bottom:var(--s-7)}
+.az-toc__grouplabel{font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:var(--s-5)}
+.az-toc__item{display:grid;grid-template-columns:22px minmax(0,1fr);gap:var(--s-4);padding:5px 0 5px var(--s-5);margin-left:-1px;border-left:1px solid var(--border-faint);color:var(--text-muted);text-decoration:none;transition:color var(--dur-fast) var(--ease),border-color var(--dur-fast) var(--ease)}
+.az-toc__item:hover{color:var(--text-body);border-left-color:var(--gold-dim);text-decoration:none}
+.az-toc__item[aria-current="true"]{color:var(--link);border-left-color:var(--gold-dim)}
+.az-toc__num{color:var(--text-faint)}
+.az-toc__item[aria-current="true"] .az-toc__num{color:var(--link)}
+
+/* --- Footer --- */
+.az-footer{border-top:1px solid var(--gold-dim);padding-top:var(--s-9);font-size:var(--body-xs);color:var(--text-muted)}
+.az-footer__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s-9)}
+.az-footer__label{font-family:var(--font-ui);font-size:var(--ui-xs);letter-spacing:var(--ui-tracking-wide);text-transform:uppercase;color:var(--text-faint);margin-bottom:var(--s-5)}
+.az-footer__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--s-4);font-family:var(--font-ui);font-size:var(--ui-sm)}
+.az-footer__disclaimer{margin-top:var(--s-10);padding-top:var(--s-6);border-top:var(--hairline-faint);font-family:var(--font-ui);font-size:var(--ui-xs);color:var(--text-faint);max-width:var(--measure)}

@@ -1,0 +1,150 @@
+tree,host,row,kind,talent,ranks,filename
+Blackguard,Paladin,1,,"Unholy Vigor",5,talent-blackguard-unholy-vigor.png
+Blackguard,Paladin,1,,"Grave Cold",3,talent-blackguard-grave-cold.png
+Blackguard,Paladin,1,,"Deathward",5,talent-blackguard-deathward.png
+Blackguard,Paladin,2,,"Plague Strike",1,talent-blackguard-plague-strike.png
+Blackguard,Paladin,2,,"Deathchill",2,talent-blackguard-deathchill.png
+Blackguard,Paladin,2,,"Rotting Flesh",3,talent-blackguard-rotting-flesh.png
+Blackguard,Paladin,2,,"Morbid Strength",5,talent-blackguard-morbid-strength.png
+Blackguard,Paladin,3,,"Leeching Blade",5,talent-blackguard-leeching-blade.png
+Blackguard,Paladin,3,,"Spreading Corruption",2,talent-blackguard-spreading-corruption.png
+Blackguard,Paladin,3,,"Chilblain",3,talent-blackguard-chilblain.png
+Blackguard,Paladin,4,,"Presence of the Grave",1,talent-blackguard-presence-of-the-grave.png
+Blackguard,Paladin,4,,"Chill of the Grave",3,talent-blackguard-chill-of-the-grave.png
+Blackguard,Paladin,4,,"Necrotic Aura",3,talent-blackguard-necrotic-aura.png
+Blackguard,Paladin,4,,"Vile Contagion",2,talent-blackguard-vile-contagion.png
+Blackguard,Paladin,5,mark,"Blood Rite",1,talent-blackguard-blood-rite.png
+Blackguard,Paladin,5,,"Unyielding Dead",3,talent-blackguard-unyielding-dead.png
+Blackguard,Paladin,5,,"Corpsefeeder",2,talent-blackguard-corpsefeeder.png
+Blackguard,Paladin,6,,"Frozen Heart",3,talent-blackguard-frozen-heart.png
+Blackguard,Paladin,6,,"Reaping",2,talent-blackguard-reaping.png
+Blackguard,Paladin,6,,"Death's Advance",3,talent-blackguard-death-s-advance.png
+Blackguard,Paladin,7,capstone,"Damnation",1,talent-blackguard-damnation.png
+Necromancy,Mage,1,,"Shadow Focus",5,talent-necromancy-shadow-focus.png
+Necromancy,Mage,1,,"Grave Robbing",3,talent-necromancy-grave-robbing.png
+Necromancy,Mage,1,,"Deathchill Focus",5,talent-necromancy-deathchill-focus.png
+Necromancy,Mage,2,,"Wither",1,talent-necromancy-wither.png
+Necromancy,Mage,2,,"Bone Chill",2,talent-necromancy-bone-chill.png
+Necromancy,Mage,2,,"Rotting Touch",3,talent-necromancy-rotting-touch.png
+Necromancy,Mage,2,,"Dark Intellect",5,talent-necromancy-dark-intellect.png
+Necromancy,Mage,3,,"Siphon Life",5,talent-necromancy-siphon-life.png
+Necromancy,Mage,3,,"Corpse Harvest",2,talent-necromancy-corpse-harvest.png
+Necromancy,Mage,3,,"Sepulchral Study",3,talent-necromancy-sepulchral-study.png
+Necromancy,Mage,4,,"Bone Armor",1,talent-necromancy-bone-armor.png
+Necromancy,Mage,4,,"Contagion",3,talent-necromancy-contagion.png
+Necromancy,Mage,4,,"Boneyard",3,talent-necromancy-boneyard.png
+Necromancy,Mage,4,,"Withering Cold",2,talent-necromancy-withering-cold.png
+Necromancy,Mage,5,mark,"Raise Skeleton",1,talent-necromancy-raise-skeleton.png
+Necromancy,Mage,5,,"Grave Chill",3,talent-necromancy-grave-chill.png
+Necromancy,Mage,5,,"Necrotic Aptitude",2,talent-necromancy-necrotic-aptitude.png
+Necromancy,Mage,6,,"Unstable Dead",3,talent-necromancy-unstable-dead.png
+Necromancy,Mage,6,,"Dark Command",2,talent-necromancy-dark-command.png
+Necromancy,Mage,6,,"Death Pact",3,talent-necromancy-death-pact.png
+Necromancy,Mage,7,capstone,"Command the Damned",1,talent-necromancy-command-the-damned.png
+Metamorphosis,Warlock,1,,"Fel Vigor",5,talent-metamorphosis-fel-vigor.png
+Metamorphosis,Warlock,1,,"Demonic Hide",3,talent-metamorphosis-demonic-hide.png
+Metamorphosis,Warlock,1,,"Fel Concentration",5,talent-metamorphosis-fel-concentration.png
+Metamorphosis,Warlock,2,,"Shadow Cleave",1,talent-metamorphosis-shadow-cleave.png
+Metamorphosis,Warlock,2,,"Fel Stamina",2,talent-metamorphosis-fel-stamina.png
+Metamorphosis,Warlock,2,,"Cruel Intent",3,talent-metamorphosis-cruel-intent.png
+Metamorphosis,Warlock,2,,"Demonic Bulwark",5,talent-metamorphosis-demonic-bulwark.png
+Metamorphosis,Warlock,3,,"Demonic Aegis",5,talent-metamorphosis-demonic-aegis.png
+Metamorphosis,Warlock,3,,"Soul Link",2,talent-metamorphosis-soul-link.png
+Metamorphosis,Warlock,3,,"Master Summoner",3,talent-metamorphosis-master-summoner.png
+Metamorphosis,Warlock,4,,"Immolation Aura",1,talent-metamorphosis-immolation-aura.png
+Metamorphosis,Warlock,4,,"Fel Resilience",3,talent-metamorphosis-fel-resilience.png
+Metamorphosis,Warlock,4,,"Unholy Sacrifice",3,talent-metamorphosis-unholy-sacrifice.png
+Metamorphosis,Warlock,4,,"Fel Ferocity",2,talent-metamorphosis-fel-ferocity.png
+Metamorphosis,Warlock,5,mark,"Fel Aegis",1,talent-metamorphosis-fel-aegis.png
+Metamorphosis,Warlock,5,,"Demonic Knowledge",3,talent-metamorphosis-demonic-knowledge.png
+Metamorphosis,Warlock,5,,"Warding Fel",2,talent-metamorphosis-warding-fel.png
+Metamorphosis,Warlock,6,,"Unending Fel",3,talent-metamorphosis-unending-fel.png
+Metamorphosis,Warlock,6,,"Demonic Fury",2,talent-metamorphosis-demonic-fury.png
+Metamorphosis,Warlock,6,,"Fel Domination",3,talent-metamorphosis-fel-domination.png
+Metamorphosis,Warlock,7,capstone,"Metamorphosis",1,talent-metamorphosis-metamorphosis.png
+Bladedancer,Rogue,1,,"Flowing Form",5,talent-bladedancer-flowing-form.png
+Bladedancer,Rogue,1,,"Fleet Footed",3,talent-bladedancer-fleet-footed.png
+Bladedancer,Rogue,1,,"Deft Hands",5,talent-bladedancer-deft-hands.png
+Bladedancer,Rogue,2,,"Tumble",1,talent-bladedancer-tumble.png
+Bladedancer,Rogue,2,,"Open Hand",2,talent-bladedancer-open-hand.png
+Bladedancer,Rogue,2,,"Lithe",3,talent-bladedancer-lithe.png
+Bladedancer,Rogue,2,,"Sinew",5,talent-bladedancer-sinew.png
+Bladedancer,Rogue,3,,"Momentum",5,talent-bladedancer-momentum.png
+Bladedancer,Rogue,3,,"No Opening Needed",2,talent-bladedancer-no-opening-needed.png
+Bladedancer,Rogue,3,,"Redirection",3,talent-bladedancer-redirection.png
+Bladedancer,Rogue,4,,"Sweeping Kick",1,talent-bladedancer-sweeping-kick.png
+Bladedancer,Rogue,4,,"Blade Harmony",3,talent-bladedancer-blade-harmony.png
+Bladedancer,Rogue,4,,"Precision Footwork",3,talent-bladedancer-precision-footwork.png
+Bladedancer,Rogue,4,,"Second Wind",2,talent-bladedancer-second-wind.png
+Bladedancer,Rogue,5,mark,"Whirling Blades",1,talent-bladedancer-whirling-blades.png
+Bladedancer,Rogue,5,,"Unbroken Rhythm",3,talent-bladedancer-unbroken-rhythm.png
+Bladedancer,Rogue,5,,"Evasive",2,talent-bladedancer-evasive.png
+Bladedancer,Rogue,6,,"Edged Discipline",3,talent-bladedancer-edged-discipline.png
+Bladedancer,Rogue,6,,"Flowing Palm",3,talent-bladedancer-flowing-palm.png
+Bladedancer,Rogue,6,,"Relentless",3,talent-bladedancer-relentless.png
+Bladedancer,Rogue,6,,"Uninterrupted",2,talent-bladedancer-uninterrupted.png
+Bladedancer,Rogue,6,,"Killing Flow",3,talent-bladedancer-killing-flow.png
+Bladedancer,Rogue,7,capstone,"Unending Dance",1,talent-bladedancer-unending-dance.png
+Conduit,Shaman,1,,"Elemental Focus",5,talent-conduit-elemental-focus.png
+Conduit,Shaman,1,,"Steady Channel",3,talent-conduit-steady-channel.png
+Conduit,Shaman,1,,"Elemental Warding",5,talent-conduit-elemental-warding.png
+Conduit,Shaman,2,,"Empowered Lightning",1,talent-conduit-empowered-lightning.png
+Conduit,Shaman,2,,"Grounding",2,talent-conduit-grounding.png
+Conduit,Shaman,2,,"Tidal Focus",3,talent-conduit-tidal-focus.png
+Conduit,Shaman,2,,"Ancestral Insight",5,talent-conduit-ancestral-insight.png
+Conduit,Shaman,3,,"Living Current",5,talent-conduit-living-current.png
+Conduit,Shaman,3,,"Empowered Healing",2,talent-conduit-empowered-healing.png
+Conduit,Shaman,3,,"Storm Reach",3,talent-conduit-storm-reach.png
+Conduit,Shaman,4,,"Totemic Reach",1,talent-conduit-totemic-reach.png
+Conduit,Shaman,4,,"Elemental Grace",3,talent-conduit-elemental-grace.png
+Conduit,Shaman,4,,"Restorative Current",3,talent-conduit-restorative-current.png
+Conduit,Shaman,4,,"Earthen Footing",2,talent-conduit-earthen-footing.png
+Conduit,Shaman,5,mark,"Elemental Bond",1,talent-conduit-elemental-bond.png
+Conduit,Shaman,5,,"Elemental Devotion",3,talent-conduit-elemental-devotion.png
+Conduit,Shaman,5,,"Surge",2,talent-conduit-surge.png
+Conduit,Shaman,6,,"Conductive",3,talent-conduit-conductive.png
+Conduit,Shaman,6,,"Deep Bond",2,talent-conduit-deep-bond.png
+Conduit,Shaman,6,,"Wellspring",3,talent-conduit-wellspring.png
+Conduit,Shaman,7,capstone,"Confluence",1,talent-conduit-confluence.png
+Runeblade,Warrior,1,,"Cold Iron",5,talent-runeblade-cold-iron.png
+Runeblade,Warrior,1,,"Frostbitten",3,talent-runeblade-frostbitten.png
+Runeblade,Warrior,1,,"Iron Discipline",5,talent-runeblade-iron-discipline.png
+Runeblade,Warrior,2,,"Rime",2,talent-runeblade-rime.png
+Runeblade,Warrior,2,,"Weighted Edge",3,talent-runeblade-weighted-edge.png
+Runeblade,Warrior,2,,"Glacial Edge",3,talent-runeblade-glacial-edge.png
+Runeblade,Warrior,2,,"Tempered",5,talent-runeblade-tempered.png
+Runeblade,Warrior,3,,"Rune Charge",5,talent-runeblade-rune-charge.png
+Runeblade,Warrior,3,,"Cold Endurance",2,talent-runeblade-cold-endurance.png
+Runeblade,Warrior,3,,"Cold Blood",3,talent-runeblade-cold-blood.png
+Runeblade,Warrior,4,,"Shattering Blow",1,talent-runeblade-shattering-blow.png
+Runeblade,Warrior,4,,"Killing Frost",3,talent-runeblade-killing-frost.png
+Runeblade,Warrior,4,,"Chillguard",3,talent-runeblade-chillguard.png
+Runeblade,Warrior,4,,"Frost Reserve",2,talent-runeblade-frost-reserve.png
+Runeblade,Warrior,5,mark,"Hoarfrost",1,talent-runeblade-hoarfrost.png
+Runeblade,Warrior,5,,"Numbing Cold",3,talent-runeblade-numbing-cold.png
+Runeblade,Warrior,5,,"Deep Freeze",2,talent-runeblade-deep-freeze.png
+Runeblade,Warrior,6,,"Permafrost",3,talent-runeblade-permafrost.png
+Runeblade,Warrior,6,,"Bitter Cold",2,talent-runeblade-bitter-cold.png
+Runeblade,Warrior,6,,"Unbreakable Rime",3,talent-runeblade-unbreakable-rime.png
+Runeblade,Warrior,7,capstone,"The Runeblade",1,talent-runeblade-the-runeblade.png
+Survival,Hunter,1,,"Savage Strikes",5,talent-survival-savage-strikes.png
+Survival,Hunter,1,,"Trap Mastery",3,talent-survival-trap-mastery.png
+Survival,Hunter,1,,"Hunter's Guile",5,talent-survival-hunter-s-guile.png
+Survival,Hunter,2,,"Combat Trapping",1,talent-survival-combat-trapping.png
+Survival,Hunter,2,,"Deflection",2,talent-survival-deflection.png
+Survival,Hunter,2,,"Improved Traps",3,talent-survival-improved-traps.png
+Survival,Hunter,2,,"Thick Hide",5,talent-survival-thick-hide.png
+Survival,Hunter,3,,"Close Quarters",5,talent-survival-close-quarters.png
+Survival,Hunter,3,,"Snare Expert",2,talent-survival-snare-expert.png
+Survival,Hunter,3,,"Surefooted",3,talent-survival-surefooted.png
+Survival,Hunter,4,,"Harpoon",1,talent-survival-harpoon.png
+Survival,Hunter,4,,"Wyvern Venom",3,talent-survival-wyvern-venom.png
+Survival,Hunter,4,,"Killer Instinct",3,talent-survival-killer-instinct.png
+Survival,Hunter,4,,"Entrapment",2,talent-survival-entrapment.png
+Survival,Hunter,5,mark,"Coordinated Assault",1,talent-survival-coordinated-assault.png
+Survival,Hunter,5,,"Resourcefulness",3,talent-survival-resourcefulness.png
+Survival,Hunter,5,,"Bestial Discipline",2,talent-survival-bestial-discipline.png
+Survival,Hunter,6,,"Pack Instinct",3,talent-survival-pack-instinct.png
+Survival,Hunter,6,,"Trapper's Cunning",2,talent-survival-trapper-s-cunning.png
+Survival,Hunter,6,,"Ferocious Bond",3,talent-survival-ferocious-bond.png
+Survival,Hunter,7,capstone,"Hunt as One",1,talent-survival-hunt-as-one.png

@@ -1,0 +1,22 @@
+/* Vanilla ships MORPHEUS.TTF (quest titles, book text, mail) and FRIZQT__.TTF
+   (Friz Quadrata, the whole interface). Neither can ship here:
+   Morpheus is shareware and payment is required even for personal use;
+   Friz Quadrata is a commercial ITC face requiring a foundry licence.
+
+   Stand-ins, both on Google Fonts and both chosen for skeleton rather than mood:
+   - Grenze Gotisch for Morpheus. Morpheus is a gothic display face with tall
+     vertical silhouettes, spear-like points and sharp flared tops, but it is a
+     gothic-roman hybrid rather than true blackletter, so it stays readable at
+     heading size. Grenze Gotisch is the closest free face on those terms.
+     Display only, never body.
+   - Marcellus for Friz Quadrata. Friz Quadrata is a glyphic Roman serif whose
+     signature is flared serifs and open lowercase bowls; Marcellus is the
+     closest free flared Roman with a real lowercase at interface sizes.
+   - Source Serif 4 for running prose, which is true to the print manuals:
+     those were not set in the interface face either.
+
+   To swap in the licensed originals: drop the .ttf/.woff2 files into
+   assets/fonts/, replace this @import with @font-face rules named
+   "Morpheus" and "Friz Quadrata", and put those names first in the
+   --font-display and --font-ui stacks. Nothing else in the system changes. */
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400..700&family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap");

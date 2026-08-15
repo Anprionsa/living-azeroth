@@ -1,0 +1,4431 @@
+{
+ "meta": {
+  "source": "maladr0it/classic-talent-calculator src/trees/*/data.ts",
+  "patch": "vanilla 1.12 / Classic Era",
+  "validation": "Arms parsed to 18 nodes and 59 points, Impale reqPoints=15 maxRank=2 confirming the 17 point cost behind the canonical 17/34/0 Fury build. Classifier output for Arms (36 flat, 23 behavior) matches an independent hand audit exactly.",
+  "classifierCaveat": "Heuristic on description text, then hand-reviewed across all 27 trees. 25 corrections applied (23 to flat, 2 to behavior). Corrected nodes carry reviewed:true. Rule: FLAT if the entire effect is a numeric modifier to something that already exists, however it is triggered. Trueshot Aura is a known ambiguous case, kept flat.",
+  "buysKey": {
+   "flat": "the whole effect is a numeric modifier to something that already exists",
+   "behavior": "introduces an effect, proc, or interaction that did not exist"
+  }
+ },
+ "classes": {
+  "Druid": {
+   "Balance": {
+    "Improved Wrath": {
+     "name": "Improved Wrath",
+     "pos": "a1",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the cast time of your Wrath spell by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Nature's Grasp": {
+     "name": "Nature's Grasp",
+     "pos": "a2",
+     "maxRank": 1,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 1). Only useable outdoors. 1 charge. Lasts 45 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Nature's Grasp": {
+     "name": "Improved Nature's Grasp",
+     "pos": "a3",
+     "maxRank": 4,
+     "reqPoints": 0,
+     "prereq": "Nature's Grasp",
+     "description": "Increases the chance of your Nature's Grasp to entangle an enemy by ${[ 15, 30, 45, 65, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Entangling Roots": {
+     "name": "Improved Entangling Roots",
+     "pos": "b1",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives you a ${[ 40, 70, 100, ]}% chance to avoid interruption caused by damage while casting Entangling Roots.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Moonfire": {
+     "name": "Improved Moonfire",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the damage and critical strike chance of your Moonfire spell by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Natural Weapons": {
+     "name": "Natural Weapons",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the damage you deal with physical attacks in all forms by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Natural Shapeshifter": {
+     "name": "Natural Shapeshifter",
+     "pos": "b4",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the mana cost of all shapeshifting by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Improved Thorns": {
+     "name": "Improved Thorns",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the damage caused by your Thorns spell by ${[ 25, 50, 75, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Omen of Clarity": {
+     "name": "Omen of Clarity",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": "Natural Weapons",
+     "description": "Imbues the druid with natural energy. Each of the Druid's melee attacks has a chance of causing the caster to enter a Clearcasting state. The Clearcasting state reduces the Mana, Rage, or Energy cost of your next damage or healing spell or offensive ability by 100%. Lasts 10 min.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Nature's Reach": {
+     "name": "Nature's Reach",
+     "pos": "c4",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the range of your Wrath, Entangling Roots, Faerie Fire, Moonfire, Starfire, and Hurricane spells by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Vengeance": {
+     "name": "Vengeance",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": "Improved Moonfire",
+     "description": "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by ${[ 20, 40, 60, 80, 100, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Starfire": {
+     "name": "Improved Starfire",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the cast time of Starfire by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec and has a ${[ 3, 6, 9, 12, 15, ]}% chance to stun the target for 3 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Nature's Grace": {
+     "name": "Nature's Grace",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "All spell criticals grace you with the blessing of nature, reducing the casting time of your next spell by 0.5 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Moonglow": {
+     "name": "Moonglow",
+     "pos": "e3",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Reduce the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth and Rejuvenation spells by ${[ 3, 6, 9, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Moonfury": {
+     "name": "Moonfury",
+     "pos": "f2",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Nature's Grace",
+     "description": "Increases the damage done by your Starfire, Moonfire and Wrath spells by ${[ 2, 4, 6, 8, 10, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Moonkin Form": {
+     "name": "Moonkin Form",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%. The Moonkin can only cast Balance spells while shapeshifted.\\n\\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Feral Combat": {
+    "Ferocity": {
+     "name": "Ferocity",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the cost of your Maul, Swipe, Claw and Rake abilities by ${[ 1, 2, 3, 4, 5, ]} Rage or Energy.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Feral Aggression": {
+     "name": "Feral Aggression",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the Attack Power reduction of your Demoralizing Roar by ${[ 8, 16, 24, 32, 40, ]}% and the damage caused by your Ferocious Bite by ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Feral Instinct": {
+     "name": "Feral Instinct",
+     "pos": "b1",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the threat caused in Bear and Dire Bear forms by ${[ 3, 6, 9, 12, 15, ]}% and reduces the chance enemies have to detect you while Prowling.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Brutal Impact": {
+     "name": "Brutal Impact",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the stun duration of your Bash and Pounce abilities by ${[ 0.5, 1, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Thick Hide": {
+     "name": "Thick Hide",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your Armor contribution from items by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Feline Swiftness": {
+     "name": "Feline Swiftness",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your movement speed by ${[ 15, 30, ]}% while outdoors in Cat Form and increases your chance to dodge while in Cat Form by ${[ 2, 4, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Feral Charge": {
+     "name": "Feral Charge",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Causes you to charge an enemy, immobilizing and interrupting any spell being cast for 4 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Sharpened Claws": {
+     "name": "Sharpened Claws",
+     "pos": "c3",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your critical strike chance while in Bear, Dire Bear or Cat Form by ${[ 2, 4, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Shred": {
+     "name": "Improved Shred",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the Energy cost of your Shred ability by ${[ 6, 12, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Predatory Strikes": {
+     "name": "Predatory Strikes",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases your attack power in Cat, Bear and Dire Bear Forms by ${[ 50, 100, 150, ]}% of your level.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Blood Frenzy": {
+     "name": "Blood Frenzy",
+     "pos": "d3",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": "Sharpened Claws",
+     "description": "Your critial strikes from Cat Form abilities that add combo points have a ${[ 50, 100, ]}% chance to add an additional combo point.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Primal Fury": {
+     "name": "Primal Fury",
+     "pos": "d4",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": "Sharpened Claws",
+     "description": "Gives you ${[ 50, 100, ]} chance to gain an additional 5 Rage anytime you get a critical strike while in Bear and Dire Bear Form.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Savage Fury": {
+     "name": "Savage Fury",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the damage caused by your Claw, Rake, Maul and Swipe abilities by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Faerie Fire (Feral)": {
+     "name": "Faerie Fire (Feral)",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Decrease the armor of the target by 175 for 40 sec. While affected, the target cannot stealth or turn invisible.",
+     "buys": "behavior",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Heart of the Wild": {
+     "name": "Heart of the Wild",
+     "pos": "f2",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Predatory Strikes",
+     "description": "Increases your Intellect by ${[ 4, 8, 12, 16, 20, ]}%. In addition, while in Bear or Dire Bear Form your Stamina is increased by ${[ 4, 8, 12, 16, 20, ]}% and while in Cat Form your Strength is increased by ${[ 4, 8, 12, 16, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Leader of the Pack": {
+     "name": "Leader of the Pack",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "While in Cat, Bear or Dire Bear Form, the Leader of the Pack increases ranged and melee critical chance of all party members within 45 yards by 3%",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Restoration": {
+    "Improved Mark of the Wild": {
+     "name": "Improved Mark of the Wild",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the effects of your Mark of the Wild and Gift of the Wild spells by ${[ 7, 14, 21, 28, 35, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Furor": {
+     "name": "Furor",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Gives you ${[ 20, 40, 60, 80, 100, ]}% chance to gain 10 Rage when you shapeshift into Bear and Dire Bear Form or 40 Energy when you shapeshift into Cat Form.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Healing Touch": {
+     "name": "Improved Healing Touch",
+     "pos": "b1",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cast time of your Healing Touch spell by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Nature's Focus": {
+     "name": "Nature's Focus",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives you a ${[ 14, 28, 42, 56, 70, ]}% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Enrage": {
+     "name": "Improved Enrage",
+     "pos": "b3",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "The Enrage ability now instantly generates ${[ 5, 10, ]} Rage.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Reflection": {
+     "name": "Reflection",
+     "pos": "c2",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Allows ${[ 5, 10, 15, ]}% of your Mana regeneration to continue while casting.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Insect Swarm": {
+     "name": "Insect Swarm",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "The enemy is swarmed by insects, decreasing their chance to hit by 2% and causing 66 Nature damage over 12 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Subtlety": {
+     "name": "Subtlety",
+     "pos": "c4",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the threat generated by your Healing spells by ${[ 4, 8, 12, 16, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Tranquil Spirit": {
+     "name": "Tranquil Spirit",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the mana cost of your Healing Touch and Tranquility spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Rejuvenation": {
+     "name": "Improved Rejuvenation",
+     "pos": "d4",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the effect of your Rejuvenation spell by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Nature's Swiftness": {
+     "name": "Nature's Swiftness",
+     "pos": "e1",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Improved Healing Touch",
+     "description": "When activated, your next Nature spell becomes an instant cast spell.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Gift of Nature": {
+     "name": "Gift of Nature",
+     "pos": "e3",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": "Insect Swarm",
+     "description": "Increases the effect of all healing spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Tranquility": {
+     "name": "Improved Tranquility",
+     "pos": "e4",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Reduces the threat caused by Tranquility by ${[ 50, 100, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Regrowth": {
+     "name": "Improved Regrowth",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the critical effect chance of your Regrowth spell by ${[ 10, 20, 30, 40, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Swiftmend": {
+     "name": "Swiftmend",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Tranquil Spirit",
+     "description": "Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Hunter": {
+   "Beast Mastery": {
+    "Improved Aspect of the Hawk": {
+     "name": "Improved Aspect of the Hawk",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "While Aspect of the Hawk is active, all normal ranged attacks have a ${[ 1, 2, 3, 4, 5, ]}% chance of increasing ranged attack speed by 30% for 12 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Endurance Training": {
+     "name": "Endurance Training",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the Health of your pets by ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Eyes of the Beast": {
+     "name": "Improved Eyes of the Beast",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the duration of your Eyes of the Beast by ${[ 30, 60, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Aspect of the Monkey": {
+     "name": "Improved Aspect of the Monkey",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the Dodge bonus of your Aspect of the Monkey by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Thick Hide": {
+     "name": "Thick Hide",
+     "pos": "b3",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the Armor rating of your pets by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Revive Pet": {
+     "name": "Improved Revive Pet",
+     "pos": "b4",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Revive Pet's casting time is reduced by ${[ 3, 6, ]} sec, mana cost is reduced by ${[ 20, 40, ]}%, and increases the health your pet returns with by an additional ${[ 15, 30, ]}%.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Pathfinding": {
+     "name": "Pathfinding",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the speed bonus of your Aspect of the Cheetah and Aspect of the Pack by ${[ 3, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Bestial Swiftness": {
+     "name": "Bestial Swiftness",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the outdoor movement speed of your pets by 30%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Unleashed Fury": {
+     "name": "Unleashed Fury",
+     "pos": "c3",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the damage done by your pets by ${[ 4, 8, 12, 16, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Mend Pet": {
+     "name": "Improved Mend Pet",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives the Mend Pet spell a ${[ 15, 50, ]}% chance of cleansing 1 Curse, Disease, Magic or Poison effect from the pet each tick.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Ferocity": {
+     "name": "Ferocity",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your pets by ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Spirit Bond": {
+     "name": "Spirit Bond",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "While your pet is active, you and your pet will regenerate ${[ 1, 2, ]}% of total health every 10 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Intimidation": {
+     "name": "Intimidation",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Command your pet to intimidate the target on the next successful melee attack, causing a high amount of threat and stunning the target for 3 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Bestial Discipline": {
+     "name": "Bestial Discipline",
+     "pos": "e4",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increase the Focus regeneration of your pets by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Frenzy": {
+     "name": "Frenzy",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Ferocity",
+     "description": "Gives your pet a ${[ 20, 40, 60, 80, 100, ]}% chance to gain a 30% attack speed increase for 8 sec after dealing a critical strike.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Bestial Wrath": {
+     "name": "Bestial Wrath",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Intimidation",
+     "description": "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Marksmanship": {
+    "Improved Concussive Shot": {
+     "name": "Improved Concussive Shot",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Gives your Concussive Shot a ${[ 4, 8, 12, 16, 20, ]}% chance to stun the target for 3 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Efficiency": {
+     "name": "Efficiency",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your Shots and Stings by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Hunter's Mark": {
+     "name": "Improved Hunter's Mark",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the Ranged Attack Power bonus of your Hunter's Mark spell by ${[ 3, 6, 9, 12, 15, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Lethal Shots": {
+     "name": "Lethal Shots",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your critical strike chance with ranged weapons by ${[ 1, 2, 3, 4, 5, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Aimed Shot": {
+     "name": "Aimed Shot",
+     "pos": "c1",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "An aimed shot that increases ranged damage by 70",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Arcane Shot": {
+     "name": "Improved Arcane Shot",
+     "pos": "c2",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Arcane Shot by ${[ 0.2, 0.4, 0.6, 0.8, 1, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Hawk Eye": {
+     "name": "Hawk Eye",
+     "pos": "c4",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the range of your ranged weapons by ${[ 2, 4, 6, ]} yards.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Serpent Sting": {
+     "name": "Improved Serpent Sting",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the damage done by your Serpent Sting by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Mortal Shots": {
+     "name": "Mortal Shots",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": "Lethal Shots",
+     "description": "Increases your ranged weapon critical strike damage bonus by ${[ 6, 12, 18, 24, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Scatter Shot": {
+     "name": "Scatter Shot",
+     "pos": "e1",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "A short range shot that deals 50% wepon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Barrage": {
+     "name": "Barrage",
+     "pos": "e2",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the damage done by your Multi-Shot and Volley spells by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Scorpid Sting": {
+     "name": "Improved Scorpid Sting",
+     "pos": "e3",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Reduces the Stamina of targets affected by your Scorpid Sting by ${[ 10, 20, 30, ]}% of the amount of Strength reduced.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Ranged Weapon Specialization": {
+     "name": "Ranged Weapon Specialization",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the damage your deal with ranged weapons by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Trueshot Aura": {
+     "name": "Trueshot Aura",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Barrage",
+     "description": "Increase the attack power of party members within 45 yards by 50. Lasts 30 min.",
+     "buys": "flat",
+     "candidateActive": false
+    }
+   },
+   "Survival": {
+    "Monster Slaying": {
+     "name": "Monster Slaying",
+     "pos": "a1",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases all damage against Beasts, Giants and Dragonkin targets by ${[ 1, 2, 3, ]}% and increases critical damage caused against Beasts, Giants and Dragonkin targets by an additional ${[ 1, 2, 3, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Humanoid Slaying": {
+     "name": "Humanoid Slaying",
+     "pos": "a2",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases all damage against Humanoid targets by ${[ 1, 2, 3, ]}% and increases the critical damage caused against Humanoid targets by an additional ${[ 1, 2, 3, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Deflection": {
+     "name": "Deflection",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your Parry chance by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Entrapment": {
+     "name": "Entrapment",
+     "pos": "b1",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives your Immolation Trap, Frost Trap, and Explosive Trap a ${[ 5, 10, 15, 20, 25, ]}% chance to entrap the target, preventing them from moving for 5 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Savage Strikes": {
+     "name": "Savage Strikes",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the critical strike chance of Raptor Strike and Mongoose Bite by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Wing Clip": {
+     "name": "Improved Wing Clip",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives your Wing Clip ability a ${[ 4, 8, 12, 16, 20, ]}% chance to immobilize the target for 5 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Clever Traps": {
+     "name": "Clever Traps",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the duration of Freezing and Frost trap effects by ${[ 15, 30, ]}% and the damage of Immolation and Explosive trap by ${[15, 30]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Survivalist": {
+     "name": "Survivalist",
+     "pos": "c2",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases total health by ${[2, 4, 6, 8, 10]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Deterrence": {
+     "name": "Deterrence",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "When activated, increases your Dodge and Parry chance by 25% for 10 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Trap Mastery": {
+     "name": "Trap Mastery",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Decreases the chance enemies will resist trap effects by ${[ 5, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Surefooted": {
+     "name": "Surefooted",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases hit chance by ${[ 1, 2, 3, ]}% and increases the chance movement impairing effects will be resisted by an additional ${[ 5, 10, 15, ]}%",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Improved Feign Death": {
+     "name": "Improved Feign Death",
+     "pos": "d4",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the chance your Feign Death ability will be resisted by ${[ 2, 4, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Killer Instinct": {
+     "name": "Killer Instinct",
+     "pos": "e2",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases your critical strike chance with all attacks by ${[ 1, 2, 3, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Counterattack": {
+     "name": "Counterattack",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Deterrence",
+     "description": "A strike that becomes active after parrying an opponent's attack. This attack deals 40 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Lightening Reflexes": {
+     "name": "Lightening Reflexes",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases your Agility by ${[ 3, 6, 9, 12, 15, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Wyvern Sting": {
+     "name": "Wyvern Sting",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Killer Instinct",
+     "description": "A stinging shot that puts the target to sleep for 12 sec. Any damage will cancel the effect. When the target wakes up, the Sting causes 0 Nature damage over 12 sec. Only usable out of combat. Only one Sting per Hunter can be active on the target at a time.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Mage": {
+   "Arcane": {
+    "Arcane Subtlety": {
+     "name": "Arcane Subtlety",
+     "pos": "a1",
+     "maxRank": 2,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces your target's resistance to all your spells by ${[ 5, 10, ]} and reduces the threat caused by your Arcane spells by ${[ 20, 40, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Arcane Focus": {
+     "name": "Arcane Focus",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the chance that the opponent can resist your Arcane spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Arcane Missiles": {
+     "name": "Improved Arcane Missiles",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Gives you a ${[ 20, 40, 60, 80, 100, ]}% chance to avoid interruption caused by damage while channeling Arcane Missiles.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Wand Specialization": {
+     "name": "Wand Specialization",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your damage with Wands by ${[ 13, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Magic Absorption": {
+     "name": "Magic Absorption",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases all resistances by ${[ 2, 4, 6, 8, 10, ]} and causes all spells you fully resist to restore ${[ 1, 2, 3, 4, 5, ]}% of your total Mana. 1 sec. cooldown.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Arcane Concentration": {
+     "name": "Arcane Concentration",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives you a ${[ 2, 4, 6, 8, 10, ]}% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Magic Attunement": {
+     "name": "Magic Attunement",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the effect of your Amplify Magic and Dampen Magic spells by ${[ 25, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Arcane Explosion": {
+     "name": "Improved Arcane Explosion",
+     "pos": "c2",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Arcane Explosion spell by an additional ${[ 2, 4, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Arcane Resilience": {
+     "name": "Arcane Resilience",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your armor by an amount equal to 50% of your Intellect.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Mana Shield": {
+     "name": "Improved Mana Shield",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Decreases the mana lost per point of damage taken when Mana Sheild is active by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Counterspell": {
+     "name": "Improved Counterspell",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives your Counterspell a ${[ 50, 100, ]}% chance to silence the target for 4 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Arcane Meditation": {
+     "name": "Arcane Meditation",
+     "pos": "d4",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Allows ${[ 5, 10, 15, ]}% of your Mana regeneration to continue while casting.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Presence of Mind": {
+     "name": "Presence of Mind",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Arcane Mind": {
+     "name": "Arcane Mind",
+     "pos": "e3",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": "Arcane Resilience",
+     "description": "Increases your maximum Mana by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Arcane Instability": {
+     "name": "Arcane Instability",
+     "pos": "f2",
+     "maxRank": 3,
+     "reqPoints": 25,
+     "prereq": "Presence of Mind",
+     "description": "Increases your spell damage critical strike chance by ${[ 1, 2, 3, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Arcane Power": {
+     "name": "Arcane Power",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Arcane Instability",
+     "description": "When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect lasts 15 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Fire": {
+    "Improved Fireball": {
+     "name": "Improved Fireball",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the casting time of your Fireball spell by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Impact": {
+     "name": "Impact",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Gives your Fire spells a ${[ 2, 4, 6, 8, 10, ]}% chance to stun the target for 2 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Ignite": {
+     "name": "Ignite",
+     "pos": "b1",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Your critical strikes from Fire damage spells cause the target to burn for an additional ${[ 8, 16, 24, 32, 40, ]}% of your spell's damage over 4 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Flame Throwing": {
+     "name": "Flame Throwing",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the range of your Fire spells by ${[ 3, 6, ]} yards.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Fire Blast": {
+     "name": "Improved Fire Blast",
+     "pos": "b3",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Fire Blast spell by ${[ 0.5, 1, 1.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Incinerate": {
+     "name": "Incinerate",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Fire Blast and Scorch spells by ${[ 2, 4, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Flamestrike": {
+     "name": "Improved Flamestrike",
+     "pos": "c2",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Flamestrike spell by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Pyroblast": {
+     "name": "Pyroblast",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Hurls an immense fiery boulder that causes 141 to 188 Fire damage and an additional 56 Fire damage over 12 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Burning Soul": {
+     "name": "Burning Soul",
+     "pos": "c4",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives your Fire spells a ${[ 35, 70, ]}% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by ${[ 15, 30, ]}%.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Scorch": {
+     "name": "Improved Scorch",
+     "pos": "d1",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Your Scorch spells have a ${[ 33, 66, 100, ]}% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases Fire damage dealt to your target by 3% and lasts 30 sec. Stacks up to 5 times.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Fire Ward": {
+     "name": "Improved Fire Ward",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Causes your Fire Ward to have a ${[ 10, 20, ]}% chance to reflect Fire spells when active.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Master of Elements": {
+     "name": "Master of Elements",
+     "pos": "d4",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Your Fire and Frost spell criticals will refund ${[ 10, 20, 30, ]}% of their base mana cost.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Critical Mass": {
+     "name": "Critical Mass",
+     "pos": "e2",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Fire spells by ${[ 2, 4, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Blast Wave": {
+     "name": "Blast Wave",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Pyroblast",
+     "description": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 154 to 187 Fire damage, and dazing them for 6 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Fire Power": {
+     "name": "Fire Power",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the damage done by your Fire spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Combustion": {
+     "name": "Combustion",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Critical Mass",
+     "description": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 critical strikes with Fire spells.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Frost": {
+    "Frost Warding": {
+     "name": "Frost Warding",
+     "pos": "a1",
+     "maxRank": 2,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the armor and resistances given by your Frost Armor and Ice Armor spells by ${[ 15, 30, ]}%. In addition, gives your Frost Ward a ${[ 10, 20, ]}% chance to reflect Frost spells and effects while active.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Frostbolt": {
+     "name": "Improved Frostbolt",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the casting time of your Frostbolt spell by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Elemental Precision": {
+     "name": "Elemental Precision",
+     "pos": "a3",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the chance that the opponent can resist your Frost and Fire spells by ${[ 2, 4, 6, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Ice Shards": {
+     "name": "Ice Shards",
+     "pos": "b1",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the critical strike damage bonus of your Frost spells by ${[ 20, 40, 60, 80, 100, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Frostbite": {
+     "name": "Frostbite",
+     "pos": "b2",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives your Chill effects a ${[ 5, 10, 15, ]}% chance to freeze the target for 5 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Frost Nova": {
+     "name": "Improved Frost Nova",
+     "pos": "b3",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Frost Nova spell by ${[ 2, 4, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Permafrost": {
+     "name": "Permafrost",
+     "pos": "b4",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the duration of your Chill effects by ${[ 1, 2, 3, 4, 5, ]} sec and reduces the target's speed by an additional ${[4, 7, 10]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Piercing Ice": {
+     "name": "Piercing Ice",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the damage done by your Frost spells by ${[ 2, 4, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Cold Snap": {
+     "name": "Cold Snap",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "When activated, this spell finishes the cooldown on all your Frost spells.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Blizzard": {
+     "name": "Improved Blizzard",
+     "pos": "c4",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Adds a chill effect to your Blizzard spell. This effect lowers the target's movement speed by ${[ 30, 50, 65, ]}%. Lasts 1.50 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Arctic Reach": {
+     "name": "Arctic Reach",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the range of your Frostbolt and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Frost Channeling": {
+     "name": "Frost Channeling",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the mana cost of your Frost spells by ${[ 5, 10, 15, ]}% and reduces the threat caused by your Frost spells by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shatter": {
+     "name": "Shatter",
+     "pos": "d3",
+     "maxRank": 1,
+     "reqPoints": 15,
+     "prereq": "Improved Frost Nova",
+     "description": "Increases the critical strike chance of all your spells against frozen targets by ${[ 10, 20, 30, 40, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Ice Block": {
+     "name": "Ice Block",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot, move or cast spells.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Cone of Cold": {
+     "name": "Improved Cone of Cold",
+     "pos": "e3",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the damage dealt by your Cone of Cold spell by ${[ 15, 25, 35, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Winter's Chill": {
+     "name": "Winter's Chill",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Gives your Frost damage spells a ${[ 20, 40, 60, 80, 100, ]}% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec. Stacks up to 5 times.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Ice Barrier": {
+     "name": "Ice Barrier",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Ice Block",
+     "description": "Instantly sheilds you, absorbing 455 damage. Lasts 1 min. While the shield holds, spells will not be interrupted.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Paladin": {
+   "Holy": {
+    "Divine Strength": {
+     "name": "Divine Strength",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your Strength by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Divine Intellect": {
+     "name": "Divine Intellect",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your total Intellect by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Spiritual Focus": {
+     "name": "Spiritual Focus",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives your Flash of Light and Holy Light spells a ${[ 14, 28, 42, 56, 70, ]}% chance to not lose casting time when you take damage.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Seal of Righteousness": {
+     "name": "Improved Seal of Righteousness",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the damage done by your Seal of Righteousness by ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Healing Light": {
+     "name": "Healing Light",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the amount healed by your Holy Light and Flash of Light spells by ${[ 4, 8, 12, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Consecration": {
+     "name": "Consecration",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Consecrates the land beneath the Paladin, doing 64 Holy damage over 8 sec to enemies who enter the area.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Lay on Hands": {
+     "name": "Improved Lay on Hands",
+     "pos": "c3",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives the target of your Lay on Hands spell a ${[ 15, 30, ]}% bonus to their armor value from items for 2 min. In addition, the cooldown of your Lay on Hands spell is reduced by ${[ 10, 20, ]} min.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Unyielding Faith": {
+     "name": "Unyielding Faith",
+     "pos": "c4",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your chance to resist Fear and Disorient effects by an additional ${[ 5, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Illumination": {
+     "name": "Illumination",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a ${[ 20, 40, 60, 80, 100, ]}% chance to gain Mana equal to the base cost of the spell.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Blessing of Wisdom": {
+     "name": "Improved Blessing of Wisdom",
+     "pos": "d3",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the effect of your Blessing of Wisdom spell by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Divine Favor": {
+     "name": "Divine Favor",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Illumination",
+     "description": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Lasting Judgement": {
+     "name": "Lasting Judgement",
+     "pos": "e3",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the duration of your Judgement of Light and Judgement of Wisdom by ${[ 10, 20, 30, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Holy Power": {
+     "name": "Holy Power",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the critical effect chance of your Holy Spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Holy Shock": {
+     "name": "Holy Shock",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Divine Favor",
+     "description": "Blasts the target with Holy energy, causing 204 to 220 Holy damage to an enemy, or 204 to 220 healing to an ally.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Protection": {
+    "Improved Devotion Aura": {
+     "name": "Improved Devotion Aura",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the armor bonus of your Devotion Aura by ${[ 5, 10, 15, 20, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Redoubt": {
+     "name": "Redoubt",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your chance to block attacks with your shield by ${[ 6, 12, 18, 24, 30, ]}% after being the victim of a critical strike. Lasts 10 sec or 5 blocks.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Precision": {
+     "name": "Precision",
+     "pos": "b1",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your chance to hit with melee weapons by ${[ 1, 2, 3, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Guardian's Favor": {
+     "name": "Guardian's Favor",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Blessing of Protection by ${[ 60, 120, ]} sec and increases the duration of your Blessing of Freedom by ${[ 3, 6, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Toughness": {
+     "name": "Toughness",
+     "pos": "b4",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your armor value from items by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Blessing of Kings": {
+     "name": "Blessing of Kings",
+     "pos": "c1",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Places a Blessing on a friendly target, increasing total stats by 10% for 5 min. Players may only have one Blessing on them per Paladin at any one time.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Righteous Fury": {
+     "name": "Improved Righteous Fury",
+     "pos": "c2",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the amount of threat generated by your Righteous Fury spell by ${[ 16, 33, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Sheild Specialization": {
+     "name": "Sheild Specialization",
+     "pos": "c3",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": "Redoubt",
+     "description": "Increases the amount of damage absorbed by your sheild by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Anticipation": {
+     "name": "Anticipation",
+     "pos": "c4",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your Defense skill by ${[ 2, 4, 6, 8, 10, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Hammer of Justice": {
+     "name": "Improved Hammer of Justice",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Decreases the cooldown of your Hammer of Justice spell by ${[ 5, 10, 15, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Concentration Aura": {
+     "name": "Improved Concentration Aura",
+     "pos": "d3",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the effect of your Concentration Aura by an additional ${[ 5, 10, 15, ]}% and gives all group members affected by the aura an additional ${[ 5, 10, 15, ]}% chance to resist Silence and Interrupt effects.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Blessing of Sanctuary": {
+     "name": "Blessing of Sanctuary",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 10 for 5 min. In addition, when the target blocks a melee attack the attacker will take 14 Holy damage. Players may only have one Blessing on them per Paladin at any one time.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Reckoning": {
+     "name": "Reckoning",
+     "pos": "e3",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Gives you a ${[ 20, 40, 60, 80, 100, ]}% chance to gain an extra attack after being the victim of a critical strike.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "One-Handed Weapon Specialization": {
+     "name": "One-Handed Weapon Specialization",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the damage you deal with one-handed melee weapons by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Holy Shield": {
+     "name": "Holy Shield",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Blessing of Sanctuary",
+     "description": "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Retribution": {
+    "Improved Blessing of Might": {
+     "name": "Improved Blessing of Might",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the melee attack power bonus of your Blessing of Might by ${[ 4, 8, 12, 16, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Benediction": {
+     "name": "Benediction",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your Judgement and Seal spells by ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Judgement": {
+     "name": "Improved Judgement",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Decreases the cooldown of your Judgement spell by ${[ 1, 2, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Seal of the Crusader": {
+     "name": "Improved Seal of the Crusader",
+     "pos": "b2",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the melee attack power bonus of your Seal of the Crusader and the Holy damage increase of your Judgement of the Crusader by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Deflection": {
+     "name": "Deflection",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your Parry chance by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Vindication": {
+     "name": "Vindication",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by ${[ 5, 10, 15, ]}% for 10 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Conviction": {
+     "name": "Conviction",
+     "pos": "c2",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your chance to get a critical strike with melee weapons by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Seal of Command": {
+     "name": "Seal of Command",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives the Paladin a chance to deal Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.\\n\\nUnleashing this Seal's energy will judge an enemy, instantly causing 90 to 95 Holy damage, 137 to 146 if the target is stunned or incapacitated.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Pursuit of Justice": {
+     "name": "Pursuit of Justice",
+     "pos": "c4",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases movement and mounted movement speed by ${[ 4, 8, ]}%. This does not stack with other movement speed increasing effects.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Eye for an Eye": {
+     "name": "Eye for an Eye",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "All spell criticals against you cause ${[ 15, 30, ]}% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Retribution Aura": {
+     "name": "Improved Retribution Aura",
+     "pos": "d3",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the damage done by your Retribution Aura by ${[ 25, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Two-Handed Weapon Specialization": {
+     "name": "Two-Handed Weapon Specialization",
+     "pos": "e1",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the damage you deal with two-handed melee weapons by ${[ 2, 4, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Sanctity Aura": {
+     "name": "Sanctity Aura",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases Holy damage done by party members within 30 yards by 10%. Players may only have one Aura on them per Paladin at any one time.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Vengence": {
+     "name": "Vengence",
+     "pos": "f2",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Conviction",
+     "description": "Gives you a ${[ 3, 6, 9, 12, 15, ]}% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Repentence": {
+     "name": "Repentence",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Priest": {
+   "Discipline": {
+    "Unbreakable Will": {
+     "name": "Unbreakable Will",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your chance to resist Stun, Fear, and Silence effects by an additional ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Wand Specialization": {
+     "name": "Wand Specialization",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your damage with Wands by ${[ 5, 10, 15, 20, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Silent Resolve": {
+     "name": "Silent Resolve",
+     "pos": "b1",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the threat generated by your spells by ${[ 4, 8, 12, 16, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Power Word: Fortitude": {
+     "name": "Improved Power Word: Fortitude",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the effect of your Power Word: Fortitude and Prayer of Fortitude spells by ${[ 15, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Power Word: Shield": {
+     "name": "Improved Power Word: Shield",
+     "pos": "b3",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases damage absorbed by your Power Word: Shield by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Martyrdom": {
+     "name": "Martyrdom",
+     "pos": "b4",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives you a ${[ 50, 100, ]}% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage and increases resistance to Interrupt effects by ${[ 10, 20, ]}%.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Inner Focus": {
+     "name": "Inner Focus",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "When activated, reduces the Mana cost of your next spell by 100% and increases its critical effect chance by 25% if it is capable of a critical effect.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Meditation": {
+     "name": "Meditation",
+     "pos": "c3",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Allows ${[ 5, 10, 15, ]}% of your Mana regeneration to continue while casting.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Inner Fire": {
+     "name": "Improved Inner Fire",
+     "pos": "d1",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the Armor bonus of your Inner Fire spell by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Mental Agility": {
+     "name": "Mental Agility",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your instant cast spells by ${[ 2, 4, 6, 8, 10, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Mana Burn": {
+     "name": "Improved Mana Burn",
+     "pos": "d4",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the casting time of your Mana Burn spell by ${[ 0.25, 0.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Mental Strength": {
+     "name": "Mental Strength",
+     "pos": "e2",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases your maximum Mana by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Divine Spirit": {
+     "name": "Divine Spirit",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Meditation",
+     "description": "Holy power infuses the target, increasing their Spirit by 17 for 30 min.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Force of Will": {
+     "name": "Force of Will",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases your spell damage by ${[ 1, 2, 3, 4, 5, ]}% and the critical strike chance of your offensive spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Power Infusion": {
+     "name": "Power Infusion",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Mental Strength",
+     "description": "Infuses the target with power, increasing their spell damage and healing by 20%. Lasts 15 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Holy": {
+    "Healing Focus": {
+     "name": "Healing Focus",
+     "pos": "a1",
+     "maxRank": 2,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Gives you a ${[ 35, 70, ]}% chance to avoid interruption caused by damage while casting any healing spell.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Renew": {
+     "name": "Improved Renew",
+     "pos": "a2",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the amount healed by your Renew spell by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Holy Specialization": {
+     "name": "Holy Specialization",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the critical effect chance of your Holy spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Spell Warding": {
+     "name": "Spell Warding",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces all spell damage taken by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Divine Fury": {
+     "name": "Divine Fury",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the casting time of your Smite, Holy Fire and Greater Heal spells by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Holy Nova": {
+     "name": "Holy Nova",
+     "pos": "c1",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Causes an explosion of holy light around the caster, causing 29 to 34 Holy damageto all enemy targets within 10 yards and healing all party members within 10 yards for 54 to 63. These effects cause no threat.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Blessed Recovery": {
+     "name": "Blessed Recovery",
+     "pos": "c2",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "After being struck by a melee or ranged critical hit, heal ${[ 8, 16, 25, ]}% of the damage taken over 6 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Inspiration": {
+     "name": "Inspiration",
+     "pos": "c4",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increase your target's armor by ${[ 8, 16, 25, ]}% for 15 sec after getting a critical effect from your Flash Heal, Heal, Greater Heal, or Prayer of Healing spell.",
+     "buys": "behavior",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Holy Reach": {
+     "name": "Holy Reach",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the range of your Smite and Holy Fire spells and the radius of your Prayer of Healing and Holy Nova spells by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Healing": {
+     "name": "Improved Healing",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your Lesser Heal, Heal, and Greater Heal spells by ${[ 5, 10, 15, ]}%",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Searing Light": {
+     "name": "Searing Light",
+     "pos": "d3",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": "Divine Fury",
+     "description": "Increases the damage of your Smite and Holy Fire spells by ${[ 5, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Prayer of Healing": {
+     "name": "Improved Prayer of Healing",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your Prayer of Healing spell by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Spirit of Redemption": {
+     "name": "Spirit of Redemption",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Upon death, the priest becomes the Spirit of Redemption for 10 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted any spells or effects. While in this form the priest can cast any healing spell free of cost. When the effect ends, the priest dies.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Spiritual Guidance": {
+     "name": "Spiritual Guidance",
+     "pos": "e3",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases spell damage and healing by up to ${[ 5, 10, 15, 20, 25, ]}% of your total Spirit.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Spiritual Healing": {
+     "name": "Spiritual Healing",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the amount healed by your healing spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Lightwell": {
+     "name": "Lightwell",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Spirit of Redemption",
+     "description": "Creates a holy Lightwell near the priest. Members of your raid or party can click the Lightwell to restore 800 health over 10 sec. Being attacked cancels the effect. Lightwell lasts for 3 min or 5 charges.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Shadow": {
+    "Spirit Tap": {
+     "name": "Spirit Tap",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Gives you a ${[ 20, 40, 60, 80, 100, ]}% chance to gain a 100% bonus to your Spirit after killing a target that yields experience. For the duration, your Mana will regenerate at a 50% rate while casting. Lasts 15 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Blackout": {
+     "name": "Blackout",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Gives your Shadow damage spells a ${[ 2, 4, 6, 8, 10, ]}% chance to stun the target for 3s.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Shadow Affinity": {
+     "name": "Shadow Affinity",
+     "pos": "b1",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the threat generated by your Shadow spells by ${[ 8, 16, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Shadow Word: Pain": {
+     "name": "Improved Shadow Word: Pain",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the duration of your Shadow Word: Pain spell by ${[ 3, 6, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shadow Focus": {
+     "name": "Shadow Focus",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces your target's chance to resist your Shadow spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Psychic Scream": {
+     "name": "Improved Psychic Scream",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Psychic Scream spell by ${[ 2, 4, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Mind Blast": {
+     "name": "Improved Mind Blast",
+     "pos": "c2",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Mind Blast spell by ${[ 0.5, 1, 1.5, 2, 2.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Mind Flay": {
+     "name": "Mind Flay",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Assault the target's mind with Shadow energy, causing 75 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Fade": {
+     "name": "Improved Fade",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Decreases the cooldown of your Fade ability by ${[ 3, 6, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shadow Reach": {
+     "name": "Shadow Reach",
+     "pos": "d3",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the range of your Shadow spells by ${[ 6, 13, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shadow Weaving": {
+     "name": "Shadow Weaving",
+     "pos": "d4",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Your Shadow damage spells have a ${[ 20, 40, 60, 80, 100, ]}% chance to cause your target to be vulnerable to Shadow damage. This vulnerability increases the Shadow damage dealt to your target by 3% and lasts 15 sec. Stacks up to 5 times.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Silence": {
+     "name": "Silence",
+     "pos": "e1",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Improved Psychic Scream",
+     "description": "Silences the target, preventing them from casting spells for 5 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Vampiric Embrace": {
+     "name": "Vampiric Embrace",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 1 min.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Vampiric Embrace": {
+     "name": "Improved Vampiric Embrace",
+     "pos": "e3",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": "Vampiric Embrace",
+     "description": "Increases the percentage healed by Vampiric Embrace by an additional ${[ 5, 10, ]}%.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Darkness": {
+     "name": "Darkness",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases your Shadow spell damage by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shadowform": {
+     "name": "Shadowform",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Vampiric Embrace",
+     "description": "Assume a Shadowform, increasing your Shadow damage by 15% and reducing Physical damage done to you by 15%. However, you may not cast Holy spells while in this form.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Rogue": {
+   "Assassination": {
+    "Improved Eviscerate": {
+     "name": "Improved Eviscerate",
+     "pos": "a1",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the damage done by your Eviscerate ability by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Remorseless Attacks": {
+     "name": "Remorseless Attacks",
+     "pos": "a2",
+     "maxRank": 2,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "After killing a target that yields experience or honor, gives you a ${[ 20, 40, ]}% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike. Lasts 20 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Malice": {
+     "name": "Malice",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your critical strike chance by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Ruthlessness": {
+     "name": "Ruthlessness",
+     "pos": "b1",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives your finishing moves a ${[ 20, 40, 60, ]}% chance to add a combo point to your target.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Murder": {
+     "name": "Murder",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by ${[ 1, 2, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Slice and Dice": {
+     "name": "Improved Slice and Dice",
+     "pos": "b4",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the duration of your Slice and Dice ability by ${[ 15, 30, 45, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Relentless Strikes": {
+     "name": "Relentless Strikes",
+     "pos": "c1",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Your finishing moves have a 20% chance per combo point to restore 25 energy.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Expose Armor": {
+     "name": "Improved Expose Armor",
+     "pos": "c2",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the armor reduced by your Expose Armor ability by ${[ 25, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Lethality": {
+     "name": "Lethality",
+     "pos": "c3",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": "Malice",
+     "description": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by ${[ 6, 12, 18, 24, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Vile Poisons": {
+     "name": "Vile Poisons",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the damage dealt by your poisons by ${[ 4, 8, 12, 16, 20, ]}% and gives your poisons an additional ${[ 8, 16, 24, 32, 40, ]}% chance to resist dispel effects.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Improved Poisons": {
+     "name": "Improved Poisons",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the chance to apply poisons to your target by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Cold Blood": {
+     "name": "Cold Blood",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, or Eviscerate by 100%.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Kidney Shot": {
+     "name": "Improved Kidney Shot",
+     "pos": "e3",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "While affected by your Kidney Shot ability, the target receives an additional ${[ 3, 6, 9, ]}% damage from all sources.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Seal Fate": {
+     "name": "Seal Fate",
+     "pos": "f2",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Cold Blood",
+     "description": "Your critical strikes from abilities that add combo points have a ${[ 20, 40, 60, 80, 100, ]}% chance to add an additional combo point.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Vigor": {
+     "name": "Vigor",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "Increases your maximum Energy by 10.",
+     "buys": "flat",
+     "candidateActive": false
+    }
+   },
+   "Combat": {
+    "Improved Gouge": {
+     "name": "Improved Gouge",
+     "pos": "a1",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the effect duration of your Gouge ability by ${[ 0.5, 1, 1.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Sinister Strike": {
+     "name": "Improved Sinister Strike",
+     "pos": "a2",
+     "maxRank": 2,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the Energy cost of your Sinister Strike ability by ${[ 3, 5, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Lightening Reflexes": {
+     "name": "Lightening Reflexes",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your Dodge chance by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Backstab": {
+     "name": "Improved Backstab",
+     "pos": "b1",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Backstab ability by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Deflection": {
+     "name": "Deflection",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your Parry chance by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Precision": {
+     "name": "Precision",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your chance to hit with melee weapons by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Endurance": {
+     "name": "Endurance",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Sprint and Evasion abilities by ${[ \"45 sec\", \"1.5 min\", ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Riposte": {
+     "name": "Riposte",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": "Deflection",
+     "description": "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Sprint": {
+     "name": "Improved Sprint",
+     "pos": "c4",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives a ${[ 50, 100, ]}% chance to remove all movement impairing effects when you activate your Sprint ability.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Kick": {
+     "name": "Improved Kick",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives your Kick ability a ${[ 50, 100, ]}% chance to silence the target for 2 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Dagger Specialization": {
+     "name": "Dagger Specialization",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases your chance to get a critical strike with Daggers by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Dual Wield Specialization": {
+     "name": "Dual Wield Specialization",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": "Precision",
+     "description": "Increases damage done by your offhand weapon by ${[ 10, 20, 30, 40, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Mace Specialization": {
+     "name": "Mace Specialization",
+     "pos": "e1",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases your skill with Maces by ${[ 1, 2, 3, 4, 5, ]}, and gives you a ${[ 1, 2, 3, 4, 5, ]}% chance to stun your target for 3 sec with a Mace.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Blade Flurry": {
+     "name": "Blade Flurry",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases your attack speed by 20%. In addition, attacks strike an additional nearby opponent. Lasts 15 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Sword Specialization": {
+     "name": "Sword Specialization",
+     "pos": "e3",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Gives you a ${[ 1, 2, 3, 4, 5, ]}% chance to get an extra attack on the same target after dealing damage with your Sword.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Fist Weapon Specialization": {
+     "name": "Fist Weapon Specialization",
+     "pos": "e4",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases your chance to get a critical strike with Fist Weapons by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Weapon Expertise": {
+     "name": "Weapon Expertise",
+     "pos": "f2",
+     "maxRank": 2,
+     "reqPoints": 25,
+     "prereq": "Blade Flurry",
+     "description": "Increases your skill with Sword, Fist, and Dagger weapons by ${[ 3, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Aggression": {
+     "name": "Aggression",
+     "pos": "f3",
+     "maxRank": 3,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the damage of your Sinister Strike and Eviscerate abilities by ${[ 2, 4, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Adrenaline Rush": {
+     "name": "Adrenaline Rush",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "Increases your Energy regeneration rate by 100% for 15 sec.",
+     "buys": "flat",
+     "candidateActive": false
+    }
+   },
+   "Subtlety": {
+    "Master of Deception": {
+     "name": "Master of Deception",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the chance enemies have to detect you while in Stealth mode.${[ \"\", \" More effective than Master of Deception (Rank 1)\", \" More effective than Master of Deception (Rank 2)\", \" More effective than Master of Deception (Rank 3)\", \" More effective than Master of Deception (Rank 4)\", ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Opportunity": {
+     "name": "Opportunity",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by ${[ 4, 8, 12, 16, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Sleight of Hand": {
+     "name": "Sleight of Hand",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the chance you are critically hit by melee and ranged attacks by ${[ 1, 2, ]}% and increases the threat reduction of your Feint ability by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Elusiveness": {
+     "name": "Elusiveness",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Vanish and Blind abilities by ${[ \"45 sec\", \"1.5 min\", ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Camouflage": {
+     "name": "Camouflage",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your speed while stealthed by ${[ 3, 6, 9, 12, 15, ]}% and reduces the cooldown of your Stealth ability by ${[ 1, 2, 3, 4, 5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Initiative": {
+     "name": "Initiative",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives you a ${[ 25, 50, 75, ]}% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Ghostly Strike": {
+     "name": "Ghostly Strike",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Ambush": {
+     "name": "Improved Ambush",
+     "pos": "c3",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Ambush ability by ${[ 15, 30, 45, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Setup": {
+     "name": "Setup",
+     "pos": "d1",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives you a ${[ 15, 30, 45, ]}% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Sap": {
+     "name": "Improved Sap",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives you a ${[ 30, 60, 90, ]}% chance to return to stealth mode after using your Sap ability.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Serrated Blades": {
+     "name": "Serrated Blades",
+     "pos": "d3",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by ${[ 10, 20, 30, ]}%. The amount of Armor reduced increases with your level.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Heightened Senses": {
+     "name": "Heightened Senses",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases your Stealth detection and reduces the chance you are hit by spells and ranged attacks by ${[ 2, 4, ]}.${[\"\", \" More effective than Heightened Senses (Rank 1).\"]}",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Preparation": {
+     "name": "Preparation",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "When activated, this ability immediately finishes the cooldown on your other Rogue abilities.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Dirty Deeds": {
+     "name": "Dirty Deeds",
+     "pos": "e3",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by ${[ 10, 20, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Hemmorhage": {
+     "name": "Hemmorhage",
+     "pos": "e4",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Serrated Blades",
+     "description": "An instant strike that damages the opponent and causes the target to hemmorhage, increasing any Physical damage dealt to the target by up to 3. Lasts 30 charges or 15 sec. Awards 1 combo point.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Deadliness": {
+     "name": "Deadliness",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases your Attack Power by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Premeditation": {
+     "name": "Premeditation",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "When used, adds 2 combo points to your target. You must add to or use those combo points within 10 sec or the combo points are lost.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Shaman": {
+   "Elemental": {
+    "Convection": {
+     "name": "Convection",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the many cost of your Shock, Lightening Bolt, and Chain Lightening spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Concussion": {
+     "name": "Concussion",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the damage done by your Lightning Bolt, Chain Lightning and Shock spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Earth's Grasp": {
+     "name": "Earth's Grasp",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the health of your Stoneclaw Totem by ${[ 25, 50, ]}% and the radius of your Earthbind Totem by ${[10, 20]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Elemental Warding": {
+     "name": "Elemental Warding",
+     "pos": "b2",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the damage taken by Fire, Frost and Nature effects by ${[ 4, 7, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Call of Flame": {
+     "name": "Call of Flame",
+     "pos": "b3",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the damage done by your Fire Totems by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Elemental Focus": {
+     "name": "Elemental Focus",
+     "pos": "c1",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Reverberation": {
+     "name": "Reverberation",
+     "pos": "c2",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Shock spells by ${[ 0.2, 0.4, 0.6, 0.8, 1, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Call of Thunder": {
+     "name": "Call of Thunder",
+     "pos": "c3",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by an additional ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Improved Fire Totems": {
+     "name": "Improved Fire Totems",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the delay before your Fire Nova Totem activates by ${[ 1, 2, ]} sec. and decreases the threat generated by your Magma Totem by ${[ 25, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Eye of the Storm": {
+     "name": "Eye of the Storm",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives you a ${[ 33, 66, 100, ]}% to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Elemental Devastation": {
+     "name": "Elemental Devastation",
+     "pos": "d4",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Your offensive spell crits will increase your chance to get a critical strike with melee attacks by ${[ 3, 6, 9, ]}% for 10 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Storm Reach": {
+     "name": "Storm Reach",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the range of your Lightning Bolt and Chain Lightning spells by ${[ 3, 6, ]} yards.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Elemental Fury": {
+     "name": "Elemental Fury",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the critical strike challenge bonus of your Searing, Magma, and Fire Nova totems and your Fire, Frost, and Nature spells by 100%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Lightning Mastery": {
+     "name": "Lightning Mastery",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Call of Thunder",
+     "description": "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by ${[ 0.2, 0.4, 0.6, 0.8, 1, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Elemental Mastery": {
+     "name": "Elemental Mastery",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Elemental Fury",
+     "description": "When activated, this spell gives your next Fire, Frost, or Nature damage spell a 100% critical strike chance and reduces the mana cost by 100%.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Enhancement": {
+    "Ancestral Knowledge": {
+     "name": "Ancestral Knowledge",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your maximum Mana by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Sheild Specialization": {
+     "name": "Sheild Specialization",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your chance to block attacks with a shield by ${[ 1, 2, 3, 4, 5, ]}% and increases the amount blocked by ${[5, 10, 15, 20, 25]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Guardian Totems": {
+     "name": "Guardian Totems",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by ${[ 10, 20, ]}% and reduces the cooldown of your Grounding Totem by ${[1, 2]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Thundering Strikes": {
+     "name": "Thundering Strikes",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Improves your chance to get a critical strike with your weapon by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Ghost Wolf": {
+     "name": "Improved Ghost Wolf",
+     "pos": "b3",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cast time of your Ghost Wolf spell by ${[ 1, 2, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Lightning Shield": {
+     "name": "Improved Lightning Shield",
+     "pos": "b4",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the damage done by your Lightning Shield orbs by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Enhancing Totems": {
+     "name": "Enhancing Totems",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increase the effect of your Strength of Earth and Grace of Air Totems by ${[ 8, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Two-Handed Axes and Maces": {
+     "name": "Two-Handed Axes and Maces",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Allows you to use Two-Handed Axes and Two-Handed Maces.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Anticipation": {
+     "name": "Anticipation",
+     "pos": "c4",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your chance to dodge by an additional ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Flurry": {
+     "name": "Flurry",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": "Thundering Strikes",
+     "description": "Increases your attack speed by ${[ 10, 15, 20, 25, 30, ]}% for your next 3 swings after dealing a critical strike.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Toughnes": {
+     "name": "Toughnes",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases your armor value from items by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Weapon Totems": {
+     "name": "Improved Weapon Totems",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the melee attack power bonus of your Windfury Totem by ${[ 15, 30, ]}% and increases the damage caused by your Flametongue Totem by ${[ 6, 12, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Elemental Weapons": {
+     "name": "Elemental Weapons",
+     "pos": "e2",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the melee attack power bonus of your Rockbiter Weapon by ${[ 7, 14, 20, ]}%, your Windfury Weapon effect by ${[ 13, 27, 40, ]}% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Parry": {
+     "name": "Parry",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Gives a chance to parry enemy melee attacks.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Weapon Mastery": {
+     "name": "Weapon Mastery",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the damage you deal with all weapons by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Stormstrike": {
+     "name": "Stormstrike",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Elemental Weapons",
+     "description": "Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Restoration": {
+    "Improved Healing Wave": {
+     "name": "Improved Healing Wave",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the casting time of your Healing Wave spell by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Tidal Focus": {
+     "name": "Tidal Focus",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your healing spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Imroved Reincarnation": {
+     "name": "Imroved Reincarnation",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Reincarnation spell by ${[ 10, 20, ]} min and increases the amount of health and mana you reincarnate with by an additional ${[ 10, 20, ]}%.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Ancestral Healing": {
+     "name": "Ancestral Healing",
+     "pos": "b2",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your target's armor value by ${[ 8, 16, 25, ]}% for 15 sec after getting a critical effect from one of your healing spells.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Totemic Focus": {
+     "name": "Totemic Focus",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your totems by ${[ 5, 10, 15, 20, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Nature's Guidance": {
+     "name": "Nature's Guidance",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases your chance to hit with melee attacks and spells by ${[ 1, 2, 3, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Healing Focus": {
+     "name": "Healing Focus",
+     "pos": "c2",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives you a ${[ 14, 28, 42, 56, 70, ]}% chance to avoid interruption caused by damage while casting any healing spell.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Totemic Mastery": {
+     "name": "Totemic Mastery",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "The radius of your totems that affect friendly targets is increased to 30 yd.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Healing Grace": {
+     "name": "Healing Grace",
+     "pos": "c4",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the threat generated by your healing spells by ${[ 5, 10, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Restorative Totems": {
+     "name": "Restorative Totems",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the effect of your Mana Spring and Healing Stream totems by ${[ 5, 10, 15, 20, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Tidal Mastery": {
+     "name": "Tidal Mastery",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the critical effect chance of your healing and lightning spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Healing Way": {
+     "name": "Healing Way",
+     "pos": "e1",
+     "maxRank": 3,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Your Healing Wave spells have ${[ 33, 66, 100, ]}% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec. This effect will stack up to 3 times.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Nature's Swiftness": {
+     "name": "Nature's Swiftness",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Purification": {
+     "name": "Purification",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the effectiveness of your healing spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Mana Tide Totem": {
+     "name": "Mana Tide Totem",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Restorative Totems",
+     "description": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 170 mana every 3 seconds to group members within 20 yards.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Warlock": {
+   "Affliction": {
+    "Suppression": {
+     "name": "Suppression",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the chaance for enemies to resist your Affliction spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Corruption": {
+     "name": "Improved Corruption",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the casting time of your Corruption spell by ${[ 0.4, 0.8, 1.2, 1.6, 2, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Curse of Weakness": {
+     "name": "Improved Curse of Weakness",
+     "pos": "b1",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the effect of your Curse of Weakness by ${[ 6, 13, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Drain Soul": {
+     "name": "Improved Drain Soul",
+     "pos": "b2",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives you a ${[ 50, 100, ]}% chance to get a 100% increase to your Mana regeneration for 10 sec if the target is killed by you while you drain its soul. In addition your Mana may continue to regenerate while casting at 50% of normal.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Life Tap": {
+     "name": "Improved Life Tap",
+     "pos": "b3",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the amount of Mana awarded by your Life Tap spell by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Drain Life": {
+     "name": "Improved Drain Life",
+     "pos": "b4",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the Health drained by your Drain Life spell by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Curse of Agony": {
+     "name": "Improved Curse of Agony",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the damage done by your Curse of Agony by ${[ 2, 4, 6, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Fel Concentration": {
+     "name": "Fel Concentration",
+     "pos": "c2",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives you a ${[ 14, 28, 42, 56, 70, ]}% chance to avoid interruption caused by damage while channeling the Drain Life, Drain Mana, or Drain Soul spell.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Amplify Curse": {
+     "name": "Amplify Curse",
+     "pos": "c3",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the effect of your next Curse of Weakness or Curse of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Grim Reach": {
+     "name": "Grim Reach",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the range of your Affliction spells by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Nightfall": {
+     "name": "Nightfall",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives your Corruption and Drain Life spells a ${[ 2, 4, ]}% chance to cause you to enter a Shadow Trance state after damaging the opponent. The Shadow Trance state reduces the casting time of your next Shadow Bolt spell by 100%.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Drain Mana": {
+     "name": "Improved Drain Mana",
+     "pos": "d4",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Causes 15% of the Mana drained by your Drain Mana spell to damage the opponent.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Siphon Life": {
+     "name": "Siphon Life",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Transfers 15 health from the target to the caster every 3 sec. Lasts 30 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Curse of Exhaustion": {
+     "name": "Curse of Exhaustion",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Amplify Curse",
+     "description": "Reduces the target's movement speed by 10% for 12 sec. Only one Curse per Warlock can be active on any one target.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Curse of Exhaustion": {
+     "name": "Improved Curse of Exhaustion",
+     "pos": "e4",
+     "maxRank": 4,
+     "reqPoints": 20,
+     "prereq": "Curse of Exhaustion",
+     "description": "Increases the speed reduction of your Curse of Exhaustion by ${[ 5, 10, 15, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shadow Mastery": {
+     "name": "Shadow Mastery",
+     "pos": "f2",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Siphon Life",
+     "description": "Increases the damage dealt or life drained by your Shadow spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Dark Pact": {
+     "name": "Dark Pact",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "Drains 150 of your pet's Mana, returning 100% to you.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Demonology": {
+    "Improved Healthstone": {
+     "name": "Improved Healthstone",
+     "pos": "a1",
+     "maxRank": 2,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the amount of Health restored by your Healthstone by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Imp": {
+     "name": "Improved Imp",
+     "pos": "a2",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the effect of your Imp's Firebolt, Fire Shield, and Blood Pact spells by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Demonic Embrace": {
+     "name": "Demonic Embrace",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your total Stamina by ${[ 3, 6, 9, 12, 15, ]}%, but reduces your total Spirit by ${[1, 2, 3, 4, 5]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Health Funnel": {
+     "name": "Improved Health Funnel",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the amount of Health transfered by your Health Funnel spell by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Voidwalker": {
+     "name": "Improved Voidwalker",
+     "pos": "b2",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, Sacrifice and Suffering spells by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Fel Intellect": {
+     "name": "Fel Intellect",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the maximum Mana of your Imp, Voidwalker, Succubus, and Felhunter by ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Succubus": {
+     "name": "Improved Succubus",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the effect of your Succubus' Lash of Pain and Soothing Kiss spells by ${[ 10, 20, 30, ]}%, and increases the duration of your Succubus' Seduction and Lesser Invisibility spells by ${[ 10, 20, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Fel Domination": {
+     "name": "Fel Domination",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Your next Imp, Voidwalker, Succubus, or Felhunter Summon spell has its casting time reduced by 5.5 sec and its mana cost reduced by 50%.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Fel Stamina": {
+     "name": "Fel Stamina",
+     "pos": "c3",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the maximum Health of your Imp, Voidwalker, Succubus, and Felhutner by ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Master Summoner": {
+     "name": "Master Summoner",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": "Fel Domination",
+     "description": "Reduces the casting time of your Imp, Voidwalker, Succubus, and Felhunter Summoning spells by ${[ 2, 4, ]} sec and the Mana cost by ${[20, 40]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Unholy Power": {
+     "name": "Unholy Power",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the damage done by your Voidwalker, Succubus, and Felhunter's melee attacks by ${[ 4, 8, 12, 16, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Enslave Demon": {
+     "name": "Improved Enslave Demon",
+     "pos": "e1",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Reduces the Attack Speed and Casting Speed penalty of your Enslave Demon spell by ${[ 2, 4, 6, 8, 10, ]}% and reduces the resist chance by ${[2, 4, 6, 8, 10]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Demonic Sacrifice": {
+     "name": "Demonic Sacrifice",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min. The effect is canceled if any Demon is summoned.\\n\\nImp: Increases your Fire damage by 15%.\\n\\nVoidwalker: Restores 3% of your total Health every 4 sec.\\n\\nSuccubus: Increases your Shadow damage by 15%.\\n\\nFelhunter: Restores 2% of total Mana every 4 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Firestone": {
+     "name": "Improved Firestone",
+     "pos": "e4",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the bonus Fire damage from Firestones and the Firestone effect by ${[ 15, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Master Demonologist": {
+     "name": "Master Demonologist",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Unholy Power",
+     "description": "Grants both the Warlock and the summoned demon an effect as long as the demon is active.\\n\\nImp - Reduces threat caused by ${[ 4, 8, 12, 16, 20, ]}%.\\n\\nVoidwalker - Reduces physical damage taken by ${[ 2, 4, 6, 8, 10, ]}%.\\n\\nSuccubus - Increases all damage caused by ${[ 2, 4, 6, 8, 10, ]}%.\\n\\nFelhunter - Increases all resistances by ${[ 0.2, 0.4, 0.6, 0.8, 1, ]} per level.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Soul Link": {
+     "name": "Soul Link",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Demonic Sacrifice",
+     "description": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, or Felhunter demon instead. In addition, both the demon and master will inflict 3% more damage. Lasts as long as the demon is active.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Spellstone": {
+     "name": "Improved Spellstone",
+     "pos": "g3",
+     "maxRank": 2,
+     "reqPoints": 30,
+     "prereq": null,
+     "description": "Increases the amount of damage absorbed by your Spellstone by ${[ 15, 30, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    }
+   },
+   "Destruction": {
+    "Improved Shadow Bolt": {
+     "name": "Improved Shadow Bolt",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Your Shadow Bolt critical strikes increase Shadow damage dealt to the target by ${[ 4, 8, 12, 16, 20, ]}% until 4 non-periodic damage sources are applied. Effect lasts a maximum of 12 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Cataclysm": {
+     "name": "Cataclysm",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the Mana cost of your Destruction spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Bane": {
+     "name": "Bane",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the casting time of your Shadow Bolt and Immolate spells by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec and your Soul Fire spell by ${[0.4, 0.8, 1.2, 1.6, 2]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Aftermath": {
+     "name": "Aftermath",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives your Destruction spells a ${[ 2, 4, 6, 8, 10, ]}% chance to daze the target for 5 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Firebolt": {
+     "name": "Improved Firebolt",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the casting time of your Imp's Firebolt spell by ${[ 0.5, 1, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Lash of Pain": {
+     "name": "Improved Lash of Pain",
+     "pos": "c2",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Succubus' Lash of Pain by ${[ 3, 6, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Devastation": {
+     "name": "Devastation",
+     "pos": "c3",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Destruction spells by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shadowburn": {
+     "name": "Shadowburn",
+     "pos": "c4",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Instantly blasts the target for 91 to 104 Shadow damage. If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Intensity": {
+     "name": "Intensity",
+     "pos": "d1",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives you a ${[ 35, 70, ]}% chance to resist interruption caused by damage while channeling the Rain of Fire, Hellfire or Soul Fire spell.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Destructive Reach": {
+     "name": "Destructive Reach",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the range of your Destruction spells by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Searing Pain": {
+     "name": "Improved Searing Pain",
+     "pos": "d4",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Searing Pain spell by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Pyroclasm": {
+     "name": "Pyroclasm",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": "Intensity",
+     "description": "Gives your Rain of Fire, Hellfire, and Soul Fire spells a ${[ 13, 26, ]}% chance to stun the target for 3 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Immolate": {
+     "name": "Improved Immolate",
+     "pos": "e2",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the initial damage of your Immolate spell by ${[ 5, 10, 15, 20, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Ruin": {
+     "name": "Ruin",
+     "pos": "e3",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": "Devastation",
+     "description": "Increases the critical strike damage bonus of your Destruction spells by 100%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Emberstorm": {
+     "name": "Emberstorm",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the damage done by your Fire spells by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Conflagrate": {
+     "name": "Conflagrate",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Improved Immolate",
+     "description": "Ignites a target that is already afflicted by Immolate, dealing 249 to 316 Fire damage and consuming the Immolate spell.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  },
+  "Warrior": {
+   "Arms": {
+    "Improved Heroic Strike": {
+     "name": "Improved Heroic Strike",
+     "pos": "a1",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Reduces the cost of your Heroic Strike ability by ${[ 1, 2, 3, ]} rage point${[\"\", \"s\", \"s\"]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Deflection": {
+     "name": "Deflection",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your Parry chance by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Rend": {
+     "name": "Improved Rend",
+     "pos": "a3",
+     "maxRank": 3,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the bleed damage done by your Rend ability by ${[ 15, 25, 35, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Charge": {
+     "name": "Improved Charge",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the amount of rage generated by your Charge ability by ${[ 3, 6, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Tactical Mastery": {
+     "name": "Tactical Mastery",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "You retain up to ${[ 5, 10, 15, 20, 25, ]} of your rage points when you change stances.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Thunder Clap": {
+     "name": "Improved Thunder Clap",
+     "pos": "b4",
+     "maxRank": 3,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Reduces the cost of your Thunder Clap ability by ${[ 1, 2, 4, ]} rage point${[\"\", \"s\", \"s\"]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Overpower": {
+     "name": "Improved Overpower",
+     "pos": "c1",
+     "maxRank": 2,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the critical strike chance of your Overpower ability by ${[ 25, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Anger Management": {
+     "name": "Anger Management",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": "Tactical Mastery",
+     "description": "Increases the time required for your rage to decay while out of combat by 30%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Deep Wounds": {
+     "name": "Deep Wounds",
+     "pos": "c3",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": "Improved Rend",
+     "description": "Your critical strikes cause the opponent to bleed, dealing ${[ 20, 40, 60, ]}% of your melee weapon's average damage over 12 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Two-Handed Weapon Specialization": {
+     "name": "Two-Handed Weapon Specialization",
+     "pos": "d2",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the damage you deal with two-handed melee weapons by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Impale": {
+     "name": "Impale",
+     "pos": "d3",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": "Deep Wounds",
+     "description": "Increases the critical strike damage bonus of your abilities in Battle, Defensive, and Berserker stance by ${[ 10, 20, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Axe Specialization": {
+     "name": "Axe Specialization",
+     "pos": "e1",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases your chance to get a critical strike with Axes by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Sweeping Strikes": {
+     "name": "Sweeping Strikes",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Your next 5 melee attacks strike an additional nearby opponent.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Mace Specialization": {
+     "name": "Mace Specialization",
+     "pos": "e3",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Gives you a ${[ 1, 2, 3, 4, 5, ]}% chance to stun your target for 3 sec with a Mace.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Sword Specialization": {
+     "name": "Sword Specialization",
+     "pos": "e4",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Gives you a ${[ 1, 2, 3, 4, 5, ]}% chance to get an extra attack on the same target after dealing damage with your Sword.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Polearm Specialization": {
+     "name": "Polearm Specialization",
+     "pos": "f1",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases your chance to get a critical strike with Polearms by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Hamstring": {
+     "name": "Improved Hamstring",
+     "pos": "f3",
+     "maxRank": 3,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Gives your Hamstring ability a ${[ 5, 10, 15, ]}% chance to immobilize the target for 5 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Mortal Strike": {
+     "name": "Mortal Strike",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Sweeping Strikes",
+     "description": "A vicious strike that deals weapon damage plus 85 and wounds the target, reducing the effectiveness of any healing by 50% for 10 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Fury": {
+    "Booming Voice": {
+     "name": "Booming Voice",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases the area of effect and duration of your Battle Shout and Demoralizing Shout by ${[ 10, 20, 30, 40, 50, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Cruelty": {
+     "name": "Cruelty",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your chance to get a critical strike with melee weapons by ${[ 1, 2, 3, 4, 5, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Demoralizing Shout": {
+     "name": "Improved Demoralizing Shout",
+     "pos": "b2",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the melee attack power reduction of your Demoralizing Shout by ${[ 8, 16, 24, 32, 40, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Unbridled Wrath": {
+     "name": "Unbridled Wrath",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Gives you a ${[ 8, 16, 24, 32, 40, ]}% chance to generate an additional Rage point when you deal melee damage with a weapon.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Cleave": {
+     "name": "Improved Cleave",
+     "pos": "c1",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the bonus damage done by your Cleave ability by ${[ 40, 80, 120, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Piercing Howl": {
+     "name": "Piercing Howl",
+     "pos": "c2",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Causes all enemies near the warrior to be dazed, reducing movement speed by 50% for 6 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Blood Craze": {
+     "name": "Blood Craze",
+     "pos": "c3",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Regenerates ${[ 1, 2, 3, ]}% of your total Health over 6 sec after being the victim of a critical strike.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Battle Shout": {
+     "name": "Improved Battle Shout",
+     "pos": "c4",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the melee attack power bonus of your Battle Shout by ${[ 5, 10, 15, 20, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Dual Wield Specialization": {
+     "name": "Dual Wield Specialization",
+     "pos": "d1",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the damage done by your offhand weapon by ${[ 5, 10, 15, 20, 25, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Execute": {
+     "name": "Improved Execute",
+     "pos": "d2",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the Rage cost of your Execute ability by ${[ 2, 5, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Enrage": {
+     "name": "Enrage",
+     "pos": "d3",
+     "maxRank": 5,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Gives you a ${[ 5, 10, 15, 20, 25, ]}% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Slam": {
+     "name": "Improved Slam",
+     "pos": "e1",
+     "maxRank": 5,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Decreases the casting time of your Slam ability by ${[ 0.1, 0.2, 0.3, 0.4, 0.5, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Death Wish": {
+     "name": "Death Wish",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Intercept": {
+     "name": "Improved Intercept",
+     "pos": "e4",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Intercept abiilty by ${[ 5, 10, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Berserker Rage": {
+     "name": "Improved Berserker Rage",
+     "pos": "f1",
+     "maxRank": 2,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "The Berserker Rage ability will generate ${[ 5, 10, ]} rage when used.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Flurry": {
+     "name": "Flurry",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": "Enrage",
+     "description": "Increases your attack speed by ${[ 10, 15, 20, 25, 30, ]}% for your next 3 swings aftre dealing a melee critical strike.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Bloodthirst": {
+     "name": "Bloodthirst",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Death Wish",
+     "description": "Instantly attack the target causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 10 health. This effect lasts 8 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   },
+   "Protection": {
+    "Shield Specialization": {
+     "name": "Shield Specialization",
+     "pos": "a2",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your chance to block attacks with a shield by ${[ 1, 2, 3, 4, 5, ]}% and has a ${[ 20, 40, 60, 80, 100, ]}% chance to generate 1 rage when a block occurs.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Anticipation": {
+     "name": "Anticipation",
+     "pos": "a3",
+     "maxRank": 5,
+     "reqPoints": 0,
+     "prereq": null,
+     "description": "Increases your Defense skill by ${[ 2, 4, 6, 8, 10, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Bloodrage": {
+     "name": "Improved Bloodrage",
+     "pos": "b1",
+     "maxRank": 2,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases the instant Rage generated by your Bloodrage ability by ${[ 2, 5, ]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Toughness": {
+     "name": "Toughness",
+     "pos": "b3",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your armor value from items by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Iron Will": {
+     "name": "Iron Will",
+     "pos": "b4",
+     "maxRank": 5,
+     "reqPoints": 5,
+     "prereq": null,
+     "description": "Increases your chance to resist Stun and Charm effects by an additional ${[ 3, 6, 9, 12, 15, ]}%.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Last Stand": {
+     "name": "Last Stand",
+     "pos": "c1",
+     "maxRank": 1,
+     "reqPoints": 10,
+     "prereq": "Improved Bloodrage",
+     "description": "When activated, this ability temporarily grants you 30% of your maximum hit points for 20 seconds. After the effect expires, the hit points are lost.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Shield Block": {
+     "name": "Improved Shield Block",
+     "pos": "c2",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": "Shield Specialization",
+     "description": "Allows your Shield Block ability to block an additional attack and increases the duration by ${[ 0.5, 1, 2, ]} second.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Improved Revenge": {
+     "name": "Improved Revenge",
+     "pos": "c3",
+     "maxRank": 3,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Gives your Revenge ability a ${[ 15, 30, 45, ]}% chance to stun the target for 3 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "Defiance": {
+     "name": "Defiance",
+     "pos": "c4",
+     "maxRank": 5,
+     "reqPoints": 10,
+     "prereq": null,
+     "description": "Increases the threat generated by your attacks by ${[ 3, 6, 9, 12, 15, ]}% while in Defensive Stance.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Sunder Armor": {
+     "name": "Improved Sunder Armor",
+     "pos": "d1",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the cost of your Sunder Armor ability by ${[ 1, 2, 3, ]} rage point${[\"\", \"s\", \"s\"]}.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Disarm": {
+     "name": "Improved Disarm",
+     "pos": "d2",
+     "maxRank": 3,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Increases the duration of your Disarm abilty by ${[ 1, 2, 3, ]} secs.",
+     "buys": "flat",
+     "candidateActive": false,
+     "reviewed": true
+    },
+    "Improved Taunt": {
+     "name": "Improved Taunt",
+     "pos": "d3",
+     "maxRank": 2,
+     "reqPoints": 15,
+     "prereq": null,
+     "description": "Reduces the cooldown of your Taunt ability by ${[ 1, 2, ]} sec.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Improved Shield Wall": {
+     "name": "Improved Shield Wall",
+     "pos": "e1",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Increases the effect duration of your Shield Wall ability by ${[ 3, 5, ]} secs.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Concussion Blow": {
+     "name": "Concussion Blow",
+     "pos": "e2",
+     "maxRank": 1,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Stuns the opponent for 5 sec.",
+     "buys": "behavior",
+     "candidateActive": true
+    },
+    "Improved Shield Bash": {
+     "name": "Improved Shield Bash",
+     "pos": "e3",
+     "maxRank": 2,
+     "reqPoints": 20,
+     "prereq": null,
+     "description": "Gives your Shield Bash ability a ${[ 50, 100, ]}% chance to silence the target for 3 sec.",
+     "buys": "behavior",
+     "candidateActive": false
+    },
+    "One-Handed Specialization": {
+     "name": "One-Handed Specialization",
+     "pos": "f3",
+     "maxRank": 5,
+     "reqPoints": 25,
+     "prereq": null,
+     "description": "Increases the damage you deal with One-Handed Melee weapons by ${[ 2, 4, 6, 8, 10, ]}%.",
+     "buys": "flat",
+     "candidateActive": false
+    },
+    "Shield Slam": {
+     "name": "Shield Slam",
+     "pos": "g2",
+     "maxRank": 1,
+     "reqPoints": 30,
+     "prereq": "Concussion Blow",
+     "description": "Slam the target with your shield, causing 225 to 236 damage, modified by your shield block value, and has a 50% chance of dispelling 1 magic effect on the target. Also causes a high amount of threat.",
+     "buys": "behavior",
+     "candidateActive": true
+    }
+   }
+  }
+ }
+}

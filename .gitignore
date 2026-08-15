@@ -1,0 +1,12 @@
+# Chat-era archive, byte-redundant with files/ and data/ (audited 2026-08-14)
+uploads/
+
+# Icon source art; the site serves only the .png files
+icons/**/*.tga
+icons/ar/
+
+# Development captures and local tooling
+screenshots/
+.thumbnail
+__pycache__/
+*.backup.json

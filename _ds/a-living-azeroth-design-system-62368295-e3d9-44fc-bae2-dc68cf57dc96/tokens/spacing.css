@@ -1,0 +1,27 @@
+:root{
+--s-1:2px;
+--s-2:4px;
+--s-3:6px;
+--s-4:8px;
+--s-5:12px;
+--s-6:16px;
+--s-7:20px;
+--s-8:24px;
+--s-9:32px;
+--s-10:40px;
+--s-11:56px;
+--s-12:72px;
+--s-13:96px;
+--s-14:128px;
+
+/* Layout */
+--sidebar-w:264px;
+--page-gutter:40px;
+--page-gutter-sm:20px;
+--section-gap:var(--s-13);
+--para-gap:var(--s-7);
+--row-pad-y:11px;
+--row-pad-x:14px;
+--control-h:34px;
+--control-h-sm:28px;
+}

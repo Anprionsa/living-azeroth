@@ -1,0 +1,182 @@
+{
+ "note": "Forced-flat floor per vanilla tree, from spec-grievances.md. Floor = minimum points that must buy a number on the way to the capstone, taking behavior greedily at every gate. A lower bound on filler, not a prediction of builds.",
+ "reputation": "Specs with poor reputations average 22.7 forced-flat points; specs with good reputations average 14.4.",
+ "floors": {
+  "Druid|Balance": {
+   "avail": 52,
+   "flat": "77%",
+   "cap": 19,
+   "row5": 11
+  },
+  "Druid|Feral Combat": {
+   "avail": 45,
+   "flat": "84%",
+   "cap": 26,
+   "row5": 19
+  },
+  "Druid|Restoration": {
+   "avail": 53,
+   "flat": "66%",
+   "cap": 13,
+   "row5": 4
+  },
+  "Hunter|Beast Mastery": {
+   "avail": 48,
+   "flat": "62%",
+   "cap": 18,
+   "row5": 11
+  },
+  "Hunter|Marksmanship": {
+   "avail": 52,
+   "flat": "87%",
+   "cap": 23,
+   "row5": 14
+  },
+  "Hunter|Survival": {
+   "avail": 48,
+   "flat": "73%",
+   "cap": 18,
+   "row5": 9
+  },
+  "Mage|Arcane": {
+   "avail": 47,
+   "flat": "64%",
+   "cap": 14,
+   "row5": 5
+  },
+  "Mage|Fire": {
+   "avail": 46,
+   "flat": "50%",
+   "cap": 8,
+   "row5": 2
+  },
+  "Mage|Frost": {
+   "avail": 46,
+   "flat": "65%",
+   "cap": 15,
+   "row5": 11
+  },
+  "Paladin|Holy": {
+   "avail": 45,
+   "flat": "67%",
+   "cap": 16,
+   "row5": 7
+  },
+  "Paladin|Protection": {
+   "avail": 50,
+   "flat": "84%",
+   "cap": 23,
+   "row5": 19
+  },
+  "Paladin|Retribution": {
+   "avail": 45,
+   "flat": "84%",
+   "cap": 24,
+   "row5": 14
+  },
+  "Priest|Discipline": {
+   "avail": 48,
+   "flat": "83%",
+   "cap": 23,
+   "row5": 14
+  },
+  "Priest|Holy": {
+   "avail": 48,
+   "flat": "77%",
+   "cap": 20,
+   "row5": 11
+  },
+  "Priest|Shadow": {
+   "avail": 48,
+   "flat": "56%",
+   "cap": 11,
+   "row5": 4
+  },
+  "Rogue|Assassination": {
+   "avail": 46,
+   "flat": "67%",
+   "cap": 15,
+   "row5": 14
+  },
+  "Rogue|Combat": {
+   "avail": 62,
+   "flat": "74%",
+   "cap": 16,
+   "row5": 16
+  },
+  "Rogue|Subtlety": {
+   "avail": 47,
+   "flat": "66%",
+   "cap": 15,
+   "row5": 11
+  },
+  "Shaman|Elemental": {
+   "avail": 46,
+   "flat": "83%",
+   "cap": 23,
+   "row5": 14
+  },
+  "Shaman|Enhancement": {
+   "avail": 52,
+   "flat": "94%",
+   "cap": 28,
+   "row5": 19
+  },
+  "Shaman|Restoration": {
+   "avail": 52,
+   "flat": "75%",
+   "cap": 18,
+   "row5": 12
+  },
+  "Warlock|Affliction": {
+   "avail": 49,
+   "flat": "73%",
+   "cap": 18,
+   "row5": 9
+  },
+  "Warlock|Demonology": {
+   "avail": 52,
+   "flat": "85%",
+   "cap": 28,
+   "row5": 19
+  },
+  "Warlock|Destruction": {
+   "avail": 53,
+   "flat": "70%",
+   "cap": 15,
+   "row5": 7
+  },
+  "Warrior|Arms": {
+   "avail": 59,
+   "flat": "61%",
+   "cap": 12,
+   "row5": 12
+  },
+  "Warrior|Fury": {
+   "avail": 60,
+   "flat": "78%",
+   "cap": 18,
+   "row5": 11
+  },
+  "Warrior|Protection": {
+   "avail": 53,
+   "flat": "70%",
+   "cap": 15,
+   "row5": 8
+  }
+ },
+ "failureModes": [
+  {
+   "name": "Structurally boring",
+   "text": "The tree forces the climb to be spent on numbers. Retribution, Marksmanship, Feral, Demonology. The rework fixes this completely."
+  },
+  {
+   "name": "Numerically weak",
+   "text": "The spec does not put out enough. Shadow priest sits at 11 forced flat, among the best figures in the game, and still has a poor reputation. The rework does nothing for this, and pretending otherwise is how a design document loses credibility."
+  },
+  {
+   "name": "Valued for what you give other people",
+   "text": "Several specs hold raid slots for an aura or a totem. Logged output understates them, and a rebalance driven by personal numbers will overcorrect. A composition problem, not a talent problem."
+  }
+ ]
+}

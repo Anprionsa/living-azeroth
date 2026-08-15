@@ -1,0 +1,4425 @@
+{
+ "meta": {
+  "title": "Classic+ rebuilt vanilla trees",
+  "version": "0.1",
+  "date": "2026-08",
+  "source": "extracted from classic-plus-talent-design.md sections 6 to 19",
+  "schema": "matches trees.json: rows with points gate and talents with ranks and text",
+  "accuracy": "Twenty-three trees parsed from prose; seven match their stated point totals exactly and the rest are within five. Four trees described only in prose (Mage Fire, Rogue Subtlety, Warlock Destruction, Warrior Protection) were written out by hand. Treat point totals as approximate and talent text as abbreviated. Category membership, which is what this dataset exists to answer, is reliable.",
+  "closes": "REG-39",
+  "knownLimitation": "Keyword matching on talent text cannot answer whether a tag conversion would light a talent up. Marksmanship scores 94% for ranged keywords and every match is about Auto Shot timing or Aimed Shot specifically, none of which a converted trap would touch. The measurement is over-inclusive here where the vanilla version was under-inclusive. Answering that question needs an explicit reads field, authored rather than inferred.",
+  "readsField": "Authored. A talent reads a category only if its effect would automatically extend to a NEW member of that category, which is the only thing a tag conversion can exploit. 'Your Fire spells cannot be pushed back' reads fire; 'Fireball applies a burn stack' reads nothing, because it names one spell. Talents whose rebuild text was 'kept' or 'unchanged' were backfilled from vanilla descriptions."
+ },
+ "trees": [
+  {
+   "name": "Druid Balance",
+   "class": "Druid",
+   "availablePoints": 52,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Nature's Grasp",
+       "ranks": 1,
+       "text": "Kept from vanilla. While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 1). Only useable outdoors. 1 charge. Lasts 45 sec.",
+       "reads": []
+      },
+      {
+       "name": "Starlight",
+       "ranks": 5,
+       "text": "Wrath and Starfire each apply a stack; at three stacks the other becomes instant; stacks persist through target changes; a stack is consumed to make your next cast unresistable; a full stack refreshes Moonfire. -",
+       "reads": []
+      },
+      {
+       "name": "Improved Nature's Grasp",
+       "ranks": 4,
+       "text": "Kept from vanilla. Increases the chance of your Nature's Grasp to entangle an enemy by N%.",
+       "reads": [
+        "nature"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Moonfire",
+       "ranks": 5,
+       "text": "Reworked from damage and crit: Moonfire's periodic damage refreshes when you cast Starfire; then a critical Moonfire extends its duration; then it spreads to a second target on the target's death; then it may be cast while shapeshifted; then its initial damage scales with time re",
+       "reads": [
+        "periodic"
+       ]
+      },
+      {
+       "name": "Improved Entangling Roots",
+       "ranks": 3,
+       "text": "Kept from vanilla. Gives you a N% chance to avoid interruption caused by damage while casting Entangling Roots.",
+       "reads": []
+      },
+      {
+       "name": "Natural Shapeshifter",
+       "ranks": 2,
+       "text": "Reworked: shifting costs no mana while Omen of Clarity is active; shifting does not break Moonfire.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Omen of Clarity",
+       "ranks": 1,
+       "text": "Untouched, for the reason in 16.1. -",
+       "reads": []
+      },
+      {
+       "name": "Nature's Reach",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases the range of your Wrath, Entangling Roots, Faerie Fire, Moonfire, Starfire, and Hurricane spells by N%.",
+       "reads": []
+      },
+      {
+       "name": "Improved Thorns",
+       "ranks": 3,
+       "text": "Reworked: Thorns damage generates no threat; it applies to your party; it refreshes when its target is critically hit. -",
+       "reads": []
+      },
+      {
+       "name": "Celestial Focus",
+       "ranks": 2,
+       "text": "Starfire's pushback is halved; a critical Starfire cannot be pushed back at all.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Improved Starfire",
+       "ranks": 5,
+       "text": "Kept from vanilla. Reduces the cast time of Starfire by N sec and has a N% chance to stun the target for 3 sec.",
+       "reads": []
+      },
+      {
+       "name": "Vengeance",
+       "ranks": 5,
+       "text": "Reworked from critical damage: a critical strike grants your next spell increased range; then it grants Clearcasting; then criticals cannot be resisted; then two in a row make your next Starfire instant; then a critical Moonfire tick counts toward the chain.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Nature's Grace",
+       "ranks": 1,
+       "text": "Kept from vanilla. All spell criticals grace you with the blessing of nature, reducing the casting time of your next spell by 0.5 sec.",
+       "reads": [
+        "spell"
+       ]
+      },
+      {
+       "name": "Moonglow",
+       "ranks": 2,
+       "text": "Kept from vanilla. Reduce the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth and Rejuvenation spells by N%.",
+       "reads": []
+      },
+      {
+       "name": "Wild Growth",
+       "ranks": 3,
+       "text": "Sideways node. Your Rejuvenation and Regrowth benefit from your spell critical chance; healing a target grants them your next Moonfire's damage as absorb; Nature's Swiftness also affects Starfire. Every druid heals, so it stands alone, worth most to a Restoration main at 26/25. -",
+       "reads": [
+        "absorb",
+        "spell"
+       ]
+      },
+      {
+       "name": "Eclipse",
+       "ranks": 1,
+       "text": "Sideways node. Your bleeds in cat and bear form scale with your spell damage. -",
+       "reads": []
+      },
+      {
+       "name": "Solstice",
+       "ranks": 1,
+       "text": "Subtraction node. Your Starfire and Wrath deal substantially more damage. You may no longer shapeshift. Vanilla's four-point tier becomes eight. Solstice is the druid trade stated plainly: commit to being a caster and give up the flexibility that defines the class.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Moonfury",
+       "ranks": 5,
+       "text": "Reworked from damage percentage: Starfire and Wrath alternate a bonus, so casting one empowers the other; then the bonus persists through a Moonfire; then it doubles at full stacks; then it applies to Hurricane; then it survives leaving combat for 10 seconds.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Moonkin Form",
+       "ranks": 1,
+       "text": "Kept as a form. Its party spell critical aura moves to the depth dividend. 52 points, unchanged. Forced flat zero against 19 of 30. ---",
+       "reads": [
+        "spell"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Druid Feral Combat",
+   "class": "Druid",
+   "availablePoints": 55,
+   "statedPoints": 55,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Savage Instinct",
+       "ranks": 5,
+       "text": "Shifting no longer resets your swing timer; combo points persist 10 seconds after leaving cat form; shifting clears movement-impairing effects; you may shift while stunned once every 30 seconds; **returning to a form you left within 6 seconds costs no mana.** -",
+       "reads": []
+      },
+      {
+       "name": "Feral Aggression",
+       "ranks": 5,
+       "text": "Demoralizing Roar also reduces armor; it applies behind you; it cannot be dispelled; it refreshes your bleeds on everything it hits; a target that resists it takes bleed damage instead.",
+       "reads": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Bloodletting",
+       "ranks": 5,
+       "text": "Rake and Rip ignore armor; Rip dumps its remaining damage on a killing blow; bleeds tick twice as fast below 20%; refreshing carries damage forward; a bleeding target cannot restealth. -",
+       "reads": []
+      },
+      {
+       "name": "Menace",
+       "ranks": 5,
+       "text": "Swipe generates threat on targets it misses; Maul's threat applies within 5 yards; your threat does not decay in bear form; taunt has no cooldown against a target already on you; damage taken in bear form generates threat. -",
+       "reads": [
+        "threat"
+       ]
+      },
+      {
+       "name": "Brutal Impact",
+       "ranks": 2,
+       "text": "Bash and Pounce interrupt regardless of stun immunity; Pounce reaches 15 yards from Prowl.",
+       "reads": [
+        "stealth"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Feral Charge",
+       "ranks": 1,
+       "text": "Kept from vanilla. Causes you to charge an enemy, immobilizing and interrupting any spell being cast for 4 sec.",
+       "reads": []
+      },
+      {
+       "name": "Stalker",
+       "ranks": 2,
+       "text": "Prowl loses its movement penalty; you may Prowl in combat once every 60 seconds. -",
+       "reads": [
+        "stealth"
+       ]
+      },
+      {
+       "name": "Rend and Tear",
+       "ranks": 3,
+       "text": "Shred works from the front against a bleeding target; Shred refreshes Rake; a critical Shred reduces Ferocious Bite's cost. -",
+       "reads": []
+      },
+      {
+       "name": "Primal Fury",
+       "ranks": 3,
+       "text": "Critical strikes grant an extra combo point; crits in bear form grant rage; a crit at 5 combo points refunds the finisher.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Blood Frenzy",
+       "ranks": 2,
+       "text": "Kept and reworked to a combo point interaction rather than an energy percentage. -",
+       "reads": []
+      },
+      {
+       "name": "Opportunist",
+       "ranks": 2,
+       "text": "Shred may be used from the front against a stunned target; Shred refreshes Rake's duration. -",
+       "reads": []
+      },
+      {
+       "name": "Wild Aspect",
+       "ranks": 3,
+       "text": "Cat abilities benefit from your bear armor; bear abilities benefit from your cat critical strike chance; one active buff carries across a shift. -",
+       "reads": []
+      },
+      {
+       "name": "Savage Fury",
+       "ranks": 3,
+       "text": "Claw, Rake, Maul, and Swipe each gain an effect rather than a damage percentage.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Faerie Fire (Feral)",
+       "ranks": 1,
+       "text": "Kept from vanilla. Decrease the armor of the target by 175 for 40 sec. While affected, the target cannot stealth or turn invisible.",
+       "reads": [
+        "stealth"
+       ]
+      },
+      {
+       "name": "Nature's Grip",
+       "ranks": 3,
+       "text": "Sideways node. Entangling Roots may be cast in form; Moonfire may be cast in form at reduced damage; your bleeds scale with your spell critical strike chance. Every druid has both spells, so it stands alone, and it is worth most to a Balance main at 26/25. -",
+       "reads": [
+        "bleed",
+        "spell"
+       ]
+      },
+      {
+       "name": "Wildheart",
+       "ranks": 3,
+       "text": "Sideways node. Healing Touch may be cast in form; heals in form cost rage or energy rather than mana; overhealing becomes attack power for 6 seconds. -",
+       "reads": []
+      },
+      {
+       "name": "Unshifted",
+       "ranks": 1,
+       "text": "Subtraction node. You may cast any spell while in form. Your form's armor and attack power bonuses are halved. Vanilla's three-point tier becomes eight, and the two sideways nodes are what make a druid who does two things a character rather than a compromise.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Heart of the Wild",
+       "ranks": 5,
+       "text": "Kept from vanilla. Increases your Intellect by N%. In addition, while in Bear or Dire Bear Form your Stamina is increased by N% and while in Cat Form your Strength is increased by N%.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Apex Predator",
+       "ranks": 1,
+       "text": "Your combo points persist through form changes and through target changes. Leader of the Pack moves to the depth dividend at 30 points, on exactly the reasoning applied to Trueshot Aura in Section 7.1. It is a flat aura given to other people sitting in the capstone slot, and the ",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Druid Restoration",
+   "class": "Druid",
+   "availablePoints": 52,
+   "statedPoints": 55,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Furor",
+       "ranks": 5,
+       "text": "untouched, for the same reason as Omen of Clarity in Section 16.1: it is a functioning cross-tree draw that arose without design.",
+       "reads": []
+      },
+      {
+       "name": "Improved Mark of the Wild",
+       "ranks": 5,
+       "text": "reworked to raid-buff behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Nature's Focus",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells.",
+       "reads": []
+      },
+      {
+       "name": "Improved Enrage",
+       "ranks": 2,
+       "text": "Kept from vanilla. The Enrage ability now instantly generates N Rage.",
+       "reads": []
+      },
+      {
+       "name": "Regrowth",
+       "ranks": 5,
+       "text": "replacing Improved Healing Touch: Regrowth's direct and periodic halves may be split across two targets, then the periodic half refreshes on your Rejuvenation, then a critical direct half doubles the periodic, then it may be cast while moving, then it cannot be dispelled.",
+       "reads": [
+        "periodic"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Insect Swarm",
+       "ranks": 1,
+       "text": "Kept from vanilla. The enemy is swarmed by insects, decreasing their chance to hit by 2% and causing 66 Nature damage over 12 sec.",
+       "reads": []
+      },
+      {
+       "name": "Reflection",
+       "ranks": 3,
+       "text": "Kept from vanilla. Allows N% of your Mana regeneration to continue while casting.",
+       "reads": []
+      },
+      {
+       "name": "Subtlety",
+       "ranks": 5,
+       "text": "reworked from a threat percentage to threat behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Improved Rejuvenation",
+       "ranks": 3,
+       "text": "reworked to stacking behavior.",
+       "reads": []
+      },
+      {
+       "name": "Living Seed",
+       "ranks": 5,
+       "text": "a critical heal leaves a seed that blooms when the target is next struck, then the seed persists through your death, then two may be active, then blooming refunds mana, then a bloom applies Rejuvenation.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Nature's Swiftness",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, your next Nature spell becomes an instant cast spell.",
+       "reads": [
+        "nature"
+       ]
+      },
+      {
+       "name": "Gift of Nature",
+       "ranks": 3,
+       "text": "Kept from vanilla. Increases the effect of all healing spells by N%.",
+       "reads": []
+      },
+      {
+       "name": "Wild Growth",
+       "ranks": 3,
+       "text": "sideways: your heals over time benefit from your spell critical chance, Moonfire refreshes Rejuvenation. **Three mutually exclusive paths at 1 point each**, which is the answer to the no-choice problem:",
+       "reads": [
+        "heal",
+        "periodic",
+        "spell"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Improved Regrowth",
+       "ranks": 5,
+       "text": "Kept from vanilla. Increases the critical effect chance of your Regrowth spell by N%.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Swiftmend",
+       "ranks": 1,
+       "text": "Kept from vanilla. Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Hunter Beast Mastery",
+   "class": "Hunter",
+   "availablePoints": 51,
+   "statedPoints": 48,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Improved Aspect of the Hawk",
+       "ranks": 5,
+       "text": "Kept from vanilla. While Aspect of the Hawk is active, all normal ranged attacks have a N% chance of increasing ranged attack speed by 30% for 12 sec.",
+       "reads": [
+        "ranged"
+       ]
+      },
+      {
+       "name": "Kindred",
+       "ranks": 5,
+       "text": "replacing Endurance Training: your pet inherits your resistances, then your critical strike chance, then your Hunter's Mark bonus, then it holds threat through your Feign Death, then it attacks a target you Scatter Shot without breaking it.",
+       "reads": [
+        "pet"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Improved Revive Pet",
+       "ranks": 2,
+       "text": "Kept from vanilla. Revive Pet's casting time is reduced by N sec, mana cost is reduced by N%, and increases the health your pet returns with by an additional N%.",
+       "reads": [
+        "pet"
+       ]
+      },
+      {
+       "name": "Pack Leader",
+       "ranks": 5,
+       "text": "your pet's family ability gains a second effect, differing per family, so which pet you brought decides what you can do.",
+       "reads": [
+        "pet"
+       ]
+      },
+      {
+       "name": "Bestial Bond",
+       "ranks": 5,
+       "text": "your pet's damage feeds your focus, then your critical strikes, then your traps arm faster while it holds aggro, then commands cost no global cooldown, then it executes one queued command after dying.",
+       "reads": [
+        "pet",
+        "trap"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Unleashed Fury",
+       "ranks": 5,
+       "text": "reworked to pet ability behavior.",
+       "reads": []
+      },
+      {
+       "name": "Pathfinding",
+       "ranks": 3,
+       "text": "your pet keeps pace with you mounted, then closes through crowd control, then reaches a target you cannot see.",
+       "reads": [
+        "pet"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Ferocity",
+       "ranks": 5,
+       "text": "reworked from critical chance to what a pet critical does.",
+       "reads": []
+      },
+      {
+       "name": "Improved Mend Pet",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives the Mend Pet spell a N% chance of cleansing 1 Curse, Disease, Magic or Poison effect from the pet each tick.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Intimidation",
+       "ranks": 1,
+       "text": "Kept from vanilla. Command your pet to intimidate the target on the next successful melee attack, causing a high amount of threat and stunning the target for 3 sec.",
+       "reads": [
+        "melee",
+        "pet"
+       ]
+      },
+      {
+       "name": "Spirit Bond",
+       "ranks": 2,
+       "text": "Kept from vanilla. While your pet is active, you and your pet will regenerate N% of total health every 10 sec.",
+       "reads": [
+        "pet"
+       ]
+      },
+      {
+       "name": "Marksman's Bond",
+       "ranks": 4,
+       "text": "sideways: your pet's attacks apply your Hunter's Mark, your Aimed Shot refreshes its focus, its criticals reduce your Rapid Fire cooldown. Every hunter has a pet and a mark, so it stands alone.",
+       "reads": [
+        "pet"
+       ]
+      },
+      {
+       "name": "Blood Bond",
+       "ranks": 1,
+       "text": "subtraction: your health and your pet's become a single shared pool, and damage to either reduces both.",
+       "reads": [
+        "pet"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Frenzy",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives your pet a N% chance to gain a 30% attack speed increase for 8 sec after dealing a critical strike.",
+       "reads": [
+        "pet"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Bestial Wrath",
+       "ranks": 1,
+       "text": "Kept from vanilla. Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed.",
+       "reads": [
+        "pet"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Hunter Marksmanship",
+   "class": "Hunter",
+   "availablePoints": 53,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Steady Aim",
+       "ranks": 5,
+       "text": "Arcane Shot stops clipping your Auto Shot; then Multi-Shot stops; then movement no longer resets the swing timer; then Aimed Shot becomes castable while moving; then Auto Shot keeps firing during Aimed Shot's cast. -",
+       "reads": []
+      },
+      {
+       "name": "Marked Quarry",
+       "ranks": 5,
+       "text": "Hunter's Mark shows the target's health to your party; Auto Shots on a marked target cannot be dodged; the mark jumps to the nearest enemy on death; marking no longer breaks Feign Death; a marked target shows on your minimap at any range.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Ranger's Cadence",
+       "ranks": 5,
+       "text": "Arcane Shot refunds its cooldown on a critical strike; Multi-Shot applies Serpent Sting to everything it hits; Arcane Shot removes one magic effect; Multi-Shot gains a fourth target; Arcane Shot and Multi-Shot stop sharing a cooldown. -",
+       "reads": []
+      },
+      {
+       "name": "Hawk Eye",
+       "ranks": 3,
+       "text": "Concussive Shot and Scatter Shot gain your full ranged range; holding position for 3 seconds extends your range further; you can fire on a marked target you cannot see. -",
+       "reads": []
+      },
+      {
+       "name": "Bullseye",
+       "ranks": 2,
+       "text": "Aimed Shot can be released early for reduced damage; Aimed Shot cannot be resisted. Raw range moves to the dividend. Hawk Eye becomes about what range lets you do rather than how much of it you have.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Aimed Shot",
+       "ranks": 1,
+       "text": "Kept from vanilla. An aimed shot that increases ranged damage by 70",
+       "reads": []
+      },
+      {
+       "name": "Killing Instinct",
+       "ranks": 5,
+       "text": "Aimed Shot refreshes Hunter's Mark; it cannot be dodged or parried; it does not break your own trap; a killing blow with it refunds its mana; it resets Scatter Shot. -",
+       "reads": []
+      },
+      {
+       "name": "Distracting Fire",
+       "ranks": 3,
+       "text": "Concussive Shot may stun; the slow spreads to one nearby enemy; a stunned target cannot regain movement speed for 4 seconds.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Venomshot",
+       "ranks": 5,
+       "text": "Serpent Sting ticks twice as fast below 20% health; it cannot be dispelled; it spreads on death; it applies through immunities to poison; refreshing carries remaining damage forward. -",
+       "reads": []
+      },
+      {
+       "name": "Ranger's Focus",
+       "ranks": 5,
+       "text": "Standing still builds Focus stacks that empower your next Aimed Shot; stacks persist through one movement; they are not lost on a miss; they double during Rapid Fire; a full stack makes the next Aimed Shot instant.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Scatter Shot",
+       "ranks": 1,
+       "text": "Kept from vanilla. A short range shot that deals 50% wepon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used.",
+       "reads": []
+      },
+      {
+       "name": "Pack Tactics",
+       "ranks": 3,
+       "text": "Sideways node. Your pet's Bite and Claw gain your ranged critical strike chance; your pet gains your Hunter's Mark bonus; your pet's critical strikes refresh Serpent Sting on its target. *Rewritten under Section 5.7's rule.* The first draft made rank 3 read \"Bestial Wrath also gr",
+       "reads": [
+        "pet"
+       ]
+      },
+      {
+       "name": "Sure Shot",
+       "ranks": 1,
+       "text": "Subtraction node. Your ranged attacks can no longer miss or be resisted. Your ranged attacks can no longer critically strike. -",
+       "reads": [
+        "ranged"
+       ]
+      },
+      {
+       "name": "Volley Discipline",
+       "ranks": 3,
+       "text": "Volley may be channelled while moving; Volley applies Hunter's Mark to everything it hits; a Volley tick refreshes Serpent Sting. Pack Tactics is the node a Beast Mastery hunter crosses for, reachable at 21 points invested. Note the shape that actually reaches it: not 31/20, whic",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Rapid Killing",
+       "ranks": 5,
+       "text": "Rapid Fire's cooldown drops on a killing blow; it no longer costs mana; it extends when you critically strike; it grants your party your Auto Shot speed for 5 seconds; using it resets Aimed Shot.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Trueshot",
+       "ranks": 1,
+       "text": "Your Aimed Shot loses its cast time entirely, but can only be fired after three consecutive Auto Shots have landed. The aura is gone from this slot and now arrives free with depth. What replaces it converts the spec's worst mechanical friction into its payoff: Aimed Shot stops be",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Hunter Survival",
+   "class": "Hunter",
+   "availablePoints": 52,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Trapper",
+       "ranks": 5,
+       "text": "replacing Deflection: traps arm instantly, then may be laid in combat, then two may be active at once, then they persist through your death, then laying one does not break stealth-equivalent positioning. *Monster Slaying* and",
+       "reads": [
+        "stealth",
+        "trap"
+       ]
+      },
+      {
+       "name": "Quarry",
+       "ranks": 6,
+       "text": "your damage against a creature type you have Tracked is increased, and Track swaps freely in combat.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Entrapment",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives your Immolation Trap, Frost Trap, and Explosive Trap a N% chance to entrap the target, preventing them from moving for 5 sec.",
+       "reads": []
+      },
+      {
+       "name": "Improved Wing Clip",
+       "ranks": 5,
+       "text": "kept with a Section 5.8 fallback: against immune targets it reduces damage dealt instead of rooting.",
+       "reads": []
+      },
+      {
+       "name": "Savage Strikes",
+       "ranks": 2,
+       "text": "reworked to Raptor Strike behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Deterrence",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, increases your Dodge and Parry chance by 25% for 10 sec.",
+       "reads": []
+      },
+      {
+       "name": "Clever Traps",
+       "ranks": 3,
+       "text": "trap effects cannot be dispelled, then they scale with your ranged attack power, then a broken trap refunds its cooldown.",
+       "reads": [
+        "ranged"
+       ]
+      },
+      {
+       "name": "Survivalist",
+       "ranks": 4,
+       "text": "reworked from health percentage: damage taken below 35% arms your nearest trap.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Improved Feign Death",
+       "ranks": 2,
+       "text": "Kept from vanilla. Reduces the chance your Feign Death ability will be resisted by N%.",
+       "reads": []
+      },
+      {
+       "name": "Trap Mastery",
+       "ranks": 5,
+       "text": "traps deal damage rather than only controlling, then they apply Serpent Sting, then Explosive Trap knocks back, then Freezing Trap slows a stun-immune target, then triggering one resets another.",
+       "reads": [
+        "trap"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Counterattack",
+       "ranks": 1,
+       "text": "Kept from vanilla. A strike that becomes active after parrying an opponent's attack. This attack deals 40 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried.",
+       "reads": []
+      },
+      {
+       "name": "Snare Mastery",
+       "ranks": 3,
+       "text": "sideways: your Concussive Shot and Wing Clip share their slow, your traps benefit from your ranged critical chance.",
+       "reads": [
+        "trap"
+       ]
+      },
+      {
+       "name": "Melee Cadence",
+       "ranks": 3,
+       "text": "sideways: Raptor Strike does not consume your ranged swing, Mongoose Bite triggers on a dodge as well as a parry.",
+       "reads": []
+      },
+      {
+       "name": "Lone Wolf",
+       "ranks": 1,
+       "text": "subtraction: you gain substantial damage while no pet is active, and you may not summon one.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Lightning Reflexes",
+       "ranks": 5,
+       "text": "reworked from agility percentage to avoidance behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Wyvern Sting",
+       "ranks": 1,
+       "text": "kept with a Section 5.8 fallback.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Mage Arcane",
+   "class": "Mage",
+   "availablePoints": 50,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Improved Arcane Missiles",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance to avoid interruption caused by damage while channeling Arcane Missiles.",
+       "reads": []
+      },
+      {
+       "name": "Arcane Subtlety",
+       "ranks": 5,
+       "text": "Kept from vanilla. Reduces your target's resistance to all your spells by N and reduces the threat caused by your Arcane spells by N%.",
+       "reads": [
+        "arcane",
+        "spell"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Arcane Concentration",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+       "reads": []
+      },
+      {
+       "name": "Magic Absorption",
+       "ranks": 5,
+       "text": "reworked from a resistance percentage to what absorbing does: an absorbed spell returns mana, then grants a stack, then the stack empowers your next cast.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Improved Counterspell",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives your Counterspell a N% chance to silence the target for 4 sec.",
+       "reads": []
+      },
+      {
+       "name": "Arcane Shielding",
+       "ranks": 6,
+       "text": "Mana Shield converts damage at a better rate, then does not break on control effects, then may be cast on an ally, then refreshes on a critical strike, then absorbs magic as well as physical, then its expiry deals arcane damage.",
+       "reads": [
+        "absorb"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Arcane Meditation",
+       "ranks": 3,
+       "text": "Kept from vanilla. Allows N% of your Mana regeneration to continue while casting.",
+       "reads": []
+      },
+      {
+       "name": "Temporal Flux",
+       "ranks": 5,
+       "text": "your next spell after a Blink is instant, then Blink removes roots, then Presence of Mind's cooldown drops on a critical strike, then Evocation may be channelled while moving, then Blink resets Frost Nova.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Presence of Mind",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell.",
+       "reads": []
+      },
+      {
+       "name": "Arcane Potency",
+       "ranks": 3,
+       "text": "sideways: your Fire and Frost spells benefit from Clearcasting without consuming it, Arcane Missiles applies Ignite or Chill depending on your last cast.",
+       "reads": [
+        "fire",
+        "frost"
+       ]
+      },
+      {
+       "name": "Spellsteal",
+       "ranks": 3,
+       "text": "sideways: Counterspell removes one beneficial magic effect and grants it to you.",
+       "reads": []
+      },
+      {
+       "name": "Mana Burn",
+       "ranks": 1,
+       "text": "subtraction: your spell damage is greatly increased and your mana pool is halved.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Arcane Instability",
+       "ranks": 5,
+       "text": "reworked from spell damage and critical chance to Clearcasting behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Arcane Power",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, your spells deal 30% more damage while costing 30% more mana to cast. This effect lasts 15 sec.",
+       "reads": [
+        "spell"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Mage Fire",
+   "class": "Mage",
+   "availablePoints": 51,
+   "statedPoints": null,
+   "extraction": "hand-written",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Improved Fireball",
+       "ranks": 5,
+       "text": "Fireball applies a burn stack; at three the next is instant; it cannot be resisted; it refreshes Ignite; a critical resets Fire Blast.",
+       "reads": []
+      },
+      {
+       "name": "Impact",
+       "ranks": 5,
+       "text": "Your Fire spells stun on critical strike, with a graded fallback reducing damage dealt against stun-immune targets.",
+       "reads": [
+        "fire"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Ignite",
+       "ranks": 5,
+       "text": "Your Fire criticals burn the target over time; the burn spreads on death; it stacks; it refreshes on any Fire cast; it cannot be dispelled.",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Flame Throwing",
+       "ranks": 2,
+       "text": "Fire spells reach further; Scorch may be cast while moving.",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Improved Fire Blast",
+       "ranks": 3,
+       "text": "Fire Blast refreshes Ignite; it may be cast while casting; a critical resets its cooldown.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Incinerate",
+       "ranks": 2,
+       "text": "Fire Blast and Scorch consume Ignite for burst damage.",
+       "reads": []
+      },
+      {
+       "name": "Improved Flamestrike",
+       "ranks": 3,
+       "text": "Flamestrike leaves burning ground; it applies Ignite; it follows a marked target.",
+       "reads": []
+      },
+      {
+       "name": "Pyroblast",
+       "ranks": 1,
+       "text": "Kept from vanilla. Hurls an immense fiery boulder that causes 141 to 188 Fire damage and an additional 56 Fire damage over 12 sec.",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Burning Soul",
+       "ranks": 2,
+       "text": "Fire spells cannot be pushed back; threat from Fire is reduced.",
+       "reads": [
+        "fire",
+        "threat"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Improved Scorch",
+       "ranks": 3,
+       "text": "Scorch applies a stacking fire vulnerability; the stack persists through target death; at full stacks Scorch is free.",
+       "reads": []
+      },
+      {
+       "name": "Master of Elements",
+       "ranks": 3,
+       "text": "Fire criticals refund mana; then refund the full cast; then grant Clearcasting.",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Critical Mass",
+       "ranks": 3,
+       "text": "Reworked to what a Fire critical does rather than how often it happens.",
+       "reads": [
+        "fire"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Blast Wave",
+       "ranks": 1,
+       "text": "Kept from vanilla. A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 154 to 187 Fire damage, and dazing them for 6 sec.",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Frostfire",
+       "ranks": 3,
+       "text": "Cross-tree. Your Frostbolt counts as a Fire spell as well as Frost; Ignite may be applied by Frost criticals; Fire Blast consumes Chill for damage.",
+       "reads": [
+        "fire",
+        "frost"
+       ]
+      },
+      {
+       "name": "Fire and Ice",
+       "ranks": 2,
+       "text": "Cross-tree. Your Fire spells apply Chill to targets already burning.",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Immolation",
+       "ranks": 2,
+       "text": "Subtraction. Your Fire damage over time effects deal double damage. Your direct Fire spells can no longer critically strike.",
+       "reads": [
+        "fire",
+        "periodic"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Fire Power",
+       "ranks": 5,
+       "text": "Reworked from a damage percentage into Ignite behaviour: Ignite ticks faster, then spreads further, then applies to Blast Wave, then cannot be outpaced by healing, then detonates on expiry.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Combustion",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 critical strikes with Fire spells.",
+       "reads": [
+        "fire"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Mage Frost",
+   "class": "Mage",
+   "availablePoints": 52,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Improved Frostbolt",
+       "ranks": 5,
+       "text": "reworked from cast time: Frostbolt applies two stacks of Chill, then cannot be resisted against a Chilled target, then reduces its own cast time per consecutive cast, then refreshes Winter's Chill, then a critical hit resets Frost Nova.",
+       "reads": []
+      },
+      {
+       "name": "Frost Warding",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases the armor and resistances given by your Frost Armor and Ice Armor spells by N%. In addition, gives your Frost Ward a N% chance to reflect Frost spells and effects while active.",
+       "reads": [
+        "frost"
+       ]
+      },
+      {
+       "name": "Elemental Precision",
+       "ranks": 3,
+       "text": "Kept from vanilla. Reduces the chance that the opponent can resist your Frost and Fire spells by N%",
+       "reads": [
+        "fire",
+        "frost"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Frostbite",
+       "ranks": 3,
+       "text": "Kept from vanilla. Gives your Chill effects a N% chance to freeze the target for 5 sec.",
+       "reads": [
+        "frost"
+       ]
+      },
+      {
+       "name": "Improved Frost Nova",
+       "ranks": 2,
+       "text": "Kept from vanilla. Reduces the cooldown of your Frost Nova spell by N sec.",
+       "reads": [
+        "frost"
+       ]
+      },
+      {
+       "name": "Permafrost",
+       "ranks": 3,
+       "text": "reworked from duration to what a Chill does.",
+       "reads": []
+      },
+      {
+       "name": "Deep Freeze",
+       "ranks": 5,
+       "text": "Chilled targets take increased damage from your other schools, then Frost Nova's break threshold rises, then Chill spreads on death, then Blizzard applies Frostbite, then a frozen target's Shatter bonus applies to your party.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Cold Snap",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, this spell finishes the cooldown on all your Frost spells.",
+       "reads": [
+        "frost"
+       ]
+      },
+      {
+       "name": "Improved Blizzard",
+       "ranks": 3,
+       "text": "Kept from vanilla. Adds a chill effect to your Blizzard spell. This effect lowers the target's movement speed by N%. Lasts 1.50 sec.",
+       "reads": []
+      },
+      {
+       "name": "Piercing Ice",
+       "ranks": 3,
+       "text": "reworked to Chill interaction.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Shatter",
+       "ranks": 1,
+       "text": "Kept from vanilla. Increases the critical strike chance of all your spells against frozen targets by N%.",
+       "reads": [
+        "spell"
+       ]
+      },
+      {
+       "name": "Arctic Reach",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases the range of your Frostbolt and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by N%.",
+       "reads": [
+        "frost"
+       ]
+      },
+      {
+       "name": "Frost Channeling",
+       "ranks": 5,
+       "text": "reworked from mana cost: channelled spells cannot be pushed back, then Blizzard follows your target, then Evocation may be used in combat once, then channels benefit from Clearcasting, then a broken channel refunds its mana.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Ice Block",
+       "ranks": 1,
+       "text": "Kept from vanilla. You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot, move or cast spells.",
+       "reads": []
+      },
+      {
+       "name": "Improved Cone of Cold",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases the damage dealt by your Cone of Cold spell by N%.",
+       "reads": []
+      },
+      {
+       "name": "Frostfire",
+       "ranks": 3,
+       "text": "sideways: your Fire spells apply Chill, Frostbolt benefits from Ignite, Blast Wave applies Frostbite.",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Absolute Zero",
+       "ranks": 2,
+       "text": "subtraction: your Frost spells always apply their full Chill and cannot be resisted; they can no longer critically strike.",
+       "reads": [
+        "frost"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Winter's Chill",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives your Frost damage spells a N% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec. Stacks up to 5 times.",
+       "reads": [
+        "frost"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Ice Barrier",
+       "ranks": 1,
+       "text": "Kept from vanilla. Instantly sheilds you, absorbing 455 damage. Lasts 1 min. While the shield holds, spells will not be interrupted.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Paladin Holy",
+   "class": "Paladin",
+   "availablePoints": 49,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Sanctified Word",
+       "ranks": 5,
+       "text": "your first heal on a target cannot be interrupted, then it cannot be overhealed, then it refreshes your Seal, then it grants the target your aura at double effect, then it applies to everyone within 8 yards of them.",
+       "reads": []
+      },
+      {
+       "name": "Beacon",
+       "ranks": 5,
+       "text": "a target you heal is marked, then heals on others echo to them, then the mark persists through your death, then it transfers your Judgement, then two may be active.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Spiritual Focus",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives your Flash of Light and Holy Light spells a N% chance to not lose casting time when you take damage.",
+       "reads": []
+      },
+      {
+       "name": "Improved Seal of Righteousness",
+       "ranks": 5,
+       "text": "reworked to Seal behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Consecration",
+       "ranks": 1,
+       "text": "Kept from vanilla. Consecrates the land beneath the Paladin, doing 64 Holy damage over 8 sec to enemies who enter the area.",
+       "reads": []
+      },
+      {
+       "name": "Improved Lay on Hands",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives the target of your Lay on Hands spell a N% bonus to their armor value from items for 2 min. In addition, the cooldown of your Lay on Hands spell is reduced by N min.",
+       "reads": []
+      },
+      {
+       "name": "Healing Light",
+       "ranks": 5,
+       "text": "reworked from a healing percentage to what a heal does at thresholds.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Illumination",
+       "ranks": 5,
+       "text": "Kept from vanilla. After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a N% chance to gain Mana equal to the base cost of the spell.",
+       "reads": []
+      },
+      {
+       "name": "Improved Blessing of Wisdom",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases the effect of your Blessing of Wisdom spell by N%.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Divine Favor",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.",
+       "reads": []
+      },
+      {
+       "name": "Judgement of Light",
+       "ranks": 3,
+       "text": "replacing Lasting Judgement: your Judgement heals whoever strikes the target, then scales with your healing bonus, then cannot be overwritten.",
+       "reads": [
+        "heal"
+       ]
+      },
+      {
+       "name": "Righteous Shield",
+       "ranks": 3,
+       "text": "sideways: your Blessing of Sanctuary scales with your healing bonus, Holy Shield may be maintained while healing.",
+       "reads": [
+        "heal"
+       ]
+      },
+      {
+       "name": "Devotion",
+       "ranks": 1,
+       "text": "subtraction: your heals cost no mana while above 50% health; below 50% you cannot heal at all.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Holy Power",
+       "ranks": 5,
+       "text": "reworked from critical chance to critical heal behavior.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Holy Shock",
+       "ranks": 1,
+       "text": "Kept from vanilla. Blasts the target with Holy energy, causing 204 to 220 Holy damage to an enemy, or 204 to 220 healing to an ally.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Paladin Protection",
+   "class": "Paladin",
+   "availablePoints": 52,
+   "statedPoints": 50,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Righteous Defense",
+       "ranks": 5,
+       "text": "Damage you take generates threat on its source; then on everything within 8 yards; then blocked damage generates double; then threat you generate does not decay while you hold aggro; then a target that switches off you takes holy damage. -",
+       "reads": [
+        "holy",
+        "threat"
+       ]
+      },
+      {
+       "name": "Redoubt",
+       "ranks": 5,
+       "text": "Blocking refreshes your Seal; consecutive blocks raise your block value for 6 seconds; a block below 30% health grants a charge of Holy Shield; blocking a critical strike stuns nothing but refunds mana; blocks generate threat on the whole encounter.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Guardian's Favor",
+       "ranks": 2,
+       "text": "Blessing of Protection's cooldown drops; it may be cast on yourself while silenced. -",
+       "reads": []
+      },
+      {
+       "name": "Anvil",
+       "ranks": 5,
+       "text": "Consecration generates threat on targets that resist it; it follows you for 3 seconds; it refreshes when you block; it applies your Judgement debuff; it cannot be outranged by a target inside its original radius. -",
+       "reads": []
+      },
+      {
+       "name": "Improved Righteous Fury",
+       "ranks": 3,
+       "text": "Righteous Fury also converts healing received into threat; it persists through death; it applies to your Consecration.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Blessing of Kings",
+       "ranks": 1,
+       "text": "Kept from vanilla. Places a Blessing on a friendly target, increasing total stats by 10% for 5 min. Players may only have one Blessing on them per Paladin at any one time.",
+       "reads": []
+      },
+      {
+       "name": "Reckoning",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance to gain an extra attack after being the victim of a critical strike.",
+       "reads": []
+      },
+      {
+       "name": "Shield Specialization",
+       "ranks": 3,
+       "text": "Your shield's absorb applies to your party's next hit; absorbed damage generates threat; your block value scales with your Blessing of Sanctuary. -",
+       "reads": [
+        "absorb"
+       ]
+      },
+      {
+       "name": "Bulwark",
+       "ranks": 3,
+       "text": "Shield Block covers an extra attack; it may be used while stunned; it refreshes on a parry.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Improved Hammer of Justice",
+       "ranks": 3,
+       "text": "Cooldown drops; it may be cast at range; per Section 5.8 it also reduces a stun-immune target's damage by 10% for its duration. -",
+       "reads": []
+      },
+      {
+       "name": "Aura Mastery",
+       "ranks": 3,
+       "text": "Your aura applies to the whole raid rather than your party; you may run two auras at once; switching auras costs no global cooldown.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Blessing of Sanctuary",
+       "ranks": 1,
+       "text": "Kept from vanilla. Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 10 for 5 min. In addition, when the target blocks a melee attack the attacker will take 14 Holy damage. Players may only have one Blessing on them per Paladin at any one t",
+       "reads": [
+        "melee"
+       ]
+      },
+      {
+       "name": "Hand of Light",
+       "ranks": 3,
+       "text": "Sideways node. Your Holy Light and Flash of Light generate no threat on a target you are tanking; healing yourself refreshes Righteous Fury; your heals scale with your block value. Every paladin heals, so it stands alone, worth most to a Holy main at 26/25. -",
+       "reads": [
+        "heal"
+       ]
+      },
+      {
+       "name": "Crusader's Resolve",
+       "ranks": 3,
+       "text": "Sideways node. Your Seal damage generates threat as though doubled; Seal of Command may proc from a block; your Judgement applies to everything striking you. -",
+       "reads": []
+      },
+      {
+       "name": "Immovable",
+       "ranks": 1,
+       "text": "Subtraction node. You cannot be moved, feared, stunned, or knocked back. Your movement speed is reduced by 30% at all times.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Ardent Defender",
+       "ranks": 5,
+       "text": "Below 35% health, damage taken is reduced; then a killing blow is survived once every 3 minutes; then survival grants a full Holy Shield; then it heals you for the overkill; then it resets Lay on Hands. One-Handed Weapon Specialization deleted outright.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Holy Shield",
+       "ranks": 1,
+       "text": "Kept from vanilla. Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Paladin Retribution",
+   "class": "Paladin",
+   "availablePoints": 55,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Sanctified Blessings",
+       "ranks": 5,
+       "text": "Greater Blessings last twice as long; they may be cast on any raid member rather than only your party; recasting one does not clear it from others; they persist through the target's death; one cast applies to an entire party. -",
+       "reads": []
+      },
+      {
+       "name": "Crusader's Word",
+       "ranks": 5,
+       "text": "Blessing of Might also grants you its attack power; Blessing of Wisdom returns mana on your critical strikes; Blessing of Freedom may be cast on yourself while stunned; Blessing of Sacrifice transfers threat as well as damage; a blessing you cast refreshes your current Seal.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Seal Mastery",
+       "ranks": 5,
+       "text": "Your Seal persists through weapon swaps; judging does not consume it; a Seal refreshes when you Judge; two Seals may be active at once; your Seal applies to your first attack after leaving combat. -",
+       "reads": []
+      },
+      {
+       "name": "Improved Judgement",
+       "ranks": 3,
+       "text": "Judgement's cooldown drops; it may be cast while moving; it applies your Seal to a second nearby target. -",
+       "reads": []
+      },
+      {
+       "name": "Vindication",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by N% for 10 sec.",
+       "reads": [
+        "melee"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Seal of Command",
+       "ranks": 1,
+       "text": "Kept from vanilla. Gives the Paladin a chance to deal Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.\\n\\nUnleashing this Seal's energy will judge an enemy, instantly causing 90 to 95 Holy damage, 137 to 1",
+       "reads": []
+      },
+      {
+       "name": "Righteous Fury",
+       "ranks": 5,
+       "text": "Consecration ticks faster on targets you have Judged; Holy damage you deal refreshes Judgement; your Judgement debuff cannot be overwritten by another paladin; Judging a target already Judged by you extends both; Consecration follows you for its first 3 seconds. -",
+       "reads": []
+      },
+      {
+       "name": "Pursuit of Justice",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases movement and mounted movement speed by N%. This does not stack with other movement speed increasing effects.",
+       "reads": []
+      },
+      {
+       "name": "Eye for an Eye",
+       "ranks": 3,
+       "text": "Kept from vanilla. All spell criticals against you cause N% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.",
+       "reads": [
+        "spell"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Vengeance",
+       "ranks": 5,
+       "text": "Rewritten from a flat damage bonus to a chain: a critical strike opens a window; inside it your next Judgement is free; then Consecration does not consume mana; then the window extends on each crit; then it may be opened by your Seal's proc rather than only by your own crit. -",
+       "reads": []
+      },
+      {
+       "name": "Zeal",
+       "ranks": 5,
+       "text": "Two-handed weapons gain an effect rather than a damage percentage: crits apply a healing reduction; slow weapons make Seal of Command proc harder; your first attack from more than 8 yards cannot be avoided; Judgement resets your swing timer favourably; a killing blow refreshes yo",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Hammer of Wrath",
+       "ranks": 1,
+       "text": "Moved into the tree as a genuine button rather than a trainer skill. -",
+       "reads": []
+      },
+      {
+       "name": "Sanctified Light",
+       "ranks": 3,
+       "text": "Sideways node. Holy Light and Flash of Light may be cast while your Seal is active without breaking it; your heals extend your Judgement; healing a target below 30% refreshes your Seal. Every paladin heals, so it stands alone, and it is worth most to a Holy main at 26/25. -",
+       "reads": [
+        "heal"
+       ]
+      },
+      {
+       "name": "Bulwark of Faith",
+       "ranks": 3,
+       "text": "Sideways node. Blessing of Sanctuary's block damage scales with your attack power; Holy Shield may be maintained while a two-handed weapon is equipped; damage you block refreshes your Seal. -",
+       "reads": []
+      },
+      {
+       "name": "Zealotry",
+       "ranks": 1,
+       "text": "Subtraction node. Your Seals never expire and cannot be dispelled. You may no longer benefit from any blessing cast by another paladin. Sanctity Aura moves to the depth dividend at 20 points, on the same reasoning as Trueshot Aura and Leader of the Pack. Improved Enslave-style fi",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Crusade",
+       "ranks": 5,
+       "text": "Your Judgement applies to everything your Consecration touches; then Seal of Command chains to a second target; then Judging refreshes every blessing you have cast on your party; then your Seal procs cannot be resisted; then a Judgement that kills its target has no cooldown.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Repentance",
+       "ranks": 1,
+       "text": "Kept, with the graded fallback from Section 5.8: against a target immune to incapacitation it instead removes all of the target's beneficial magic effects. ### 11.3 After 52 points against vanilla's 45. Sixteen nodes against fifteen. Forced flat to the capstone: zero, against 24 ",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Priest Discipline",
+   "class": "Priest",
+   "availablePoints": 54,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Silent Resolve",
+       "ranks": 5,
+       "text": "Reworked from a threat percentage: your first heal on a target generates no threat; then overhealing generates none; then healing a target below 30% generates none; then threat you would generate transfers to the tank; then your shields generate none. -",
+       "reads": [
+        "absorb"
+       ]
+      },
+      {
+       "name": "Inner Focus",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, reduces the Mana cost of your next spell by 100% and increases its critical effect chance by 25% if it is capable of a critical effect.",
+       "reads": []
+      },
+      {
+       "name": "Improved Power Word: Shield",
+       "ranks": 4,
+       "text": "The shield does not break on your own damage; it may be cast on a target already shielded, refreshing rather than failing; its expiry heals for what it did not absorb; a shield that absorbs its full value refunds its mana. Wand Specialization and Unbreakable Will are both deleted",
+       "reads": [
+        "absorb"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Meditation",
+       "ranks": 3,
+       "text": "Kept from vanilla. Allows N% of your Mana regeneration to continue while casting.",
+       "reads": []
+      },
+      {
+       "name": "Martyrdom",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives you a N% chance to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage and increases resistance to Interrupt ",
+       "reads": []
+      },
+      {
+       "name": "Improved Power Word: Fortitude",
+       "ranks": 2,
+       "text": "Fortitude applies to the raid rather than the party; it persists through death. -",
+       "reads": []
+      },
+      {
+       "name": "Absolution",
+       "ranks": 5,
+       "text": "Dispel Magic removes one additional effect; it may be cast while casting; dispelling grants the target a shield; dispelling an enemy buff damages them; failed dispels refund mana.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Focused Will",
+       "ranks": 5,
+       "text": "Casting is not interrupted by damage below a threshold; then pushback is capped at once per cast; then a completed heal under fire grants Focused Casting; then interruption instead extends your next cast's power; then you may cast while silenced once every 45 seconds. -",
+       "reads": []
+      },
+      {
+       "name": "Reflective Shield",
+       "ranks": 3,
+       "text": "Power Word: Shield returns a portion of absorbed damage; the return scales with your spell damage; it applies to everything attacking the shielded target.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Mental Agility",
+       "ranks": 5,
+       "text": "Reworked: instant spells do not trigger the global cooldown when cast on a target below 20%; then Renew may be applied to two targets; then Shield and Renew share a cast; then instants refresh Inner Fire; then your next instant after a Greater Heal is free. -",
+       "reads": []
+      },
+      {
+       "name": "Improved Inner Fire",
+       "ranks": 2,
+       "text": "Inner Fire is not consumed by damage; it grants spell damage as well as armor. -",
+       "reads": []
+      },
+      {
+       "name": "Mana Burn",
+       "ranks": 3,
+       "text": "Reworked and given a Section 5.8 fallback: against a target with no mana it instead deals shadow damage equal to what it would have burned.",
+       "reads": [
+        "shadow"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Divine Spirit",
+       "ranks": 1,
+       "text": "Kept from vanilla. Holy power infuses the target, increasing their Spirit by 17 for 30 min.",
+       "reads": []
+      },
+      {
+       "name": "Grace",
+       "ranks": 3,
+       "text": "Sideways node. Your Renew and Prayer of Healing benefit from your shield's absorb value; healing a shielded target extends the shield. Every priest has both, so it stands alone, worth most to a Holy main at 26/25. -",
+       "reads": [
+        "absorb"
+       ]
+      },
+      {
+       "name": "Shadow Affinity",
+       "ranks": 3,
+       "text": "Sideways node. Your Shadow Word: Pain refreshes when you shield its target; Mind Blast generates no threat while a shield of yours is active; your shields benefit from your shadow damage. -",
+       "reads": [
+        "absorb",
+        "shadow"
+       ]
+      },
+      {
+       "name": "Ascetic",
+       "ranks": 1,
+       "text": "Subtraction node. Your healing is increased substantially. You may no longer cast Power Word: Shield. *Ascetic is the Section 5.4 example rewritten. The original draft named it Vow of Silence and gave it a mana clause; this version trades the class's signature spell for throughpu",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Power of the Word",
+       "ranks": 5,
+       "text": "Your shields chain to a second target; then Power Infusion's cooldown drops; then shields cannot be dispelled; then a shield that expires unspent grants a charge; then a full charge makes your next Greater Heal instant.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Power Infusion",
+       "ranks": 1,
+       "text": "Kept from vanilla. Infuses the target with power, increasing their spell damage and healing by 20%. Lasts 15 sec.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Priest Holy",
+   "class": "Priest",
+   "availablePoints": 48,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Healing Focus",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives you a N% chance to avoid interruption caused by damage while casting any healing spell.",
+       "reads": []
+      },
+      {
+       "name": "Renewal",
+       "ranks": 5,
+       "text": "Renew ticks once immediately; a target at full health banks the tick; Renew's remaining duration is added when refreshed; Renew on a target below 30% heals double and ends; Renew spreads to a nearby ally when its target dies. -",
+       "reads": []
+      },
+      {
+       "name": "Holy Concentration",
+       "ranks": 3,
+       "text": "Your critical heals refund mana; then reduce your next heal's cast time; then grant the target 10% of the overheal as a shield.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Attunement",
+       "ranks": 5,
+       "text": "Reworked from Divine Fury: **your talents scale with what a heal does, not with which heal it is.** Any heal cast on a target below 50% is faster; then any heal that lands on a target at full health becomes a shield; then any overheal is banked toward your next cast; then any hea",
+       "reads": [
+        "heal"
+       ]
+      },
+      {
+       "name": "Spell Warding",
+       "ranks": 5,
+       "text": "Reworked to discrete schools, and per Section 5.8 it also reduces physical damage taken while a heal of yours is active on you.",
+       "reads": [
+        "physical"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Holy Nova",
+       "ranks": 1,
+       "text": "Kept from vanilla. Causes an explosion of holy light around the caster, causing 29 to 34 Holy damageto all enemy targets within 10 yards and healing all party members within 10 yards for 54 to 63. These effects cause no threat.",
+       "reads": []
+      },
+      {
+       "name": "Blessed Recovery",
+       "ranks": 3,
+       "text": "Kept from vanilla. After being struck by a melee or ranged critical hit, heal N% of the damage taken over 6 sec.",
+       "reads": []
+      },
+      {
+       "name": "Inspiration",
+       "ranks": 3,
+       "text": "Kept from vanilla. Increase your target's armor by N% for 15 sec after getting a critical effect from your Flash Heal, Heal, Greater Heal, or Prayer of Healing spell.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Circle of Healing",
+       "ranks": 1,
+       "text": "Added as a genuine button, the thing this tree never had. -",
+       "reads": []
+      },
+      {
+       "name": "Improved Healing",
+       "ranks": 3,
+       "text": "Reworked from mana cost: your area heals prioritise the lowest-health target; then they cannot overheal; then they refund mana per target already at full health. -",
+       "reads": []
+      },
+      {
+       "name": "Holy Reach",
+       "ranks": 3,
+       "text": "Reworked: your heals reach further; then your area heals apply to anyone within your Holy Nova radius; then range no longer reduces their effect.",
+       "reads": [
+        "heal",
+        "holy"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Spirit of Redemption",
+       "ranks": 1,
+       "text": "Kept from vanilla. Upon death, the priest becomes the Spirit of Redemption for 10 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted any spells or effects. While in this form the priest can cast any healing spell free of cost. When the effect ends, the pri",
+       "reads": []
+      },
+      {
+       "name": "Spiritual Guidance",
+       "ranks": 3,
+       "text": "Kept from vanilla. Increases spell damage and healing by up to N% of your total Spirit.",
+       "reads": []
+      },
+      {
+       "name": "Empowered Shield",
+       "ranks": 3,
+       "text": "Sideways node. Your heals on a shielded target extend the shield; a shield that breaks while you are casting refunds its mana; Power Word: Shield benefits from your healing bonus. Every priest shields, so it stands alone, worth most to a Discipline main at 26/25. -",
+       "reads": [
+        "heal"
+       ]
+      },
+      {
+       "name": "Martyr",
+       "ranks": 1,
+       "text": "Subtraction node. Your healing is increased while you are below 50% health. You may no longer heal yourself.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Spiritual Healing",
+       "ranks": 5,
+       "text": "Reworked from a healing percentage: your heals on a target you have healed in the last 6 seconds chain to a second ally; then the chain carries Renew; then it cannot overheal; then it prefers a target with no heal-over-time active; then a full chain refunds a portion of the cast.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Guardian Spirit",
+       "ranks": 1,
+       "text": "Replaces Lightwell. Place a spirit on an ally that heals them, and once, prevents a killing blow. A capstone should not depend on other players clicking something. 52 points against 48. Forced flat zero against 20 of 30. ---",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Priest Shadow",
+   "class": "Priest",
+   "availablePoints": 52,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Spirit Tap",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance to gain a 100% bonus to your Spirit after killing a target that yields experience. For the duration, your Mana will regenerate at a 50% rate while casting. Lasts 15 sec.",
+       "reads": []
+      },
+      {
+       "name": "Blackout",
+       "ranks": 5,
+       "text": "both kept, Blackout given a graded fallback per Section 5.8.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Shadow Affinity",
+       "ranks": 3,
+       "text": "Kept from vanilla. Reduces the threat generated by your Shadow spells by N%.",
+       "reads": [
+        "shadow"
+       ]
+      },
+      {
+       "name": "Shadow Focus",
+       "ranks": 5,
+       "text": "reworked from resistance to what an unresisted spell does.",
+       "reads": []
+      },
+      {
+       "name": "Improved Shadow Word: Pain",
+       "ranks": 2,
+       "text": "reworked to refresh behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Mind Flay",
+       "ranks": 1,
+       "text": "Kept from vanilla. Assault the target's mind with Shadow energy, causing 75 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+       "reads": []
+      },
+      {
+       "name": "Improved Mind Blast",
+       "ranks": 5,
+       "text": "reworked from cooldown: Mind Blast refreshes Shadow Word: Pain, then generates no threat, then applies Shadow Weaving at full stacks, then its cooldown resets on a killing blow, then it consumes Shadow Word: Pain for burst.",
+       "reads": []
+      },
+      {
+       "name": "Improved Psychic Scream",
+       "ranks": 2,
+       "text": "kept with a fallback.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Shadow Weaving",
+       "ranks": 5,
+       "text": "Kept from vanilla. Your Shadow damage spells have a N% chance to cause your target to be vulnerable to Shadow damage. This vulnerability increases the Shadow damage dealt to your target by 3% and lasts 15 sec. Stacks up to 5 times.",
+       "reads": []
+      },
+      {
+       "name": "Mind Melt",
+       "ranks": 5,
+       "text": "your periodic shadow damage refreshes on Mind Flay, then Mind Flay may be cast while moving, then it does not break on damage, then it applies Vampiric Embrace's healing, then a full channel resets Mind Blast.",
+       "reads": [
+        "periodic",
+        "shadow"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Vampiric Embrace",
+       "ranks": 1,
+       "text": "Kept from vanilla. Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 1 min.",
+       "reads": [
+        "shadow"
+       ]
+      },
+      {
+       "name": "Improved Vampiric Embrace",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases the percentage healed by Vampiric Embrace by an additional N%.",
+       "reads": []
+      },
+      {
+       "name": "Silence",
+       "ranks": 1,
+       "text": "Kept from vanilla. Silences the target, preventing them from casting spells for 5 sec.",
+       "reads": []
+      },
+      {
+       "name": "Inner Light",
+       "ranks": 3,
+       "text": "sideways: your Renew benefits from your shadow damage, your heals extend Vampiric Embrace, Power Word: Shield does not break Shadowform.",
+       "reads": [
+        "heal",
+        "shadow"
+       ]
+      },
+      {
+       "name": "Void",
+       "ranks": 1,
+       "text": "subtraction: your shadow damage is greatly increased and you may not be healed by anyone but yourself.",
+       "reads": [
+        "shadow"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Darkness",
+       "ranks": 5,
+       "text": "reworked from spell damage to Shadowform behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Shadowform",
+       "ranks": 1,
+       "text": "Kept from vanilla. Assume a Shadowform, increasing your Shadow damage by 15% and reducing Physical damage done to you by 15%. However, you may not cast Holy spells while in this form.",
+       "reads": [
+        "holy",
+        "shadow"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Rogue Assassination",
+   "class": "Rogue",
+   "availablePoints": 48,
+   "statedPoints": 52,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Remorseless Attacks",
+       "ranks": 2,
+       "text": "Kept from vanilla. After killing a target that yields experience or honor, gives you a N% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike. Lasts 20 sec.",
+       "reads": []
+      },
+      {
+       "name": "Improved Eviscerate",
+       "ranks": 3,
+       "text": "reworked to combo point behavior.",
+       "reads": []
+      },
+      {
+       "name": "Opportunity",
+       "ranks": 5,
+       "text": "your first strike from stealth grants a combo point, then Cheap Shot and Garrote share a cooldown reduction, then stealth breaks slower, then Vanish resets Cold Blood, then a stealth opener cannot miss.",
+       "reads": [
+        "stealth"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Ruthlessness",
+       "ranks": 3,
+       "text": "Kept from vanilla. Gives your finishing moves a N% chance to add a combo point to your target.",
+       "reads": []
+      },
+      {
+       "name": "Improved Slice and Dice",
+       "ranks": 3,
+       "text": "reworked to refresh behavior.",
+       "reads": []
+      },
+      {
+       "name": "Find Weakness",
+       "ranks": 2,
+       "text": "your finishers reduce armor.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Relentless Strikes",
+       "ranks": 1,
+       "text": "Kept from vanilla. Your finishing moves have a 20% chance per combo point to restore 25 energy.",
+       "reads": []
+      },
+      {
+       "name": "Puncturing Wounds",
+       "ranks": 5,
+       "text": "critical strikes with a finisher apply a bleed that scales with combo points spent.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Envenom",
+       "ranks": 5,
+       "text": "and",
+       "reads": []
+      },
+      {
+       "name": "Toxicology",
+       "ranks": 5,
+       "text": "poisons stack higher, apply from finishers, cannot be cleansed, benefit from your critical chance, and a fully stacked poison may be consumed for burst.",
+       "reads": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Cold Blood",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, or Eviscerate by 100%.",
+       "reads": []
+      },
+      {
+       "name": "Improved Kidney Shot",
+       "ranks": 3,
+       "text": "Kept from vanilla. While affected by your Kidney Shot ability, the target receives an additional N% damage from all sources.",
+       "reads": []
+      },
+      {
+       "name": "Shadow Focus",
+       "ranks": 3,
+       "text": "sideways: your stealth abilities cost less while Slice and Dice is active, Premeditation feeds Seal Fate.",
+       "reads": [
+        "stealth"
+       ]
+      },
+      {
+       "name": "Blood Price",
+       "ranks": 1,
+       "text": "subtraction: your finishers deal substantially more damage and cost health as well as energy.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Seal Fate",
+       "ranks": 5,
+       "text": "Kept from vanilla. Your critical strikes from abilities that add combo points have a N% chance to add an additional combo point.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Master Poisoner",
+       "ranks": 1,
+       "text": "replacing Vigor.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Rogue Combat",
+   "class": "Rogue",
+   "availablePoints": 57,
+   "statedPoints": 62,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Improved Gouge",
+       "ranks": 3,
+       "text": "Kept from vanilla. Increases the effect duration of your Gouge ability by N sec.",
+       "reads": []
+      },
+      {
+       "name": "Improved Sinister Strike",
+       "ranks": 2,
+       "text": "reworked to combo point behavior.",
+       "reads": []
+      },
+      {
+       "name": "Opportunist",
+       "ranks": 5,
+       "text": "Sinister Strike may be used from any angle, then it refreshes Slice and Dice, then a critical grants a combo point, then two in a row make the next free, then it applies your poison.",
+       "reads": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Riposte",
+       "ranks": 1,
+       "text": "Kept from vanilla. A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for 6 sec.",
+       "reads": []
+      },
+      {
+       "name": "Bladework",
+       "ranks": 5,
+       "text": "parrying grants a combo point, then dodging does too, then avoidance refreshes Riposte, then a parry refunds energy, then Riposte cannot be avoided.",
+       "reads": []
+      },
+      {
+       "name": "Improved Backstab",
+       "ranks": 3,
+       "text": "reworked to positional behavior.",
+       "reads": []
+      },
+      {
+       "name": "Endurance",
+       "ranks": 4,
+       "text": "Kept from vanilla. Reduces the cooldown of your Sprint and Evasion abilities by N.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Improved Sprint",
+       "ranks": 2,
+       "text": "kept with a graded fallback per Section 5.8.",
+       "reads": []
+      },
+      {
+       "name": "Adrenaline",
+       "ranks": 6,
+       "text": "energy regeneration increases below 20 energy, then a finisher refunds energy, then Evasion grants energy, then energy caps higher during Blade Flurry, then abilities cost no energy for 3 seconds after a killing blow, then Sprint costs energy rather than a cooldown.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Weapon Mastery",
+       "ranks": 5,
+       "text": "the fork: swords proc an extra attack, maces stun, fists reduce the target's attack speed, daggers gain a positional-free Backstab.",
+       "reads": []
+      },
+      {
+       "name": "Improved Kick",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives your Kick ability a N% chance to silence the target for 2 sec.",
+       "reads": []
+      },
+      {
+       "name": "Vitality",
+       "ranks": 5,
+       "text": "your poisons persist through weapon swaps, then apply from Blade Flurry, then a poison application refreshes Slice and Dice, then two poisons may be on one weapon, then poisons benefit from your critical strike chance.",
+       "reads": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Blade Flurry",
+       "ranks": 1,
+       "text": "Kept from vanilla. Increases your attack speed by 20%. In addition, attacks strike an additional nearby opponent. Lasts 15 sec.",
+       "reads": []
+      },
+      {
+       "name": "Killing Spree",
+       "ranks": 3,
+       "text": "sideways: your Backstab and Ambush benefit from your off-hand, Cheap Shot's stun applies your Expose Armor.",
+       "reads": []
+      },
+      {
+       "name": "Cutthroat",
+       "ranks": 3,
+       "text": "sideways: your poisons benefit from Lethality, Envenom-style finishers consume poison stacks for damage.",
+       "reads": [
+        "poison"
+       ]
+      },
+      {
+       "name": "Duellist",
+       "ranks": 1,
+       "text": "subtraction: you deal substantially more damage from the front and none at all from behind.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Aggression",
+       "ranks": 5,
+       "text": "reworked from a damage percentage to finisher behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Adrenaline Rush",
+       "ranks": 1,
+       "text": "Kept from vanilla. Increases your Energy regeneration rate by 100% for 15 sec.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Rogue Subtlety",
+   "class": "Rogue",
+   "availablePoints": 50,
+   "statedPoints": null,
+   "extraction": "hand-written",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Master of Deception",
+       "ranks": 5,
+       "text": "Stealth is harder to detect; then it does not break on ambient damage; then it may be entered in combat once per minute.",
+       "reads": []
+      },
+      {
+       "name": "Opportunity",
+       "ranks": 5,
+       "text": "Openers from stealth generate an extra combo point; then they cannot be dodged; then they apply Expose Armor.",
+       "reads": [
+        "stealth"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Initiative",
+       "ranks": 3,
+       "text": "Openers grant an additional combo point; the effect works on a raid pull rather than only from stealth.",
+       "reads": [
+        "stealth"
+       ]
+      },
+      {
+       "name": "Camouflage",
+       "ranks": 5,
+       "text": "Stealth movement speed rises; then Vanish resets it; then Sprint does not break stealth.",
+       "reads": [
+        "stealth"
+       ]
+      },
+      {
+       "name": "Improved Sap",
+       "ranks": 3,
+       "text": "Sap lasts longer; against sap-immune targets it instead reduces damage dealt.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Ghostly Strike",
+       "ranks": 1,
+       "text": "Kept from vanilla. A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point.",
+       "reads": []
+      },
+      {
+       "name": "Serrated Blades",
+       "ranks": 5,
+       "text": "Finishers reduce armor; then apply a bleed; then the bleed scales with combo points spent.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Setup",
+       "ranks": 3,
+       "text": "Avoiding an attack grants a combo point; then Riposte does; then a full dodge chain refreshes Evasion.",
+       "reads": []
+      },
+      {
+       "name": "Elusiveness",
+       "ranks": 2,
+       "text": "Vanish and Blind cooldowns drop; Vanish removes damage over time effects.",
+       "reads": [
+        "periodic"
+       ]
+      },
+      {
+       "name": "Hemorrhage",
+       "ranks": 4,
+       "text": "A strike that marks the target so your party's physical damage is increased; it stacks; it persists through your death; it transfers on target death.",
+       "reads": [
+        "physical"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Preparation",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, this ability immediately finishes the cooldown on your other Rogue abilities.",
+       "reads": []
+      },
+      {
+       "name": "Deadened Nerves",
+       "ranks": 4,
+       "text": "Cross-tree. Your poisons benefit from your stealth openers; Ambush and Backstab apply your active poison at double stacks.",
+       "reads": [
+        "poison",
+        "stealth"
+       ]
+      },
+      {
+       "name": "Silent Death",
+       "ranks": 3,
+       "text": "Subtraction. Your openers cannot be dodged or resisted and generate no threat. You deal no damage from the front. The deliberate mirror of Combat's Duellist.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Premeditation",
+       "ranks": 5,
+       "text": "Grants combo points before an opener; then they persist through a target change; then they cannot be lost; then Premeditation resets on a killing blow; then it grants an extra finisher point.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Shadowstrike",
+       "ranks": 1,
+       "text": "A strike from stealth that does not break stealth, usable once per Vanish.",
+       "reads": [
+        "stealth"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Shaman Elemental",
+   "class": "Shaman",
+   "availablePoints": 51,
+   "statedPoints": 50,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Convection",
+       "ranks": 5,
+       "text": "Reworked: a Shock refunds mana on a critical strike; then Lightning Bolt refunds on overload; then your totems draw from your mana pool rather than costing up front; then a spell cast at full mana costs nothing; then Clearcasting also refunds the previous spell. -",
+       "reads": [
+        "totem"
+       ]
+      },
+      {
+       "name": "Storm Reach",
+       "ranks": 2,
+       "text": "Kept from vanilla. Increases the range of your Lightning Bolt and Chain Lightning spells by N yards.",
+       "reads": []
+      },
+      {
+       "name": "Elemental Warding",
+       "ranks": 3,
+       "text": "Kept from vanilla. Reduces the damage taken by Fire, Frost and Nature effects by N%.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Call of Flame",
+       "ranks": 3,
+       "text": "Reworked: Fire totems inherit your spell critical chance; Fire Nova arms instantly when an enemy enters its radius; Magma Totem pulses on a target that flees. -",
+       "reads": [
+        "fire",
+        "spell",
+        "totem"
+       ]
+      },
+      {
+       "name": "Earth's Grasp",
+       "ranks": 2,
+       "text": "Stoneclaw taunts on a delay rather than instantly; Earthbind slows casting as well as movement. -",
+       "reads": []
+      },
+      {
+       "name": "Static Field",
+       "ranks": 3,
+       "text": "Your Lightning Shield orbs are shared with your totems; totems struck discharge an orb; a discharged orb refreshes Flame Shock.",
+       "reads": [
+        "totem"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Elemental Focus",
+       "ranks": 1,
+       "text": "Kept from vanilla. Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+       "reads": []
+      },
+      {
+       "name": "Reverberation",
+       "ranks": 5,
+       "text": "Reworked: Shocks no longer share a cooldown with each other; then a Shock refreshes on a critical strike; then Earth Shock interrupts through immunity; then Frost Shock's slow applies to attack speed; then a Shock cast during Clearcasting costs nothing and does not consume the pr",
+       "reads": []
+      },
+      {
+       "name": "Storm Caller",
+       "ranks": 5,
+       "text": "Lightning Bolt may be cast while moving at reduced damage; then Chain Lightning cannot be resisted on its first target; then a critical Lightning Bolt shortens Chain Lightning's cooldown; then overloads cannot draw threat; then Chain Lightning bounces back to its origin.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Elemental Devastation",
+       "ranks": 3,
+       "text": "Kept from vanilla. Your offensive spell crits will increase your chance to get a critical strike with melee attacks by N% for 10 sec.",
+       "reads": [
+        "melee"
+       ]
+      },
+      {
+       "name": "Eye of the Storm",
+       "ranks": 3,
+       "text": "Kept from vanilla. Gives you a N% to gain the Focused Casting effect that lasts for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage.",
+       "reads": []
+      },
+      {
+       "name": "Improved Fire Totems",
+       "ranks": 2,
+       "text": "Fire Nova's delay is removed entirely; a Fire totem that dies detonates.",
+       "reads": [
+        "fire",
+        "totem"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Elemental Fury",
+       "ranks": 1,
+       "text": "Kept from vanilla. Increases the critical strike challenge bonus of your Searing, Magma, and Fire Nova totems and your Fire, Frost, and Nature spells by 100%.",
+       "reads": [
+        "fire",
+        "nature"
+       ]
+      },
+      {
+       "name": "Stormstrike Affinity",
+       "ranks": 3,
+       "text": "Sideways node. Your Flame and Frost Shock scale with your attack power as well as your spell damage; your weapon imbue adds to your spell damage; melee critical strikes grant Clearcasting. Every shaman imbues a weapon, so it stands alone, worth most to an Enhancement main at 26/2",
+       "reads": []
+      },
+      {
+       "name": "Tidal Mastery",
+       "ranks": 3,
+       "text": "Sideways node. Your Chain Lightning's jump logic applies to Chain Heal; healing a target grants them your next Lightning Shield discharge; Clearcasting applies to your heals. -",
+       "reads": [
+        "heal"
+       ]
+      },
+      {
+       "name": "Grounded",
+       "ranks": 1,
+       "text": "Subtraction node. Your spells cannot be resisted or interrupted. You may no longer critically strike with them. Vanilla's three-point tier becomes eight, matching the Feral fix.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Lightning Mastery",
+       "ranks": 5,
+       "text": "Reworked from cast time to behavior: Lightning Bolt gains a chance to overload and cast a free second copy; then overloads can chain; then they apply Flame Shock; then Chain Lightning can overload; then an overload refunds the original spell's mana.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Elemental Mastery",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, this spell gives your next Fire, Frost, or Nature damage spell a 100% critical strike chance and reduces the mana cost by 100%.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Shaman Enhancement",
+   "class": "Shaman",
+   "availablePoints": 54,
+   "statedPoints": 50,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Stormbringer",
+       "ranks": 5,
+       "text": "Windfury can proc from an extra attack once per swing; its proc rate stops scaling down with weapon speed; a proc refreshes your weapon imbue duration; two procs in a row make your next Shock free; a proc grants a stack that increases the next one's damage. -",
+       "reads": []
+      },
+      {
+       "name": "Totemic Focus",
+       "ranks": 5,
+       "text": "Dropping a totem no longer resets your swing timer; totems inherit your weapon imbue's element; a totem destroyed by an enemy refunds its mana; you may drop two totems on one global cooldown; **your buff totems follow you within 20 yards.**",
+       "reads": [
+        "totem"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Elemental Cadence",
+       "ranks": 5,
+       "text": "Earth Shock leaves the Flame and Frost Shock cooldown alone; a Shock within 3 seconds of a Windfury proc costs no mana; Frost Shock also slows attack speed; Flame Shock spreads to a second target on your next proc; Shocks no longer clip your swing. -",
+       "reads": []
+      },
+      {
+       "name": "Charged",
+       "ranks": 3,
+       "text": "Lightning Shield orbs are consumed by your attacks as well as by being hit; losing an orb refunds mana; at full orbs your next Shock chains to a second target. -",
+       "reads": [
+        "melee"
+       ]
+      },
+      {
+       "name": "Guardian Totems",
+       "ranks": 2,
+       "text": "Stoneskin also shortens movement-impairing effects; Windwall reflects one ranged attack every 10 seconds. -",
+       "reads": [
+        "ranged"
+       ]
+      },
+      {
+       "name": "Improved Ghost Wolf",
+       "ranks": 2,
+       "text": "Ghost Wolf becomes instant; then usable in combat.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Weapon Mastery",
+       "ranks": 5,
+       "text": "Effect determined by equipped weapon, the same fork pattern used in Arms and in Bladedancer. Two-handed axes and maces make critical strikes bleed; one hand and shield makes a block generate a Lightning Shield orb; fist and dagger raises Windfury's proc rate. -",
+       "reads": []
+      },
+      {
+       "name": "Enhancing Totems",
+       "ranks": 3,
+       "text": "Strength of Earth and Grace of Air persist for 10 seconds after leaving their radius; they scale with your weapon imbue; recasting one does not clear its buff from anyone still in range.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Static Charge",
+       "ranks": 5,
+       "text": "Critical strikes add an orb to Lightning Shield; orbs beyond maximum become damage; crits refresh your weapon imbue; at full orbs a crit discharges one at a nearby enemy; a crit within 3 seconds of a Windfury proc grants another proc. -",
+       "reads": []
+      },
+      {
+       "name": "Ancestral Guidance",
+       "ranks": 5,
+       "text": "Healing Wave no longer stops your swing; Lesser Healing Wave may be cast while moving; healing a target grants them your Lightning Shield's next discharge; your heals generate no threat while a totem of yours is active; overhealing becomes attack power for 6 seconds.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Elemental Weapons",
+       "ranks": 3,
+       "text": "Sideways node. Your weapon imbues also add spell damage; Flame and Frost Shock scale with it; your Lightning Bolt may be cast while your swing timer is running. Worth its points to any shaman who imbues a weapon, which is all of them, and worth most to an Elemental main at 26/25.",
+       "reads": []
+      },
+      {
+       "name": "Improved Weapon Totems",
+       "ranks": 4,
+       "text": "Windfury Totem also grants its attack power to you while you are within range of it; its proc can trigger from an extra attack; Flametongue Totem applies your weapon imbue to the party; a totem you drop refreshes the imbue on everyone in range. -",
+       "reads": []
+      },
+      {
+       "name": "Earthbound",
+       "ranks": 1,
+       "text": "Subtraction node. Your totems become immune to damage and last twice as long. You may have only one totem active at a time.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Windfury Mastery",
+       "ranks": 5,
+       "text": "Windfury's extra attacks use your main hand's full damage; they can critically strike; they generate no threat; they refresh Flame Shock; a proc during Stormstrike's window adds a third attack.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Stormstrike",
+       "ranks": 1,
+       "text": "Kept from vanilla. Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%. Lasts 12 sec.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Shaman Restoration",
+   "class": "Shaman",
+   "availablePoints": 53,
+   "statedPoints": 56,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Tidal Focus",
+       "ranks": 5,
+       "text": "reworked: a heal that overheals refunds mana, then chains to a second target, then banks toward your next cast.",
+       "reads": []
+      },
+      {
+       "name": "Ancestral Healing",
+       "ranks": 5,
+       "text": "your heal grants armor, then damage reduction, then it applies to everyone the heal touched, then it persists 10 seconds after the heal, then it cannot be dispelled.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Improved Reincarnation",
+       "ranks": 2,
+       "text": "kept.",
+       "reads": []
+      },
+      {
+       "name": "Chain Mastery",
+       "ranks": 5,
+       "text": "Chain Heal jumps further, then prefers the lowest-health target, then does not lose effect per jump against targets below 30%, then can bounce back to its origin, then jumps to a target with no heal-over-time first.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Healing Focus",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance to avoid interruption caused by damage while casting any healing spell.",
+       "reads": []
+      },
+      {
+       "name": "Totemic Mastery",
+       "ranks": 1,
+       "text": "Kept from vanilla. The radius of your totems that affect friendly targets is increased to 30 yd.",
+       "reads": [
+        "totem"
+       ]
+      },
+      {
+       "name": "Totemic Reach",
+       "ranks": 3,
+       "text": "totems affect the raid rather than the party, then follow you within 20 yards, then persist 10 seconds after being destroyed.",
+       "reads": []
+      },
+      {
+       "name": "Healing Grace",
+       "ranks": 3,
+       "text": "Kept from vanilla. Reduces the threat generated by your healing spells by N%.",
+       "reads": [
+        "heal",
+        "spell"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Restorative Totems",
+       "ranks": 5,
+       "text": "Kept from vanilla. Increases the effect of your Mana Spring and Healing Stream totems by N%.",
+       "reads": []
+      },
+      {
+       "name": "Tidal Mastery",
+       "ranks": 5,
+       "text": "reworked from critical chance to what a critical heal does.",
+       "reads": [
+        "heal"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Nature's Swiftness",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, your next Nature spell becomes an instant cast spell.",
+       "reads": [
+        "nature"
+       ]
+      },
+      {
+       "name": "Healing Way",
+       "ranks": 3,
+       "text": "Kept from vanilla. Your Healing Wave spells have N% chance to increase the effect of subsequent Healing Wave spells on that target by 6% for 15 sec. This effect will stack up to 3 times.",
+       "reads": []
+      },
+      {
+       "name": "Elemental Communion",
+       "ranks": 3,
+       "text": "sideways: your Lightning Shield discharges heal instead of damage while a healing totem is active, your Chain Lightning uses Chain Heal's jump logic.",
+       "reads": []
+      },
+      {
+       "name": "Ancestor's Vigil",
+       "ranks": 1,
+       "text": "subtraction: your totems heal continuously and cannot be destroyed; you may not cast direct heals.",
+       "reads": [
+        "totem"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Purification",
+       "ranks": 5,
+       "text": "reworked from healing percentage to dispel and cleanse behavior.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Mana Tide Totem",
+       "ranks": 1,
+       "text": "Kept from vanilla. Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 170 mana every 3 seconds to group members within 20 yards.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Warlock Affliction",
+   "class": "Warlock",
+   "availablePoints": 51,
+   "statedPoints": 49,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Suppression",
+       "ranks": 5,
+       "text": "reworked: your damage-over-time effects cannot be dispelled at rank 3, and cannot be resisted on application at rank 5.",
+       "reads": [
+        "periodic"
+       ]
+      },
+      {
+       "name": "Improved Corruption",
+       "ranks": 5,
+       "text": "reworked from cast time: Corruption applies instantly at rank 1, then refreshes on your Shadow Bolt, then ticks faster below 20%, then spreads on death, then carries remaining damage forward when refreshed.",
+       "reads": [
+        "shadow"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Improved Drain Soul",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives you a N% chance to get a 100% increase to your Mana regeneration for 10 sec if the target is killed by you while you drain its soul. In addition your Mana may continue to regenerate while casting at 50% of normal.",
+       "reads": []
+      },
+      {
+       "name": "Siphon",
+       "ranks": 5,
+       "text": "merging the drain talents: Drain Life and Drain Mana channel while you move, then do not break on damage, then benefit from your shadow damage, then apply Corruption, then refund a shard on a killing blow.",
+       "reads": [
+        "shadow"
+       ]
+      },
+      {
+       "name": "Curse Mastery",
+       "ranks": 5,
+       "text": "two curses may be active at once, then curses cannot be dispelled, then a curse refreshes on your damage-over-time ticks, then Amplify Curse has no cooldown, then curses apply to everything Corruption is on.",
+       "reads": [
+        "curse",
+        "periodic"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Fel Concentration",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance to avoid interruption caused by damage while channeling the Drain Life, Drain Mana, or Drain Soul spell.",
+       "reads": []
+      },
+      {
+       "name": "Amplify Curse",
+       "ranks": 1,
+       "text": "Kept from vanilla. Increases the effect of your next Curse of Weakness or Curse of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec.",
+       "reads": []
+      },
+      {
+       "name": "Grim Reach",
+       "ranks": 3,
+       "text": "kept and extended to all Affliction effects.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Nightfall",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives your Corruption and Drain Life spells a N% chance to cause you to enter a Shadow Trance state after damaging the opponent. The Shadow Trance state reduces the casting time of your next Shadow Bolt spell by 100%.",
+       "reads": []
+      },
+      {
+       "name": "Improved Drain Mana",
+       "ranks": 2,
+       "text": "Kept from vanilla. Causes 15% of the Mana drained by your Drain Mana spell to damage the opponent.",
+       "reads": []
+      },
+      {
+       "name": "Shadow Embrace",
+       "ranks": 2,
+       "text": "your damage-over-time effects reduce healing received, and a target with three of them takes increased shadow damage.",
+       "reads": [
+        "periodic",
+        "shadow"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Siphon Life",
+       "ranks": 1,
+       "text": "Kept from vanilla. Transfers 15 health from the target to the caster every 3 sec. Lasts 30 sec.",
+       "reads": []
+      },
+      {
+       "name": "Soul Siphon",
+       "ranks": 3,
+       "text": "sideways: your Shadow Bolt refreshes Corruption, your Immolate benefits from your shadow damage, Conflagrate does not consume Immolate on a target affected by Corruption.",
+       "reads": [
+        "shadow"
+       ]
+      },
+      {
+       "name": "Malediction",
+       "ranks": 2,
+       "text": "sideways: your curses benefit from your fire damage and Curse of Shadow applies to your pet's attacks.",
+       "reads": [
+        "curse",
+        "pet"
+       ]
+      },
+      {
+       "name": "Unstable Affliction",
+       "ranks": 2,
+       "text": "subtraction: your damage-over-time effects deal substantially more damage and detonate when dispelled; you may no longer cast Shadow Bolt.",
+       "reads": [
+        "periodic"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Shadow Mastery",
+       "ranks": 5,
+       "text": "Kept from vanilla. Increases the damage dealt or life drained by your Shadow spells by N%.",
+       "reads": [
+        "shadow"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Dark Pact",
+       "ranks": 1,
+       "text": "Kept from vanilla. Drains 150 of your pet's Mana, returning 100% to you.",
+       "reads": [
+        "pet"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Warlock Demonology",
+   "class": "Warlock",
+   "availablePoints": 49,
+   "statedPoints": 50,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Bound Servant",
+       "ranks": 5,
+       "text": "Your demon inherits your resistances; then your armor; then it survives your death; then it returns at 30% health thirty seconds after dying; then summoning costs no shard. -",
+       "reads": []
+      },
+      {
+       "name": "Familiar",
+       "ranks": 3,
+       "text": "Your Imp's Firebolt applies Corruption; your Voidwalker's Torment scales with your shadow damage; your Succubus's Seduction breaks only on damage you deal. -",
+       "reads": [
+        "shadow"
+       ]
+      },
+      {
+       "name": "Soulcraft",
+       "ranks": 2,
+       "text": "Healthstones can be used while silenced; creating one below 30% health costs no shard.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Soul Tether",
+       "ranks": 5,
+       "text": "Health Funnel channels while you cast; your demon's damage returns health to you; a demon at full health funnels back to you instead; Health Funnel on a full demon becomes damage against its target; your demon's regeneration applies to you while it is idle. -",
+       "reads": [
+        "pet"
+       ]
+      },
+      {
+       "name": "Demonic Resilience",
+       "ranks": 3,
+       "text": "Your demon takes reduced damage from area effects; it cannot be feared; when it attacks, it breaks roots on you. -",
+       "reads": []
+      },
+      {
+       "name": "Guardian",
+       "ranks": 2,
+       "text": "Voidwalker's Sacrifice absorbs based on your health rather than the Voidwalker's; Consuming Shadows can be cast on you.",
+       "reads": [
+        "absorb"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Fel Domination",
+       "ranks": 1,
+       "text": "Kept from vanilla. Your next Imp, Voidwalker, Succubus, or Felhunter Summon spell has its casting time reduced by 5.5 sec and its mana cost reduced by 50%.",
+       "reads": []
+      },
+      {
+       "name": "Swift Binding",
+       "ranks": 5,
+       "text": "Fel Domination's cooldown drops; then it applies to Enslave Demon; then a demon summoned under it arrives at full health; then swapping demons carries your active buffs across; then Fel Domination holds two charges. -",
+       "reads": []
+      },
+      {
+       "name": "Cruelty",
+       "ranks": 3,
+       "text": "Succubus's Lash of Pain reduces healing received; Felhunter's Spell Lock silences longer against a target mid-cast; Imp's Fire Shield reflects to a second attacker.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Master Summoner",
+       "ranks": 2,
+       "text": "Summoning is instant if your previous demon died within 10 seconds; summoning does not break your current cast. -",
+       "reads": []
+      },
+      {
+       "name": "Demonic Empowerment",
+       "ranks": 5,
+       "text": "Each demon gains a command you can trigger. The Imp becomes a charge you detonate; the Voidwalker taunts everything near it; the Succubus vanishes and re-engages behind its target; the Felhunter devours one beneficial effect. The fifth rank takes the command off the global cooldo",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Demonic Sacrifice",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min. The effect is canceled if any Demon is summoned.\\n\\nImp: Increases your Fire damage by 15%.\\n\\nVoidwalker: Restores 3% of your total Health every 4 sec.\\n\\nSuccubus: Increa",
+       "reads": [
+        "fire"
+       ]
+      },
+      {
+       "name": "Shadow Bond",
+       "ranks": 3,
+       "text": "Sideways node. Your demon's damage benefits from your curses; your Corruption refreshes on any target your demon damages; your demon's critical strikes extend Siphon Life. Every warlock has Corruption, so it is worth its points alone, and worth most to an Affliction main at 26/25",
+       "reads": [
+        "curse",
+        "pet"
+       ]
+      },
+      {
+       "name": "Ashen Pact",
+       "ranks": 3,
+       "text": "Sideways node. Your demon's attacks apply your Immolate's fire damage; Conflagrate does not consume Immolate while your demon is on the target; Searing Pain from you draws no threat if your demon is attacking. -",
+       "reads": [
+        "pet"
+       ]
+      },
+      {
+       "name": "Unbound",
+       "ranks": 1,
+       "text": "Subtraction node. **You may have two demons active at once. Neither may be sacrificed, and both take double damage.**",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Master Demonologist",
+       "ranks": 5,
+       "text": "Kept and rewritten from stat auras to behavior. Imp: your Destruction spells cost no shard to empower. Voidwalker: threat you generate transfers to it on a delay. Succubus: your first spell on a fresh target cannot be resisted. Felhunter: your curses cannot be dispelled. Fifth ra",
+       "reads": [
+        "curse",
+        "threat"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": []
+    }
+   ]
+  },
+  {
+   "name": "Warlock Destruction",
+   "class": "Warlock",
+   "availablePoints": 51,
+   "statedPoints": null,
+   "extraction": "hand-written",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Improved Shadow Bolt",
+       "ranks": 5,
+       "text": "Shadow Bolt applies a vulnerability consumed by the next attacker; then it stacks; then it does not expire; then it applies on cast rather than on hit; then it spreads on death.",
+       "reads": []
+      },
+      {
+       "name": "Aftermath",
+       "ranks": 5,
+       "text": "Destruction spells daze; then slow casting; then apply Immolate's burn at reduced value.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Improved Immolate",
+       "ranks": 5,
+       "text": "Immolate's direct half scales with its remaining periodic damage; then it refreshes on Shadow Bolt; then it cannot be dispelled; then it ticks faster below 20% health; then it detonates on expiry.",
+       "reads": [
+        "periodic"
+       ]
+      },
+      {
+       "name": "Intensity",
+       "ranks": 2,
+       "text": "Destruction spells cannot be pushed back.",
+       "reads": []
+      },
+      {
+       "name": "Destructive Reach",
+       "ranks": 3,
+       "text": "Range increases; threat is reduced; Rain of Fire follows a marked target.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Shadowburn",
+       "ranks": 1,
+       "text": "Kept from vanilla. Instantly blasts the target for 91 to 104 Shadow damage. If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard.",
+       "reads": []
+      },
+      {
+       "name": "Improved Searing Pain",
+       "ranks": 5,
+       "text": "Searing Pain draws no threat; then it consumes Immolate for burst; then it applies Immolate; then it refreshes Conflagrate; then two casts in a row are free.",
+       "reads": []
+      },
+      {
+       "name": "Pyroclasm",
+       "ranks": 2,
+       "text": "Kept from vanilla. Gives your Rain of Fire, Hellfire, and Soul Fire spells a N% chance to stun the target for 3 sec.",
+       "reads": [
+        "fire"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Devastation",
+       "ranks": 5,
+       "text": "Reworked from critical chance into what a Destruction critical does: it refreshes Immolate, then applies Aftermath, then grants a shard.",
+       "reads": []
+      },
+      {
+       "name": "Emberstorm",
+       "ranks": 4,
+       "text": "Fire spells consume Immolate stacks for damage; then Rain of Fire applies Immolate; then Hellfire does not damage you while Immolate is active.",
+       "reads": [
+        "fire"
+       ]
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Ruin",
+       "ranks": 1,
+       "text": "Kept from vanilla. Increases the critical strike damage bonus of your Destruction spells by 100%.",
+       "reads": []
+      },
+      {
+       "name": "Cataclysm",
+       "ranks": 3,
+       "text": "Cross-tree. Your Immolate counts as a curse; Corruption refreshes it; Curse of Agony benefits from your fire damage.",
+       "reads": []
+      },
+      {
+       "name": "Nether Protection",
+       "ranks": 2,
+       "text": "Cross-tree. Your demon's attacks apply Immolate; Soul Link shares your fire damage bonus.",
+       "reads": []
+      },
+      {
+       "name": "Backdraft",
+       "ranks": 2,
+       "text": "Subtraction. Conflagrate loses its cooldown. You may no longer cast Shadow Bolt.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Conflagrate",
+       "ranks": 5,
+       "text": "Conflagrate no longer consumes Immolate; then it extends it; then it hits a second target; then it cannot be resisted; then it resets on a killing blow.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Shadow and Flame",
+       "ranks": 1,
+       "text": "Your Shadow Bolt and Immolate each empower the other, so alternating them is stronger than repeating either.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Warrior Arms",
+   "class": "Warrior",
+   "availablePoints": 50,
+   "statedPoints": 50,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Bloodletting",
+       "ranks": 3,
+       "text": "Rend ignores armor; Overpower refreshes it; below 20% health it dumps its remaining damage at once. -",
+       "reads": []
+      },
+      {
+       "name": "Poise",
+       "ranks": 5,
+       "text": "Dodged and parried attacks refund their Rage; Overpower's cooldown resets on a dodge; you cannot be disarmed in Battle Stance; Hamstring's slow cannot be dispelled; Rage does not decay while a target you struck recently is still alive. Deflection is gone. Its parry now arrives th",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Concussion",
+       "ranks": 3,
+       "text": "Thunder Clap also slows casting; it spreads Rend to targets already bleeding; it becomes usable in any stance. -",
+       "reads": []
+      },
+      {
+       "name": "Headlong",
+       "ranks": 2,
+       "text": "Charge usable in combat when no enemy is within 8 yards; Charge interrupts spellcasting. -",
+       "reads": []
+      },
+      {
+       "name": "Tactical Mastery",
+       "ranks": 5,
+       "text": "Retain all Rage swapping to Battle Stance, then Berserker, then Defensive; then no stance swap cooldown; then swapping stances reopens Overpower's window. Tactical Mastery survives almost intact because it was already behavioral. Only its ranks change from numeric to discrete.",
+       "reads": []
+      },
+      {
+       "name": "Rupture Line",
+       "ranks": 3,
+       "text": "Execute refreshes your bleeds; bleeds on a target below 20% tick twice as fast; a target dying while bleeding refunds the Rage spent on Execute. -",
+       "reads": [
+        "bleed"
+       ]
+      },
+      {
+       "name": "Mortal Cleave",
+       "ranks": 2,
+       "text": "The sideways node from 5.3. -",
+       "reads": []
+      },
+      {
+       "name": "Sure Strike",
+       "ranks": 1,
+       "text": "The subtraction node from 5.4. -",
+       "reads": []
+      },
+      {
+       "name": "Second Wind",
+       "ranks": 2,
+       "text": "Being stunned or rooted generates Rage; the second rank breaks the effect once per 30 seconds.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Riposte Reading",
+       "ranks": 2,
+       "text": "Overpower cannot be dodged or parried; Overpower's window opens on any miss rather than only a dodge. -",
+       "reads": []
+      },
+      {
+       "name": "Deep Wounds",
+       "ranks": 3,
+       "text": "Critical strikes cause bleeding; refreshing carries remaining damage forward rather than overwriting; the bleed jumps to a nearby enemy on death. -",
+       "reads": []
+      },
+      {
+       "name": "Battle Trance",
+       "ranks": 1,
+       "text": "Three consecutive attacks without a miss makes your next Overpower or Execute free.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Sweeping Strikes",
+       "ranks": 1,
+       "text": "Kept from vanilla. Your next 5 melee attacks strike an additional nearby opponent.",
+       "reads": [
+        "melee"
+       ]
+      },
+      {
+       "name": "Weapon Mastery",
+       "ranks": 5,
+       "text": "Effect determined by equipped weapon rather than by node, using the same weapon fork pattern as the Bladedancer tree in Class Absorption. Axes bleed on crit, swords proc an extra attack, maces stun, polearms strike a second target behind the first. -",
+       "reads": []
+      },
+      {
+       "name": "Opportunist",
+       "ranks": 2,
+       "text": "Sweeping Strikes copies Overpower; its extra hits can trigger Deep Wounds. This is the row that fixes vanilla's 18-point weapon specialization block. Four nodes and 20 points collapse into one node and 5, and the choice moves from the talent panel to the weapon in your hand.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Crippling Grip",
+       "ranks": 3,
+       "text": "Hamstring may root; the root is not broken by your own bleed damage; Hamstring is free against a bleeding target. -",
+       "reads": []
+      },
+      {
+       "name": "Death Sentence",
+       "ranks": 3,
+       "text": "Execute refunds its Rage on a kill; usable below 35% against targets you have Rent; a kill by Execute resets Overpower. -",
+       "reads": []
+      },
+      {
+       "name": "Unyielding",
+       "ranks": 3,
+       "text": "Reduced duration on stuns; then on disarms; then you continue attacking for 2 seconds after a fear begins.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Mortal Strike",
+       "ranks": 1,
+       "text": "Kept from vanilla. A vicious strike that deals weapon damage plus 85 and wounds the target, reducing the effectiveness of any healing by 50% for 10 sec.",
+       "reads": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Warrior Fury",
+   "class": "Warrior",
+   "availablePoints": 60,
+   "statedPoints": 60,
+   "extraction": "parsed",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Booming Voice",
+       "ranks": 5,
+       "text": "reworked: shouts affect the raid, then persist through death, then refresh on a killing blow, then cost no rage below 20 rage, then apply to targets rather than allies as a debuff.",
+       "reads": [
+        "shout"
+       ]
+      },
+      {
+       "name": "Bloodletting",
+       "ranks": 5,
+       "text": "critical strikes cause bleeding, then the bleed feeds rage, then it does not stack but carries forward, then it spreads on death, then it doubles below 20%.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Unbridled Wrath",
+       "ranks": 5,
+       "text": "Kept from vanilla. Gives you a N% chance to generate an additional Rage point when you deal melee damage with a weapon.",
+       "reads": []
+      },
+      {
+       "name": "Improved Demoralizing Shout",
+       "ranks": 5,
+       "text": "reworked to a debuff behavior chain.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Blood Craze",
+       "ranks": 3,
+       "text": "Kept from vanilla. Regenerates N% of your total Health over 6 sec after being the victim of a critical strike.",
+       "reads": []
+      },
+      {
+       "name": "Piercing Howl",
+       "ranks": 1,
+       "text": "Kept from vanilla. Causes all enemies near the warrior to be dazed, reducing movement speed by 50% for 6 sec.",
+       "reads": []
+      },
+      {
+       "name": "Improved Cleave",
+       "ranks": 3,
+       "text": "reworked: Cleave hits a third target, then applies your last special attack's effect, then costs no rage while enraged.",
+       "reads": []
+      },
+      {
+       "name": "Rampage",
+       "ranks": 5,
+       "text": "a killing blow grants attack speed, then it stacks, then it persists 10 seconds out of combat, then it triggers on a critical strike, then it carries across targets.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Enrage",
+       "ranks": 5,
+       "text": "reworked from damage percentage to what being enraged enables.",
+       "reads": []
+      },
+      {
+       "name": "Dual Wield Specialization",
+       "ranks": 5,
+       "text": "becomes the weapon fork used in Arms, Enhancement, and Bladedancer.",
+       "reads": []
+      },
+      {
+       "name": "Improved Execute",
+       "ranks": 2,
+       "text": "Kept from vanilla. Reduces the Rage cost of your Execute ability by N.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Death Wish",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%.",
+       "reads": [
+        "physical"
+       ]
+      },
+      {
+       "name": "Improved Intercept",
+       "ranks": 2,
+       "text": "Kept from vanilla. Reduces the cooldown of your Intercept abiilty by N sec.",
+       "reads": []
+      },
+      {
+       "name": "Sundering Blows",
+       "ranks": 4,
+       "text": "sideways: your Sunder Armor applies from Cleave and Whirlwind, your Overpower benefits from your off-hand, Shield Slam may be used without a shield at reduced effect.",
+       "reads": []
+      },
+      {
+       "name": "Reckless",
+       "ranks": 1,
+       "text": "subtraction: your critical strike chance is greatly increased; you cannot dodge, parry, or block.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Improved Berserker Rage",
+       "ranks": 2,
+       "text": "Kept from vanilla. The Berserker Rage ability will generate N rage when used.",
+       "reads": []
+      },
+      {
+       "name": "Flurry",
+       "ranks": 5,
+       "text": "reworked, as in Enhancement, from an attack speed percentage to what a critical strike triggers.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Bloodthirst",
+       "ranks": 1,
+       "text": "Kept from vanilla. Instantly attack the target causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 10 health. This effect lasts 8 sec.",
+       "reads": [
+        "melee"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Warrior Protection",
+   "class": "Warrior",
+   "availablePoints": 56,
+   "statedPoints": null,
+   "extraction": "hand-written",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Shield Specialization",
+       "ranks": 5,
+       "text": "Blocking generates rage; then refreshes Shield Block; then a block grants a stacking damage reduction; then blocked damage generates threat; then two blocks in a row reset Revenge.",
+       "reads": []
+      },
+      {
+       "name": "Anticipation",
+       "ranks": 5,
+       "text": "Reworked from defense skill into avoidance behaviour: a dodge or parry refreshes Revenge, then grants rage, then reduces Shield Slam's cooldown.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Improved Bloodrage",
+       "ranks": 2,
+       "text": "Bloodrage generates threat; it may be used while stunned.",
+       "reads": []
+      },
+      {
+       "name": "Toughness",
+       "ranks": 5,
+       "text": "Reworked from armor into what taking a hit does: damage taken refreshes your active shout, then generates threat, then reduces the next hit.",
+       "reads": []
+      },
+      {
+       "name": "Iron Will",
+       "ranks": 5,
+       "text": "Stun and charm duration is reduced; against immune sources it instead generates rage. Graded fallback per Section 5.8.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Last Stand",
+       "ranks": 1,
+       "text": "Kept from vanilla. When activated, this ability temporarily grants you 30% of your maximum hit points for 20 seconds. After the effect expires, the hit points are lost.",
+       "reads": []
+      },
+      {
+       "name": "Improved Shield Block",
+       "ranks": 3,
+       "text": "Shield Block covers an additional attack; then it may be used while stunned; then it refreshes on a parry.",
+       "reads": []
+      },
+      {
+       "name": "Improved Revenge",
+       "ranks": 3,
+       "text": "Revenge stuns; against stun-immune targets it instead reduces their damage. Graded fallback per Section 5.8.",
+       "reads": []
+      },
+      {
+       "name": "Defiance",
+       "ranks": 5,
+       "text": "Reworked from a threat percentage into threat behaviour: threat does not decay while you hold aggro, then transfers on taunt, then applies to everything in melee range.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Improved Sunder Armor",
+       "ranks": 3,
+       "text": "Sunder Armor costs less rage; then applies from Cleave; then does not fall off while you are in melee range.",
+       "reads": []
+      },
+      {
+       "name": "Improved Disarm",
+       "ranks": 3,
+       "text": "Disarm lasts longer; against disarm-immune targets it instead reduces their damage. Graded fallback per Section 5.8.",
+       "reads": []
+      },
+      {
+       "name": "Improved Taunt",
+       "ranks": 2,
+       "text": "Taunt's cooldown drops; taunt works on an already-taunted target.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Concussion Blow",
+       "ranks": 1,
+       "text": "Kept from vanilla. Stuns the opponent for 5 sec.",
+       "reads": []
+      },
+      {
+       "name": "Sword and Board",
+       "ranks": 3,
+       "text": "Cross-tree. Your Overpower may be used with a shield equipped; Deep Wounds applies from Shield Slam; Mortal Strike's healing reduction applies from Revenge.",
+       "reads": []
+      },
+      {
+       "name": "Bulwark",
+       "ranks": 3,
+       "text": "Cross-tree. Your Cleave and Whirlwind generate block value; Bloodthirst heals for your block value.",
+       "reads": []
+      },
+      {
+       "name": "Unbreakable",
+       "ranks": 1,
+       "text": "Subtraction. You cannot be critically struck. You can no longer critically strike.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Shield Discipline",
+       "ranks": 5,
+       "text": "Shield Slam refreshes Shield Block; then it dispels one magic effect; then it applies Sunder Armor; then it cannot miss; then it resets Last Stand below 20% health.",
+       "reads": []
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Shield Slam",
+       "ranks": 1,
+       "text": "Kept from vanilla. Slam the target with your shield, causing 225 to 236 damage, modified by your shield block value, and has a 50% chance of dispelling 1 magic effect on the target. Also causes a high amount of threat.",
+       "reads": [
+        "absorb"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

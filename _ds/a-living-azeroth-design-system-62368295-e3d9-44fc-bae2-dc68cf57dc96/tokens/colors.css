@@ -1,0 +1,115 @@
+:root{
+/* --- Grounds. Parchment panel for reading, stone panel for data. --- */
+--parchment:#F0E6D2;
+--parchment-raised:#F7F0E1;
+--parchment-sunk:#E4D7BE;
+--stone:#2B2721;
+--stone-raised:#40382C;
+--stone-sunk:#1F1C17;
+
+/* --- Ink --- */
+--ink:#1C1710;
+--ink-70:#4A4133;
+--ink-50:#6E624E;
+--ink-30:#9C8F76;
+--ink-inverse:#E8DCC4;
+--ink-inverse-70:#B5A88E;
+--ink-inverse-50:#8A7E67;
+
+/* --- Interface gold --- */
+--gold:#FFD100;
+--gold-dim:#C79C6E;
+--gold-deep:#8A6A2E;
+--gold-wash:rgba(199,156,110,.16);
+
+/* --- Item quality, exactly as the client returns them.
+       Legible on the stone panel; reserved for it. --- */
+--quality-uncommon:#1eff00;
+--quality-rare:#0070dd;
+--quality-epic:#a335ee;
+--quality-legendary:#ff8000;
+
+/* Darkened equivalents for the same three qualities on the parchment ground,
+   where the client values fail contrast. Same ladder, same meaning. */
+--quality-uncommon-on-light:#2C7A10;
+--quality-rare-on-light:#02549F;
+--quality-epic-on-light:#7A2BB4;
+
+/* --- Tier scale aliases the components actually use --- */
+--tier-1:var(--quality-uncommon-on-light);
+--tier-2:var(--quality-rare-on-light);
+--tier-3:var(--quality-epic-on-light);
+--tier-1-wash:rgba(44,122,16,.10);
+--tier-2-wash:rgba(2,84,159,.10);
+--tier-3-wash:rgba(122,43,180,.10);
+
+/* --- Cost: three weights of ink, not a second colour scale --- */
+--cost-low:var(--ink-50);
+--cost-medium:var(--ink-70);
+--cost-high:var(--ink);
+
+/* --- Rules --- */
+--rule-faint:#E2D5B8;
+--rule:#D2C09C;
+--rule-strong:#B49E74;
+--rule-inverse:#4A4133;
+--rule-inverse-strong:#6E624E;
+
+/* --- Semantic aliases --- */
+--surface-page:var(--parchment);
+--surface-card:var(--parchment-raised);
+--surface-band:var(--parchment-sunk);
+--surface-sunk:var(--parchment-sunk);
+--surface-panel:var(--stone);
+--surface-panel-raised:var(--stone-raised);
+--surface-panel-sunk:var(--stone-sunk);
+--text-body:var(--ink);
+--text-heading:var(--ink);
+--text-muted:var(--ink-70);
+--text-faint:var(--ink-50);
+--text-on-panel:var(--ink-inverse);
+--text-on-panel-muted:var(--ink-inverse-70);
+--text-on-panel-faint:var(--ink-inverse-50);
+--border-hairline:var(--rule);
+--border-strong:var(--rule-strong);
+--border-faint:var(--rule-faint);
+--border-panel:var(--rule-inverse-strong);
+--link:var(--gold-deep);
+--link-hover:#6B5122;
+--focus-ring:var(--gold-deep);
+--row-hover:var(--gold-wash);
+--flavor:var(--gold-dim);
+--tree-cargo:var(--gold-dim);
+--tree-enables:var(--ink-30);
+--tree-node:var(--stone-raised);
+}
+
+/* Stone panels: the client register. Quality colours revert to exact values. */
+.panel,[data-theme="dark"]{
+--surface-page:var(--stone);
+--surface-card:var(--stone-raised);
+--surface-band:var(--stone-raised);
+--surface-sunk:var(--stone-sunk);
+--text-body:var(--ink-inverse);
+--text-heading:var(--ink-inverse);
+--text-muted:var(--ink-inverse-70);
+--text-faint:var(--ink-inverse-50);
+--border-hairline:var(--rule-inverse);
+--border-strong:var(--rule-inverse-strong);
+--border-faint:#3A342B;
+--link:var(--gold);
+--link-hover:#FFE47A;
+--focus-ring:var(--gold);
+--row-hover:rgba(255,209,0,.10);
+--tier-1:var(--quality-uncommon);
+--tier-2:var(--quality-rare);
+--tier-3:var(--quality-epic);
+--tier-1-wash:rgba(30,255,0,.10);
+--tier-2-wash:rgba(0,112,221,.16);
+--tier-3-wash:rgba(163,53,238,.16);
+--tree-enables:var(--ink-inverse-50);
+--tree-node:var(--stone-sunk);
+--cost-low:var(--ink-inverse-50);
+--cost-medium:var(--ink-inverse-70);
+--cost-high:var(--ink-inverse);
+}

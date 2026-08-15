@@ -1,0 +1,1610 @@
+{
+ "meta": {
+  "document": "Class Absorption",
+  "version": "1.3",
+  "generated": "2026-08-01",
+  "companionTo": "A Living Azeroth",
+  "count": 7,
+  "joinKey": "worldAnchors joins to the zones field in proposals.json. Every tree is acquired through a quest chain that runs through named vanilla locations, which is the seam between the two documents: one describes the world, the other describes something you go into that world to get.",
+  "structure": {
+   "rows": "Seven. Row one is free, each subsequent row needs five more points spent in the tree. Row seven unlocks at thirty.",
+   "mark": "The twenty-point talent. The hybrid's prize, usable without deep investment. A splash is a character, not a broken build.",
+   "capstone": "The thirty-one point talent. Transformative, something a character either has or does not.",
+   "localMechanic": "No absorbed tree imports a new resource bar. Each layers a tree-local mechanic on the host's existing resource, the way combo points and soul shards already do.",
+   "verbs": "Acquisition differs per tree so seven chains do not feel like seven copies of one quest: forged, taught, taken, fallen, earned, granted, copied."
+  },
+  "revision": "Absorbed trees revised per absorbed-revisions.md. All seven gain a cross-tree conditional at gate 20, gate 20 grows from six points to eight, flat nodes are deleted with their budget returned to local-mechanic scaling, and Metamorphosis, Conduit, and Survival gain subtraction nodes. Metamorphosis is rebuilt around fel corruption. Survival takes the Section 17.2 rebuild of vanilla Survival rather than carrying the original forward."
+ },
+ "trees": [
+  {
+   "id": "blackguard",
+   "name": "Blackguard",
+   "host": "Paladin",
+   "concept": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps.",
+   "retailSource": "Death Knight, Blood plus the core fallen-knight identity",
+   "localMechanic": "Blight, a disease applied by Blackguard strikes that roughly a third of the tree pays out against",
+   "verb": "fallen",
+   "verbNote": "The only tree that should be done to the character rather than by them. A paladin does not apply to become a death knight.",
+   "professionGate": null,
+   "professionNote": "Deliberately none. The whole point of the fallen verb is that nothing is prepared and nothing is chosen.",
+   "permanentCost": "Loses the ability to cast Blessings or direct heals on other players.",
+   "tier": 3,
+   "deployment": "fresh",
+   "worldAnchors": [
+    "Scholomance",
+    "Scarlet Monastery",
+    "Western Plaguelands",
+    "Eastern Plaguelands"
+   ],
+   "loreAnchor": "Arthas was a paladin. The Death Knight fantasy is the paladin fantasy corrupted, and Warcraft III spends an entire campaign on the transition.",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": []
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Plague Strike",
+       "ranks": 1,
+       "text": "Instant melee strike dealing weapon damage and applying Blight for 15 sec.",
+       "icon": "icons/talent-blackguard-plague-strike.png",
+       "status": "reworked",
+       "note": "The tree's enabler. The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Deathchill",
+       "ranks": 2,
+       "text": "Blight also slows movement by 15/30%.",
+       "icon": "icons/talent-blackguard-deathchill.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Rotting Flesh",
+       "ranks": 5,
+       "text": "Blighted targets have their armor reduced, then Blight spreads on death, then a Blighted target takes increased Shadow damage, then Blight applies twice from behind, then it cannot be cleansed below 20% health.",
+       "icon": "icons/talent-blackguard-rotting-flesh.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Leeching Blade",
+       "ranks": 5,
+       "text": "Your strikes against a Blighted target heal you, scaling with the number of Blight stacks it carries.",
+       "icon": "icons/talent-blackguard-leeching-blade.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Spreading Corruption",
+       "ranks": 2,
+       "text": "Blight has a 50/100% chance to spread to a nearby enemy every 5 sec.",
+       "icon": "icons/talent-blackguard-spreading-corruption.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Chilblain",
+       "ranks": 5,
+       "text": "Blight also slows attack speed, then chills the ground under the target, then a Blighted target that dies leaves the chill behind.",
+       "icon": "icons/talent-blackguard-chilblain.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Presence of the Grave",
+       "ranks": 1,
+       "text": "Replaces your active Blessing with a self-only presence granting armor and health regeneration. While active you cannot cast Blessings on others.",
+       "icon": "icons/talent-blackguard-presence-of-the-grave.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Chill of the Grave",
+       "ranks": 3,
+       "text": "Blight reduces healing received by 10/20/30%.",
+       "icon": "icons/talent-blackguard-chill-of-the-grave.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Necrotic Aura",
+       "ranks": 3,
+       "text": "Enemies within 8 yards take 2/4/6 Shadow damage every 3 sec.",
+       "icon": "icons/talent-blackguard-necrotic-aura.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Vile Contagion",
+       "ranks": 2,
+       "text": "Increases Blight duration by 3/6 sec.",
+       "icon": "icons/talent-blackguard-vile-contagion.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "isMark": true,
+     "talents": [
+      {
+       "name": "Blood Rite",
+       "ranks": 1,
+       "text": "Consumes all Blight on a target to instantly heal you for a large amount. Off the global cooldown.",
+       "note": "Lay on Hands inverted. An emergency heal that requires you to have poisoned somebody first, which is a complete character in one talent.",
+       "icon": "icons/talent-blackguard-blood-rite.png",
+       "status": "reworked"
+      },
+      {
+       "name": "Unyielding Dead",
+       "ranks": 3,
+       "text": "Reduces the chance to be critically hit by 1/2/3%.",
+       "icon": "icons/talent-blackguard-unyielding-dead.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Corpsefeeder",
+       "ranks": 2,
+       "text": "Blood Rite also removes one poison or disease from you, 50/100% chance.",
+       "icon": "icons/talent-blackguard-corpsefeeder.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Unholy Devotion",
+       "ranks": 2,
+       "col": 4,
+       "crossTree": true,
+       "text": "Your Blight benefits from your healing bonus, and Judgement spreads it.",
+       "icon": "icons/v/34.png",
+       "status": "cross",
+       "note": "Every paladin has Judgement, so it stands alone and is worth most to a Holy or Protection main."
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Frozen Heart",
+       "ranks": 3,
+       "text": "Reduces damage taken by 2/4/6% while Presence of the Grave is active.",
+       "icon": "icons/talent-blackguard-frozen-heart.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Reaping",
+       "ranks": 2,
+       "text": "Killing a Blighted enemy grants 10/20% attack speed for 10 sec.",
+       "icon": "icons/talent-blackguard-reaping.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      },
+      {
+       "name": "Death's Advance",
+       "ranks": 3,
+       "text": "Increases movement speed by 5/10/15% and reduces snare duration by 15/30/45%.",
+       "icon": "icons/talent-blackguard-death-s-advance.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 31,
+     "isCapstone": true,
+     "talents": [
+      {
+       "name": "Damnation",
+       "ranks": 1,
+       "text": "Permanent while held. Your Seals become Plagues, melee attacks apply Blight automatically, and Leeching Blade’s healing is doubled. Toggleable in the manner of Shadowform: the permanence lives in the acquisition chain rather than in the mechanic.",
+       "icon": "icons/talent-blackguard-damnation.png",
+       "status": "reworked",
+       "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "necromancy",
+   "name": "Necromancy",
+   "host": "Mage",
+   "concept": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains.",
+   "retailSource": "Necromancer as a Warcraft III unit, plus Unholy Death Knight's caster half",
+   "localMechanic": "The Risen, skeletal minions raised from corpses, plural and expiring",
+   "verb": "taught",
+   "verbNote": "Necromancy in Warcraft is explicitly curriculum. Somebody teaches it, in a building, to students.",
+   "professionGate": "Alchemy",
+   "professionNote": "For the plague components. Scholomance is as much a laboratory as a school. Satisfiable by another player, never required personally.",
+   "permanentCost": null,
+   "tier": 3,
+   "deployment": "fresh",
+   "worldAnchors": [
+    "Scholomance",
+    "Western Plaguelands"
+   ],
+   "loreAnchor": "Kel'Thuzad was a Dalaran mage and a member of the Kirin Tor before founding the Cult of the Damned. Both endpoints of that career change are already in the game.",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": []
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Wither",
+       "ranks": 1,
+       "text": "A shadow damage over time effect.",
+       "icon": "icons/talent-necromancy-wither.png",
+       "status": "reworked",
+       "note": "Mage's first real DoT and the tree's rhythm-setter. The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Bone Chill",
+       "ranks": 2,
+       "text": "Wither reduces the target's attack speed by 10/20%.",
+       "icon": "icons/talent-necromancy-bone-chill.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Rotting Touch",
+       "ranks": 3,
+       "text": "Wither deals 4/8/12% additional damage to targets below 35% health.",
+       "icon": "icons/talent-necromancy-rotting-touch.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Siphon Life",
+       "ranks": 5,
+       "text": "Wither heals you for 5/10/15/20/25% of the damage it deals.",
+       "icon": "icons/talent-necromancy-siphon-life.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Corpse Harvest",
+       "ranks": 5,
+       "text": "A corpse you consume raises a Risen, then two, then the Risen inherit your Frost slows, then they detonate on expiry, then a kill near one refreshes its duration.",
+       "icon": "icons/talent-necromancy-corpse-harvest.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Sepulchral Study",
+       "ranks": 3,
+       "text": "Your time spent among the dead pays out: your Risen last longer and your Shadow and Frost spells cost less against anything already damaged by them.",
+       "icon": "icons/talent-necromancy-sepulchral-study.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Bone Armor",
+       "ranks": 1,
+       "text": "Surrounds you with bone fragments absorbing damage. Each absorb consumes a fragment, so the shield visibly depletes.",
+       "icon": "icons/talent-necromancy-bone-armor.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Contagion",
+       "ranks": 3,
+       "text": "Wither spreads to a nearby enemy on the target's death, 33/66/100% chance.",
+       "icon": "icons/talent-necromancy-contagion.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Boneyard",
+       "ranks": 5,
+       "text": "Your Risen persist through zone transitions, then guard a location you mark, then taunt what attacks you, then rise again once per fight.",
+       "icon": "icons/talent-necromancy-boneyard.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Withering Cold",
+       "ranks": 2,
+       "text": "Wither slows casting speed by 10/20%.",
+       "icon": "icons/talent-necromancy-withering-cold.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "isMark": true,
+     "talents": [
+      {
+       "name": "Raise Skeleton",
+       "ranks": 1,
+       "text": "Consumes a corpse to raise a skeletal minion for 60 sec. One at a time.",
+       "note": "The largest mark in the document, because vanilla mage has no pet at all. The corpse requirement keeps it tied to combat that already happened.",
+       "icon": "icons/talent-necromancy-raise-skeleton.png",
+       "status": "reworked"
+      },
+      {
+       "name": "Grave Chill",
+       "ranks": 3,
+       "text": "Bone Armor also reduces the attack speed of melee attackers by 5/10/15%.",
+       "icon": "icons/talent-necromancy-grave-chill.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Necrotic Aptitude",
+       "ranks": 2,
+       "text": "Increases Risen duration by 15/30 sec.",
+       "icon": "icons/talent-necromancy-necrotic-aptitude.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Grave Bond",
+       "ranks": 2,
+       "col": 4,
+       "crossTree": true,
+       "text": "Your Risen benefit from your spell critical chance, and your Frost spells slow anything attacking them.",
+       "icon": "icons/v/58.png",
+       "status": "cross",
+       "note": "Every mage has Frost spells, so it stands alone and is worth most to a Frost or Arcane main."
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Unstable Dead",
+       "ranks": 5,
+       "text": "A Risen that expires explodes, then applies your Wither, then chains to a second corpse, then leaves bone shards that slow, then raises a lesser Risen in turn.",
+       "icon": "icons/talent-necromancy-unstable-dead.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Dark Command",
+       "ranks": 2,
+       "text": "Increases Risen damage by 15/30%.",
+       "icon": "icons/talent-necromancy-dark-command.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      },
+      {
+       "name": "Death Pact",
+       "ranks": 3,
+       "text": "Consuming a Risen heals you for 10/20/30% of your health.",
+       "icon": "icons/talent-necromancy-death-pact.png",
+       "status": "reworked",
+       "note": "The fourth school. A caster who raises the disposable dead, spreads plague, and drains."
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 31,
+     "isCapstone": true,
+     "talents": [
+      {
+       "name": "Command the Damned",
+       "ranks": 1,
+       "text": "Raise Skeleton no longer requires a corpse and you may sustain three Risen at once. They still expire, and they always will.",
+       "note": "The expiry is the identity, not a balance lever. Warlocks have a companion. Necromancers have ammunition.",
+       "icon": "icons/talent-necromancy-command-the-damned.png",
+       "status": "reworked"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "metamorphosis",
+   "name": "Metamorphosis",
+   "host": "Warlock",
+   "concept": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on.",
+   "retailSource": "Demon Hunter, Vengeance. Previously a Demonology warlock talent from Wrath through Warlords.",
+   "localMechanic": "Fel corruption, a self-applied stacking state that the tree applies, spends, and scales with. The rebuild exists because the original tree contained none of it.",
+   "verb": "taken",
+   "verbNote": "Nobody grants this and nobody teaches it. The warlock performs a ritual on themselves and it works or it does not.",
+   "professionGate": "Tailoring, Enchanting",
+   "professionNote": "Tailoring fits the Season of Discovery precedent of cloth built for tanking. Enchanting for the ritual components.",
+   "permanentCost": "Marked by the fel in a visible, permanent, mechanically minor way.",
+   "tier": 3,
+   "deployment": "fresh",
+   "worldAnchors": [
+    "Redridge Mountains",
+    "Darkshore",
+    "The Barrens",
+    "Shadowfang Keep",
+    "Blackfathom Deeps",
+    "Ashenvale"
+   ],
+   "loreAnchor": "Metamorphosis is adapted from the Warcraft III Demon Hunter ability, visually based on Illidan, and was removed from warlocks in patch 7.0.3 specifically to make room for the Demon Hunter class.",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Corruption's Price",
+       "ranks": 5,
+       "col": 1,
+       "text": "Your Shadow damage applies a stack of fel corruption, then stacks persist through form changes, then a stack is spent to make your next spell unresistable, then corruption ticks for damage at five stacks, then stacks do not decay in combat.",
+       "icon": "icons/v/15.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Fel Concentration",
+       "ranks": 5,
+       "col": 3,
+       "text": "Gives you a 14/28/42/56/70% chance to avoid interruption caused by damage while channeling the Drain Life, Drain Mana, or Drain Soul spell.",
+       "icon": "icons/talent-metamorphosis-fel-concentration.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on. Reduces the chance your channelled spells are interrupted, kept from the original tree."
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Shadow Cleave",
+       "ranks": 1,
+       "col": 1,
+       "text": "Instant Shadow strike that hits all enemies in front of you.",
+       "icon": "icons/talent-metamorphosis-shadow-cleave.png",
+       "status": "reworked",
+       "note": "The tree’s enabler. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Cruel Intent",
+       "ranks": 5,
+       "col": 2,
+       "text": "Shadow Cleave applies two stacks, then strikes behind you, then spends stacks for damage, then refreshes Immolation Aura, then cannot be dodged at full stacks.",
+       "icon": "icons/talent-metamorphosis-cruel-intent.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Sacrificial Pact",
+       "ranks": 5,
+       "col": 4,
+       "text": "Your health is spendable as a resource, then spending it applies corruption, then Health Funnel channels while you attack, then Life Tap applies corruption, then your demon’s death grants full stacks.",
+       "icon": "icons/v/19.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Soul Link",
+       "ranks": 2,
+       "col": 1,
+       "text": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, or Felhunter demon instead. In addition, both the demon and master will inflict 3% more damage. Lasts as long as the demon is active.",
+       "icon": "icons/talent-metamorphosis-soul-link.png",
+       "status": "reworked",
+       "note": "Damage is shared with your demon, kept from the original tree. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Demonic Aegis",
+       "ranks": 5,
+       "col": 2,
+       "text": "Corruption stacks reduce damage taken, then convert magic damage to fel, then a full stack absorbs a killing blow once per fight, then absorbed damage feeds the form, then breaking absorbs applies corruption to attackers.",
+       "icon": "icons/talent-metamorphosis-demonic-aegis.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Master Summoner",
+       "ranks": 3,
+       "col": 4,
+       "text": "Reduces the casting time of your Imp, Voidwalker, Succubus, and Felhunter Summoning spells by 2/4 sec and the Mana cost by 20/40%.",
+       "icon": "icons/talent-metamorphosis-master-summoner.png",
+       "status": "reworked",
+       "note": "Reworked to summoning behavior: your demon arrives already engaged, then inherits your corruption stacks, then can be summoned in combat once per fight. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Immolation Aura",
+       "ranks": 1,
+       "col": 1,
+       "text": "Fel flames damage everything near you while active.",
+       "icon": "icons/talent-metamorphosis-immolation-aura.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Unholy Sacrifice",
+       "ranks": 3,
+       "col": 2,
+       "text": "Sacrificing your demon grants its signature effect.",
+       "icon": "icons/talent-metamorphosis-unholy-sacrifice.png",
+       "status": "reworked",
+       "note": "Sacrificing your demon grants its signature effect, kept from the original tree. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Fel Ferocity",
+       "ranks": 5,
+       "col": 4,
+       "text": "Corruption stacks raise Shadow Cleave’s critical chance, then criticals apply two stacks, then a critical at full stacks resets Fel Aegis, then criticals spread corruption to nearby enemies, then a spread refunds a shard.",
+       "icon": "icons/talent-metamorphosis-fel-ferocity.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Fel Aegis",
+       "ranks": 1,
+       "col": 1,
+       "text": "The mark. A fel barrier that absorbs damage and converts what it absorbs into corruption stacks.",
+       "icon": "icons/talent-metamorphosis-fel-aegis.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Demonic Knowledge",
+       "ranks": 2,
+       "col": 2,
+       "text": "Your spell damage benefits from your demon’s stamina and intellect.",
+       "icon": "icons/talent-metamorphosis-demonic-knowledge.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Ruinous Corruption",
+       "ranks": 3,
+       "col": 3,
+       "crossTree": true,
+       "text": "Your Immolate and Corruption apply fel stacks, Conflagrate spends them for damage, and Shadow Bolt applies two.",
+       "icon": "icons/v/103.png",
+       "status": "cross",
+       "note": "Every warlock has all three spells, so it stands alone, and it is worth most to an Affliction or Destruction main at 26/25."
+      },
+      {
+       "name": "Irreversible",
+       "ranks": 2,
+       "col": 4,
+       "subtraction": true,
+       "text": "Subtraction. Your corruption stacks never decay and the form’s bonuses double. You may no longer leave the form or summon a demon.",
+       "icon": "icons/v/232.png",
+       "status": "subtraction",
+       "note": "Added by the revisions. Metamorphosis, Conduit, and Survival were the three trees carrying no subtraction node."
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Unending Fel",
+       "ranks": 3,
+       "col": 2,
+       "text": "The form’s duration extends while enemies are near.",
+       "icon": "icons/talent-metamorphosis-unending-fel.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      },
+      {
+       "name": "Demonic Fury",
+       "ranks": 5,
+       "col": 3,
+       "text": "The form’s abilities spend corruption rather than mana, then generate it, then a full stack empowers the next, then the form’s damage scales with stacks held, then leaving the form banks them.",
+       "icon": "icons/talent-metamorphosis-demonic-fury.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Metamorphosis",
+       "ranks": 1,
+       "col": 2,
+       "text": "Transform into a demon. Armor, health, and threat rise, your abilities change, and the form runs on corruption stacks rather than on mana.",
+       "icon": "icons/talent-metamorphosis-metamorphosis.png",
+       "status": "reworked",
+       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bladedancer",
+   "name": "Bladedancer",
+   "host": "Rogue",
+   "concept": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one.",
+   "retailSource": "Demon Hunter Havoc merged with Windwalker Monk",
+   "localMechanic": "Momentum, a stacking state gained by moving and by striking new targets, lost by standing still. Combo points remain the spend.",
+   "verb": "copied",
+   "verbNote": "The rogue watches someone fight and learns it by imitation. The least mystical acquisition on the list and the most in character.",
+   "professionGate": "Leatherworking",
+   "professionNote": "For the glaives and the harness.",
+   "permanentCost": null,
+   "tier": 3,
+   "deployment": "fresh",
+   "worldAnchors": [],
+   "worldAnchorGap": "Unspecified. Section 8.6 names chains for Blackguard, Necromancy, Metamorphosis, and Runeblade only. This is an open item.",
+   "loreAnchor": "The Blademaster and the Aldrachi glaive tradition are both available as naming material without importing the Illidari. The Pandaren Brewmaster was a hireable Warcraft III neutral hero, not a race requirement.",
+   "weaponFork": {
+    "note": "The tree does not ask which fantasy you are. Your main hand answers. Vanilla already gates Backstab and Ambush on daggers and carries per-weapon specialization talents in Combat, so this is the existing rule rather than a new one.",
+    "bladed": "One-handed swords, axes, daggers. Forward, thrown, burst. Reads as the duelist.",
+    "fist": "Fist weapons or unarmed. Around you, sustained, continuous. Reads as the martial artist.",
+    "forks": [
+     {
+      "ability": "Tumble",
+      "row": 2,
+      "bladed": "A 15 yard forward leap on a 20 sec cooldown. A gap closer.",
+      "fist": "An 8 yard roll in any direction on an 8 sec cooldown. Repositioning."
+     },
+     {
+      "ability": "Whirling Blades",
+      "row": 5,
+      "bladed": "An arc striking enemies in a cone in front of you at up to 8 yards.",
+      "fist": "A spin striking every enemy within melee range around you."
+     },
+     {
+      "ability": "Unending Dance",
+      "row": 7,
+      "bladed": "Momentum is consumed by your next finisher for a large burst, then resets.",
+      "fist": "Momentum has no cap and does not decay while you keep moving."
+     }
+    ],
+    "consequence": "Swapping weapons swaps the style in the field, so a player carrying both is carrying two builds at the cost of a weapon swap rather than a respec. It also gives fist weapons a reason to exist, which vanilla's thin fist itemization currently does not provide."
+   },
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": []
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Tumble",
+       "ranks": 1,
+       "text": "A short directional roll. Not a sprint. The thing that makes the fantasy read as flow rather than speed.",
+       "forks": true,
+       "icon": "icons/talent-bladedancer-tumble.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Open Hand",
+       "ranks": 2,
+       "text": "Your unarmed attacks use your Fist Weapon skill and scale as a weapon.",
+       "note": "Vanilla ships an Unarmed weapon skill that exists, can be levelled, and is pointless. One talent makes it real in exactly one tree.",
+       "icon": "icons/talent-bladedancer-open-hand.png",
+       "status": "reworked"
+      },
+      {
+       "name": "Sinew",
+       "ranks": 5,
+       "text": "Increases Agility by 1/2/3/4/5%.",
+       "icon": "icons/talent-bladedancer-sinew.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Momentum",
+       "ranks": 5,
+       "text": "Momentum is gained by moving between targets, then held through a stun, then spent by Whirling Blades, then decays a stage slower, then a full bar makes your next strike unavoidable.",
+       "icon": "icons/talent-bladedancer-momentum.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "No Opening Needed",
+       "ranks": 2,
+       "text": "Your opener abilities no longer require stealth, at 50/100% effectiveness.",
+       "icon": "icons/talent-bladedancer-no-opening-needed.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Redirection",
+       "ranks": 3,
+       "text": "Changing targets no longer clears combo points, 33/66/100% of the time.",
+       "icon": "icons/talent-bladedancer-redirection.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Sweeping Kick",
+       "ranks": 1,
+       "text": "A combo point spender that briefly stuns all enemies within melee range. Rogue's first multi-target control.",
+       "icon": "icons/talent-bladedancer-sweeping-kick.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Blade Harmony",
+       "ranks": 3,
+       "text": "Attacking a target you have not hit in the last 6 sec grants a combo point, 33/66/100% chance.",
+       "icon": "icons/talent-bladedancer-blade-harmony.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Precision Footwork",
+       "ranks": 3,
+       "text": "Increases chance to hit by 1/2/3%.",
+       "icon": "icons/talent-bladedancer-precision-footwork.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Second Wind",
+       "ranks": 2,
+       "text": "Tumble restores 10/20 energy.",
+       "icon": "icons/talent-bladedancer-second-wind.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "isMark": true,
+     "talents": [
+      {
+       "name": "Whirling Blades",
+       "ranks": 1,
+       "text": "A finisher dealing damage to multiple enemies, scaling with combo points.",
+       "forks": true,
+       "note": "A finisher dealing damage to multiple enemies, scaling with combo points. Rogue's entire vanilla identity is single-target burst from stealth. A multi-target finisher is the largest thing twenty points could buy.",
+       "icon": "icons/talent-bladedancer-whirling-blades.png",
+       "status": "reworked"
+      },
+      {
+       "name": "Unbroken Rhythm",
+       "ranks": 5,
+       "text": "Momentum stages persist through a miss, then a dodge grants one, then holding full Momentum increases your movement speed, then a finisher banks a stage, then a banked stage opens the next fight at one.",
+       "icon": "icons/talent-bladedancer-unbroken-rhythm.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Evasive",
+       "ranks": 2,
+       "text": "Increases dodge chance by 1/2% per Momentum stack, up to 5/10%.",
+       "icon": "icons/talent-bladedancer-evasive.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Shadow Momentum",
+       "ranks": 2,
+       "col": 4,
+       "crossTree": true,
+       "text": "Momentum is gained from stealth openers and spent by finishers.",
+       "icon": "icons/v/39.png",
+       "status": "cross",
+       "note": "Every rogue has both, so it stands alone and is worth most to a Subtlety or Assassination main."
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Edged Discipline",
+       "ranks": 3,
+       "text": "Bladed only. Whirling Blades may be used at range, striking a cone from where it lands.",
+       "icon": "icons/talent-bladedancer-edged-discipline.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Flowing Palm",
+       "ranks": 3,
+       "text": "Fist or unarmed only. Whirling Blades refunds a combo point for every two targets struck.",
+       "icon": "icons/talent-bladedancer-flowing-palm.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Relentless",
+       "ranks": 3,
+       "text": "Whirling Blades refunds one combo point per 2/3/4 targets struck.",
+       "icon": "icons/talent-bladedancer-relentless.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Uninterrupted",
+       "ranks": 2,
+       "text": "Momentum stacks decay one at a time rather than clearing.",
+       "icon": "icons/talent-bladedancer-uninterrupted.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      },
+      {
+       "name": "Killing Flow",
+       "ranks": 5,
+       "text": "A kill refunds Momentum, then refreshes Whirling Blades, then grants a free Sweeping Kick, then spreads Momentum to nearby allies’ targets, then a kill at full Momentum resets Unending Dance.",
+       "icon": "icons/talent-bladedancer-killing-flow.png",
+       "status": "reworked",
+       "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 31,
+     "isCapstone": true,
+     "talents": [
+      {
+       "name": "Unending Dance",
+       "ranks": 1,
+       "text": "Momentum behaves differently by weapon. Whirling Blades no longer costs a full finisher below three targets.",
+       "forks": true,
+       "note": "The duelist builds and spends. The martial artist accumulates and never stops. That is the difference between the two fantasies stated mechanically; everything else is presentation.",
+       "icon": "icons/talent-bladedancer-unending-dance.png",
+       "status": "reworked"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "conduit",
+   "name": "Conduit",
+   "host": "Shaman",
+   "concept": "Elemental power held rather than thrown, and given to a person rather than to the ground.",
+   "retailSource": "Evoker, all three specs, with Augmentation as the load-bearing one",
+   "localMechanic": "Empowerment, where certain spells may be held while casting to advance through charge stages",
+   "verb": "granted",
+   "verbNote": "The elements agree or they do not, so the chain is a petition rather than a conquest. It should be possible to be refused and have to return.",
+   "professionGate": null,
+   "professionNote": "None. Nothing is crafted and nothing is bought.",
+   "permanentCost": null,
+   "tier": 3,
+   "deployment": "fresh",
+   "worldAnchors": [],
+   "worldAnchorGap": "Unspecified. Elemental sites would be the obvious home but Section 8.6 does not name them. Open item.",
+   "loreAnchor": "Dragonflight-era Evoker lore does not exist in a Classic timeframe and should not be imported. The shaman's existing relationship with the elements carries the whole tree.",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": []
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Empowered Lightning",
+       "ranks": 3,
+       "text": "A held Lightning Bolt splits at two stages, then chains at three, then leaves a charge on the ground at full hold.",
+       "icon": "icons/talent-conduit-empowered-lightning.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Tidal Focus",
+       "ranks": 3,
+       "text": "Reduces the mana cost of healing spells by 1/2/3%.",
+       "icon": "icons/talent-conduit-tidal-focus.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Ancestral Insight",
+       "ranks": 5,
+       "text": "Increases Intellect by 1/2/3/4/5%.",
+       "icon": "icons/talent-conduit-ancestral-insight.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Living Current",
+       "ranks": 5,
+       "text": "Empowerment stages build while you channel, then hold through a spell swap, then raise the next cast a stage, then persist ten seconds out of combat, then a full hold cannot be interrupted.",
+       "icon": "icons/talent-conduit-living-current.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Empowered Healing",
+       "ranks": 2,
+       "text": "Healing Wave may be held to charge.",
+       "icon": "icons/talent-conduit-empowered-healing.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Storm Reach",
+       "ranks": 3,
+       "text": "Increases the range of empowered spells by 3/6/9 yards.",
+       "icon": "icons/talent-conduit-storm-reach.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Totemic Reach",
+       "ranks": 1,
+       "text": "Your totems affect allies at twice the radius.",
+       "icon": "icons/talent-conduit-totemic-reach.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Elemental Grace",
+       "ranks": 3,
+       "text": "Empowerment charges 10/20/30% faster.",
+       "icon": "icons/talent-conduit-elemental-grace.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Restorative Current",
+       "ranks": 5,
+       "text": "Empowered heals overheal into a shield, then spread to a second target, then cleanse, then chain from the shield, then grant the target a stage of your Empowerment.",
+       "icon": "icons/talent-conduit-restorative-current.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Earthen Footing",
+       "ranks": 2,
+       "text": "Reduces the chance to be interrupted while empowering by 35/70%.",
+       "icon": "icons/talent-conduit-earthen-footing.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "isMark": true,
+     "talents": [
+      {
+       "name": "Elemental Bond",
+       "ranks": 1,
+       "text": "Places one active totem's effect on a single ally instead of on the ground. The effect follows them and persists while they remain in your party.",
+       "note": "Augmentation translated into vanilla's vocabulary with no invention required. Shaman's defining contribution is already a buff placed on the ground; placing it on a person is one talent.",
+       "icon": "icons/talent-conduit-elemental-bond.png",
+       "status": "reworked"
+      },
+      {
+       "name": "Elemental Devotion",
+       "ranks": 3,
+       "text": "Increases the duration of Elemental Bond by 5/10/15 sec.",
+       "icon": "icons/talent-conduit-elemental-devotion.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Surge",
+       "ranks": 2,
+       "text": "Empowered spells at full charge have a 10/20% chance not to consume mana.",
+       "icon": "icons/talent-conduit-surge.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Stormbound",
+       "ranks": 2,
+       "col": 4,
+       "crossTree": true,
+       "text": "Your Empowerment stages carry into Chain Heal and Chain Lightning, and a fully held cast grants Clearcasting.",
+       "icon": "icons/v/32.png",
+       "status": "cross",
+       "note": "Every shaman has both spells, so it stands alone and is worth most to an Elemental or Restoration main."
+      },
+      {
+       "name": "Unbroken Current",
+       "ranks": 1,
+       "col": 3,
+       "subtraction": true,
+       "text": "Subtraction. Your empowered casts cannot be interrupted or pushed back. You may no longer cast anything instantly.",
+       "icon": "icons/v/107.png",
+       "status": "subtraction",
+       "note": "Added by the revisions. Metamorphosis, Conduit, and Survival were the three trees carrying no subtraction node."
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Conductive",
+       "ranks": 3,
+       "text": "Empowered spells at full charge also strike a second target for 20/40/60%.",
+       "icon": "icons/talent-conduit-conductive.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Deep Bond",
+       "ranks": 2,
+       "text": "Elemental Bond effects are 15/30% stronger.",
+       "icon": "icons/talent-conduit-deep-bond.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      },
+      {
+       "name": "Wellspring",
+       "ranks": 3,
+       "text": "Living Current also restores mana to bonded allies at 25/50/75% of the amount.",
+       "icon": "icons/talent-conduit-wellspring.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 31,
+     "isCapstone": true,
+     "talents": [
+      {
+       "name": "Confluence",
+       "ranks": 1,
+       "text": "Elemental Bond may be active on up to three allies at once, and fully empowered spells grant a brief share of their effect to everyone you are bonded to.",
+       "icon": "icons/talent-conduit-confluence.png",
+       "status": "reworked",
+       "note": "Elemental power held rather than thrown, and given to a person rather than to the ground."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "runeblade",
+   "name": "Runeblade",
+   "host": "Warrior",
+   "concept": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six.",
+   "retailSource": "Death Knight, Frost only",
+   "localMechanic": "Rune charges accumulated on the weapon and spent on effects. The magic belongs to the object throughout.",
+   "verb": "forged",
+   "verbNote": "An object, not a power, which is the whole reason warrior can have it without becoming a spellcaster. The chain produces a weapon and requires someone who can make one.",
+   "professionGate": "Blacksmithing, ideally Weaponsmith",
+   "professionNote": "The model for the rest. Not that the warrior must be a smith, but that they need access to one. Same as Thunderfury and the Sulfuron Hammer.",
+   "permanentCost": null,
+   "tier": 3,
+   "deployment": "fresh",
+   "worldAnchors": [
+    "Blackrock Depths",
+    "Searing Gorge",
+    "Burning Steppes"
+   ],
+   "loreAnchor": "Runeblades are forged objects in Warcraft lore, so a warrior who carries one has acquired an item rather than a power. Warrior's identity in vanilla is defined negatively, as the class with no magic, and this respects that.",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Frostbitten",
+       "ranks": 3,
+       "text": "Increases Frost resistance by 5/10/15.",
+       "icon": "icons/talent-runeblade-frostbitten.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Rime",
+       "ranks": 5,
+       "text": "A charge spent on a frozen target refunds itself, then freezes the ground, then grants a free Shattering Blow, then applies to everything nearby, then holds the target in place at full charges.",
+       "icon": "icons/talent-runeblade-rime.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Glacial Edge",
+       "ranks": 3,
+       "text": "Increases the duration of Rime by 1/2/3 sec.",
+       "icon": "icons/talent-runeblade-glacial-edge.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Tempered",
+       "ranks": 5,
+       "text": "Increases Strength by 1/2/3/4/5%.",
+       "icon": "icons/talent-runeblade-tempered.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Rune Charge",
+       "ranks": 5,
+       "text": "Your strikes bank rune charges, then charges persist between fights, then a full bank empowers your next special, then charges are spent by Hoarfrost, then banking a charge refunds rage.",
+       "icon": "icons/talent-runeblade-rune-charge.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Cold Endurance",
+       "ranks": 2,
+       "text": "Reduces damage taken while below 35% health by 5/10%.",
+       "icon": "icons/talent-runeblade-cold-endurance.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Cold Blood",
+       "ranks": 3,
+       "text": "Increases critical strike chance by 1/2/3%.",
+       "icon": "icons/talent-runeblade-cold-blood.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Shattering Blow",
+       "ranks": 1,
+       "text": "Consumes all rune charges to deal frost damage scaled to the number consumed.",
+       "icon": "icons/talent-runeblade-shattering-blow.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Killing Frost",
+       "ranks": 3,
+       "text": "Critical strikes against slowed targets restore 3/6/9 rage.",
+       "icon": "icons/talent-runeblade-killing-frost.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Chillguard",
+       "ranks": 3,
+       "text": "Reduces damage taken from slowed enemies by 2/4/6%.",
+       "icon": "icons/talent-runeblade-chillguard.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Frost Reserve",
+       "ranks": 2,
+       "text": "Rune charges build 15/30% faster.",
+       "icon": "icons/talent-runeblade-frost-reserve.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "isMark": true,
+     "talents": [
+      {
+       "name": "Hoarfrost",
+       "ranks": 1,
+       "text": "For 20 sec every swing deals additional frost damage and applies Rime automatically. Two minute cooldown.",
+       "icon": "icons/talent-runeblade-hoarfrost.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Numbing Cold",
+       "ranks": 3,
+       "text": "Rime also reduces the target's attack speed by 5/10/15%.",
+       "icon": "icons/talent-runeblade-numbing-cold.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Deep Freeze",
+       "ranks": 2,
+       "text": "Increases Shattering Blow damage by 15/30%.",
+       "icon": "icons/talent-runeblade-deep-freeze.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Tempered Steel",
+       "ranks": 2,
+       "col": 4,
+       "crossTree": true,
+       "text": "Rune charges are spent by Sunder Armor and Shield Slam, and Mortal Strike consumes all charges for damage.",
+       "icon": "icons/v/22.png",
+       "status": "cross",
+       "note": "Every warrior has Sunder Armor, so it stands alone and is worth most to an Arms or Protection main."
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Permafrost",
+       "ranks": 3,
+       "text": "Rune charges no longer decay out of combat, up to 1/2/3 retained.",
+       "icon": "icons/talent-runeblade-permafrost.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Bitter Cold",
+       "ranks": 2,
+       "text": "Shattering Blow also slows all nearby enemies by 25/50%.",
+       "icon": "icons/talent-runeblade-bitter-cold.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      },
+      {
+       "name": "Unbreakable Rime",
+       "ranks": 5,
+       "text": "Charges no longer expire, then a spent charge chills the attacker, then two charges may be spent at once, then a spend refreshes Hoarfrost, then a full spend leaves a rune on the ground.",
+       "icon": "icons/talent-runeblade-unbreakable-rime.png",
+       "status": "reworked",
+       "note": "A warrior whose weapon is enchanted with cold. Not a caster, and deliberately smaller in ambition than the other six."
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 31,
+     "isCapstone": true,
+     "talents": [
+      {
+       "name": "The Runeblade",
+       "ranks": 1,
+       "text": "Requires an equipped runeblade. Your weapon permanently deals frost damage on every swing, your strikes always apply Rime, and killing blows restore rage.",
+       "note": "The only capstone in the document gated on an item rather than on points. It exists to close the loop with the forged verb: the capstone should not function without the thing that was forged.",
+       "icon": "icons/talent-runeblade-the-runeblade.png",
+       "status": "reworked"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "survival",
+   "name": "Survival",
+   "host": "Hunter",
+   "concept": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes.",
+   "retailSource": "Survival, the 2016 melee rework",
+   "localMechanic": "Offensive traps: laid in combat, armed instantly, and rewarded for being triggered rather than for controlling.",
+   "verb": "earned",
+   "verbNote": "A master, a trial, and a demonstration. The Beastmaster was a hero you hired rather than one you built.",
+   "professionGate": null,
+   "professionNote": "None.",
+   "permanentCost": null,
+   "tier": 2,
+   "deployment": "ptr",
+   "isRework": true,
+   "reworkNote": "The only entry that reworks an existing tree rather than adding a fourth, which is why it is Tier 2 and does not need a fresh realm. Vanilla's Survival is already full of traps and melee-adjacent talents and is the weakest of the three precisely because it never committed to either.",
+   "worldAnchors": [],
+   "worldAnchorGap": "Unspecified. Open item.",
+   "loreAnchor": "Rexxar exists in Warcraft III and in vanilla, fights in melee alongside Misha, and is the archetype fully realized. A hunter tree that produces Rexxar is a tree that produces something the setting already contains.",
+   "rows": [
+    {
+     "row": 1,
+     "points": 0,
+     "talents": [
+      {
+       "name": "Trapper",
+       "ranks": 5,
+       "col": 1,
+       "text": "Traps arm instantly, then may be laid in combat, then two may be active at once, then they persist through your death, then laying one does not break your positioning. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/16.png",
+       "status": "replacing",
+       "note": "Replacing Deflection. Rebuild of vanilla Survival rather than the original tree carried forward."
+      },
+      {
+       "name": "Quarry",
+       "ranks": 6,
+       "col": 3,
+       "text": "Your damage against a creature type you have Tracked is increased, and Track swaps freely in combat. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/17.png",
+       "status": "reworked",
+       "note": "Monster Slaying and Humanoid Slaying merged. Rebuild of vanilla Survival rather than the original tree carried forward."
+      }
+     ]
+    },
+    {
+     "row": 2,
+     "points": 5,
+     "talents": [
+      {
+       "name": "Entrapment",
+       "ranks": 5,
+       "col": 1,
+       "text": "Gives your Immolation Trap, Frost Trap, and Explosive Trap a 5/10/15/20/25% chance to entrap the target, preventing them from moving for 5 sec. Traps stop being written off as PvP content and start working in both modes. Your traps root what they hit.",
+       "icon": "icons/talent-survival-entrapment.png",
+       "status": "kept",
+       "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
+      },
+      {
+       "name": "Improved Wing Clip",
+       "ranks": 5,
+       "col": 2,
+       "text": "Gives your Wing Clip ability a 4/8/12/16/20% chance to immobilize the target for 5 sec. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/0.png",
+       "status": "kept",
+       "note": "Kept with a graded fallback: against immune targets it reduces damage dealt instead of rooting. Rebuild of vanilla Survival rather than the original tree carried forward."
+      },
+      {
+       "name": "Savage Strikes",
+       "ranks": 2,
+       "col": 4,
+       "text": "Increases the critical strike chance of Raptor Strike and Mongoose Bite by 10/20%. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/talent-survival-savage-strikes.png",
+       "status": "reworked",
+       "note": "Reworked to Raptor Strike behavior rather than a critical chance percentage. Rebuild of vanilla Survival rather than the original tree carried forward."
+      }
+     ]
+    },
+    {
+     "row": 3,
+     "points": 10,
+     "talents": [
+      {
+       "name": "Deterrence",
+       "ranks": 1,
+       "col": 1,
+       "text": "Parry and dodge chance rise sharply for a short window. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/23.png",
+       "status": "reworked",
+       "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
+      },
+      {
+       "name": "Clever Traps",
+       "ranks": 3,
+       "col": 2,
+       "text": "Trap effects cannot be dispelled, then they scale with your ranged attack power, then a broken trap refunds its cooldown. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/75.png",
+       "status": "reworked",
+       "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
+      },
+      {
+       "name": "Survivalist",
+       "ranks": 4,
+       "col": 4,
+       "text": "Increases total health by 2/4/6/8/10% Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/77.png",
+       "status": "reworked",
+       "note": "Reworked from a health percentage: damage taken below 35% arms your nearest trap. Rebuild of vanilla Survival rather than the original tree carried forward."
+      }
+     ]
+    },
+    {
+     "row": 4,
+     "points": 15,
+     "talents": [
+      {
+       "name": "Improved Feign Death",
+       "ranks": 2,
+       "col": 1,
+       "text": "Feign Death is harder to resist and drops combat faster. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/2.png",
+       "status": "reworked",
+       "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
+      },
+      {
+       "name": "Trap Mastery",
+       "ranks": 5,
+       "col": 3,
+       "text": "Traps deal damage rather than only controlling, then apply Serpent Sting, then Explosive Trap knocks back, then Freezing Trap slows a stun-immune target, then triggering one resets another. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/talent-survival-trap-mastery.png",
+       "status": "reworked",
+       "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
+      }
+     ]
+    },
+    {
+     "row": 5,
+     "points": 20,
+     "talents": [
+      {
+       "name": "Coordinated Assault",
+       "ranks": 1,
+       "col": 1,
+       "text": "The mark. You and your pet strike as one: your Raptor Strike triggers its basic attack and its critical strikes refresh your traps. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/talent-survival-coordinated-assault.png",
+       "status": "reworked",
+       "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
+      },
+      {
+       "name": "Snare Mastery",
+       "ranks": 3,
+       "col": 2,
+       "text": "Your Concussive Shot and Wing Clip share their slow, and your traps benefit from your ranged critical chance. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/47.png",
+       "status": "reworked",
+       "note": "Sideways. Rebuild of vanilla Survival rather than the original tree carried forward."
+      },
+      {
+       "name": "Marked Prey",
+       "ranks": 3,
+       "col": 3,
+       "crossTree": true,
+       "text": "Your traps apply Hunter’s Mark, your melee strikes benefit from your ranged attack power, and Raptor Strike refreshes Serpent Sting.",
+       "icon": "icons/v/25.png",
+       "status": "cross",
+       "note": "Stands alone for any hunter."
+      },
+      {
+       "name": "Sole Survivor",
+       "ranks": 1,
+       "col": 4,
+       "subtraction": true,
+       "text": "Your traps arm instantly and cannot be resisted. You may no longer have a pet active.",
+       "icon": "icons/v/78.png",
+       "status": "subtraction",
+       "note": "Subtraction, replacing Lone Wolf because this tree is built around a pet. Added by the revisions. Metamorphosis, Conduit, and Survival were the three trees carrying no subtraction node."
+      }
+     ]
+    },
+    {
+     "row": 6,
+     "points": 25,
+     "talents": [
+      {
+       "name": "Lightning Reflexes",
+       "ranks": 5,
+       "col": 2,
+       "text": "Reworked from an agility percentage to avoidance behavior. Traps stop being written off as PvP content and start working in both modes.",
+       "icon": "icons/v/37.png",
+       "status": "reworked",
+       "note": "Reworked from an agility percentage to avoidance behavior. Rebuild of vanilla Survival rather than the original tree carried forward."
+      }
+     ]
+    },
+    {
+     "row": 7,
+     "points": 30,
+     "talents": [
+      {
+       "name": "Hunt as One",
+       "ranks": 1,
+       "col": 2,
+       "text": "You and your pet share targets, cooldowns, and critical strikes for the duration.",
+       "icon": "icons/talent-survival-hunt-as-one.png",
+       "status": "reworked",
+       "note": "The capstone the tree was always pointing at."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sampleBuilds": [
+  {
+   "build": "31 Blackguard / 20 Protection",
+   "description": "A death knight who still tanks. Damnation plus enough Protection for defensive fundamentals."
+  },
+  {
+   "build": "20 Blackguard / 31 Retribution",
+   "description": "A paladin who dabbled. Blood Rite as an emergency button in an otherwise Light-driven build, and the Blessings still work because Damnation was never taken."
+  },
+  {
+   "build": "31 Necromancy / 20 Frost",
+   "description": "A caster with three Risen and enough Frost for control."
+  },
+  {
+   "build": "20 Necromancy / 31 Arcane",
+   "description": "A mage with a temporary skeleton and a real burst spec."
+  },
+  {
+   "build": "31 Bladedancer / 20 Combat",
+   "description": "Sustained multi-target melee."
+  },
+  {
+   "build": "20 Conduit / 31 Restoration",
+   "description": "A healer who bonds a totem to the tank. Probably the most immediately popular build on this list."
+  }
+ ],
+ "openItems": [
+  "Three acquisition chains are unspecified: Bladedancer, Conduit, and Survival. Section 8.6 names locations for the other four only.",
+  "Fist weapon itemization in vanilla is thin, and the Bladedancer weapon fork depends on it. Filling that lane in is additive Tier 1 work but it is a prerequisite rather than a nice-to-have."
+ ]
+}

@@ -1,0 +1,399 @@
+{
+ "digests": {
+  "warrior-arms": {
+   "section": "19.5",
+   "class": "Warrior",
+   "tree": "Arms",
+   "title": "Arms, redone",
+   "prose": [
+    "Section 6 predates the tier arithmetic correction, the classifier review, the aura rule, the sparse-tier finding, the weapon fork as a shared component, and Section 5.7's cross-tree rule. Its worked example was written to demonstrate a method that has since changed in six places.",
+    "Rather than rewrite Section 6, it stays as the record of how the method started, with this note attached. The current-rules Arms is:",
+    "Weapon specialization collapses into the shared fork, as in Combat rogue, Enhancement, and Fury. Deflection, Two-Handed Weapon Specialization, Improved Overpower, Impale, and Improved Heroic Strike go to the dividend. Gate 20 is checked against REG-18; Arms holds twelve points there, which is healthy, so it needs no rebalancing. Mortal Cleave passes Section 5.7's rule and stays. Sure Strike stays as the Resolute Technique port. Mortal Strike stays as the capstone. Tactical Mastery, Deep Wounds, and Sweeping Strikes were already behavior and are unchanged.",
+    "Twenty-seven of 27 trees complete."
+   ]
+  },
+  "hunter-marksmanship": {
+   "section": "7",
+   "class": "Hunter",
+   "tree": "Marksmanship",
+   "title": "First real rebuild: Marksmanship",
+   "prose": [
+    "Arms in Section 6 shows the method on a healthy tree. This is the method applied where it is actually needed.",
+    "Marksmanship earns first place on the tiebreak rather than the raw number. At 23 of 30 forced flat and 87% flat overall it is firmly in the worst group, though the classifier review put Enhancement shaman and Demonology above it at 28. What separates it is that unlike either of those, it is its class's mandatory raid spec, so every raiding hunter in the game walks this exact path.",
+    "Vanilla Marksmanship, for reference: 14 nodes, 52 points, three behavior nodes total. Two of those three are the only active abilities in the tree.",
+    "Trueshot Aura sits at gate 30. It grants party members within 45 yards a flat 50 attack power.",
+    "It is a flat number, it is the capstone of the tree, and it is given to other people. It is also the entire reason the spec is mandatory: guides state plainly that Beast Mastery loses Trueshot Aura and therefore hurts the whole party's damage."
+   ]
+  },
+  "shaman-enhancement": {
+   "section": "8",
+   "class": "Shaman",
+   "tree": "Enhancement",
+   "title": "Second rebuild: Enhancement shaman",
+   "prose": [
+    "Tied with Demonology for the worst tree in the game at 28 of 30 forced flat, and the flattest tree anywhere at 94%. Nineteen of the first twenty points must buy numbers, so an Enhancement splash is very close to pure filler.",
+    "Vanilla Enhancement has 16 nodes and 52 points. Three nodes buy behavior. Read them:",
+    "Two of the three are not talents. They are permissions to do things other melee classes do without asking. A warrior parries at level one. Spending a talent point to be allowed to hold a two-handed axe is the clearest statement in the game that a tree has nothing to sell you.",
+    "Both should be baseline, and the two points they occupied do not come back as talents. A permission converted into a talent is still a permission; it just costs more. Enhancement gets two-handers and parry for free, and the tree is rebuilt at 50 available points rather than 52.",
+    "The dead node sweep in Section 1.2 found almost nothing across 27 trees. This is the closest thing to a second finding: not nodes that do nothing, but nodes that undo an artificial restriction. Worth checking the other trees for the same shape."
+   ]
+  },
+  "warlock-demonology": {
+   "section": "9",
+   "class": "Warlock",
+   "tree": "Demonology",
+   "title": "Third rebuild: Demonology",
+   "prose": [
+    "Tied with Enhancement for the worst tree in the game at 28 of 30 forced flat. Unlike Enhancement, this one also fails at the thing it is named after.",
+    "Fifty-two points across 17 nodes. Thirty-eight of those points are percentages applied to a pet: Improved Imp, Improved Voidwalker, Improved Succubus, Fel Intellect, Fel Stamina, Unholy Power, Demonic Embrace. Another six are applied to consumable stones, which have nothing to do with demons at all. Improved Spellstone sits at gate 30, alongside the capstone, and increases the amount of damage a stone absorbs.",
+    "Not one node in the tree is about commanding a demon. Which one you summon, when you swap, what you tell it to do, and what you give up to keep it are all decisions a warlock makes constantly, and the tree that is supposedly about the demon has nothing to say about any of them.",
+    "Then the finding from the audit, which is worth restating because it is the sharpest single fact in this document. Nobody specs deep Demonology. The two canonical raid builds are SM/Ruin and DS/Ruin, and DS/Ruin takes exactly 21 points here to reach Demonic Sacrifice at gate 20, a talent that kills the demon in exchange for a damage buff.",
+    "The tree's most-used talent deletes the thing the tree is about. That is not a flatness problem, it is a premise failure, and no amount of rank rewriting fixes it. The rebuild has to give the tree a reason to exist first."
+   ]
+  },
+  "druid-feral": {
+   "section": "10",
+   "class": "Druid",
+   "tree": "Feral Combat",
+   "title": "Fourth rebuild: Feral Combat",
+   "prose": [
+    "Twenty-six of thirty forced flat, and a hybrid seat figure of 19 of 20 that is the worst in the game.",
+    "Forty-five points, tied with Holy and Retribution paladin for the least content anywhere. Combat rogue carries 62 for one role. Feral carries 45 for two, because bear tanking and cat damage share a tree.",
+    "That is roughly twenty points of relevant content per role, and it is the structural reason the tree feels thin from either side. The rebuild grows it to 55, and the growth is the finding rather than a liberty taken. A tree serving two roles at 72% of the size of a tree serving one is underinvested, and no amount of rewriting fixes a shortage of nodes.",
+    "Gate 20 holds three points in vanilla: Faerie Fire in forms, and two ranks of Savage Fury. That is why reaching the hybrid seat costs 19 flat points out of 20. The seat is not badly designed, it is nearly empty.",
+    "The grievance record notes that feral damage depends on power-shifting, dropping cat form and re-entering it to trigger Furor's energy. The interface does not teach it, no tooltip describes it, and it is mandatory."
+   ]
+  },
+  "paladin-retribution": {
+   "section": "11",
+   "class": "Paladin",
+   "tree": "Retribution",
+   "title": "Fifth rebuild: Retribution",
+   "prose": [
+    "Twenty-four of thirty forced flat, 84% flat overall, and the only tree in this document whose worst problem is not in the tree.",
+    "Guides describe Retribution as running on auto attacks and passive procs, and then defend that emptiness on the grounds that it leaves the paladin free to distribute blessings. The spec has nothing to press because its actual job is buff maintenance, and forty raid members need rebuffing every five minutes.",
+    "So the tree being 84% numbers is the second problem. The first is that the paladin has no room to use anything anyway.",
+    "That points the rebuild somewhere unusual. The most valuable thing this tree can buy is time. A talent that cuts blessing overhead does more for how Retribution feels to play than any damage node, because it converts a spec that cannot afford a rotation into one that can.",
+    "Vanilla row totals are 10/10/11/4/4/5/1. Gates 15 and 20 hold four points each, which is why the middle of this tree feels like a corridor. The rebuild redistributes toward the middle and grows to 52, matching Enhancement and Marksmanship rather than staying at the 45 shared with Feral and Holy paladin."
+   ]
+  },
+  "paladin-protection": {
+   "section": "12",
+   "class": "Paladin",
+   "tree": "Protection",
+   "title": "Sixth rebuild: Protection paladin",
+   "prose": [
+    "Twenty-three of thirty forced flat, and the only tank tree in the game whose threat comes from buffing.",
+    "Blessing of Kings sits at gate 10, Blessing of Sanctuary at gate 20. Both are buffs cast on other people, inside a tank tree. That looks like misplacement until you read the tanking guides, which state that Greater Blessing of Kings cast on party members is roughly 95% of a protection paladin's raid threat.",
+    "So the tree is not confused. It is internally consistent with a threat model where the tank's rotation is buffing the raid. The buffs are in the tree because the buffs are the rotation.",
+    "That is the thing to fix, and no rank rewriting reaches it. A protection paladin needs threat that comes from tanking. Everything below follows from that.",
+    "One-Handed Weapon Specialization at gate 25 is the single universally dead node found by the Section 1.2 sweep: paladin melee damage never carries threat, and protection paladin has no PvP context where it would. Deleted, not rewritten."
+   ]
+  },
+  "priest-discipline": {
+   "section": "13",
+   "class": "Priest",
+   "tree": "Discipline",
+   "title": "Seventh rebuild: Discipline",
+   "prose": [
+    "Twenty-three of thirty forced flat, and five of its forty-eight points buy wand damage.",
+    "Wand Specialization takes five points at gate 0, over a tenth of a healing tree, to improve a weapon a raid healer fires between casts. Unbreakable Will takes five more on stun and fear resistance, which is mode-locked content per Section 5.8. Mental Strength, Force of Will, Mental Agility, Improved Inner Fire, and Improved Mana Burn are all percentages.",
+    "Two nodes give something to someone else: Divine Spirit at gate 20 and Power Infusion at gate 30.",
+    "A refinement to the rule from Section 10.3 is needed here. Power Infusion is an active cooldown the priest chooses when to spend and on whom. That is a decision, and decisions belong at a capstone. Trueshot Aura, Leader of the Pack, and Sanctity Aura are passive and permanent, which makes them obligations. The rule is therefore narrower than first stated: a passive aura never belongs at a capstone. An active cooldown aimed at an ally is fine. Power Infusion stays.",
+    "Wand Specialization and Unbreakable Will are both deleted. Wand damage returns as dividend; the resistances go with the mode-locked content."
+   ]
+  },
+  "shaman-elemental": {
+   "section": "14",
+   "class": "Shaman",
+   "tree": "Elemental",
+   "title": "Eighth rebuild: Elemental",
+   "prose": [
+    "Twenty-three of thirty forced flat, and a gate-20 tier holding three points, the second-sparsest hybrid seat in the game after Feral.",
+    "Concussion, Convection, Call of Thunder, Reverberation, and Lightning Mastery all modify Lightning Bolt and Chain Lightning. Twenty-three of forty-six points make one spell cheaper, faster, harder, and more likely to crit.",
+    "Three more, Call of Flame, Earth's Grasp, and Improved Fire Totems, modify totems nobody drops. That is the same totem neglect found in Enhancement, from the other direction: Enhancement had no totem talents at all, Elemental has three that nobody takes.",
+    "The grievance record adds that Elemental runs out of mana and does not put out enough. The second is a tuning problem for the depth coefficient under band neutrality. The first is a tree problem and the tree should own it.",
+    "Vanilla's three-point tier becomes eight, matching the Feral fix."
+   ]
+  },
+  "priest-holy": {
+   "section": "15",
+   "class": "Priest",
+   "tree": "Holy",
+   "title": "Ninth rebuild: Holy priest",
+   "prose": [
+    "Twenty of thirty forced flat, and the tree with the best-documented complaint in the whole audit.",
+    "A vanilla-era forum post, quoted in the grievance record, says the holy tree is mostly worthless because in Molten Core you are not casting Greater Heal, Heal, or Prayer of Healing, so every talent buffing them is wasted.",
+    "The tree confirms it. Improved Healing takes three points on the mana cost of Lesser Heal, Heal, and Greater Heal. Improved Prayer of Healing takes two more on a spell raid healers rarely cast. Divine Fury spends five on cast time for Greater Heal alongside two damage spells.",
+    "Then the second problem, which is the mirror of Discipline's wand node. Divine Fury, Holy Reach, and Searing Light spend nine points improving Smite and Holy Fire, offensive spells inside the tree a raid healer specialises into.",
+    "And the capstone is Lightwell, which asks other players to click a well and which they famously do not."
+   ]
+  },
+  "druid-balance": {
+   "section": "16",
+   "class": "Druid",
+   "tree": "Balance",
+   "title": "Tenth rebuild: Balance",
+   "prose": [
+    "Nineteen of thirty forced flat, and a gate-5 tier holding sixteen points against a gate-20 tier holding four.",
+    "Improved Wrath, Improved Moonfire, Improved Starfire, Vengeance, Moonfury, and Moonglow spend twenty-eight of fifty-two points modifying Wrath, Starfire, and Moonfire. That is the Elemental disease with three spells instead of two.",
+    "The distribution is the other problem. Sixteen points sit at gate 5 and four at gate 20, so the tree front-loads its content and then thins out exactly where the hybrid seat is. Third tree in this document with a near-empty gate 20, after Feral at three and Elemental at three.",
+    "One thing here works and is worth protecting. Omen of Clarity at gate 10 is the most-splashed talent in the class: feral druids spend points in Balance specifically to reach it, which is a functioning cross-tree draw that arose without anyone designing one. Section 5.3's hybrid seat is trying to produce deliberately what Omen of Clarity produces by accident, and it should not be disturbed.",
+    "Moonkin Form is a capstone carrying a party spell critical aura. Per the rule in Section 13.1, the form stays because transforming is a real capstone and changes how you play; the aura portion moves to the depth dividend, as with Trueshot Aura."
+   ]
+  },
+  "hunter-beast-mastery": {
+   "section": "17.1",
+   "class": "Hunter",
+   "tree": "Beast Mastery",
+   "title": "Beast Mastery",
+   "prose": [
+    "Eleven of sixteen nodes are pet statistics: health, armor, damage, critical strike, focus regeneration, movement speed. Demonology's disease, one class over, and with the same consequence: the four pet families are one pet with different art.",
+    "The spine that survives is Frenzy, Intimidation, Spirit Bond, and Bestial Wrath, all of which are about the pet doing something rather than having more of something.",
+    "48 points, unchanged. Endurance Training, Thick Hide, Bestial Swiftness, and Bestial Discipline are deleted to dividend."
+   ]
+  },
+  "hunter-survival": {
+   "section": "17.2",
+   "class": "Hunter",
+   "tree": "Survival",
+   "title": "Survival",
+   "prose": [
+    "The one tree in the game whose own class guides call it the worst and advise against playing it. Its content is traps and defence, neither of which vanilla raids reward, and it carries the most mode-locked nodes after Protection warrior.",
+    "Two things make it the most interesting salvage in the document. Traps are a mechanic no other class has, and Section 5.8's rule means they now need to work in both modes rather than being written off as PvP content.",
+    "52 points against 48. Surefooted and Killer Instinct deleted to dividend."
+   ]
+  },
+  "shaman-restoration": {
+   "section": "17.3",
+   "class": "Shaman",
+   "tree": "Restoration",
+   "title": "Restoration shaman",
+   "prose": [
+    "Twenty of fifty-two points are mana cost and healing percentage on one spell family. Gate 20 holds four points, the sparse-tier problem from REG-18 for the fifth time.",
+    "The spine is Nature's Swiftness, Healing Way, Totemic Mastery, and Mana Tide Totem. Three of those four are totem content, which makes this the one shaman tree that already knows what the class is about.",
+    "56 points against 52. Improved Healing Wave, Totemic Focus, and Nature's Guidance deleted to dividend."
+   ]
+  },
+  "warlock-affliction": {
+   "section": "17.4",
+   "class": "Warlock",
+   "tree": "Affliction",
+   "title": "Affliction",
+   "prose": [
+    "Seventeen nodes, and five of them modify curses that a raid warlock casts once. Improved Curse of Exhaustion takes four points at gate 20, in the hybrid seat, on a movement slow.",
+    "The spine is Nightfall, Siphon Life, Dark Pact, Improved Drain Soul, and Shadow Mastery. Affliction is in better shape than its floor suggests because those five are genuinely good; the problem is what sits between them.",
+    "49 points, unchanged. Improved Curse of Weakness, Improved Curse of Agony, Curse of Exhaustion, and Improved Curse of Exhaustion deleted, their effects folded into Curse Mastery."
+   ]
+  },
+  "warrior-fury": {
+   "section": "17.5",
+   "class": "Warrior",
+   "tree": "Fury",
+   "title": "Fury",
+   "prose": [
+    "Sixty points, the second largest tree in the game, and 78% of them flat. Nothing structural is wrong: gate 20 holds eight points and the distribution is even. It is simply a large tree full of percentages.",
+    "The spine is Unbridled Wrath, Blood Craze, Piercing Howl, Death Wish, Improved Berserker Rage, and Bloodthirst.",
+    "60 points, unchanged. Improved Battle Shout and Improved Slam deleted to dividend.",
+    "---"
+   ]
+  },
+  "paladin-holy": {
+   "section": "18.1",
+   "class": "Paladin",
+   "tree": "Holy",
+   "title": "Holy paladin",
+   "prose": [
+    "Forty-five points, the third of the underweight trees from REG-17 and the last one outstanding. Gate 20 holds four points, sparse-tier again.",
+    "It also opens with the purest offenders in the game. Divine Strength and Divine Intellect take ten of forty-five points, and their entire text is \"increases your Strength\" and \"increases your Intellect.\" No condition, no interaction, no spell named. If Section 5.1 needed a single illustration, it is these two nodes: they exist only because the tree needed something at gate 0, and under the depth dividend they are precisely what a curve is for.",
+    "The spine is Illumination, Spiritual Focus, Divine Favor, Consecration, and Holy Shock.",
+    "52 points against 45, per REG-17. Unyielding Faith deleted as mode-locked."
+   ]
+  },
+  "rogue-combat": {
+   "section": "18.2",
+   "class": "Rogue",
+   "tree": "Combat",
+   "title": "Combat rogue",
+   "prose": [
+    "The inverse of every sparse-tier tree in this document. Gate 20 holds sixteen points, and all sixteen are weapon specialization: Fist, Mace, and Sword at five each, plus Blade Flurry. Add Dagger Specialization at gate 15 and Weapon Expertise at gate 25 and the tree spends twenty-seven of sixty-two points on which weapon you happened to loot.",
+    "This is the Arms problem at twice the scale, and the fix is the same weapon fork used in Arms, Enhancement, Fury, and Bladedancer. Five nodes and twenty-seven points collapse to one node and five, and the choice moves from the talent panel to your hands.",
+    "That reclaims twenty-two points, which is why this tree does not grow: it redistributes.",
+    "62 points, unchanged. Lightning Reflexes, Deflection, Dagger Specialization, Fist and Mace and Sword Specialization, and Weapon Expertise all deleted or folded into the fork."
+   ]
+  },
+  "mage-frost": {
+   "section": "18.3",
+   "class": "Mage",
+   "tree": "Frost",
+   "title": "Frost mage",
+   "prose": [
+    "Gate 20 holds four points. The tree is otherwise healthy and its spine, Shatter, Winter's Chill, Ice Block, Cold Snap, and Ice Barrier, is among the best in the game.",
+    "The Winter's Chill note from Section 5.4 belongs here: the frost group build trades roughly 5 to 10% of the mage's own damage for the whole group's, which is a subtraction talent that shipped in vanilla and the better of the two precedents this document cites.",
+    "52 points against 46."
+   ]
+  },
+  "rogue-assassination": {
+   "section": "18.4",
+   "class": "Rogue",
+   "tree": "Assassination",
+   "title": "Assassination",
+   "prose": [
+    "Gate 20 holds four points. The tree is the least flat in the game at 67% and its spine, Seal Fate, Relentless Strikes, Cold Blood, Ruthlessness, and Improved Kidney Shot, is a genuine combo point engine.",
+    "The capstone is Vigor, which increases maximum energy by 10. A 31-point talent whose entire text is a flat number, and the only capstone in the game that buys nothing but a stat. Deleted to dividend, and the slot needs a real capstone: Master Poisoner (1), your poisons apply instantly at full stacks and cannot be cleansed.",
+    "52 points against 46."
+   ]
+  },
+  "rogue-subtlety": {
+   "section": "18.5",
+   "class": "Rogue",
+   "tree": "Subtlety",
+   "title": "Subtlety, Destruction, Protection warrior",
+   "prose": [
+    "Three trees needing no new argument.",
+    "Subtlety (47 points, 15 forced flat) is a PvP tree with no raid application, which under Section 5.8 is the problem rather than a description. Its stealth and positioning content becomes mode-agnostic: Opportunity and Initiative reworked so opening from stealth matters in a raid pull, Preparation kept, Ghostly Strike kept, Master of Deception and Camouflage folded into a single stealth node, Improved Sap given a graded fallback. Gate 20 grows from six to eight with a sideways node keyed to poisons and a subtraction node, Silent Death: your openers cannot be dodged or resisted and generate no threat, and you deal no damage from the front. That is the deliberate mirror of Combat's Duellist, so the two rogue trees close opposite doors."
+   ]
+  },
+  "warlock-destruction": {
+   "section": "18.5",
+   "class": "Warlock",
+   "tree": "Destruction",
+   "title": "Subtlety, Destruction, Protection warrior",
+   "prose": [
+    "Three trees needing no new argument.",
+    "Subtlety (47 points, 15 forced flat) is a PvP tree with no raid application, which under Section 5.8 is the problem rather than a description. Its stealth and positioning content becomes mode-agnostic: Opportunity and Initiative reworked so opening from stealth matters in a raid pull, Preparation kept, Ghostly Strike kept, Master of Deception and Camouflage folded into a single stealth node, Improved Sap given a graded fallback. Gate 20 grows from six to eight with a sideways node keyed to poisons and a subtraction node, Silent Death: your openers cannot be dodged or resisted and generate no threat, and you deal no damage from the front. That is the deliberate mirror of Combat's Duellist, so the two rogue trees close opposite doors.",
+    "Destruction (53 points, 15 forced flat, gate 20 at eight) is the healthiest warlock tree and needs the least. Devastation, Improved Immolate, Improved Searing Pain, Cataclysm, and Bane are flat and go to dividend; Shadowburn, Conflagrate, Ruin, Pyroclasm, and Improved Shadow Bolt are the spine and stay. The rebuilt nodes are about Immolate and Conflagrate interacting rather than about either being larger. Subtraction node at gate 20, Backdraft: Conflagrate loses its cooldown and you may no longer cast Shadow Bolt."
+   ]
+  },
+  "warrior-protection": {
+   "section": "18.5",
+   "class": "Warrior",
+   "tree": "Protection",
+   "title": "Subtlety, Destruction, Protection warrior",
+   "prose": [
+    "Three trees needing no new argument.",
+    "Subtlety (47 points, 15 forced flat) is a PvP tree with no raid application, which under Section 5.8 is the problem rather than a description. Its stealth and positioning content becomes mode-agnostic: Opportunity and Initiative reworked so opening from stealth matters in a raid pull, Preparation kept, Ghostly Strike kept, Master of Deception and Camouflage folded into a single stealth node, Improved Sap given a graded fallback. Gate 20 grows from six to eight with a sideways node keyed to poisons and a subtraction node, Silent Death: your openers cannot be dodged or resisted and generate no threat, and you deal no damage from the front. That is the deliberate mirror of Combat's Duellist, so the two rogue trees close opposite doors.",
+    "Protection warrior (53 points, 15 forced flat) is the tree this document originally called the healthiest in the game, before the classifier review moved it from 7 to 15. It carries the most mode-locked content of any tree at three nodes: Iron Will, Improved Disarm, and Improved Revenge's stun. All three get graded fallbacks per Section 5.8 rather than deletion. Gate 20 grows from five to eight, including the subtraction node Unbreakable: you cannot be critically struck, and you can no longer critically strike. Shield Slam, Last Stand, Concussion Blow, and Shield Specialization's rage interaction are the spine and stay."
+   ]
+  },
+  "mage-arcane": {
+   "section": "19.1",
+   "class": "Mage",
+   "tree": "Arcane",
+   "title": "Arcane",
+   "prose": [
+    "Fourteen forced flat, gate 20 at six. Arcane Focus, Arcane Subtlety, Magic Absorption, Arcane Resilience, Magic Attunement, Improved Mana Shield, Arcane Mind, and Arcane Instability are all percentages, and Wand Specialization reappears for the third time in the document after Discipline and Combat rogue.",
+    "The spine is Arcane Concentration, Presence of Mind, Improved Counterspell, Arcane Meditation, and Arcane Power. That is a real spec, and it is the reason Arcane is a splash tree rather than a main one: the good nodes are cheap and the deep ones are stats.",
+    "52 points against 47. Wand Specialization, Arcane Mind, Arcane Resilience, and Magic Attunement deleted to dividend."
+   ]
+  },
+  "druid-restoration": {
+   "section": "19.2",
+   "class": "Druid",
+   "tree": "Restoration",
+   "title": "Restoration druid",
+   "prose": [
+    "Thirteen forced flat, gate 20 at eight, and the only tree in this document whose complaint the floor cannot see.",
+    "The grievance record found it: the Restoration points are set with no real choice, and the spare Balance points are the only decision a resto druid gets. The tree is not full of filler. It is full of talents so obviously mandatory that there is nothing to decide. That is a fourth failure mode, and the rework as specified in Section 5.2 does not address it, because making a mandatory talent more interesting leaves it mandatory.",
+    "The fix is Section 5.4, not 5.2. A tree with no choices needs talents that trade against each other, which means subtraction nodes and mutually exclusive paths rather than better versions of the same obligations.",
+    "55 points against 53. Tranquil Spirit and Improved Tranquility deleted to dividend."
+   ]
+  },
+  "priest-shadow": {
+   "section": "19.3",
+   "class": "Priest",
+   "tree": "Shadow",
+   "title": "Shadow",
+   "prose": [
+    "Eleven forced flat, and the tree this document has repeatedly used as its example of a healthy structure attached to a weak spec. That remains true and the rebuild does not change it.",
+    "Improved Mind Blast, Shadow Focus, Shadow Reach, Improved Fade, Improved Psychic Scream, Improved Shadow Word: Pain, Shadow Affinity, and Darkness are the flat content, and most of them are small. Blackout, Spirit Tap, Mind Flay, Shadow Weaving, Silence, Vampiric Embrace, and Shadowform are the spine, and it is a good one.",
+    "52 points against 48. Shadow Reach and Improved Fade deleted to dividend."
+   ]
+  },
+  "mage-fire": {
+   "section": "19.4",
+   "class": "Mage",
+   "tree": "Fire",
+   "title": "Fire",
+   "prose": [
+    "Eight forced flat, the healthiest tree in the game, and the one that argues against this document.",
+    "Impact, Ignite, Burning Soul, Pyroblast, Improved Fire Ward, Improved Scorch, Master of Elements, Blast Wave, and Combustion are all behavior. Only Improved Fireball, Flame Throwing, Improved Fire Blast, Improved Flamestrike, Incinerate, Critical Mass, and Fire Power are flat, and several are two or three ranks rather than five.",
+    "So the rebuild is small, and that is the finding. Improved Fireball, Critical Mass, and Fire Power go to the dividend. Flame Throwing and Improved Fire Blast get discrete ranks. Gate 20 grows from four to eight with a sideways node keyed to Frost and a subtraction node. Everything else stays as written.",
+    "The tree needed about a quarter of the work the others did, and per Section 21 the class that owns it still has the most repetitive rotation in the game. Fire mage is the proof that a good tree and good gameplay are separate problems, and it should be read alongside its own rebuild rather than instead of it."
+   ]
+  }
+ },
+ "exemplars": {
+  "warrior-arms": {
+   "title": "Worked example: Arms",
+   "sections": [
+    "6",
+    "19.5"
+   ],
+   "prose": [
+    "One tree, in full, to show the method produces something recognizable.",
+    "Arms is the wrong tree to rebuild first and this section survives only as a worked method. At 12 of 30 forced filler it is one of the healthier trees in the game, and that figure did not move in the classifier review. Enhancement shaman and Demonology at 28, Feral Combat at 26, and Retribution at 24 all have far stronger claims. Arms is here because it is the tree this project audited first, not because it is broken.",
+    "Row assignments below are illustrative and have not been checked against a talent calculator. Vanilla's own Arms rows do not sit where they are commonly remembered: Impale is tier 4, reachable at 17 points invested, which is the entire reason the canonical Fury build spends exactly 17 in Arms. Any build of this tree needs its gates verified before the point math means anything.",
+    "Tactical Mastery survives almost intact because it was already behavioral. Only its ranks change from numeric to discrete.",
+    "This is the row that fixes vanilla's 18-point weapon specialization block. Four nodes and 20 points collapse into one node and 5, and the choice moves from the talent panel to the weapon in your hand.",
+    "What was deleted. Deflection is gone. Its parry now arrives through the depth dividend.",
+    "Totals: 50 available points against vanilla's 59, across the same seven rows. That sits just under the 57 to 64 band the Class Absorption trees use, and closing the gap is a matter of adding one more node to rows 5 and 6 rather than a structural issue.",
+    "Points that buy a new button: 2, the same as vanilla. Points that buy behavior: all of them.",
+    "—",
+    "Section 6 predates the tier arithmetic correction, the classifier review, the aura rule, the sparse-tier finding, the weapon fork as a shared component, and Section 5.7's cross-tree rule. Its worked example was written to demonstrate a method that has since changed in six places.",
+    "Rather than rewrite Section 6, it stays as the record of how the method started, with this note attached. The current-rules Arms is:",
+    "Weapon specialization collapses into the shared fork, as in Combat rogue, Enhancement, and Fury. Deflection, Two-Handed Weapon Specialization, Improved Overpower, Impale, and Improved Heroic Strike go to the dividend. Gate 20 is checked against REG-18; Arms holds twelve points there, which is healthy, so it needs no rebalancing. Mortal Cleave passes Section 5.7's rule and stays. Sure Strike stays as the Resolute Technique port. Mortal Strike stays as the capstone. Tactical Mastery, Deep Wounds, and Sweeping Strikes were already behavior and are unchanged.",
+    "Twenty-seven of 27 trees complete."
+   ]
+  },
+  "hunter-marksmanship": {
+   "title": "First real rebuild: Marksmanship",
+   "sections": [
+    "7",
+    "7.1",
+    "7.3"
+   ],
+   "prose": [
+    "Arms in Section 6 shows the method on a healthy tree. This is the method applied where it is actually needed.",
+    "Marksmanship earns first place on the tiebreak rather than the raw number. At 23 of 30 forced flat and 87% flat overall it is firmly in the worst group, though the classifier review put Enhancement shaman and Demonology above it at 28. What separates it is that unlike either of those, it is its class's mandatory raid spec, so every raiding hunter in the game walks this exact path.",
+    "Vanilla Marksmanship, for reference: 14 nodes, 52 points, three behavior nodes total. Two of those three are the only active abilities in the tree.",
+    "Trueshot Aura sits at gate 30. It grants party members within 45 yards a flat 50 attack power.",
+    "Trueshot Aura sits at gate 30. It grants party members within 45 yards a flat 50 attack power.",
+    "It is a flat number, it is the capstone of the tree, and it is given to other people. It is also the entire reason the spec is mandatory: guides state plainly that Beast Mastery loses Trueshot Aura and therefore hurts the whole party's damage.",
+    "So the tree's final point, the one a hunter spends 30 points climbing toward, buys somebody else a stat. That is the third failure mode and the flat-talent problem meeting at the single most visible node in the class.",
+    "Deleting it takes the hunter's raid slot. Keeping it flat breaks the rules this document sets. The resolution is to move it rather than change it: Trueshot Aura becomes part of the depth dividend, granted automatically at 30 points in Marksmanship. The raid keeps the aura, the hunter keeps the slot, and the capstone is freed to be something the hunter does.",
+    "That is the clearest single demonstration of what Section 5.1 is for. The dividend is not only a place to put filler. It is where a spec's obligations to other people belong, so that purchased talents can be about the player.",
+    "52 available points across the same seven rows, against vanilla's 52. Fourteen nodes against vanilla's fourteen. Two points buy a new active ability, the same as vanilla.",
+    "Forced flat on the way to the capstone: zero, because there are no flat nodes left to force. Vanilla's figure is 23 of 30.",
+    "Deleted rather than rewritten: Improved Scorpid Sting. Deleted and returned as dividend: Efficiency, Improved Hunter's Mark, Lethal Shots, Improved Arcane Shot, Improved Serpent Sting, Mortal Shots, Barrage, Ranged Weapon Specialization, Hawk Eye's raw range, and Trueshot Aura's party attack power.",
+    "None of that changes the hunter's output by design. Section 5.1's tuning method sets the dividend coefficients to reproduce exactly what those nodes delivered to a canonical build.",
+    "And to be clear about what this does not do, per Section 22: it does not fix hunters falling off as gear scales. That is a scaling problem, it is the actual reason hunter raid slots shrink after Molten Core, and no amount of talent redesign touches it."
+   ]
+  },
+  "warlock-demonology": {
+   "title": "Third rebuild: Demonology",
+   "sections": [
+    "9",
+    "9.1",
+    "9.2",
+    "9.4"
+   ],
+   "prose": [
+    "Tied with Enhancement for the worst tree in the game at 28 of 30 forced flat. Unlike Enhancement, this one also fails at the thing it is named after.",
+    "Fifty-two points across 17 nodes. Thirty-eight of those points are percentages applied to a pet: Improved Imp, Improved Voidwalker, Improved Succubus, Fel Intellect, Fel Stamina, Unholy Power, Demonic Embrace. Another six are applied to consumable stones, which have nothing to do with demons at all. Improved Spellstone sits at gate 30, alongside the capstone, and increases the amount of damage a stone absorbs.",
+    "Not one node in the tree is about commanding a demon. Which one you summon, when you swap, what you tell it to do, and what you give up to keep it are all decisions a warlock makes constantly, and the tree that is supposedly about the demon has nothing to say about any of them.",
+    "Fifty-two points across 17 nodes. Thirty-eight of those points are percentages applied to a pet: Improved Imp, Improved Voidwalker, Improved Succubus, Fel Intellect, Fel Stamina, Unholy Power, Demonic Embrace. Another six are applied to consumable stones, which have nothing to do with demons at all. Improved Spellstone sits at gate 30, alongside the capstone, and increases the amount of damage a stone absorbs.",
+    "Not one node in the tree is about commanding a demon. Which one you summon, when you swap, what you tell it to do, and what you give up to keep it are all decisions a warlock makes constantly, and the tree that is supposedly about the demon has nothing to say about any of them.",
+    "Then the finding from the audit, which is worth restating because it is the sharpest single fact in this document. Nobody specs deep Demonology. The two canonical raid builds are SM/Ruin and DS/Ruin, and DS/Ruin takes exactly 21 points here to reach Demonic Sacrifice at gate 20, a talent that kills the demon in exchange for a damage buff.",
+    "The tree's most-used talent deletes the thing the tree is about. That is not a flatness problem, it is a premise failure, and no amount of rank rewriting fixes it. The rebuild has to give the tree a reason to exist first.",
+    "Demonology is about which demon you have and when you change it, not about how much stat each demon carries.",
+    "Vanilla already gestures at this twice and develops neither. Fel Domination makes a summon instant, which is only interesting if swapping mid-fight is a thing you do. Master Demonologist gives a different effect per demon, which is the one node in the tree that treats the four demons as different rather than as one pet with different art.",
+    "Everything below builds on those two.",
+    "50 available points across seven tiers against vanilla's 52. Sixteen nodes against seventeen. Forced flat to the capstone: zero, against vanilla's 28 of 30.",
+    "Deleted and returned as dividend: Demonic Embrace, Improved Imp, Fel Intellect, Fel Stamina, Unholy Power. Deleted outright: Improved Spellstone, Improved Firestone, Improved Enslave Demon.",
+    "The test the rebuild has to pass is not the floor figure. It is whether a warlock would now spend 26 points here on purpose. The old tree's answer was no, and the proof is that the two builds everyone runs either skip it entirely or dip in exactly far enough to kill the demon.",
+    "---"
+   ]
+  }
+ }
+}

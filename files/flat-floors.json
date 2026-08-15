@@ -1,0 +1,398 @@
+{
+ "Druid": {
+  "Balance": {
+   "floorAt20": {
+    "forcedFlat": 11,
+    "bestCaseBehavior": 9,
+    "forcedFlatShare": 0.55
+   },
+   "floorAt30": {
+    "forcedFlat": 19,
+    "bestCaseBehavior": 11,
+    "forcedFlatShare": 0.63
+   },
+   "availablePoints": 52,
+   "treeFlatShare": 0.77
+  },
+  "Feral Combat": {
+   "floorAt20": {
+    "forcedFlat": 19,
+    "bestCaseBehavior": 1,
+    "forcedFlatShare": 0.95
+   },
+   "floorAt30": {
+    "forcedFlat": 26,
+    "bestCaseBehavior": 4,
+    "forcedFlatShare": 0.87
+   },
+   "availablePoints": 45,
+   "treeFlatShare": 0.84
+  },
+  "Restoration": {
+   "floorAt20": {
+    "forcedFlat": 4,
+    "bestCaseBehavior": 16,
+    "forcedFlatShare": 0.2
+   },
+   "floorAt30": {
+    "forcedFlat": 13,
+    "bestCaseBehavior": 17,
+    "forcedFlatShare": 0.43
+   },
+   "availablePoints": 53,
+   "treeFlatShare": 0.66
+  }
+ },
+ "Hunter": {
+  "Beast Mastery": {
+   "floorAt20": {
+    "forcedFlat": 11,
+    "bestCaseBehavior": 9,
+    "forcedFlatShare": 0.55
+   },
+   "floorAt30": {
+    "forcedFlat": 18,
+    "bestCaseBehavior": 12,
+    "forcedFlatShare": 0.6
+   },
+   "availablePoints": 48,
+   "treeFlatShare": 0.62
+  },
+  "Marksmanship": {
+   "floorAt20": {
+    "forcedFlat": 14,
+    "bestCaseBehavior": 6,
+    "forcedFlatShare": 0.7
+   },
+   "floorAt30": {
+    "forcedFlat": 23,
+    "bestCaseBehavior": 7,
+    "forcedFlatShare": 0.77
+   },
+   "availablePoints": 52,
+   "treeFlatShare": 0.87
+  },
+  "Survival": {
+   "floorAt20": {
+    "forcedFlat": 9,
+    "bestCaseBehavior": 11,
+    "forcedFlatShare": 0.45
+   },
+   "floorAt30": {
+    "forcedFlat": 18,
+    "bestCaseBehavior": 12,
+    "forcedFlatShare": 0.6
+   },
+   "availablePoints": 48,
+   "treeFlatShare": 0.73
+  }
+ },
+ "Mage": {
+  "Arcane": {
+   "floorAt20": {
+    "forcedFlat": 5,
+    "bestCaseBehavior": 15,
+    "forcedFlatShare": 0.25
+   },
+   "floorAt30": {
+    "forcedFlat": 14,
+    "bestCaseBehavior": 16,
+    "forcedFlatShare": 0.47
+   },
+   "availablePoints": 47,
+   "treeFlatShare": 0.64
+  },
+  "Fire": {
+   "floorAt20": {
+    "forcedFlat": 2,
+    "bestCaseBehavior": 18,
+    "forcedFlatShare": 0.1
+   },
+   "floorAt30": {
+    "forcedFlat": 8,
+    "bestCaseBehavior": 22,
+    "forcedFlatShare": 0.27
+   },
+   "availablePoints": 46,
+   "treeFlatShare": 0.5
+  },
+  "Frost": {
+   "floorAt20": {
+    "forcedFlat": 11,
+    "bestCaseBehavior": 9,
+    "forcedFlatShare": 0.55
+   },
+   "floorAt30": {
+    "forcedFlat": 15,
+    "bestCaseBehavior": 15,
+    "forcedFlatShare": 0.5
+   },
+   "availablePoints": 46,
+   "treeFlatShare": 0.65
+  }
+ },
+ "Paladin": {
+  "Holy": {
+   "floorAt20": {
+    "forcedFlat": 7,
+    "bestCaseBehavior": 13,
+    "forcedFlatShare": 0.35
+   },
+   "floorAt30": {
+    "forcedFlat": 16,
+    "bestCaseBehavior": 14,
+    "forcedFlatShare": 0.53
+   },
+   "availablePoints": 45,
+   "treeFlatShare": 0.67
+  },
+  "Protection": {
+   "floorAt20": {
+    "forcedFlat": 19,
+    "bestCaseBehavior": 1,
+    "forcedFlatShare": 0.95
+   },
+   "floorAt30": {
+    "forcedFlat": 23,
+    "bestCaseBehavior": 7,
+    "forcedFlatShare": 0.77
+   },
+   "availablePoints": 50,
+   "treeFlatShare": 0.84
+  },
+  "Retribution": {
+   "floorAt20": {
+    "forcedFlat": 14,
+    "bestCaseBehavior": 6,
+    "forcedFlatShare": 0.7
+   },
+   "floorAt30": {
+    "forcedFlat": 24,
+    "bestCaseBehavior": 6,
+    "forcedFlatShare": 0.8
+   },
+   "availablePoints": 45,
+   "treeFlatShare": 0.84
+  }
+ },
+ "Priest": {
+  "Discipline": {
+   "floorAt20": {
+    "forcedFlat": 14,
+    "bestCaseBehavior": 6,
+    "forcedFlatShare": 0.7
+   },
+   "floorAt30": {
+    "forcedFlat": 23,
+    "bestCaseBehavior": 7,
+    "forcedFlatShare": 0.77
+   },
+   "availablePoints": 48,
+   "treeFlatShare": 0.83
+  },
+  "Holy": {
+   "floorAt20": {
+    "forcedFlat": 11,
+    "bestCaseBehavior": 9,
+    "forcedFlatShare": 0.55
+   },
+   "floorAt30": {
+    "forcedFlat": 20,
+    "bestCaseBehavior": 10,
+    "forcedFlatShare": 0.67
+   },
+   "availablePoints": 48,
+   "treeFlatShare": 0.77
+  },
+  "Shadow": {
+   "floorAt20": {
+    "forcedFlat": 4,
+    "bestCaseBehavior": 16,
+    "forcedFlatShare": 0.2
+   },
+   "floorAt30": {
+    "forcedFlat": 11,
+    "bestCaseBehavior": 19,
+    "forcedFlatShare": 0.37
+   },
+   "availablePoints": 48,
+   "treeFlatShare": 0.56
+  }
+ },
+ "Rogue": {
+  "Assassination": {
+   "floorAt20": {
+    "forcedFlat": 14,
+    "bestCaseBehavior": 6,
+    "forcedFlatShare": 0.7
+   },
+   "floorAt30": {
+    "forcedFlat": 15,
+    "bestCaseBehavior": 15,
+    "forcedFlatShare": 0.5
+   },
+   "availablePoints": 46,
+   "treeFlatShare": 0.67
+  },
+  "Combat": {
+   "floorAt20": {
+    "forcedFlat": 16,
+    "bestCaseBehavior": 4,
+    "forcedFlatShare": 0.8
+   },
+   "floorAt30": {
+    "forcedFlat": 16,
+    "bestCaseBehavior": 14,
+    "forcedFlatShare": 0.53
+   },
+   "availablePoints": 62,
+   "treeFlatShare": 0.74
+  },
+  "Subtlety": {
+   "floorAt20": {
+    "forcedFlat": 11,
+    "bestCaseBehavior": 9,
+    "forcedFlatShare": 0.55
+   },
+   "floorAt30": {
+    "forcedFlat": 15,
+    "bestCaseBehavior": 15,
+    "forcedFlatShare": 0.5
+   },
+   "availablePoints": 47,
+   "treeFlatShare": 0.66
+  }
+ },
+ "Shaman": {
+  "Elemental": {
+   "floorAt20": {
+    "forcedFlat": 14,
+    "bestCaseBehavior": 6,
+    "forcedFlatShare": 0.7
+   },
+   "floorAt30": {
+    "forcedFlat": 23,
+    "bestCaseBehavior": 7,
+    "forcedFlatShare": 0.77
+   },
+   "availablePoints": 46,
+   "treeFlatShare": 0.83
+  },
+  "Enhancement": {
+   "floorAt20": {
+    "forcedFlat": 19,
+    "bestCaseBehavior": 1,
+    "forcedFlatShare": 0.95
+   },
+   "floorAt30": {
+    "forcedFlat": 28,
+    "bestCaseBehavior": 2,
+    "forcedFlatShare": 0.93
+   },
+   "availablePoints": 52,
+   "treeFlatShare": 0.94
+  },
+  "Restoration": {
+   "floorAt20": {
+    "forcedFlat": 12,
+    "bestCaseBehavior": 8,
+    "forcedFlatShare": 0.6
+   },
+   "floorAt30": {
+    "forcedFlat": 18,
+    "bestCaseBehavior": 12,
+    "forcedFlatShare": 0.6
+   },
+   "availablePoints": 52,
+   "treeFlatShare": 0.75
+  }
+ },
+ "Warlock": {
+  "Affliction": {
+   "floorAt20": {
+    "forcedFlat": 9,
+    "bestCaseBehavior": 11,
+    "forcedFlatShare": 0.45
+   },
+   "floorAt30": {
+    "forcedFlat": 18,
+    "bestCaseBehavior": 12,
+    "forcedFlatShare": 0.6
+   },
+   "availablePoints": 49,
+   "treeFlatShare": 0.73
+  },
+  "Demonology": {
+   "floorAt20": {
+    "forcedFlat": 19,
+    "bestCaseBehavior": 1,
+    "forcedFlatShare": 0.95
+   },
+   "floorAt30": {
+    "forcedFlat": 28,
+    "bestCaseBehavior": 2,
+    "forcedFlatShare": 0.93
+   },
+   "availablePoints": 52,
+   "treeFlatShare": 0.85
+  },
+  "Destruction": {
+   "floorAt20": {
+    "forcedFlat": 7,
+    "bestCaseBehavior": 13,
+    "forcedFlatShare": 0.35
+   },
+   "floorAt30": {
+    "forcedFlat": 15,
+    "bestCaseBehavior": 15,
+    "forcedFlatShare": 0.5
+   },
+   "availablePoints": 53,
+   "treeFlatShare": 0.7
+  }
+ },
+ "Warrior": {
+  "Arms": {
+   "floorAt20": {
+    "forcedFlat": 12,
+    "bestCaseBehavior": 8,
+    "forcedFlatShare": 0.6
+   },
+   "floorAt30": {
+    "forcedFlat": 12,
+    "bestCaseBehavior": 18,
+    "forcedFlatShare": 0.4
+   },
+   "availablePoints": 59,
+   "treeFlatShare": 0.61
+  },
+  "Fury": {
+   "floorAt20": {
+    "forcedFlat": 11,
+    "bestCaseBehavior": 9,
+    "forcedFlatShare": 0.55
+   },
+   "floorAt30": {
+    "forcedFlat": 18,
+    "bestCaseBehavior": 12,
+    "forcedFlatShare": 0.6
+   },
+   "availablePoints": 60,
+   "treeFlatShare": 0.78
+  },
+  "Protection": {
+   "floorAt20": {
+    "forcedFlat": 8,
+    "bestCaseBehavior": 12,
+    "forcedFlatShare": 0.4
+   },
+   "floorAt30": {
+    "forcedFlat": 15,
+    "bestCaseBehavior": 15,
+    "forcedFlatShare": 0.5
+   },
+   "availablePoints": 53,
+   "treeFlatShare": 0.7
+  }
+ }
+}

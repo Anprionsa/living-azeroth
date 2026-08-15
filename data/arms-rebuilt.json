@@ -1,0 +1,176 @@
+{
+ "meta": {
+  "source": "classic-plus-talent-design.md section 6",
+  "note": "Illustrative rebuild. 50 available points against vanilla's 59, same seven rows."
+ },
+ "rows": [
+  {
+   "row": 1,
+   "talents": [
+    {
+     "name": "Bloodletting",
+     "pos": "a1",
+     "ranks": 3,
+     "kind": "effect",
+     "text": "Rend ignores armor; Overpower refreshes its duration; below 20% health it deals all remaining damage at once."
+    },
+    {
+     "name": "Poise",
+     "pos": "a3",
+     "ranks": 5,
+     "kind": "effect",
+     "text": "Dodged and parried attacks refund Rage; Overpower resets on a dodge; you cannot be disarmed in Battle Stance; Hamstring cannot be dispelled; Rage does not decay while a struck target lives."
+    }
+   ]
+  },
+  {
+   "row": 2,
+   "talents": [
+    {
+     "name": "Concussion",
+     "pos": "b1",
+     "ranks": 3,
+     "kind": "effect",
+     "text": "Thunder Clap also slows casting, spreads Rend to bleeding targets, and becomes usable in any stance."
+    },
+    {
+     "name": "Headlong",
+     "pos": "b2",
+     "ranks": 2,
+     "kind": "effect",
+     "text": "Charge is usable in combat when no enemy is within 8 yards, and interrupts spellcasting."
+    },
+    {
+     "name": "Tactical Mastery",
+     "pos": "b4",
+     "ranks": 5,
+     "kind": "effect",
+     "text": "Retain Rage through Battle, then Berserker, then Defensive; then no stance swap cooldown; then swapping stances reopens Overpower's window."
+    }
+   ]
+  },
+  {
+   "row": 3,
+   "talents": [
+    {
+     "name": "Riposte Reading",
+     "pos": "c1",
+     "ranks": 2,
+     "kind": "effect",
+     "text": "Overpower cannot be dodged or parried; its window opens on any miss rather than only a dodge."
+    },
+    {
+     "name": "Battle Trance",
+     "pos": "c2",
+     "ranks": 1,
+     "kind": "effect",
+     "text": "Three consecutive attacks without a miss makes your next Overpower or Execute free."
+    },
+    {
+     "name": "Deep Wounds",
+     "pos": "c3",
+     "ranks": 3,
+     "kind": "effect",
+     "text": "Critical strikes cause bleeding; refreshing carries remaining damage forward; the bleed jumps to a nearby enemy on death."
+    }
+   ]
+  },
+  {
+   "row": 4,
+   "talents": [
+    {
+     "name": "Sweeping Strikes",
+     "pos": "d1",
+     "ranks": 1,
+     "kind": "button",
+     "text": "Your next 5 melee attacks strike an additional nearby opponent. Unchanged from vanilla."
+    },
+    {
+     "name": "Weapon Mastery",
+     "pos": "d2",
+     "ranks": 5,
+     "kind": "effect",
+     "text": "Effect determined by the equipped weapon rather than by the node. Axes bleed on crit, swords proc an extra attack, maces stun, polearms strike a second target behind the first."
+    },
+    {
+     "name": "Opportunist",
+     "pos": "d3",
+     "ranks": 2,
+     "kind": "effect",
+     "text": "Sweeping Strikes copies Overpower; its extra hits can trigger Deep Wounds."
+    }
+   ]
+  },
+  {
+   "row": 5,
+   "talents": [
+    {
+     "name": "Rupture Line",
+     "pos": "e1",
+     "ranks": 3,
+     "kind": "effect",
+     "text": "Execute refreshes your bleeds; bleeds below 20% tick twice as fast; a target dying while bleeding refunds the Rage spent on Execute."
+    },
+    {
+     "name": "Mortal Cleave",
+     "pos": "e2",
+     "ranks": 2,
+     "kind": "effect",
+     "text": "Cleave and Whirlwind apply Mortal Strike's healing reduction; it persists 4 seconds after the target leaves melee range. The sideways node."
+    },
+    {
+     "name": "Sure Strike",
+     "pos": "e3",
+     "ranks": 1,
+     "kind": "effect",
+     "text": "Your melee attacks can no longer be dodged, parried, or miss. Your melee attacks can no longer critically strike. The subtraction node."
+    },
+    {
+     "name": "Second Wind",
+     "pos": "e4",
+     "ranks": 2,
+     "kind": "effect",
+     "text": "Being stunned or rooted generates Rage; the second rank breaks the effect once per 30 seconds."
+    }
+   ]
+  },
+  {
+   "row": 6,
+   "talents": [
+    {
+     "name": "Crippling Grip",
+     "pos": "f1",
+     "ranks": 3,
+     "kind": "effect",
+     "text": "Hamstring may root; the root is not broken by your own bleed damage; Hamstring is free against a bleeding target."
+    },
+    {
+     "name": "Death Sentence",
+     "pos": "f2",
+     "ranks": 3,
+     "kind": "effect",
+     "text": "Execute refunds its Rage on a kill; usable below 35% against targets you have Rent; a kill by Execute resets Overpower."
+    },
+    {
+     "name": "Unyielding",
+     "pos": "f3",
+     "ranks": 3,
+     "kind": "effect",
+     "text": "Reduced stun duration, then reduced disarm duration, then you continue attacking for 2 seconds after a fear begins."
+    }
+   ]
+  },
+  {
+   "row": 7,
+   "talents": [
+    {
+     "name": "Mortal Strike",
+     "pos": "g2",
+     "ranks": 1,
+     "kind": "button",
+     "text": "A vicious strike that deals weapon damage and wounds the target, reducing healing received. Unchanged from vanilla."
+    }
+   ]
+  }
+ ]
+}

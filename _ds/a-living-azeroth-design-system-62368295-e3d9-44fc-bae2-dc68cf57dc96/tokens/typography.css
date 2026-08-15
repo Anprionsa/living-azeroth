@@ -1,0 +1,38 @@
+:root{
+/* Display stands in for MORPHEUS.TTF, UI stands in for FRIZQT__.TTF.
+   Both originals are commercial; see tokens/fonts.css for the substitution note. */
+--font-display:"Grenze Gotisch","Pirata One",Georgia,serif;
+--font-body:"Source Serif 4","Source Serif Pro",Georgia,serif;
+--font-ui:"Marcellus","Quattrocento",Georgia,serif;
+
+/* Display: quest titles and book text. Headings, wordmark, view titles. */
+--display-1:56px;
+--display-2:40px;
+--display-3:30px;
+--display-4:23px;
+--display-line:1.1; /* @kind other */
+--display-tracking:0.01em; /* @kind other */
+--display-weight:500; /* @kind other */
+--display-opsz:normal; /* @kind other */
+
+/* Body: 8,000 words of chronicle. Not the interface face. */
+--body-lg:20px;
+--body:18px;
+--body-sm:16px;
+--body-xs:15px;
+--body-line:1.62; /* @kind other */
+--body-line-tight:1.45; /* @kind other */
+--measure:68ch; /* @kind other */
+--measure-narrow:54ch; /* @kind other */
+
+/* Interface: item names, tooltips, panel labels, tier badges, table headers. */
+--ui-lg:15px;
+--ui:14px;
+--ui-sm:12.5px;
+--ui-xs:11px;
+--ui-line:1.4; /* @kind other */
+--ui-tracking:0.015em; /* @kind other */
+--ui-tracking-wide:0.1em; /* @kind other */
+--eyebrow-size:12.5px;
+--eyebrow-tracking:0.12em; /* @kind other */
+}
