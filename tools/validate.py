@@ -243,6 +243,25 @@ for t in D["trees"]:
             if sev=="error": errs+=1
             else: warns+=1
 print(f"CONFIGURATION: {CONFIG}\n{len(D['trees'])} trees, {sum(len(r['talents']) for t in D['trees'] for r in t['rows'])} talents, {len(R)} rules\n")
+@rule("prerequisites","error",["vanilla","rebuilt","absorbed","original"])
+def r_prereq(t):
+    where={x["id"]:(r["row"],x) for r in t["rows"] for x in r["talents"]}
+    bad=[]
+    for r in t["rows"]:
+        for x in r["talents"]:
+            rq=x.get("requires")
+            if not rq: continue
+            if not isinstance(rq,dict) or "talent" not in rq: bad.append(f"{x['name']}: malformed requires"); continue
+            tg=where.get(rq["talent"])
+            if not tg: bad.append(f"{x['name']} requires {rq['talent']} which is not in this tree"); continue
+            if tg[0]>r["row"]: bad.append(f"{x['name']} requires {tg[1]['name']} from a later row")
+            if rq["talent"]==x["id"]: bad.append(f"{x['name']} requires itself")
+            rk=rq.get("ranks",tg[1]["ranks"])
+            if not isinstance(rk,int) or rk<1 or rk>tg[1]["ranks"]: bad.append(f"{x['name']} requires {rk} points in {tg[1]['name']} which has {tg[1]['ranks']}")
+            back=(tg[1].get("requires") or {}).get("talent")
+            if back==x["id"]: bad.append(f"{x['name']} and {tg[1]['name']} require each other")
+    return bad
+
 for name,sev,kinds,fn in R:
     hits=report.get(name,[])
     mark="PASS" if not hits else ("FAIL" if hits[0][0]=="error" else "WARN")

@@ -127,24 +127,24 @@ Runeblade,Warrior,6,,"Permafrost",3,talent-runeblade-permafrost.png
 Runeblade,Warrior,6,,"Bitter Cold",2,talent-runeblade-bitter-cold.png
 Runeblade,Warrior,6,,"Unbreakable Rime",3,talent-runeblade-unbreakable-rime.png
 Runeblade,Warrior,7,capstone,"The Runeblade",1,talent-runeblade-the-runeblade.png
-Survival,Hunter,1,,"Savage Strikes",5,talent-survival-savage-strikes.png
-Survival,Hunter,1,,"Trap Mastery",3,talent-survival-trap-mastery.png
-Survival,Hunter,1,,"Hunter's Guile",5,talent-survival-hunter-s-guile.png
-Survival,Hunter,2,,"Combat Trapping",1,talent-survival-combat-trapping.png
-Survival,Hunter,2,,"Deflection",2,talent-survival-deflection.png
-Survival,Hunter,2,,"Improved Traps",3,talent-survival-improved-traps.png
-Survival,Hunter,2,,"Thick Hide",5,talent-survival-thick-hide.png
-Survival,Hunter,3,,"Close Quarters",5,talent-survival-close-quarters.png
-Survival,Hunter,3,,"Snare Expert",2,talent-survival-snare-expert.png
-Survival,Hunter,3,,"Surefooted",3,talent-survival-surefooted.png
-Survival,Hunter,4,,"Harpoon",1,talent-survival-harpoon.png
-Survival,Hunter,4,,"Wyvern Venom",3,talent-survival-wyvern-venom.png
-Survival,Hunter,4,,"Killer Instinct",3,talent-survival-killer-instinct.png
-Survival,Hunter,4,,"Entrapment",2,talent-survival-entrapment.png
-Survival,Hunter,5,mark,"Coordinated Assault",1,talent-survival-coordinated-assault.png
-Survival,Hunter,5,,"Resourcefulness",3,talent-survival-resourcefulness.png
-Survival,Hunter,5,,"Bestial Discipline",2,talent-survival-bestial-discipline.png
-Survival,Hunter,6,,"Pack Instinct",3,talent-survival-pack-instinct.png
-Survival,Hunter,6,,"Trapper's Cunning",2,talent-survival-trapper-s-cunning.png
-Survival,Hunter,6,,"Ferocious Bond",3,talent-survival-ferocious-bond.png
-Survival,Hunter,7,capstone,"Hunt as One",1,talent-survival-hunt-as-one.png
+Trapper,Hunter,1,,"Savage Strikes",5,talent-trapper-savage-strikes.png
+Trapper,Hunter,1,,"Trap Mastery",3,talent-trapper-trap-mastery.png
+Trapper,Hunter,1,,"Hunter's Guile",5,talent-trapper-hunter-s-guile.png
+Trapper,Hunter,2,,"Combat Trapping",1,talent-trapper-combat-trapping.png
+Trapper,Hunter,2,,"Deflection",2,talent-trapper-deflection.png
+Trapper,Hunter,2,,"Improved Traps",3,talent-trapper-improved-traps.png
+Trapper,Hunter,2,,"Thick Hide",5,talent-trapper-thick-hide.png
+Trapper,Hunter,3,,"Close Quarters",5,talent-trapper-close-quarters.png
+Trapper,Hunter,3,,"Snare Expert",2,talent-trapper-snare-expert.png
+Trapper,Hunter,3,,"Surefooted",3,talent-trapper-surefooted.png
+Trapper,Hunter,4,,"Harpoon",1,talent-trapper-harpoon.png
+Trapper,Hunter,4,,"Wyvern Venom",3,talent-trapper-wyvern-venom.png
+Trapper,Hunter,4,,"Killer Instinct",3,talent-trapper-killer-instinct.png
+Trapper,Hunter,4,,"Entrapment",2,talent-trapper-entrapment.png
+Trapper,Hunter,5,mark,"Coordinated Assault",1,talent-trapper-coordinated-assault.png
+Trapper,Hunter,5,,"Resourcefulness",3,talent-trapper-resourcefulness.png
+Trapper,Hunter,5,,"Bestial Discipline",2,talent-trapper-bestial-discipline.png
+Trapper,Hunter,6,,"Pack Instinct",3,talent-trapper-pack-instinct.png
+Trapper,Hunter,6,,"Trapper's Cunning",2,talent-trapper-trapper-s-cunning.png
+Trapper,Hunter,6,,"Ferocious Bond",3,talent-trapper-ferocious-bond.png
+Trapper,Hunter,7,capstone,"Hunt as One",1,talent-trapper-hunt-as-one.png

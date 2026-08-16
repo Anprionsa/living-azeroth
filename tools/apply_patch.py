@@ -28,6 +28,8 @@ if "--in" in args:
 out = None
 if "--out" in args:
     i = args.index("--out"); out = args[i + 1]; del args[i:i + 2]
+ALLOW_AUTHORED = "--allow-authored" in args
+if ALLOW_AUTHORED: args.remove("--allow-authored")
 patch_paths = args
 
 def clauses(text):
@@ -74,7 +76,7 @@ for pp in patch_paths:
                             if x.get("source") == "authored")
             after = sorted(authored_key(x) for x in new_fx
                            if x.get("source") == "authored")
-            if before != after:
+            if before != after and not ALLOW_AUTHORED:
                 e.append("authored effects changed (only adding `rank` to them is allowed)")
             for fx in new_fx:
                 if fx.get("op") not in OPS:
@@ -99,9 +101,30 @@ for pp in patch_paths:
                 e.append("text contains em dash or exclamation point")
             if tal["ranks"] >= 2 and len(clauses(tx)) != tal["ranks"]:
                 e.append(f"text decomposes into {len(clauses(tx))} clauses, needs {tal['ranks']}")
+        if "requires" in ch and ch["requires"] is not None:
+            rq = ch["requires"]
+            tree_of = {}
+            for t in d["trees"]:
+                for r in t.get("rows", []):
+                    for x in r["talents"]:
+                        tree_of[x["id"]] = (t["id"], r["row"], x)
+            if not (isinstance(rq, dict) and isinstance(rq.get("talent"), str)):
+                e.append("requires must be {talent, ranks}")
+            else:
+                tgt = tree_of.get(rq["talent"]); me = tree_of.get(tid)
+                if not tgt: e.append(f"requires unknown talent {rq['talent']}")
+                elif tgt[0] != me[0]: e.append("requires a talent in another tree")
+                elif tgt[1] > me[1]: e.append("requires a talent in a later row")
+                elif rq["talent"] == tid: e.append("requires itself")
+                else:
+                    rk = rq.get("ranks", tgt[2]["ranks"])
+                    if not (isinstance(rk, int) and 1 <= rk <= tgt[2]["ranks"]): e.append(f"requires ranks {rk!r} outside 1..{tgt[2]['ranks']}")
         if e:
             errors.append(f"{tid}: " + "; ".join(e))
             continue
+        if "requires" in ch:
+            if ch["requires"] is None: tal.pop("requires", None)
+            else: tal["requires"] = {"talent": ch["requires"]["talent"], "ranks": ch["requires"].get("ranks", tree_of[ch["requires"]["talent"]][2]["ranks"])}
         if "text" in ch:
             tal["text"] = str(ch["text"]).strip()
         if "effects" in ch:

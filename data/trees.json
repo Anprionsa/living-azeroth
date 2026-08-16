@@ -1113,8 +1113,8 @@
    "source": "absorbed"
   },
   {
-   "id": "survival",
-   "name": "Survival",
+   "id": "trapper",
+   "name": "Trapper",
    "host": "Hunter",
    "concept": "The close-range trapper. A hunter who fights beside the pet rather than behind it.",
    "retailSource": "Survival, the 2016 melee rework",

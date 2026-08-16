@@ -2,8 +2,15 @@
  "meta": {
   "date": "2026-08",
   "band": "-7% to +7%",
-  "cells": 94,
-  "note": "Curated from final-state.md, band-policy.md, sim-instruments.md, flags-closed.md, handoff.md, open-register.md. Final numbers; earlier runs in sim-results.md were superseded."
+  "cells": 122,
+  "seeds": {
+   "damage": 120,
+   "tank": 30,
+   "heal": 24,
+   "capstoneFree": 25
+  },
+  "note": "Regenerated in August 2026 from the stage 2 rerun (HANDOFF-stage1.md, HANDOFF-stage2.md, HANDOFF-stage3.md, stage3-results.json) on the staging data files/sim-work/talent-data.json, which is canonical plus stage1_patch.py and stage2_patch.py. Core and expanded at 120 seeds through harness.py, tanks at 30, healers at 24, the capstone-free sweep at 25. Cells counted: sixty core, thirty-five expanded, twelve tank (three cells on four capstones), twelve healing (three patterns on four healers) and three for Dreamer; Radiance's three are measured and unbanded and not counted. The earlier file, curated from final-state.md, described a state the shipped instrument did not reproduce; the cause is recorded in HANDOFF-stage2.md section 5 and the earlier numbers are superseded.",
+  "supersedes": "final-state.md, full-pass.md, suite-results.md, tuning-pass-expanded.md section 2 for the numbers; the prose findings of band-policy.md and candidate-test.md stand."
  },
  "instruments": [
   {
@@ -11,21 +18,21 @@
    "name": "Damage",
    "measures": "Damage per second across five fight scenarios",
    "covers": "The damage trees",
-   "cells": "50 core, 30 expanded"
+   "cells": "60 core, 35 expanded"
   },
   {
    "id": "tank.py",
    "name": "Tanking",
    "measures": "Threat, damage taken, effective health, crit immunity",
    "covers": "Four tank trees",
-   "cells": "4 builds"
+   "cells": "4 capstones, 3 cells each"
   },
   {
    "id": "heal.py",
    "name": "Healing",
    "measures": "Effective healing, healing per mana, overheal, time to out of mana",
-   "covers": "Five healing trees",
-   "cells": "4 classes"
+   "covers": "Six healing trees",
+   "cells": "4 classes and Dreamer banded, Radiance measured"
   }
  ],
  "scenarios": [
@@ -51,7 +58,7 @@
   },
   {
    "id": "switching",
-   "shape": "300s, new target every 30s",
+   "shape": "300s, new target every 30s, ten switches",
    "exposes": "Ramp, periodic effects, instant application"
   }
  ],
@@ -75,10 +82,10 @@
     "violations": "1 of 10 pairs, but blind to a capstone useless in a whole encounter category"
    }
   ],
-  "note": "The exemption policy, argued for across four passes, performed worse than simply widening the band and was dropped. -7 was free: both -7 and -8 failed the same four cells before tuning, and tuning cleared them."
+  "note": "The exemption policy, argued for across four passes, performed worse than simply widening the band and was dropped. -7 was free: both -7 and -8 failed the same four cells before tuning, and tuning cleared them. The pricing was done on the fifty cells of the ten pairs then measurable; the band it chose is applied unchanged to the sixty measured now. Tanks take the same band on three cells of their own, policy B, with crit immunity as a gate."
  },
  "core": {
-  "headline": "Zero violations of fifty cells",
+  "headline": "Fifty-nine of sixty cells inside the band across twelve measurable pairs; Fury + Protection on burst reads +7.2% at 120 seeds and +7.0% at 240",
   "columns": [
    "patchwerk",
    "burst",
@@ -89,109 +96,165 @@
   "rows": [
    {
     "pair": "Arms",
+    "alt": "Fury",
+    "build": "Arms 31 / Fury 20 against Arms 30 / Fury 21",
     "cells": [
-     "+1.2%",
-     "-6.6%",
-     "+1.2%",
-     "-0.6%",
-     "+2.9%"
+     "+5.3%",
+     "-2.1%",
+     "+5.3%",
+     "-2.7%",
+     "+5.0%"
     ]
    },
    {
     "pair": "Fury",
+    "alt": "Protection",
+    "build": "Fury 31 / Protection 20 against Fury 30 / Protection 21",
     "cells": [
-     "+3.4%",
-     "+0.7%",
-     "+3.4%",
-     "+1.5%",
-     "+2.9%"
+     "+4.5%",
+     "+7.2%",
+     "+4.5%",
+     "+0.8%",
+     "+3.8%"
     ]
    },
    {
     "pair": "Combat",
+    "alt": "Assassination",
+    "build": "Combat 31 / Assassination 20 against Combat 30 / Assassination 21",
     "cells": [
-     "+0.6%",
-     "-1.9%",
-     "+0.6%",
-     "+0.6%",
-     "+0.3%"
+     "-0.5%",
+     "-4.6%",
+     "-0.3%",
+     "-1.1%",
+     "-0.5%"
+    ]
+   },
+   {
+    "pair": "Assassination",
+    "alt": "Subtlety",
+    "build": "Assassination 31 / Subtlety 20 against Assassination 30 / Subtlety 21",
+    "cells": [
+     "-0.1%",
+     "+1.6%",
+     "-0.1%",
+     "-0.1%",
+     "+3.1%"
     ]
    },
    {
     "pair": "Fire",
+    "alt": "Frost",
+    "build": "Fire 31 / Frost 20 against Fire 30 / Frost 21",
     "cells": [
-     "+1.0%",
+     "+1.9%",
      "+4.3%",
-     "+0.8%",
-     "+1.0%",
-     "+1.1%"
+     "+2.1%",
+     "+1.3%",
+     "+1.9%"
     ]
    },
    {
     "pair": "Arcane",
+    "alt": "Fire",
+    "build": "Arcane 31 / Fire 20 against Arcane 30 / Fire 21",
     "cells": [
      "+2.0%",
-     "+6.1%",
+     "+6.4%",
      "+1.1%",
      "+1.9%",
-     "+2.0%"
+     "+1.9%"
     ]
    },
    {
     "pair": "Affliction",
+    "alt": "Destruction",
+    "build": "Affliction 31 / Destruction 20 against Affliction 30 / Destruction 21",
     "cells": [
-     "-1.2%",
-     "+6.5%",
-     "-1.2%",
-     "-6.5%",
-     "+5.5%"
+     "-4.4%",
+     "+2.2%",
+     "-4.4%",
+     "-2.8%",
+     "-3.6%"
     ]
    },
    {
     "pair": "Destruction",
+    "alt": "Demonology",
+    "build": "Destruction 31 / Demonology 20 against Destruction 30 / Demonology 21",
     "cells": [
-     "+0.9%",
-     "+5.7%",
-     "-1.1%",
-     "-0.4%",
-     "+1.6%"
+     "-3.2%",
+     "+5.2%",
+     "-4.6%",
+     "-4.3%",
+     "-5.4%"
     ]
    },
    {
     "pair": "Shadow",
+    "alt": "Discipline",
+    "build": "Shadow 31 / Discipline 20 against Shadow 30 / Discipline 21",
     "cells": [
      "+4.5%",
-     "+2.4%",
-     "+3.2%",
+     "+2.0%",
      "+4.5%",
-     "+4.2%"
+     "+4.5%",
+     "+4.5%"
     ]
    },
    {
-    "pair": "Marksmanship",
+    "pair": "Elemental",
+    "alt": "Enhancement",
+    "build": "Elemental 31 / Enhancement 20 against Elemental 30 / Enhancement 21",
     "cells": [
-     "-1.2%",
-     "+2.4%",
-     "-1.7%",
-     "-2.8%",
-     "+0.0%"
+     "-0.1%",
+     "-0.5%",
+     "-0.1%",
+     "-0.1%",
+     "-0.1%"
     ]
    },
    {
     "pair": "Balance",
+    "alt": "Feral Combat",
+    "build": "Balance 31 / Feral Combat 20 against Balance 30 / Feral Combat 21",
     "cells": [
-     "+0.9%",
-     "+0.8%",
-     "+0.9%",
-     "+1.0%",
-     "+0.9%"
+     "+0.5%",
+     "+0.6%",
+     "+0.6%",
+     "+0.6%",
+     "+0.5%"
+    ]
+   },
+   {
+    "pair": "Marksmanship",
+    "alt": "Beast Mastery",
+    "build": "Marksmanship 31 / Beast Mastery 20 against Marksmanship 30 / Beast Mastery 21",
+    "cells": [
+     "-2.1%",
+     "+0.7%",
+     "-2.6%",
+     "+4.1%",
+     "-3.7%"
     ]
    }
   ],
-  "note": "Each row is a capstone build against its mid-tree alternative. The tuning rule from talent design 5.6 holds: fifty cells, zero outside the band."
+  "note": "Each row is a capstone build against its mid-tree alternative, 31 / 20 against 30 / 21, at 120 seeds. Twelve pairs are measurable; Retribution + Holy is Repentance, simulable false, and reads zero by construction, so it is not a row. Elemental + Enhancement is measured and reads within a tenth of zero on four cells: Elemental Mastery as modelled, a guaranteed critical on one spell, is worth about nothing against a twenty-first Enhancement point. Median capstone premium on patchwerk +0.2%, eleven of twelve inside five percent. The one cell out is Fury + Protection on burst at +7.2%, which read +4.7% on the sixty seeds stage 2 tuned against and reads +7.0% on 240; the burst cell of a forty-five second fight carries about two and a half points of seed noise at this count, and Death Wish's thirty second window is two thirds of it. The widest cell in core is Fury on burst at +7.2%.",
+  "excluded": {
+   "pair": "Retribution",
+   "cells": [
+    "+0.0%",
+    "+0.0%",
+    "+0.0%",
+    "+0.0%",
+    "+0.0%"
+   ],
+   "reason": "Repentance carries simulable: false; the pair reads zero in every cell by construction and is not evidence either way."
+  },
+  "warrior": "The Warrior pairs read +22.7% and +33.0% on the shipped data before stage 2, against the +1.2% and +3.4% the earlier record claimed. The cause was the gear calibration: rage per swing runs at the cap on the calibrated block, every rage-costed strike is free, and a granted six second strike is pure addition to a rotation whose global cooldowns are otherwise empty. Mortal Strike was halved and Bloodthirst cut to 0.28 of its coefficient through the tuner's own lever for a granted capstone, and Death Wish's cooldown magnitude came down from 1.45 to 1.30. The tuned factors follow the model, which is still owed a rage economy on the real-gear scale and on-next-swing strikes as a swing plus a flat bonus."
  },
  "expanded": {
-  "headline": "Thirty of thirty cells in band",
+  "headline": "Thirty-five of thirty-five cells inside the band, with Metamorphosis on switching at the ceiling: +7.0% at 120 seeds and +7.1% at 240",
   "columns": [
    "patchwerk",
    "burst",
@@ -202,117 +265,183 @@
   "rows": [
    {
     "pair": "Blackguard",
+    "host": "Retribution",
+    "baseline": "Retribution 31 / Holy 20",
     "cells": [
-     "+6.0%",
-     "+3.2%",
-     "+6.0%",
-     "+6.0%",
-     "+4.8%"
+     "+4.9%",
+     "+0.5%",
+     "+4.9%",
+     "+4.9%",
+     "+2.8%"
     ]
    },
    {
     "pair": "Necromancy",
+    "host": "Frost",
+    "baseline": "Fire 31 / Frost 20",
     "cells": [
-     "+3.6%",
-     "-2.0%",
-     "-0.8%",
-     "+3.2%",
-     "+0.8%"
+     "-0.2%",
+     "-0.1%",
+     "-3.4%",
+     "+2.9%",
+     "-1.0%"
+    ]
+   },
+   {
+    "pair": "Metamorphosis",
+    "host": "Destruction",
+    "baseline": "Affliction 31 / Destruction 20",
+    "cells": [
+     "-0.1%",
+     "-5.5%",
+     "-2.9%",
+     "+3.4%",
+     "+7.0%"
     ]
    },
    {
     "pair": "Bladedancer",
+    "host": "Combat",
+    "baseline": "Assassination 31 / Combat 20",
     "cells": [
-     "+0.3%",
-     "-0.2%",
-     "+0.3%",
-     "+0.3%",
-     "+0.3%"
+     "+4.2%",
+     "+0.0%",
+     "+0.4%",
+     "-3.0%",
+     "+3.9%"
     ]
    },
    {
     "pair": "Conduit",
+    "host": "Elemental",
+    "baseline": "Enhancement 31 / Elemental 20",
     "cells": [
-     "+3.7%",
-     "+4.7%",
-     "+3.7%",
-     "+5.3%",
-     "+2.5%"
+     "+4.4%",
+     "+5.2%",
+     "+4.4%",
+     "+4.0%",
+     "+3.9%"
     ]
    },
    {
     "pair": "Runeblade",
+    "host": "Arms",
+    "baseline": "Fury 31 / Arms 20",
     "cells": [
-     "+2.2%",
-     "-3.8%",
-     "+2.2%",
-     "-3.3%",
-     "+0.9%"
+     "+2.7%",
+     "-1.9%",
+     "+2.7%",
+     "+4.8%",
+     "+4.0%"
     ]
    },
    {
-    "pair": "Survival",
+    "pair": "Trapper",
+    "host": "Marksmanship",
+    "baseline": "Beast Mastery 31 / Marksmanship 20",
     "cells": [
+     "-4.9%",
+     "-3.7%",
+     "-0.9%",
      "+0.7%",
-     "+4.4%",
-     "+6.8%",
-     "+5.9%",
-     "-1.4%"
+     "-4.8%"
     ]
    }
   ],
-  "note": "Each new tree’s best build against its class’s best core build. Metamorphosis is a tank tree and is measured by the tank instrument below.",
-  "before": "Before tuning these spanned -21% to +29.4%: Necromancy was a burst outlier, Blackguard was weak in every scenario, Runeblade had no cash-out. Three trees needed three different fixes and only one was a magnitude."
+  "note": "Each new tree at 31 with its host at 20, against a real two-tree damage build of the same class that duplicates neither, tune.gaps' rule; the baseline is named on each row. The earlier table compared against the class's best core build, which for Bladedancer, Conduit, Trapper and Runeblade duplicated the host and read part of the host's worth as the tree's: Trapper's -16.6% cleave and Runeblade's +8.6% burst in the shipped suite were that comparison and not the trees, and both were in band against the correct baseline before anything was tuned. Metamorphosis is a tank tree and its three tank cells are in the table below; its damage cells are here because a tank tree at 31 is also a damage build a warlock can play. Dreamer and Radiance are healing trees and sit in the healing table; Radiance is measured and unbanded, pending an instrument that reads both halves of an emission.",
+  "before": "Before the August rerun these read, against the correct baseline at 60 seeds: Bladedancer +20.2% patchwerk and +19.8% switching after the Rogue gear recalibration lifted a poison-free tree by the whole factor; Metamorphosis -24.9% burst and -14.9% movement, a Shadow Bolt caster on a short fight; Runeblade +23.9% to +30.4% once Bloodthirst was cut under it; Blackguard, Necromancy, Conduit and Trapper in band. Three trees needed three fixes: a level pass for Bladedancer with its capstone sweep tightened, two scenario levers for Metamorphosis, and a level pass for Runeblade with Bitter Cold's sweep trimmed. Necromancy's cleave lever had been oversized at +31.1% and was cut to every fifth strike in the tuning pass before this.",
+  "healing": [
+   {
+    "tree": "Dreamer",
+    "build": "Dreamer 31 / Restoration 20 against Restoration 31 / Balance 20",
+    "cells": [
+     "+1.7 / +2.3 / +1.7%",
+     "+1.9 / +2.4 / +1.8%"
+    ],
+    "columns": [
+     "HPS gap steady / spiky / aoe",
+     "HPM gap steady / spiky / aoe"
+    ],
+    "verdict": "in band"
+   },
+   {
+    "tree": "Radiance",
+    "build": "Radiance 31 / Holy 20 against Discipline 31 / Holy 20",
+    "cells": [
+     "-23.0 / +1.6 / +9.2%",
+     "-22.8 / +2.0 / +9.4%"
+    ],
+    "columns": [
+     "HPS gap steady / spiky / aoe",
+     "HPM gap steady / spiky / aoe"
+    ],
+    "verdict": "unbanded"
+   }
+  ]
  },
  "tank": {
-  "headline": "Four of four in band",
-  "band": "The mean of the threat gap and the effective-health gap, held between -7% and +7%. Banding each separately would forbid a capstone that trades one for the other, which is a legitimate shape.",
+  "headline": "Four of four in band under policy B",
+  "policy": "B",
+  "band": "Three cells, each held between -7% and +7% against the mid-tree alternative with the host held constant, 31 against 30: the threat gap, the effective health gap, and the damage-taken reduction with its sign flipped so that positive favours the capstone. Crit immunity is a gate the two builds must agree on. The mean of threat and effective health, the earlier policy, passed a capstone reading +13% threat and nothing else, twice the damage ceiling and the shape the damage band forbids; banding each cell separately needs no exchange rate between threat and survival, which nothing in the project can supply.",
   "columns": [
-   "TPS",
+   "Threat",
    "EHP",
-   "Mean"
+   "Damage taken"
   ],
   "rows": [
    {
     "pair": "Protection warrior",
     "cells": [
-     "+13.0%",
+     "+2.1%",
      "+0.0%",
-     "+6.5%"
+     "+0.0%"
     ],
-    "before": "+28.4%"
+    "critImmunity": "agree",
+    "before": "+32.5% / +0.0% / +0.0%, refused by the tuner: the excess was Shield Slam's base damage",
+    "lever": "Shield Slam to gate 25, Bastion as the capstone",
+    "raw": "TPS 2,522 against 2,469, DTPS 384 against 384, EHP 40,917 against 40,917, crit immune true both"
    },
    {
     "pair": "Protection paladin",
     "cells": [
-     "+12.0%",
+     "+5.9%",
      "+0.0%",
-     "+6.0%"
+     "+1.3%"
     ],
-    "before": "+12.0%"
+    "critImmunity": "agree",
+    "before": "+11.4% / +0.0% / +1.3%",
+    "lever": "Holy Shield's Holy threat rider 0.15 to 0.075",
+    "raw": "TPS 2,844 against 2,685, DTPS 332 against 336, EHP 36,118 against 36,118, crit immune false both"
    },
    {
     "pair": "Bear",
     "cells": [
-     "+7.4%",
+     "+6.7%",
      "+5.6%",
-     "+6.5%"
+     "+3.9%"
     ],
-    "before": "+9.4%"
+    "critImmunity": "agree",
+    "before": "+7.4% / +5.6% / +3.8%",
+    "lever": "Apex Predator's form threat 0.0784 to 0.0706",
+    "raw": "TPS 1,409 against 1,321, DTPS 435 against 452, EHP 42,767 against 40,502, crit immune false both"
    },
    {
     "pair": "Metamorphosis",
     "cells": [
-     "+3.5%",
-     "+9.6%",
-     "+6.6%"
+     "+4.6%",
+     "+4.4%",
+     "+4.2%"
     ],
-    "before": "+23.2%"
+    "critImmunity": "agree",
+    "before": "+6.8% / +4.4% / +4.2%",
+    "lever": "none; the damage-side opening window was placed on Fel Aegis so the tank pair does not carry it",
+    "raw": "TPS 1,852 against 1,771, DTPS 465 against 485, EHP 26,435 against 25,330, crit immune false both"
    }
-  ]
+  ],
+  "note": "Thirty seeds, host held: Fury, Retribution, Restoration, Destruction. Shield Slam read +32.5% threat with every scalable magnitude on the capstone at zero, so the tuner refused it by name: the excess was the granted ability's base damage. It took shape (b): the grant moved to gate 25 with its text unchanged, and Bastion is the capstone. Three instrument caveats stand: threat riders are scope-blind, threat is measured on a damage-role build, and block reaches damage taken and not effective health."
  },
  "heal": {
-  "headline": "Four of four in band",
+  "headline": "Three of four healers in band, Restoration shaman one point outside on steady; Dreamer in band, Radiance measured and unbanded",
   "columns": [
    "HPS gap",
    "HPM gap"
@@ -320,45 +449,185 @@
   "rows": [
    {
     "pair": "Priest",
+    "tree": "Holy",
+    "build": "Holy 31 / Discipline 20 against Holy 30 / Discipline 21",
     "cells": [
-     "-0.1%",
-     "-0.1%"
-    ]
+     "+1.1 / +1.6 / +0.3%",
+     "+1.1 / +1.6 / +0.4%"
+    ],
+    "overheal": "2 / 2 / 2%",
+    "inBand": true
    },
    {
     "pair": "Druid",
+    "tree": "Restoration",
+    "build": "Restoration 31 / Balance 20 against Restoration 30 / Balance 21",
     "cells": [
-     "+2.1%",
-     "+1.6%"
-    ]
-   },
-   {
-    "pair": "Paladin",
-    "cells": [
-     "+0.0%",
-     "+0.0%"
-    ]
+     "+2.1 / +1.0 / +1.9%",
+     "+1.5 / +0.7 / +1.7%"
+    ],
+    "overheal": "4 / 5 / 5%",
+    "inBand": true
    },
    {
     "pair": "Shaman",
+    "tree": "Restoration",
+    "build": "Restoration 31 / Elemental 20 against Restoration 30 / Elemental 21",
     "cells": [
-     "+5.3%",
-     "tuned from +27.9%"
-    ]
+     "-8.2 / -1.8 / -2.1%",
+     "-19.9 / -14.9 / -15.0%"
+    ],
+    "overheal": "5 / 2 / 4%",
+    "inBand": false
+   },
+   {
+    "pair": "Paladin",
+    "tree": "Holy",
+    "build": "Holy 31 / Protection 20 against Holy 30 / Protection 21",
+    "cells": [
+     "+0.0 / +0.0 / +0.0%",
+     "+0.0 / +0.0 / +0.0%"
+    ],
+    "overheal": "0 / 0 / 0%",
+    "inBand": true
+   },
+   {
+    "pair": "Dreamer",
+    "tree": "Dreamer",
+    "build": "Dreamer 31 / Restoration 20 against Restoration 31 / Balance 20",
+    "cells": [
+     "+1.7 / +2.3 / +1.7%",
+     "+1.9 / +2.4 / +1.8%"
+    ],
+    "overheal": "4 / 5 / 6%",
+    "inBand": true
+   },
+   {
+    "pair": "Radiance",
+    "tree": "Radiance",
+    "build": "Radiance 31 / Holy 20 against Discipline 31 / Holy 20",
+    "cells": [
+     "-23.0 / +1.6 / +9.2%",
+     "-22.8 / +2.0 / +9.4%"
+    ],
+    "overheal": "15 / 6 / 9%",
+    "inBand": null,
+    "unbanded": "Radiance heals and damages at once and no instrument reads both halves of an emission; heal.py reads the healing half alone and sim.py, given its healing rotation, returns nothing usable. Left as measured, not judged, until a combined instrument exists."
    }
   ],
-  "note": "Restoration shaman is the only healer whose capstone changes anything, and it has held the same shape across five runs: more throughput, materially worse efficiency. Overheal separates sensibly: Chain Heal into a raid overheals at 37 to 49%, a druid’s heals over time at 0 to 5%."
+  "note": "Each cell reads steady / spiky / aoe, twenty-four seeds. Restoration shaman reads -8.2% healing per second on steady, -1.8% on spiky and -2.1% on aoe, with healing per mana -19.9 / -14.9 / -15.0%: the earlier record's shape was more throughput at a materially worse efficiency, and the efficiency cost holds while the throughput edge is gone; on steady it is a point outside the band. It read the same at 120 seeds before the August rerun, nothing in the rerun touched a healer, and it is the open healing item. Paladin reads zero because the healing rotation casts Flash of Light alone and never reaches Holy Shock, so its capstone is unread rather than worthless. Overheal reads 0 to 5% for the four core healers at these seeds and 7 to 15% for Radiance. Dreamer against Restoration 31 / Balance 20 is in band on all three patterns after The Waking World's reach was rescoped to the Threshold, a scope correction rather than a magnitude edit. Radiance against Discipline 31 / Holy 20 reads -23.0% steady, +1.6% spiky and +9.2% aoe: the steady deficit is mana, dry at 22 to 25 seconds against Discipline's 50 to 58, and the aoe surplus is emission onto ten allies. Neither instrument reads what its role says it does, healing and damage at once, and banding the healing half alone would overtune the tree the moment the damage half is counted; it is left as measured."
  },
  "hybrids": {
-  "headline": "Every class has a capstone-free build within 6.3% of its best capstone build, and four of six have one that beats it.",
+  "headline": "Every class has a capstone-free build within 2.1% of its best capstone build and four of six have one that beats it; two beat it by more than the band, Rogue at +14.1% and Hunter at +9.7%, and Warrior's +8.1% is a Protection build the damage instrument cannot tell from a damage one.",
   "items": [
-   "Rogue’s best is a three-tree split, Assassination 25 / Subtlety 20 / Combat 6, at +5.3% over the best capstone build. Poison talents exist in all three rogue trees, so spreading collects them rather than choosing between them: a mechanic that spans trees makes spreading a real strategy.",
-   "Druid is the opposite pole: the most capstone-dependent class measured, with a capstone-free median of -34.8%. Both findings survived four structural fixes to the simulator, which makes them the most stable results in the project.",
-   "Warrior’s narrowness is a design decision, not a fault: its third tree is Protection, and a damage build correctly gets nothing from it. Whether Warrior should have a third damage-relevant tree is a question the simulator surfaced and cannot settle."
-  ]
+   "Rogue's best is a three-tree split, Assassination 25 / Subtlety 20 / Combat 6, at +14.1% over Subtlety 31 / Combat 20, and 51 of 114 shapes beat the best capstone build. Poison talents exist in all three rogue trees, so spreading collects them rather than choosing between them, and the poison model of August, the game's 34 per stack stream applied per landed hit, doubled the earlier +6.3%: the capstone builds that leaned on the old stream lost more than the splits did. Rogue's capstones are not worth their point against a Combat splash under the corrected model, and that is a design decision rather than a measurement fault.",
+   "Druid ties: Feral Combat 30 / Balance 21 reads exactly the capstone build's output, 19 distinct results from 114 shapes, and the median across all shapes is -40.1% because most of them put points in Restoration, a healing tree where a damage build's points do nothing. Both findings survived every structural fix to the simulator.",
+   "Warrior's ladder moved. With Mortal Strike halved and Bloodthirst at 0.28 of its coefficient, the damage instrument reads Protection 31 / Arms 20 as the class's best capstone build, 1,090 against Arms 31 / Fury 20 at 1,084, and Protection 30 / Fury 21 beats it by 8.1%: Shield Slam sits at gate 25 with its base damage intact and the model has no shield check. Within Arms and Fury alone the best capstone-free shape, Arms 30 / Fury 21, reads -5.7% against Arms 31 / Fury 20. Whether Warrior should have a third damage-relevant tree was the question the simulator surfaced and could not settle; under this model it has one by accident.",
+   "Hunter's Marksmanship 30 / Survival 21 beats Survival 31 / Marksmanship 20 by 9.7% and Marksmanship 31 / Survival 20 by about the same, and 30 of 114 shapes beat the best capstone build: neither Hunter capstone is worth its point against Marksmanship 30 / Survival 21, the finding nocapstone-results.md made at +8.9% and full-pass.md read down to +4.9%. The core pair, Marksmanship + Beast Mastery, is in band; the split that wins reaches into Survival.",
+   "Warlock's Affliction 26 / Demonology 25 reads +1.5% with one shape beating; Mage's Arcane 30 / Frost 21 reads -2.1% with none. Eleven and ten of 114 shapes inside seven percent: where talents are tree-specific, spreading is a strict loss."
+  ],
+  "table": [
+   {
+    "cls": "Rogue",
+    "bestCapstoneBuild": "Subtlety 31 / Combat 20",
+    "bestCapstoneDps": 953.2,
+    "bestCapstoneFree": "Assassination 25 / Subtlety 20 / Combat 6",
+    "gap": "+14.1%",
+    "within7": "61 of 114",
+    "beating": 51,
+    "distinct": "96 of 114",
+    "damageTreesOnly": {
+     "shapes": 114,
+     "best": "Assassination 25 / Subtlety 20 / Combat 6",
+     "gap": "+14.1%",
+     "within7": 61
+    }
+   },
+   {
+    "cls": "Hunter",
+    "bestCapstoneBuild": "Survival 31 / Marksmanship 20",
+    "bestCapstoneDps": 785.6,
+    "bestCapstoneFree": "Marksmanship 30 / Survival 21",
+    "gap": "+9.7%",
+    "within7": "72 of 114",
+    "beating": 30,
+    "distinct": "63 of 114",
+    "damageTreesOnly": {
+     "shapes": 114,
+     "best": "Marksmanship 30 / Survival 21",
+     "gap": "+9.7%",
+     "within7": 72
+    }
+   },
+   {
+    "cls": "Warrior",
+    "bestCapstoneBuild": "Protection 31 / Arms 20",
+    "bestCapstoneDps": 1089.7,
+    "bestCapstoneFree": "Protection 30 / Fury 21",
+    "gap": "+8.1%",
+    "within7": "17 of 114",
+    "beating": 4,
+    "distinct": "53 of 114",
+    "damageTreesOnly": {
+     "shapes": 4,
+     "best": "Arms 30 / Fury 21",
+     "gap": "-6.2%",
+     "within7": 1
+    }
+   },
+   {
+    "cls": "Warlock",
+    "bestCapstoneBuild": "Destruction 31 / Affliction 20",
+    "bestCapstoneDps": 909.3,
+    "bestCapstoneFree": "Affliction 26 / Demonology 25",
+    "gap": "+1.5%",
+    "within7": "11 of 114",
+    "beating": 1,
+    "distinct": "93 of 114",
+    "damageTreesOnly": {
+     "shapes": 114,
+     "best": "Affliction 26 / Demonology 25",
+     "gap": "+1.5%",
+     "within7": 11
+    }
+   },
+   {
+    "cls": "Mage",
+    "bestCapstoneBuild": "Arcane 31 / Frost 20",
+    "bestCapstoneDps": 995.4,
+    "bestCapstoneFree": "Arcane 30 / Frost 21",
+    "gap": "-2.1%",
+    "within7": "10 of 114",
+    "beating": 0,
+    "distinct": "51 of 114",
+    "damageTreesOnly": {
+     "shapes": 114,
+     "best": "Arcane 30 / Frost 21",
+     "gap": "-2.1%",
+     "within7": 10
+    }
+   },
+   {
+    "cls": "Druid",
+    "bestCapstoneBuild": "Feral Combat 31 / Balance 20",
+    "bestCapstoneDps": 862.7,
+    "bestCapstoneFree": "Feral Combat 30 / Balance 21",
+    "gap": "+0.0%",
+    "within7": "28 of 114",
+    "beating": 0,
+    "distinct": "19 of 114",
+    "damageTreesOnly": {
+     "shapes": 4,
+     "best": "Feral Combat 30 / Balance 21",
+     "gap": "+0.0%",
+     "within7": 2
+    }
+   }
+  ],
+  "method": "nocapstone.py's 114 shapes per class, 51 points and no tree above 30, on patchwerk at 25 seeds, against the class's best capstone build measured the same way. Damage-tree shapes are counted separately, because a shape that puts points in a healing or tank tree is measuring how many ways there are to spend points badly, which reading-the-number.md recorded."
  },
  "rewrites": {
-  "headline": "Eleven talents were rewritten because measurement showed they did not work, not because anyone disliked them.",
+  "headline": "Eleven talents were rewritten in the first passes because measurement showed they did not work, not because anyone disliked them; the August rerun rewrote five more, moved one and added one, and rescaled magnitudes on a dozen others without touching a word, Mortal Strike, Bloodthirst and Shadowform among them.",
   "named": [
    {
     "talent": "Dark Pact",
@@ -368,21 +637,73 @@
    {
     "talent": "Shadow and Flame",
     "tree": "warlock-destruction",
-    "story": "Paid for alternating two spells that were cast thirty-nine times and three. A reward for a rotation nobody runs is not a talent, it is a trap."
+    "story": "Paid for alternating two spells that were cast thirty-nine times and three. A reward for a rotation nobody runs is not a talent, it is a trap. In August its per-stack shadow vulnerability rose from 0.037 to 0.09, because Unbound's second demon now arrives before the pull and the pair had fallen to -9.1%."
    },
    {
     "talent": "Unbound",
     "tree": "warlock-demonology",
-    "story": "Said “you may have two demons active at once” and was authored as a damage percentage, so the talent that makes a Demonology splash worth taking did not do the thing it describes."
+    "story": "Said “you may have two demons active at once” and was authored as a damage percentage, so the talent that makes a Demonology splash worth taking did not do the thing it describes. The second demon then arrived only when a switch forced a resummon, worth nothing on four scenarios; the pet cap is filled before the pull since August."
    },
    {
     "talent": "Death Wish",
     "tree": "warrior-fury",
-    "story": "Carried both a permanent bonus and a cooldown, which made one point worth ten percent and left Warrior a single viable hybrid."
+    "story": "Carried both a permanent bonus and a cooldown, which made one point worth ten percent and left Warrior a single viable hybrid. Its cooldown magnitude came down from 1.45 to 1.30 in August: the window is two thirds of a forty-five second fight, and at 1.45 it put thirteen points between Arms + Fury's sustained and burst cells that no lever on Mortal Strike could close."
+   },
+   {
+    "talent": "Command the Damned",
+    "tree": "necromancy",
+    "story": "Swept two enemies on every third strike and read +31.1% on cleave with the tree in band everywhere else; the pet tree's cleave identity was the capstone's sweep alone, since pet damage is not multiplied by target count. Every fifth strike sweeps a second enemy and reads +2.9%. The old text said every second strike and disagreed with the data; the new text says what the data says."
+   },
+   {
+    "talent": "Bitter Cold",
+    "tree": "runeblade",
+    "story": "Every third strike sweeping two enemies kept Runeblade five to eight points above its own patchwerk on cleave at every level. Every fifth strike sweeps a second enemy, with the rank 2 clause rewritten in Necromancy's phrasing; the capstone's undeclared sweep, which had silently overridden it under a last-wins merge, is removed."
+   },
+   {
+    "talent": "Unending Dance",
+    "tree": "bladedancer",
+    "story": "Carried a sweep every eighth strike its text never named. Against the recalibrated Rogue the tree read -9.9% on cleave at level, so the sweep tightened to every fourth strike and the clause was written into the text."
+   },
+   {
+    "talent": "Metamorphosis",
+    "tree": "metamorphosis",
+    "story": "Read -24.9% on burst and -14.9% on movement against Affliction 31 / Destruction 20: on a forty-five second fight the build never reaches Shadow Cleave, and it is partly cooldown-limited where Affliction only defers its casts. Two levers with precedent: Shadow spells cast on the move at reduced damage on the capstone, and an opening window on Fel Aegis. The capstone's shadow multiplier paid the window's sustained cost, 1.15 to 1.11."
+   },
+   {
+    "talent": "Fel Aegis",
+    "tree": "metamorphosis",
+    "story": "The twenty-second partial transformation carries the opening window: used before the pull it opens the fight at full fury, and for the first twenty seconds Shadow damage is increased. Placed here rather than on the capstone so the tank comparison does not carry it; a first placement on the capstone read +10.8% threat."
+   },
+   {
+    "talent": "Shield Slam",
+    "tree": "warrior-protection",
+    "story": "Read +32.5% threat with every scalable magnitude on the capstone at zero; the excess was the granted ability's base damage, which the tuner does not own. The grant moved to gate 25 with its text, its absorb read and its threat rider unchanged, so a 26 / 25 warrior owns it and Fury 30 / Protection 21 does not."
+   },
+   {
+    "talent": "Bastion",
+    "tree": "warrior-protection",
+    "story": "New, the Protection capstone: Shield Slam cannot be dodged or parried, draws far more attention than its damage warrants, and readies at once on a block. The pair is Bastion against Death Wish and reads +2.1% threat."
    }
   ],
-  "levers": "Fifteen genuinely inert talents were rewritten as scenario levers: opening windows for Unbridled Wrath, Improved Berserker Rage, Opportunity, Pyroclasm, Natural Shapeshifter and Convection; movement bonuses for Ruthlessness, Distracting Fire and Improved Nature’s Grasp; periodic cleave for Crippling Grip, Relentless Strikes, Trapline and Storm Reach.",
-  "poison": "Separately, nine rogue talents modified a poison tag no ability carried, so Assassination read exactly 0.0% on every scenario since the project began. The fix made poison a mechanic that spans all three rogue trees, which is what makes the three-tree split work."
+  "magnitudes": [
+   {
+    "talent": "Mortal Strike",
+    "tree": "warrior-arms",
+    "story": "Halved, base and coefficient, through the tuner's lever for a granted capstone. On the calibrated gear block rage runs at the cap and a granted six second strike is worth thirty points in an empty rotation whichever way it is scaled; the pair sits at +5.3% sustained and -2.1% burst."
+   },
+   {
+    "talent": "Bloodthirst",
+    "tree": "warrior-fury",
+    "story": "Cut to 0.28 of its coefficient. The twenty-first Protection point buys a damage build nothing, so the pair is Bloodthirst against nothing and can only be in band if Bloodthirst is worth under seven points. Its text carries no number."
+   },
+   {
+    "talent": "Shadowform",
+    "tree": "priest-shadow",
+    "story": "1.0563 to 1.045; the pair read a uniform +5.6% and reads a uniform +4.5%. One magnitude, no text."
+   }
+  ],
+  "levers": "Fifteen genuinely inert talents were rewritten as scenario levers in the first passes: opening windows for Unbridled Wrath, Improved Berserker Rage, Opportunity, Pyroclasm, Natural Shapeshifter and Convection; movement bonuses for Ruthlessness, Distracting Fire and Improved Nature’s Grasp; periodic cleave for Crippling Grip, Relentless Strikes, Trapline and Storm Reach. Every text change since accompanies a change of behaviour and is in the client register; multi-rank talents keep one clause per rank and rank_audit.py reads mismatch 0.",
+  "poison": "Separately, nine rogue talents modified a poison tag no ability carried, so Assassination read exactly 0.0% on every scenario since the project began. Poison is now applied per landed hit at the game's 34 per stack with no attack power term, an off-hand timer, five stacks before talents and instant and finisher application as scoped events; its share of Assassination 31 / Subtlety 20 is 17% where the earlier stream read 52%. That is what makes the three-tree split work, and what makes it win."
  },
  "levers": {
   "rule": "A lever that pays everywhere is a buff. A lever that pays in one place is a fix. And it must sit on the talent that differs between the two builds, or it lifts both and closes nothing.",
@@ -398,6 +719,11 @@
     "cost": "Nothing sustained"
    },
    {
+    "lever": "Opening window on a partial form (Fel Aegis, twenty seconds)",
+    "gain": "+19.6 burst on Metamorphosis",
+    "cost": "+4.9 sustained, paid back by the capstone multiplier"
+   },
+   {
     "lever": "Pet amplifier",
     "gain": "+2.4",
     "cost": "Nothing without the pet"
@@ -406,14 +732,21 @@
     "lever": "Making the capstone itself hit more targets",
     "gain": "+2.0",
     "cost": "Cast too rarely to matter"
+   },
+   {
+    "lever": "The correct baseline",
+    "gain": "Trapper cleave -16.6% to +0.5%, Runeblade burst +8.6% to -4.2%",
+    "cost": "No talent touched"
    }
   ],
-  "arms": "Arms read -16.7% on three targets. Making Mortal Strike hit three targets gained two points. A periodic cleave on every third strike gained 18.8 at zero cost on one, because cleaving is worth nothing when there is nothing to cleave into. That is the cleanest lever shape in the project: it moves one scenario and touches no other."
+  "arms": "Arms read -16.7% on three targets. Making Mortal Strike hit three targets gained two points. A periodic cleave on every third strike gained 18.8 at zero cost on one, because cleaving is worth nothing when there is nothing to cleave into. That is the cleanest lever shape in the project: it moves one scenario and touches no other. The same lever cuts the other way when it is oversized: Necromancy's sweep at every third strike read +31.1% on cleave and every fifth reads +2.9%."
  },
  "cannotAnswer": [
-  "Absolute numbers. The figures are relative and the gear blocks are invented. A real balance pass needs Warcraft Logs Season of Mastery data as the control, which sim-baseline-protocol.md specified from the start and which has never been done.",
+  "Absolute numbers. The figures are relative and the gear blocks are invented. A real balance pass needs Warcraft Logs Season of Mastery data as the control, which sim-baseline-protocol.md specified from the start and which has never been done. The Warrior finding is the sharpest case: the calibrated block runs the rage economy at its cap, and the tuned Mortal Strike and Bloodthirst follow that regime.",
   "Anything not throughput, threat or healing. Twelve talents carry simulable: false. Repentance is a stun, and no damage simulator will ever measure it. Producing a number for it that looks like evidence would be worse than admitting the gap.",
-  "Whether the design is fun. The instrument says a hybrid is within six percent. It cannot say whether anyone wants to play one."
+  "Tag-scoped extra targets. Fire Power, Sweeping Strikes, Whirling Blades, Storm Caller, Crusade, Shadow Cleave and about thirty more carry addTarget on a tag; the damage instrument reads ability-scoped extra targets and the pet and poison tags only, so every cleave cell was tuned without them. Reading them is a cleave retune for a dozen trees.",
+  "Radiance. Its emissions heal and damage at once and no instrument reads both halves, so it is measured and left unbanded.",
+  "Whether the design is fun. The instrument says a hybrid is within a few percent, or ahead. It cannot say whether anyone wants to play one."
  ],
  "pairs": {
   "core": {
@@ -485,7 +818,7 @@
     "reaches": "Silence and Darkness, plus Divine Spirit"
    }
   ],
-  "caveat": "These names should not ship in the documents. Vanilla build names were earned rather than assigned: DS/Ruin exists because players found it. The useful version is the reverse, build the talents so the names are available. A build nobody can name in three words is probably a build nobody will remember."
+  "caveat": "These names should not ship in the documents. Vanilla build names were earned rather than assigned: DS/Ruin exists because players found it. The useful version is the reverse, build the talents so the names are available. A build nobody can name in three words is probably a build nobody will remember. The edge and pair counts are the earlier pass's and were not rerun."
  },
  "sequence": [
   "The first sweep reported 176 of 277 talents worth exactly zero, including Bloodthirst and Arcane Power. The sweep was wrong twice: it kept grant effects when stripping a talent, and it measured healing and tank trees with the damage simulator.",
@@ -493,6 +826,10 @@
   "Druid had a feral rotation that had never been used, so Feral builds were measured casting Wrath. Fixed, ten Feral talents went from zero to contributing.",
   "Ruin, encoded as a flat multiplier instead of crit-conditional, paid fifty percent on every hit: a one-point talent worth half a tree.",
   "The rotation ranked area abilities as if they hit every target while the damage calculation multiplied only when maxTargets was set, so every cleave number before the fix was wrong in proportion to how much a build relied on area abilities.",
-  "When a measurement returns exactly zero, suspect the consumer before the data. This happened four times: the extractor, the tag lookup, the build selector, and the value function."
+  "When a measurement returns exactly zero, suspect the consumer before the data. This happened four times: the extractor, the tag lookup, the build selector, and the value function.",
+  "The switching scenario's clock drifted past its window from t=90 on and cleared the target twice in 300 seconds where it should have cleared it ten times. Counting steps fixed it, and Warlock Destruction + Demonology fell to -10.4% on switching the moment it did.",
+  "The expanded baseline duplicated the host for four of seven trees, so a tree's cell read part of its host's worth. Two of the six named offenders in the shipped suite were the comparison and not the tree.",
+  "The record's Warrior numbers reproduced only at the pre-calibration gear scale. Rage per swing on the calibrated block runs at the cap, so a granted strike is pure addition; the on-next-swing strike also ignored the swing's cooldown multiplier and hit one target. A cell that reads +1.2% under one regime and +22.7% under another is measuring the regime.",
+  "A capstone tuned to sixty seeds sat at +4.7% on burst and reads +7.2% on 120 and +7.0% on 240. A forty-five second fight carries two and a half points of seed noise at these counts, and a cell tuned to the edge of the band should be tuned on more seeds than it will be checked on."
  ]
 }

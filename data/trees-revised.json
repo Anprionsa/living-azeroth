@@ -220,7 +220,7 @@
       {
        "name": "Damnation",
        "ranks": 1,
-       "text": "Permanent while held. Your Seals become Plagues, melee attacks apply Blight automatically, and Leeching Blade’s healing is doubled. Toggleable in the manner of Shadowform: the permanence lives in the acquisition chain rather than in the mechanic.",
+       "text": "Permanent while held. Your Seals become Plagues, melee attacks apply Blight automatically, and Leeching Blade\u2019s healing is doubled. Toggleable in the manner of Shadowform: the permanence lives in the acquisition chain rather than in the mechanic.",
        "icon": "icons/talent-blackguard-damnation.png",
        "status": "reworked",
        "note": "The Light turned inward. Self-sustain becomes leeching, blessings become presences that cannot be shared, and the aura harms instead of helps."
@@ -444,7 +444,7 @@
    "id": "metamorphosis",
    "name": "Metamorphosis",
    "host": "Warlock",
-   "concept": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on.",
+   "concept": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on.",
    "retailSource": "Demon Hunter, Vengeance. Previously a Demonology warlock talent from Wrath through Warlords.",
    "localMechanic": "Fel corruption, a self-applied stacking state that the tree applies, spends, and scales with. The rebuild exists because the original tree contained none of it.",
    "verb": "taken",
@@ -475,7 +475,7 @@
        "text": "Your Shadow damage applies a stack of fel corruption, then stacks persist through form changes, then a stack is spent to make your next spell unresistable, then corruption ticks for damage at five stacks, then stacks do not decay in combat.",
        "icon": "icons/v/15.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Fel Concentration",
@@ -484,7 +484,7 @@
        "text": "Gives you a 14/28/42/56/70% chance to avoid interruption caused by damage while channeling the Drain Life, Drain Mana, or Drain Soul spell.",
        "icon": "icons/talent-metamorphosis-fel-concentration.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on. Reduces the chance your channelled spells are interrupted, kept from the original tree."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on. Reduces the chance your channelled spells are interrupted, kept from the original tree."
       }
      ]
     },
@@ -499,7 +499,7 @@
        "text": "Instant Shadow strike that hits all enemies in front of you.",
        "icon": "icons/talent-metamorphosis-shadow-cleave.png",
        "status": "reworked",
-       "note": "The tree’s enabler. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "The tree\u2019s enabler. Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Cruel Intent",
@@ -508,16 +508,16 @@
        "text": "Shadow Cleave applies two stacks, then strikes behind you, then spends stacks for damage, then refreshes Immolation Aura, then cannot be dodged at full stacks.",
        "icon": "icons/talent-metamorphosis-cruel-intent.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Sacrificial Pact",
        "ranks": 5,
        "col": 4,
-       "text": "Your health is spendable as a resource, then spending it applies corruption, then Health Funnel channels while you attack, then Life Tap applies corruption, then your demon’s death grants full stacks.",
+       "text": "Your health is spendable as a resource, then spending it applies corruption, then Health Funnel channels while you attack, then Life Tap applies corruption, then your demon\u2019s death grants full stacks.",
        "icon": "icons/v/19.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       }
      ]
     },
@@ -532,7 +532,7 @@
        "text": "When active, 30% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, or Felhunter demon instead. In addition, both the demon and master will inflict 3% more damage. Lasts as long as the demon is active.",
        "icon": "icons/talent-metamorphosis-soul-link.png",
        "status": "reworked",
-       "note": "Damage is shared with your demon, kept from the original tree. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Damage is shared with your demon, kept from the original tree. Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Demonic Aegis",
@@ -541,7 +541,7 @@
        "text": "Corruption stacks reduce damage taken, then convert magic damage to fel, then a full stack absorbs a killing blow once per fight, then absorbed damage feeds the form, then breaking absorbs applies corruption to attackers.",
        "icon": "icons/talent-metamorphosis-demonic-aegis.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Master Summoner",
@@ -550,7 +550,7 @@
        "text": "Reduces the casting time of your Imp, Voidwalker, Succubus, and Felhunter Summoning spells by 2/4 sec and the Mana cost by 20/40%.",
        "icon": "icons/talent-metamorphosis-master-summoner.png",
        "status": "reworked",
-       "note": "Reworked to summoning behavior: your demon arrives already engaged, then inherits your corruption stacks, then can be summoned in combat once per fight. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Reworked to summoning behavior: your demon arrives already engaged, then inherits your corruption stacks, then can be summoned in combat once per fight. Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       }
      ]
     },
@@ -565,7 +565,7 @@
        "text": "Fel flames damage everything near you while active.",
        "icon": "icons/talent-metamorphosis-immolation-aura.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Unholy Sacrifice",
@@ -574,16 +574,16 @@
        "text": "Sacrificing your demon grants its signature effect.",
        "icon": "icons/talent-metamorphosis-unholy-sacrifice.png",
        "status": "reworked",
-       "note": "Sacrificing your demon grants its signature effect, kept from the original tree. Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Sacrificing your demon grants its signature effect, kept from the original tree. Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Fel Ferocity",
        "ranks": 5,
        "col": 4,
-       "text": "Corruption stacks raise Shadow Cleave’s critical chance, then criticals apply two stacks, then a critical at full stacks resets Fel Aegis, then criticals spread corruption to nearby enemies, then a spread refunds a shard.",
+       "text": "Corruption stacks raise Shadow Cleave\u2019s critical chance, then criticals apply two stacks, then a critical at full stacks resets Fel Aegis, then criticals spread corruption to nearby enemies, then a spread refunds a shard.",
        "icon": "icons/talent-metamorphosis-fel-ferocity.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       }
      ]
     },
@@ -598,16 +598,16 @@
        "text": "The mark. A fel barrier that absorbs damage and converts what it absorbs into corruption stacks.",
        "icon": "icons/talent-metamorphosis-fel-aegis.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Demonic Knowledge",
        "ranks": 2,
        "col": 2,
-       "text": "Your spell damage benefits from your demon’s stamina and intellect.",
+       "text": "Your spell damage benefits from your demon\u2019s stamina and intellect.",
        "icon": "icons/talent-metamorphosis-demonic-knowledge.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Ruinous Corruption",
@@ -624,7 +624,7 @@
        "ranks": 2,
        "col": 4,
        "subtraction": true,
-       "text": "Subtraction. Your corruption stacks never decay and the form’s bonuses double. You may no longer leave the form or summon a demon.",
+       "text": "Subtraction. Your corruption stacks never decay and the form\u2019s bonuses double. You may no longer leave the form or summon a demon.",
        "icon": "icons/v/232.png",
        "status": "subtraction",
        "note": "Added by the revisions. Metamorphosis, Conduit, and Survival were the three trees carrying no subtraction node."
@@ -639,19 +639,19 @@
        "name": "Unending Fel",
        "ranks": 3,
        "col": 2,
-       "text": "The form’s duration extends while enemies are near.",
+       "text": "The form\u2019s duration extends while enemies are near.",
        "icon": "icons/talent-metamorphosis-unending-fel.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       },
       {
        "name": "Demonic Fury",
        "ranks": 5,
        "col": 3,
-       "text": "The form’s abilities spend corruption rather than mana, then generate it, then a full stack empowers the next, then the form’s damage scales with stacks held, then leaving the form banks them.",
+       "text": "The form\u2019s abilities spend corruption rather than mana, then generate it, then a full stack empowers the next, then the form\u2019s damage scales with stacks held, then leaving the form banks them.",
        "icon": "icons/talent-metamorphosis-demonic-fury.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       }
      ]
     },
@@ -666,7 +666,7 @@
        "text": "Transform into a demon. Armor, health, and threat rise, your abilities change, and the form runs on corruption stacks rather than on mana.",
        "icon": "icons/talent-metamorphosis-metamorphosis.png",
        "status": "reworked",
-       "note": "Fel corruption made real: a stack applied by the warlock’s own damage, spent by the tree, and the thing the form runs on."
+       "note": "Fel corruption made real: a stack applied by the warlock\u2019s own damage, spent by the tree, and the thing the form runs on."
       }
      ]
     }
@@ -901,7 +901,7 @@
       {
        "name": "Killing Flow",
        "ranks": 5,
-       "text": "A kill refunds Momentum, then refreshes Whirling Blades, then grants a free Sweeping Kick, then spreads Momentum to nearby allies’ targets, then a kill at full Momentum resets Unending Dance.",
+       "text": "A kill refunds Momentum, then refreshes Whirling Blades, then grants a free Sweeping Kick, then spreads Momentum to nearby allies\u2019 targets, then a kill at full Momentum resets Unending Dance.",
        "icon": "icons/talent-bladedancer-killing-flow.png",
        "status": "reworked",
        "note": "Mobile melee flow. Glaives, fists, and open hands, spread across several targets rather than concentrated on one."
@@ -1367,8 +1367,8 @@
    ]
   },
   {
-   "id": "survival",
-   "name": "Survival",
+   "id": "trapper",
+   "name": "Trapper",
    "host": "Hunter",
    "concept": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes.",
    "retailSource": "Survival, the 2016 melee rework",
@@ -1419,7 +1419,7 @@
        "ranks": 5,
        "col": 1,
        "text": "Gives your Immolation Trap, Frost Trap, and Explosive Trap a 5/10/15/20/25% chance to entrap the target, preventing them from moving for 5 sec. Traps stop being written off as PvP content and start working in both modes. Your traps root what they hit.",
-       "icon": "icons/talent-survival-entrapment.png",
+       "icon": "icons/talent-trapper-entrapment.png",
        "status": "kept",
        "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
       },
@@ -1437,7 +1437,7 @@
        "ranks": 2,
        "col": 4,
        "text": "Increases the critical strike chance of Raptor Strike and Mongoose Bite by 10/20%. Traps stop being written off as PvP content and start working in both modes.",
-       "icon": "icons/talent-survival-savage-strikes.png",
+       "icon": "icons/talent-trapper-savage-strikes.png",
        "status": "reworked",
        "note": "Reworked to Raptor Strike behavior rather than a critical chance percentage. Rebuild of vanilla Survival rather than the original tree carried forward."
       }
@@ -1494,7 +1494,7 @@
        "ranks": 5,
        "col": 3,
        "text": "Traps deal damage rather than only controlling, then apply Serpent Sting, then Explosive Trap knocks back, then Freezing Trap slows a stun-immune target, then triggering one resets another. Traps stop being written off as PvP content and start working in both modes.",
-       "icon": "icons/talent-survival-trap-mastery.png",
+       "icon": "icons/talent-trapper-trap-mastery.png",
        "status": "reworked",
        "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
       }
@@ -1509,7 +1509,7 @@
        "ranks": 1,
        "col": 1,
        "text": "The mark. You and your pet strike as one: your Raptor Strike triggers its basic attack and its critical strikes refresh your traps. Traps stop being written off as PvP content and start working in both modes.",
-       "icon": "icons/talent-survival-coordinated-assault.png",
+       "icon": "icons/talent-trapper-coordinated-assault.png",
        "status": "reworked",
        "note": "The Section 17.2 rebuild of vanilla Survival rather than the original tree carried forward. Traps stop being written off as PvP content and start working in both modes."
       },
@@ -1527,7 +1527,7 @@
        "ranks": 3,
        "col": 3,
        "crossTree": true,
-       "text": "Your traps apply Hunter’s Mark, your melee strikes benefit from your ranged attack power, and Raptor Strike refreshes Serpent Sting.",
+       "text": "Your traps apply Hunter\u2019s Mark, your melee strikes benefit from your ranged attack power, and Raptor Strike refreshes Serpent Sting.",
        "icon": "icons/v/25.png",
        "status": "cross",
        "note": "Stands alone for any hunter."
@@ -1568,7 +1568,7 @@
        "ranks": 1,
        "col": 2,
        "text": "You and your pet share targets, cooldowns, and critical strikes for the duration.",
-       "icon": "icons/talent-survival-hunt-as-one.png",
+       "icon": "icons/talent-trapper-hunt-as-one.png",
        "status": "reworked",
        "note": "The capstone the tree was always pointing at."
       }

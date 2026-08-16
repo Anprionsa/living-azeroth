@@ -95,7 +95,12 @@ for t in canon["trees"]:
         for r in t.get("rows", []):
             for i, tal in enumerate(r["talents"]):
                 if tal["id"] in tuned_talents:
-                    r["talents"][i] = tuned_talents[tal["id"]][1]
+                    new = dict(tuned_talents[tal["id"]][1])
+                    # prerequisites are authored on canonical after staging copies are taken;
+                    # a staging copy that lacks them must not erase them
+                    if "requires" in tal and "requires" not in new:
+                        new["requires"] = tal["requires"]
+                    r["talents"][i] = new
 for k in meta_keys & set(meta_diff):
     canon["meta"][k] = tuned["meta"][k]
 json.dump(canon, open(CANON, "w", encoding="utf-8"), separators=(",", ":"))
