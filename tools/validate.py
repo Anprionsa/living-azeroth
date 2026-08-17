@@ -234,15 +234,6 @@ _rotbad=sorted({a for r in D.get("rotations",{}).values() for k in ("priority","
 if _rotbad: print(f"  FAIL  rotation-references          {len(_rotbad)}: {_rotbad[:4]}")
 else: print(f"  PASS  rotation-references          0 finding(s)")
 
-errs=warns=0; report={}
-for t in D["trees"]:
-    for name,sev,kinds,fn in R:
-        if t["kind"] not in kinds: continue
-        for msg in fn(t):
-            report.setdefault(name,[]).append((sev,t["name"],t["kind"],msg))
-            if sev=="error": errs+=1
-            else: warns+=1
-print(f"CONFIGURATION: {CONFIG}\n{len(D['trees'])} trees, {sum(len(r['talents']) for t in D['trees'] for r in t['rows'])} talents, {len(R)} rules\n")
 @rule("prerequisites","error",["vanilla","rebuilt","absorbed","original"])
 def r_prereq(t):
     where={x["id"]:(r["row"],x) for r in t["rows"] for x in r["talents"]}
@@ -262,6 +253,15 @@ def r_prereq(t):
             if back==x["id"]: bad.append(f"{x['name']} and {tg[1]['name']} require each other")
     return bad
 
+errs=warns=0; report={}
+for t in D["trees"]:
+    for name,sev,kinds,fn in R:
+        if t["kind"] not in kinds: continue
+        for msg in fn(t):
+            report.setdefault(name,[]).append((sev,t["name"],t["kind"],msg))
+            if sev=="error": errs+=1
+            else: warns+=1
+print(f"CONFIGURATION: {CONFIG}\n{len(D['trees'])} trees, {sum(len(r['talents']) for t in D['trees'] for r in t['rows'])} talents, {len(R)} rules\n")
 for name,sev,kinds,fn in R:
     hits=report.get(name,[])
     mark="PASS" if not hits else ("FAIL" if hits[0][0]=="error" else "WARN")
