@@ -49,25 +49,38 @@ main img{max-width:100%;height:auto}
 @media (min-width:921px){
   #s-tree .panel svg{width:100% !important;min-width:0 !important;height:auto !important}
   #s-tree .panel{overflow-x:visible}
+  #m-navbar,#m-navsheet{display:none !important}
+}
+@media (max-width:1360px){
+  #t0-constraints{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+}
+@media (max-width:1040px){
+  #t0-constraints{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
 }
 @media (max-width:920px){
+  #m-navbar{display:flex !important}
   #layout-grid{grid-template-columns:minmax(0,1fr) !important;gap:0 !important;padding:0 20px !important}
   #layout-grid>aside{position:static !important;height:auto !important;padding:20px 0 0 !important;overflow:visible !important}
   #layout-grid>aside>div{display:none !important}
   #layout-grid>main{padding-top:12px !important}
-  h1{font-size:clamp(34px,9vw,56px) !important}
+  #t0-constraints{grid-template-columns:minmax(0,1fr) !important}
+  #prov-cols{grid-template-columns:minmax(0,1fr) !important}
+  #appc-plates>div{flex-direction:column !important;align-items:flex-start !important;gap:4px !important}
+  #t-calc .panel{flex-wrap:wrap !important;overflow-x:visible !important}
+  #t-calc .panel>div{flex:1 1 100% !important;min-width:0 !important;border-right:0 !important;border-bottom:1px solid var(--rule-inverse) !important}
+  #calc-controls{grid-template-columns:minmax(0,1fr) !important;gap:10px !important}
   main table{display:block;overflow-x:auto}
   .panel{overflow-x:auto}
-  main [style*="minmax(384px"]{grid-template-columns:1fr !important}
-  main div:has(>div[style*="width:326px"]),main div:has(>div[style*="width:190px"]){overflow-x:auto}
+}
+@media (max-width:640px){
+  main>section{padding-top:56px !important}
 }
 @media (max-width:480px){
-  h1{font-size:clamp(30px,10vw,40px) !important}
   #layout-grid{padding:0 16px !important}
 }
 </style>
 </helmet>
-<div id="layout-grid" style="display:grid;grid-template-columns:264px minmax(0,1fr);gap:48px;max-width:1440px;margin:0 auto;padding:0 40px;background:var(--surface-page);color:var(--text-body);font-family:var(--font-body);min-height:100vh">
+<div id="layout-grid" style="display:grid;grid-template-columns:264px minmax(0,1fr);gap:48px;max-width:1656px;margin:0 auto;padding:0 40px;background:var(--surface-page);color:var(--text-body);font-family:var(--font-body);min-height:100vh">
 
 <aside style="position:sticky;top:0;height:100vh;padding:36px 0;display:flex;flex-direction:column;gap:24px;overflow:hidden">
 <a href="#top" style="font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:-.01em;color:var(--text-heading);text-decoration:none;border:0;line-height:1.2">A Living Azeroth</a>
@@ -78,10 +91,29 @@ main img{max-width:100%;height:auto}
 
 <main style="padding:36px 0 96px;min-width:0">
 
+<div id="m-navbar" style="display:none;position:sticky;top:0;z-index:60;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;background:var(--surface-page);border-bottom:1px solid var(--border-strong)">
+<a href="#top" style="font-family:var(--font-display);font-weight:600;font-size:18px;letter-spacing:-.01em;color:var(--text-heading);text-decoration:none;border:0;line-height:1.2">A Living Azeroth</a>
+<button type="button" onClick="{{ openNav }}" aria-expanded="{{ navOpen }}" style="font-family:var(--font-ui);font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--text-body);background:transparent;border:1px solid var(--border-strong);border-radius:2px;padding:9px 14px;min-height:44px;cursor:pointer">Contents</button>
+</div>
+<sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+<div id="m-navsheet" style="position:fixed;inset:0;z-index:90;display:flex;justify-content:flex-start">
+<div onClick="{{ closeNav }}" style="position:absolute;inset:0;background:rgba(28,23,16,.5)"></div>
+<div style="position:relative;width:min(88vw,340px);height:100%;background:var(--surface-page);border-right:1px solid var(--border-strong);box-shadow:var(--shadow-sheet);display:flex;flex-direction:column;gap:18px;padding:20px 20px 32px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+<span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint)">Contents</span>
+<button type="button" onClick="{{ closeNav }}" aria-label="Close contents" style="font-family:var(--font-ui);font-size:18px;line-height:1;color:var(--text-muted);background:transparent;border:1px solid var(--border-hairline);border-radius:2px;width:44px;height:44px;cursor:pointer">&#215;</button>
+</div>
+<div onClick="{{ closeNav }}" style="min-height:0;overflow-y:auto;padding-right:6px">
+<x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SidebarTOC" items="{{ tocItems }}" active-id="{{ activeSection }}" hint-size="100%,520px"></x-import>
+</div>
+</div>
+</div>
+</sc-if>
+
 <header id="top" style="padding:48px 0 56px;border-bottom:1px solid var(--border-strong)">
 <span style="font-family:var(--font-ui);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint)">Design notes for WoW Classic+ world systems</span>
-<h1 style="font-family:var(--font-display);font-weight:600;font-size:64px;line-height:1.08;letter-spacing:-.015em;margin:14px 0 20px">A Living Azeroth</h1>
-<p style="font-size:22px;line-height:1.5;margin:0 0 32px;color:var(--text-muted);text-wrap:pretty">Systems design for a world that reads as inhabited rather than as a static diorama with mobs standing in assigned boxes.</p>
+<h1 style="font-family:var(--font-display);font-weight:600;font-size:clamp(34px,7vw,64px);line-height:1.08;letter-spacing:-.015em;margin:14px 0 20px">A Living Azeroth</h1>
+<p style="font-size:clamp(18px,2.1vw,22px);line-height:1.5;margin:0 0 32px;color:var(--text-muted);text-wrap:pretty">Systems design for a world that reads as inhabited rather than as a static diorama with mobs standing in assigned boxes.</p>
 <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.DataField" label="Proposals" value="74" hint-size="auto,44px"></x-import>
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.DataField" label="Sections" value="14" hint-size="auto,44px"></x-import>
@@ -91,7 +123,7 @@ main img{max-width:100%;height:auto}
 </header>
 
 <section style="padding:56px 0 0">
-<p style="font-family:var(--font-body);font-size:27px;line-height:1.42;margin:0 0 28px;color:var(--text-heading);text-wrap:pretty">The chronicles of this world are full of wars its roads have never carried. The camps face each other across the grass, and nothing happens.</p>
+<p style="font-family:var(--font-body);font-size:clamp(21px,2.7vw,27px);line-height:1.42;margin:0 0 28px;color:var(--text-heading);text-wrap:pretty">The chronicles of this world are full of wars its roads have never carried. The camps face each other across the grass, and nothing happens.</p>
 <div style="font-size:18px;line-height:1.62">
 <p style="margin:0 0 20px">The quest text says the Kolkar are breaking through Horde lines. The zone descriptions say the Venture Company is stripping Stonetalon bare. The faction ledgers say the Steamwheedle Cartel and the Venture Company are at open commercial war. A traveler on those roads would see none of it.</p>
 <p style="margin:0 0 20px;color:var(--text-heading)">Almost every proposal here follows the same method: find something the existing lore already asserts, and make the world show it.</p>
@@ -104,7 +136,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">As of August 2026, Blizzard has not announced a product called "Classic+". What is on the record is narrower: at the State of Azeroth stream on January 29, 2026, Blizzard said that clarity on Classic's future and Anniversary realm progression would come at BlizzCon 2026, confirmed for September 12 and 13 in Anaheim.</p>
 <p style="margin:0 0 20px">Everything else is community inference built on a real but ambiguous evidence base: the "Project Camelot" datamine, a sustained run of encrypted internal builds tagged around version 1.60, private server takedowns, and a May 2026 creator summit under NDA.</p>
 </div>
-<div style="margin-top:28px">
+<div style="margin-top:28px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Standing caveat" hint-size="100%,72px">This document assumes nothing about what Blizzard is actually building. It is a design proposal, not a prediction.</x-import>
 </div>
 </section>
@@ -133,7 +165,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">Windshear Crag has been stripped to the stumps by Venture Company logging under Gerenzo Wrenchwhistle, and the zone shows almost none of the work in motion. Let the chain be seen end to end: a chopper crew felling a marked tree, a shredder hauling the log to the stacking yard, a foreman checking loads between hauls. The stacked lumber is the cargo for Section 2.</p>
 <p style="margin:0 0 20px">The same argument runs through Bloodsail camps that are patrol grids instead of camps, Dark Iron crews probing Loch Modan toward Ironforge, and the Booty Bay docks, which are a functioning port in fiction and a static backdrop in practice.</p>
 </div>
-<figure style="margin:40px 0 0;max-width:940px">
+<figure style="margin:40px auto 0;max-width:940px">
 <img src="assets/plate-working-camp.webp" alt="A working camp with NPCs mid-task rather than standing at posts" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
 <figcaption style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin-top:10px;letter-spacing:.02em">Same mobs, same spawn points, same everything. They are just busy. The animations this needs are already in the client.</figcaption>
 </figure>
@@ -149,7 +181,7 @@ main img{max-width:100%;height:auto}
 </div>
 </section>
 
-<div style="max-width:460px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-veron-amberstill.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Veron Amberstill breeds rams outside Kharanos. The job is in the quest text and the title over his head, and nowhere in what he actually does with his hands.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Dun Morogh</span></div></div>
+<div style="max-width:460px;margin:36px auto 0"><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-veron-amberstill.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Veron Amberstill breeds rams outside Kharanos. The job is in the quest text and the title over his head, and nowhere in what he actually does with his hands.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Dun Morogh</span></div></div>
 <section id="s-2" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="2" title="Roads and traffic" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
@@ -167,17 +199,17 @@ main img{max-width:100%;height:auto}
 <h3 style="font-family:var(--font-display);font-size:26px;font-weight:600;line-height:1.16;margin:8px 0 12px;color:var(--text-heading)">Route funneling and the chokepoints the map already has</h3>
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">A caravan system with traffic spread evenly across the map is scenery. One where a few crossings carry nearly everything has geography with stakes, and the chokepoints already exist. Every crossing between the continents runs through a boat. The land route from Arathi crosses the Thandol Span. Dun Algaz is the only pass from the Wetlands toward Loch Modan. Weight the routes accordingly and Menethil becomes the most valuable point on the continent.</p>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Griefing" hint-size="100%,72px">Nothing about destroying a wagon should reward camping one. The cargo is the reward, it is finite per wagon, and the destruction carries no kill credit, no honor, and no bonus. A level sixty parked on the Gold Road killing every caravan that passes should be wasting an afternoon for nothing.</x-import>
 </div>
-<div style="margin-top:44px;max-width:940px">
+<div style="margin:44px auto 0;max-width:940px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:10px">Reference</span>
 <image-slot id="ref-roads" shape="rect" style="width:100%;height:380px" placeholder="The Gold Road or the Loch Modan corridor"></image-slot>
 <p style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin:10px 0 0;letter-spacing:.02em">A wagon under escort on a road players already walk. The Gold Road between the Crossroads and Camp Taurajo, or the Ironforge run through Dun Algaz.</p>
 </div>
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-human-carriage.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The human carriage model, already in the client and already correct for a Stormwind to Sentinel Hill run.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Model · Human carriage</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-queldorei-carriage.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Quel’dorei carriage. A second faction silhouette for the same system, no new art required.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Model · Quel’dorei carriage</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-human-carriage.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The human carriage model, already in the client and already correct for a Stormwind to Sentinel Hill run.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Model · Human carriage</span></div></div><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-queldorei-carriage.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Quel’dorei carriage. A second faction silhouette for the same system, no new art required.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Model · Quel’dorei carriage</span></div></div></div>
 <section id="s-3" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="3" title="The trade network" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
@@ -186,14 +218,14 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px;color:var(--text-heading)">The strongest argument for the whole network is not mechanical. It is that the Steamwheedle cities physically cannot supply themselves, and the map has been saying so since 2004.</p>
 <p style="margin:0 0 20px">All four sit where nobody else wanted to be. Booty Bay is built into a cliff face in hostile jungle. Ratchet is a landing on a barren coast. Gadgetzan is in the middle of a desert. Everlook is in a frozen valley above a cloud bank, reachable on foot only through a furbolg tunnel. Everlook cannot produce what Everlook sells. So the caravan system is not something being added to the world. It is something the world has implied for twenty years and never drawn.</p>
 </div>
-<div style="margin-top:44px;max-width:940px">
+<div style="margin:44px auto 0;max-width:940px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:10px">Reference</span>
 <image-slot id="ref-everlook" shape="rect" style="width:100%;height:380px" placeholder="Everlook or Gadgetzan"></image-slot>
 <p style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin:10px 0 0;letter-spacing:.02em">A Steamwheedle city that visibly cannot supply itself. Everlook in a frozen valley above the cloud bank is the strongest case, since it is reachable on foot only through a furbolg tunnel.</p>
 </div>
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-gizelton-caravan.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Gizelton Caravan in Desolace is the precedent. An escorted cargo train that walks a real route and can be attacked on it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Desolace</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-winterspring-caravan.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Pack kodo and a loaded cart outside Everlook. The cargo network the document proposes is a generalisation of what this camp already implies.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-gizelton-caravan.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Gizelton Caravan in Desolace is the precedent. An escorted cargo train that walks a real route and can be attacked on it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Desolace</span></div></div><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-winterspring-caravan.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Pack kodo and a loaded cart outside Everlook. The cargo network the document proposes is a generalisation of what this camp already implies.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div></div>
 <section id="s-4" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="4" title="Wildlife and ecology" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
@@ -208,11 +240,11 @@ main img{max-width:100%;height:auto}
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">Feeding differs by scavenger, because the animation is the storytelling. Ghouls crouch and feed in place. Carrion birds land and pick. Spiders wrap the corpse and haul it back toward the web, which is the only scavenger that removes the body rather than sitting on it. Oozes flow over and dissolve.</p>
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">A stretch of road where players keep dying silently accrues attention, and past a threshold the place starts to feel wrong: more carrion birds circling than the zone should carry, a ghoul that wandered in from further out than its normal range. Attention decays, which is what keeps it from becoming a farm. A veteran rides down a road, notices the birds are heavier than they should be, and understands that people have been dying here. That is the world telling the player something true about itself, expressed as circling crows.</p>
 </div>
-<figure style="margin:40px 0 0;max-width:940px">
+<figure style="margin:40px auto 0;max-width:940px">
 <img src="assets/plate-scavenger-arrival.webp" alt="Scavengers arriving at a body some time after the kill" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
 <figcaption style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin-top:10px;letter-spacing:.02em">Kill something and walk away. Thirty seconds to two minutes later, something shows up for the body. Most of the time you never see it, and that is the design working rather than failing.</figcaption>
 </figure>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Kodo Graveyard" hint-size="100%,72px">Desolace is the one place this should not accumulate. Kodo canonically go there to die, so scavenger presence is permanent and heavy from the start. An arrested zone with one functioning system inside it is more unsettling than an empty one.</x-import>
 </div>
 </section>
@@ -226,14 +258,14 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">It is his blood and not his quills, which changes the image entirely. The Razorfen is not a carcass the quilboar live inside. It is what the soil did afterward. That reframes the race: quilboar do not build, they tend. A camp should read as horticulture rather than construction, with thorn walls grown and trained rather than assembled and no cut ends anywhere in the structure.</p>
 <p style="margin:0 0 20px">It also hands Section 4 something it otherwise lacks, a plant that behaves like a creature. Thorns with a slow growth response, thickening where quilboar tend them and receding where they have been driven off, are the clearest possible readout of who currently holds a piece of ground. Quilboar defend ground. Gnolls raid it. That distinction should be legible without reading a single quest.</p>
 </div>
-<div style="margin-top:44px;max-width:940px">
+<div style="margin:44px auto 0;max-width:940px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:10px">Reference</span>
 <image-slot id="ref-quilboar" shape="rect" style="width:100%;height:380px" placeholder="Razorfen or quilboar camp shot"></image-slot>
 <p style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin:10px 0 0;letter-spacing:.02em">A camp that reads as horticulture rather than construction. What matters is the absence of cut ends: thorn walls grown and trained, with the largest thorn mass at the centre of what they are tending.</p>
 </div>
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-razorfen-downs.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Razorfen Downs. The quilboar warrens are built as settlements rather than as spawn grids, which is the standard the middle tier should hold.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Razorfen Downs</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-razorfen-downs.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Razorfen Downs. The quilboar warrens are built as settlements rather than as spawn grids, which is the standard the middle tier should hold.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Razorfen Downs</span></div></div></div>
 <section id="s-6" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="6" title="Emergent conflict" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
@@ -253,10 +285,10 @@ main img{max-width:100%;height:auto}
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">One-way additive events are permitted when nothing is removed. The gates of Ahn'Qiraj are the proof. The useful lesson is not that permanent change is for max level, it is that permanent change must be additive. Finishing the Lakeshire bridge would be safe at any level, because a finished bridge takes nothing away.</p>
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">Phasing is almost never correct. It gives each player a private copy of world state, and it is the specific technology that made the modern game's world feel lonely. A flare-up matters because the person you tell about it can go and see it.</p>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The rule" accent="route" hint-size="100%,72px">Additive changes may be permanent, subtractive changes must be cyclical. Never phase anything two players might reasonably need to stand in together. No hubs, no roads, no zones.</x-import>
 </div>
-<div style="margin-top:44px;max-width:940px">
+<div style="margin:44px auto 0;max-width:940px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:10px">Reference</span>
 <image-slot id="ref-flareup" shape="rect" style="width:100%;height:380px" placeholder="Aftermath shot, or a Westfall camp"></image-slot>
 <p style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin:10px 0 0;letter-spacing:.02em">The common outcome rather than the rare one: gnoll and Defias corpses tangled together after a raid the player was not present for.</p>
@@ -277,13 +309,13 @@ main img{max-width:100%;height:auto}
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">The strongest fix costs almost nothing, because the information is already in the combat log. If a creature envenoms you, it has a venom sac. Tighten that correlation until it holds without exception and every poison debuff a player has ever taken becomes a drop-table lesson they learned without being taught.</p>
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">The instinct with an undifferentiated reagent is to split it into spider, scorpid, and serpent variants. Do not. Bag space is the real currency of the vanilla leveling experience, and fragmenting one reagent into five spends the player's scarcest resource to buy texture.</p>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The rule" accent="route" hint-size="100%,72px">Add texture to materials without adding item slots. Naming, flavor, visual tells, behavioral tells, and source logic are all free. New item IDs are expensive.</x-import>
 </div>
 
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-defias-highwayman.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">A Defias highwayman carries the tools of the job he is doing. Loot logic asks only that what drops is what he was seen holding.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-defias-pillager.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The pillager casts, so she should drop what a caster carries. The rule is legibility rather than generosity.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-defias-highwayman.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">A Defias highwayman carries the tools of the job he is doing. Loot logic asks only that what drops is what he was seen holding.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-defias-pillager.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The pillager casts, so she should drop what a caster carries. The rule is legibility rather than generosity.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Defias Brotherhood</span></div></div></div>
 <section id="s-8" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="8" title="Professions" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
@@ -327,8 +359,8 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">The model is one rule applied everywhere rather than a pile of per-zone exceptions: latitude for temperature plus a per-zone moisture value. The correction found while working Kalimdor zone by zone is that latitude alone predicts the bottom of both continents is productive, which is wrong. Tanaris and Silithus sit at the same latitude as Un'goro and they are desert. Moisture is what decides whether a warm zone is jungle or sand. Two dials instead of one, and still buildable.</p>
 <p style="margin:0 0 20px">The full classification of both continents into full turn, muted pulse, and arrest is set out in <a href="#s-seasons">View 6</a> below.</p>
 </div>
-<figure style="margin:40px 0 0;max-width:1040px">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+<figure style="margin:40px auto 0;max-width:1040px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px">
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">The Hinterlands, as shipped</span>
 <img src="assets/ref-hinterlands-summer.webp" alt="The Hinterlands in its permanent late-summer state" style="display:block;width:100%;height:auto;border:1px solid var(--border-hairline)">
@@ -340,12 +372,12 @@ main img{max-width:100%;height:auto}
 </div>
 <figcaption style="font-family:var(--font-ui);font-size:13px;line-height:1.5;color:var(--text-faint);margin-top:12px;letter-spacing:.02em">The Hinterlands are deciduous, primarily oak and maple, and the lore explicitly notes it is remarkable they thrive so close to the wasted Plaguelands. Put the zone under snow and the Plaguelands border becomes the sharpest visual argument in the world: a forest that carries the year on one side of the line, dead ground registering nothing on the other.</figcaption>
 </figure>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Separability" hint-size="100%,72px">The muted pulse is lighting, weather tables, and audio with no gameplay hooks attached, so it ships with the art work in Layer 1. Arrest costs nothing at all, since it means doing nothing. Only the full turn is Tier 3.</x-import>
 </div>
 </section>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-winterspring.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Winterspring is already permanently in one season, which is why it is the control case rather than a candidate. Snow here means nothing changed.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/plate-westfall-dagger-hills.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:420px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Westfall does the thematic work by itself. The fields still turn while nobody is left to harvest them.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Westfall</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-winterspring.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Winterspring is already permanently in one season, which is why it is the control case rather than a candidate. Snow here means nothing changed.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Winterspring</span></div></div><div><div data-frame="plate" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(240px,40vw,340px)"><img src="assets/plate-westfall-dagger-hills.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Westfall does the thematic work by itself. The fields still turn while nobody is left to harvest them.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Westfall</span></div></div></div>
 <section id="s-11" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="11" title="Implementation tiers and rollout" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
@@ -359,7 +391,7 @@ main img{max-width:100%;height:auto}
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">The distinction that matters in a live game is not cost. It is whether a change invalidates something players have already learned. Additive changes put something in the world that was not there, and a player who knew the old world is not wrong about anything. Revisionary changes alter something already known and are expensive in player trust rather than in engineering.</p>
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">This cuts across the tiers rather than aligning with them. The behavioral tell audit is Tier 2 by engineering risk and nearly harmless in isolation, but it relocates drop sources players have had memorized for twenty years. Conversely, material camps are new locations that take nothing away, so despite touching the world map they are as safe as an animation pass.</p>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The working rule" accent="route" hint-size="100%,72px">On live realms, ship additive freely and treat revisionary as a fresh-realm item regardless of tier.</x-import>
 </div>
 <div style="margin-top:36px">
@@ -381,7 +413,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px;color:var(--text-heading)">Spend the art budget on variety, not fidelity. Same texture resolution, same polygon budget, more distinct assets.</p>
 <p style="margin:0 0 20px">Southshore and Darkshire are both human and should feel almost nothing alike. What separates real buildings inside a single culture is four practical constraints, and vanilla has all four available and unused: materials, meaning whatever is within hauling distance; climate, which mostly means roof pitch; threat, which is the most legible of the four; and age. A player should be able to guess how dangerous a region is from the buildings before meeting anything in it.</p>
 </div>
-<figure style="margin:44px 0 0;max-width:1040px">
+<figure style="margin:44px auto 0;max-width:1040px">
 <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Shipped kit</span>
@@ -404,7 +436,7 @@ main img{max-width:100%;height:auto}
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">The game already did this once, completely. Durotar has no forests, Orgrimmar is built from timber, the Warsong log Ashenvale, and the route is already drawn from the Lumber Camp through Mor'shan Base Camp and south. Warsong Gulch is a battleground fought over construction material. Vanilla built one complete material chain, made a battleground out of it, and then never applied the idea to a single other settlement.</p>
 <p style="font-size:18px;line-height:1.62;margin:0 0 20px">Sentinel Hill needs timber and Westfall has almost none. Putting a logging camp near the Duskwood bridge is correct; adding trees to the southern hills is a trap. Westfall's treelessness is the zone's entire character, and adding a local supply solves a problem the zone exists to have. The external camp makes the dependency visible and gives interdiction something concrete to cut. Timber crossing that bridge is also timber from a cursed forest, which is a better explanation of Sentinel Hill's character than any amount of art direction.</p>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Where this breaks the tier system" accent="1" hint-size="100%,72px">By risk this is Tier 1. It is pure art, it ships whenever, it breaks nothing, and it can be patched in one settlement at a time. By cost it is closer to Tier 3, because it is a large number of art hours with no way to shortcut them. Any team reading Section 11 as a rough cost ordering would badly underestimate this section.</x-import>
 </div>
 
@@ -419,7 +451,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">The vanilla map is full of gaps, closed gates, and places the world points at and never lets you reach. An inward addition inherits the existing road network, has no clean level bracket, is purely additive, and is already promised. The wall, the gate, and the locked door are all in the game. That is this document's method applied at the largest possible scale: everywhere else the argument is to show what the lore already asserts, and here the lore asserts a place and the map draws its front door.</p>
 <p style="margin:0 0 20px">The clearest doors are Karazhan from Deadwind Pass, where the tower is modeled and standing and was cut from vanilla for time; the Emerald Dream from the four Dream Gates placed in patch 1.8, which are guarded and lead nowhere; Gilneas behind the Greymane Wall; Grim Batol from the Wetlands; Quel'Thalas past the blocked Thalassian Pass; and Azshara, which is not a closed door but an unfinished room.</p>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The cost note" accent="1" hint-size="100%,72px">By reversibility a new zone is Tier 1, the most purely additive thing possible. By cost it is Tier 3 and then some. New zones are safe to add and expensive to add, which is exactly the profile that suits a long slow content cadence and exactly the profile that suits nothing else.</x-import>
 </div>
 
@@ -431,17 +463,17 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">Everything above this point is behavior laid over the world as it already exists. This view is the other half of the argument: the map has room, and most of the room is land vanilla shipped as a border rather than as a place. Each of these is a community map of a proposed zone, drawn against the real terrain and marked with the same vocabulary the client uses for quest hubs, dungeons, and raids.</p>
 <p style="margin:0 0 20px">They are included as scope, not as specification. A living world that gains nine zones needs the systems in sections 1 through 10 more than a static one does, because nine empty zones is nine times the emptiness. The dependency runs in that direction and not the other.</p>
 </div>
-<div style="max-width:940px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-continent-comparison.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Vanilla, the expanded proposal, and retail side by side. The middle column is what the map looks like when the borders become zones. New zones and expanded zones are keyed separately in the inset.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Overview · Eastern Kingdoms and Kalimdor</span></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-northern-lordaeron.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Northern Lordaeron, level 55 to 60, contested. The Scarlet Citadel as a raid, Hearth Stead and Ash Hollow as the two hubs, and Scourge holding the middle.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-wildhammer-highlands.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Wildhammer Highlands, level 35 to 50. Grim Batol as a dungeon and a raid, Thundermar and Bloodgulch facing each other across the same river.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-savage-coast.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Savage Coast, level 45 to 60. Trolls, naga, pirates, and Venture Company on one shoreline, with the retail and vanilla terrain shown underneath for comparison.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-blackened-marches.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Blackened Marches at 40 to 50 and The Headland at 45 to 55. Dark Irons, troggs, and the Blackrock orcs on one side of the water, gnolls and pirates on the other.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones</span></div></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-ships-end-cove.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Ships End Cove, level 55 to 60. A working harbour north of Stormwind, Corsair’s Refuge on the Deeprun line, and Frostmane trolls above it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-veiled-strand.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Veiled Strand, level 35 to 45. Lor’danel, Shatterspear Village, and the Twilight’s Hammer dungeon on the north Darkshore coast.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:36px"><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-verdant-breach.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Verdant Breach, level 45 to 50. Un’Goro pushed outward into sand troll and dinosaur country, with Marshal’s Refuge still the neutral hub.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-gilneas.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Gilneas, no band assigned yet. The wall exists in vanilla as a closed door, and the land behind it is drawn here against the retail terrain. It waits on a reason to enter at sixty.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
-<div style="max-width:940px;margin-top:36px"><div style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;justify-content:center"><img src="assets/map-zone-sheet.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:520px;margin:0 auto"></div><div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Five more at a glance: Arathi Hilltops, the Amani Plaguelands, Uldum as a raid, the Scarlet Foothills, and Stonetalon Peaks. Uldum is the only entry on these maps that is a raid rather than a zone.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones · Sheet</span></div></div>
+<div style="max-width:940px;margin:36px auto 0"><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-continent-comparison.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Vanilla, the expanded proposal, and retail side by side. The middle column is what the map looks like when the borders become zones. New zones and expanded zones are keyed separately in the inset.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Overview · Eastern Kingdoms and Kalimdor</span></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-northern-lordaeron.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Northern Lordaeron, level 55 to 60, contested. The Scarlet Citadel as a raid, Hearth Stead and Ash Hollow as the two hubs, and Scourge holding the middle.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-wildhammer-highlands.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Wildhammer Highlands, level 35 to 50. Grim Batol as a dungeon and a raid, Thundermar and Bloodgulch facing each other across the same river.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-savage-coast.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Savage Coast, level 45 to 60. Trolls, naga, pirates, and Venture Company on one shoreline, with the retail and vanilla terrain shown underneath for comparison.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-blackened-marches.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Blackened Marches at 40 to 50 and The Headland at 45 to 55. Dark Irons, troggs, and the Blackrock orcs on one side of the water, gnolls and pirates on the other.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-ships-end-cove.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Ships End Cove, level 55 to 60. A working harbour north of Stormwind, Corsair’s Refuge on the Deeprun line, and Frostmane trolls above it.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-veiled-strand.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Veiled Strand, level 35 to 45. Lor’danel, Shatterspear Village, and the Twilight’s Hammer dungeon on the north Darkshore coast.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;max-width:940px;margin:36px auto 0"><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-verdant-breach.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">The Verdant Breach, level 45 to 50. Un’Goro pushed outward into sand troll and dinosaur country, with Marshal’s Refuge still the neutral hub.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div><div><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-gilneas.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Gilneas, no band assigned yet. The wall exists in vanilla as a closed door, and the land behind it is drawn here against the retail terrain. It waits on a reason to enter at sixty.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zone</span></div></div></div>
+<div style="max-width:940px;margin:36px auto 0"><div data-frame="map" style="border:1px solid var(--border-strong);background:var(--surface-sunk);display:flex;align-items:center;justify-content:center;height:clamp(280px,48vw,440px)"><img src="assets/map-zone-sheet.webp" alt="" style="display:block;width:auto;max-width:100%;max-height:100%;object-fit:contain;margin:0 auto"></div><div style="display:flex;flex-direction:column-reverse;gap:7px;margin-top:10px"><p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:0;color:var(--text-muted);text-wrap:pretty">Five more at a glance: Arathi Hilltops, the Amani Plaguelands, Uldum as a raid, the Scarlet Foothills, and Stonetalon Peaks. Uldum is the only entry on these maps that is a raid rather than a zone.</p><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones · Sheet</span></div></div>
 <div style="font-size:18px;line-height:1.62;margin-top:52px">
 <h3 style="font-family:var(--font-display);font-size:26px;font-weight:600;line-height:1.16;margin:0 0 12px;color:var(--text-heading)">Two more, not yet drawn</h3>
 <p style="margin:0 0 20px">Northrend and Outland both sit outside the nine zones above, and both are deliberately different propositions. Northrend here is a reworked continent at much smaller scope than the one Wrath shipped, closer to a handful of zones than to a full expansion. Outland is the older question and the harder one, because the Dark Portal is already standing in Blasted Lands and already goes somewhere.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:940px;margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;max-width:940px;margin:28px auto 0">
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:10px">Map</span>
 <image-slot id="map-northrend" shape="rect" style="width:100%;height:360px" placeholder="Reworked Northrend map"></image-slot>
@@ -453,7 +485,7 @@ main img{max-width:100%;height:auto}
 <p style="font-family:var(--font-ui);font-size:14px;line-height:1.45;margin:10px 0 0;color:var(--text-muted);text-wrap:pretty">Outland through the Dark Portal, which vanilla already models and already guards. The scope question is which side of the portal the content sits on rather than whether the door exists.</p>
 </div>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Provenance" hint-size="100%,72px">These maps are community work, supplied with the brief rather than produced for it, and they are reproduced here as the scope this document is written against. Zone names, level bands, and hub placements are theirs. Nothing in sections 1 through 13 depends on any of them shipping.</x-import>
 </div>
 </section>
@@ -623,7 +655,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">The instinct is a binary: a zone either turns or it sits out. That is wrong, because nothing in the world actually sits still. Weather does not stop at a zone border and neither does the sun. A zone held frozen by magic is being held against something, which means there has to be a something for it to be held against.</p>
 <p style="margin:0 0 20px">So three tiers instead of two, worked zone by zone across both continents. The third tier only works because the second one exists: give Dun Morogh and Stranglethorn a faint pulse and the Plaguelands become the only ground in Azeroth not doing the thing every other place does.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;margin-top:40px;align-items:start">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:32px;margin-top:40px;align-items:start">
 <sc-for list="{{ seasons }}" as="t" hint-placeholder-count="3">
 <div style="border-top:2px solid var(--border-strong);padding-top:16px">
 <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
@@ -650,8 +682,8 @@ main img{max-width:100%;height:auto}
 
 <div style="margin-top:120px;padding-top:56px;border-top:2px solid var(--border-strong)">
 <span style="font-family:var(--font-ui);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint)">Second document</span>
-<h2 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">Behavior over numbers</h2>
-<p style="font-size:22px;line-height:1.5;margin:0 0 24px;color:var(--text-muted);text-wrap:pretty">What a talent point should buy, and 27 vanilla trees rebuilt to the answer. Version 1.0, August 2026.</p>
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(31px,5.4vw,52px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">Behavior over numbers</h2>
+<p style="font-size:clamp(18px,2.1vw,22px);line-height:1.5;margin:0 0 24px;color:var(--text-muted);text-wrap:pretty">What a talent point should buy, and 27 vanilla trees rebuilt to the answer. Version 1.0, August 2026.</p>
 <div style="font-size:18px;line-height:1.62">
 <p style="margin:0 0 20px">The document above describes a world. The document below argues that post-vanilla classes should arrive as trees rather than as classes. This one sits upstream of both. Its claim is that a talent point should buy behavior and never a number, and its evidence is all 27 vanilla trees rebuilt to that rule, in order of severity. What follows on this page is the five constraints the rebuild accepted, two audit views that measure what a vanilla point buys and show one tree before and after, the eight proposals that carry the rule into the trees, the 27 rebuilds with their diagnoses and floors, and a register of what is settled and what is open. The class document inherits its rules and the simulation document tests them. The calculator at the bottom of the page holds every tree in full.</p>
 <p style="margin:0 0 20px;color:var(--text-heading)">The tree structure stays: three trees, seven tiers, five points per tier to advance, 51 points at level 60, a capstone at tier 7. A player who last logged out in 2006 should open the panel and recognise it. What changes is what the nodes contain.</p>
@@ -660,24 +692,24 @@ main img{max-width:100%;height:auto}
 
 <section id="t-0" data-spy="" style="padding:72px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="0" title="Five constraints, accepted before any design work" level="{{ two }}" hint-size="100%,80px"></x-import>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
-<div style="background:var(--surface-page);padding:18px 20px">
+<div id="t0-constraints" style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="background:var(--surface-page);padding:22px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Structure</span>
 <p style="font-size:15px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">The tree shape is not the problem and does not change. Seven rows, five points to advance, one capstone.</p>
 </div>
-<div style="background:var(--surface-page);padding:18px 20px">
+<div style="background:var(--surface-page);padding:22px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Recognition</span>
 <p style="font-size:15px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">This is not a departure. The panel a returning player opens is the panel they remember.</p>
 </div>
-<div style="background:var(--surface-page);padding:18px 20px">
+<div style="background:var(--surface-page);padding:22px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">What a point buys</span>
 <p style="font-size:15px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Behavior, never numbers. No talent should exist whose entire text is a percentage.</p>
 </div>
-<div style="background:var(--surface-page);padding:18px 20px">
+<div style="background:var(--surface-page);padding:22px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Where numbers go</span>
 <p style="font-size:15px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Flat stats stay in the game and stop being purchased. They are granted for depth in a tree rather than bought with a point.</p>
 </div>
-<div style="background:var(--surface-page);padding:18px 20px">
+<div style="background:var(--surface-page);padding:22px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Power</span>
 <p style="font-size:15px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Net neutral against a canonical vanilla build. A redistribution of what points do, not a buff.</p>
 </div>
@@ -706,7 +738,7 @@ main img{max-width:100%;height:auto}
 </sc-for>
 </div>
 </div>
-<div class="panel" style="margin-top:24px;background:var(--stone);border:1px solid var(--gold-dim);display:grid;grid-template-columns:repeat(auto-fit,minmax(384px,1fr))">
+<div class="panel" style="margin-top:24px;background:var(--stone);border:1px solid var(--gold-dim);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(384px,100%),1fr))">
 <div style="padding:22px 28px 28px">
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--rule-inverse)">
 <span style="font-family:var(--font-ui);font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)">{{ auditTitle }}</span>
@@ -793,7 +825,7 @@ main img{max-width:100%;height:auto}
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.FilterChip" label="{{ c.label }}" pressed="{{ c.pressed }}" on-toggle="{{ c.onToggle }}" hint-size="130px,28px"></x-import>
 </sc-for>
 </div>
-<div class="panel" style="margin-top:24px;background:var(--stone);border:1px solid var(--gold-dim);display:grid;grid-template-columns:repeat(auto-fit,minmax(384px,1fr))">
+<div class="panel" style="margin-top:24px;background:var(--stone);border:1px solid var(--gold-dim);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(384px,100%),1fr))">
 <div style="padding:22px 28px 28px">
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--rule-inverse)">
 <span style="font-family:var(--font-ui);font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)">Arms</span>
@@ -891,7 +923,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">Four eras of talent design and three other games sit behind these. Vanilla had progression without meaningful choice, Mists of Pandaria had choice without progression, and Dragonflight got both and paid for it with permanence. Diablo 4's Lord of Hatred, shipped April 2026, is the closest case study: it stripped every dedicated passive node out of the class trees and moved raw scaling to items and Paragon, on the stated reasoning that legacy passives diluted combat engagement.</p>
 <p style="margin:0 0 20px;color:var(--text-heading)">Separation of concerns is the whole trick. Gear carries the numbers, tree depth carries the passive curve, talent points carry behavior. Vanilla has all three doing all three jobs, which is why none of them feels decisive.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
 <div style="background:var(--surface-page);padding:20px 22px 22px">
 <span style="font-family:var(--font-ui);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint)">5.1</span>
 <h3 style="font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.14;margin:6px 0 10px;color:var(--text-heading)">The depth dividend</h3>
@@ -933,7 +965,7 @@ main img{max-width:100%;height:auto}
 <p style="font-size:15px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">No PvP-only nodes, no PvP branch, no assumption that future gear bridges the gap. Prefer graded effects to binary ones: a slow or an armor reduction works on a boss at reduced relevance, a stun works at zero. Where a binary effect is the right fantasy it keeps a graded fallback that lands on an immune target. Three checks for any rewritten talent, and most trees needed one change or none.</p>
 </div>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The conflict with class absorption" accent="route" hint-size="100%,72px">The depth dividend does not calibrate against an absorbed tree, because there is no canonical vanilla build to sum. So absorbed trees grant no stat curve at all. That is the better answer anyway: a free curve on a fourth tree is exactly the mechanism by which that tree becomes a tax, and a protection paladin who gains armor for fifteen points in Blackguard will take fifteen points in Blackguard.</x-import>
 </div>
 </section>
@@ -961,7 +993,7 @@ main img{max-width:100%;height:auto}
 </div>
 </sc-for>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
 <sc-for list="{{ digestCards }}" as="d" hint-placeholder-count="24">
 <div style="background:var(--surface-page);padding:18px 20px">
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
@@ -973,7 +1005,7 @@ main img{max-width:100%;height:auto}
 </div>
 </sc-for>
 </div>
-<div style="margin-top:24px">
+<div style="margin-top:24px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Where the floors come from" hint-size="100%,72px">Floors are computed per tree by the greedy walk described in View 7, revised after a hand review of the classifier that corrected 25 nodes across the 27 trees. Enhancement went from 18 to 28 and is tied for worst; Protection warrior went from 7 to 15 and a conclusion drawn from it was withdrawn. Specs with poor reputations average 22.7 forced-flat points, good ones 14.4.</x-import>
 </div>
 </section>
@@ -983,7 +1015,7 @@ main img{max-width:100%;height:auto}
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
 <p style="margin:0 0 20px">No decision blocks the design. All 27 vanilla trees are rebuilt, the seven absorbed trees are revised to the same rules, and both configurations, core and expanded, pass 26 validation rules with zero errors and zero warnings, every talent prerequisite among them. What is settled rests on that suite and on the simulation below; what is open is what neither can reach. Where the documents on this page disagree, this register governs, and the six items that follow are its state.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <div style="background:var(--surface-page);padding:18px 20px">
 <p style="font-family:var(--font-ui);font-size:15px;line-height:1.3;margin:0 0 8px;color:var(--text-heading)">Absolute numbers are unvalidated</p>
 <p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Every simulation figure is relative and the gear blocks are invented. The specified control is Warcraft Logs Season of Mastery data, and it has not been pulled. Until it is, the figures say how the design's trees compare with each other and nothing about how they compare with the live game. tools/wcl_pull.py is written for the pull, which waits on an API client.</p>
@@ -1013,8 +1045,8 @@ main img{max-width:100%;height:auto}
 
 <div style="margin-top:120px;padding-top:56px;border-top:2px solid var(--border-strong)">
 <span style="font-family:var(--font-ui);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint)">Third document</span>
-<h2 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">Class absorption</h2>
-<p style="font-size:22px;line-height:1.5;margin:0 0 24px;color:var(--text-muted);text-wrap:pretty">New archetypes as trees, not classes. Version 1.2, August 2026.</p>
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(31px,5.4vw,52px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">Class absorption</h2>
+<p style="font-size:clamp(18px,2.1vw,22px);line-height:1.5;margin:0 0 24px;color:var(--text-muted);text-wrap:pretty">New archetypes as trees, not classes. Version 1.2, August 2026.</p>
 <div style="font-size:18px;line-height:1.62">
 <p style="margin:0 0 20px">One document describes the world. This one describes something you go into that world to get. Every tree here is acquired through a chain running through named vanilla locations, which is why they share a page.</p>
 <p style="margin:0 0 20px;color:var(--text-heading)">There are ten trees, of two kinds, and the distinction matters enough that the document gives it its own section. Seven are absorbed: a post-vanilla class collapsed into a tree its host class acquires. Three are original, built for classes that absorb nothing: Chronomancer for mage, Dreamer for druid, Radiance for priest. All ten are in the expanded configuration. The original trees carry the heavier burden of proof, since no shipped version stands behind them, and the simulation below holds Dreamer and Radiance to it: both are in band, Radiance on two scores.</p>
@@ -1028,7 +1060,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px;color:var(--text-heading)">So the direction of travel is the reverse of what people assume. The demon hunter fantasy lived inside an existing class first, worked there for years, and was taken out to make room for a class. This proposal is not inventing anything. It is declining to make that trade.</p>
 <p style="margin:0 0 20px">Three more precedents sit behind it. Druid shipped in 2004 as one class containing three roles, three armor-relevant forms, and three separate resources, which demonstrates the exact technology this depends on. Season of Discovery gave vanilla classes roles they never had through runes, and delivered warlock tanking through a chain running Redridge, Darkshore, the Barrens, Shadowfang Keep, Blackfathom Deeps, and a summoning ritual at Demon Fall Ridge. And The War Within introduced hero talents: subtrees layered onto existing classes, shared between two specs rather than owned by one, which is the fluid model arrived at independently twenty years later.</p>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The proposal" accent="route" hint-size="100%,72px">Do not add classes. Add trees. A class needs three specs whether or not it has three ideas, a starting experience, an itemization lane, and faction and race decisions. A class cannot be shipped in a patch. A tree can.</x-import>
 </div>
 </section>
@@ -1040,7 +1072,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">No absorbed tree imports a new resource bar. Each layers a tree-local mechanic on whatever the host class already spends, the way combo points and soul shards already do.</p>
 <p style="margin:0 0 20px;color:var(--text-heading)">The seven have since been measured with the same method as the 27 vanilla trees: 54% flat against vanilla's 73%, and a mean forced-flat floor of 8.6 points of 30 against 17.4. Blackguard and Necromancy at 5 would be the two healthiest trees in the game. They need a pass, not a rebuild. Two of them needed more than a pass.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <div style="background:var(--surface-page);padding:18px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Does the tree contain what it is named for</span>
 <p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Points that engage the declared local mechanic: Conduit 30 of 58, Blackguard 22, Trapper 16, Bladedancer 13 of 64, Necromancy 12, Runeblade 11 of 60, Metamorphosis zero of 58.</p>
@@ -1054,7 +1086,7 @@ main img{max-width:100%;height:auto}
 <p style="font-size:14.5px;line-height:1.5;margin:0;color:var(--text-muted);text-wrap:pretty">Gate 20 grows from six points to eight in all seven, flat nodes are deleted into local-mechanic scaling, and Metamorphosis, Conduit, and Trapper gain subtraction nodes. Metamorphosis is rebuilt around fel corruption. Trapper, the absorbed tree formerly named Survival, takes the vanilla rebuild rather than carrying the original forward.</p>
 </div>
 </div>
-<div style="margin-top:28px">
+<div style="margin-top:28px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The revision record, kept" accent="route" hint-size="100%,72px">The seven absorbed trees were audited before the rework’s rules existed: 54% of their points bought numbers against vanilla’s 73%, gate 20 carried six points instead of eight, no talent in any of them was conditioned on a host tree across 414 points, and Metamorphosis contained none of the mechanic it was named for. The revisions that fixed all four are now baked into the canonical data below, so what you are reading is post-revision, and the audit survives only as this note.</x-import>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
@@ -1062,7 +1094,7 @@ main img{max-width:100%;height:auto}
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.FilterChip" label="{{ c.label }}" pressed="{{ c.pressed }}" on-toggle="{{ c.onToggle }}" hint-size="110px,28px"></x-import>
 </sc-for>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <div style="background:var(--surface-page);padding:18px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:8px">Host and concept</span>
 <p style="font-family:var(--font-ui);font-size:15.5px;line-height:1.35;margin:0 0 8px;color:var(--text-heading)">{{ treeName }} on {{ treeHost }}</p>
@@ -1109,7 +1141,7 @@ main img{max-width:100%;height:auto}
 <p style="font-size:15px;line-height:1.55;margin:12px 0 0;color:var(--text-muted);text-wrap:pretty">{{ forkConsequence }}</p>
 </div>
 </sc-if>
-<div class="panel" style="margin-top:28px;background:var(--stone);border:1px solid var(--gold-dim);display:grid;grid-template-columns:repeat(auto-fit,minmax(384px,1fr))">
+<div class="panel" style="margin-top:28px;background:var(--stone);border:1px solid var(--gold-dim);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(384px,100%),1fr))">
 <div style="padding:22px 28px 28px">
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--rule-inverse)">
 <span style="font-family:var(--font-ui);font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)">{{ treeName }}</span>
@@ -1217,7 +1249,7 @@ main img{max-width:100%;height:auto}
 </div>
 </sc-for>
 </div>
-<div style="margin-top:28px">
+<div style="margin-top:28px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Lore anchor" hint-size="100%,72px">{{ treeLore }}</x-import>
 </div>
 </section>
@@ -1228,7 +1260,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">The temptation is one formula: a long chain, an item at the end, done. That would make ten trees feel like ten copies of one quest. Letting the acquisition verb differ is better, because in the fiction it already does. Ten verbs across ten trees, with no two chains structurally alike. That variety is worth more than any individual chain's length.</p>
 <p style="margin:0 0 20px">The profession pairings run the same way. No gate may require the player to hold the profession personally. A warrior seeking a runeblade does not need to be a blacksmith, he needs access to one, and every gate satisfiable by another player is a small ongoing reason for two people to talk.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
 <sc-for list="{{ verbGroups }}" as="v" hint-placeholder-count="6">
 <div style="background:var(--surface-page);padding:20px 22px 22px">
 <h3 style="font-family:var(--font-display);font-size:26px;font-weight:600;line-height:1.14;margin:0 0 6px;color:var(--text-heading)">{{ v.verb }}</h3>
@@ -1259,7 +1291,7 @@ main img{max-width:100%;height:auto}
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
 <p style="margin:0 0 20px">Every tree is acquired through a chain running through named vanilla locations, so the trees join to the world proposals on zone. Below are the places that appear in both datasets. The overlap is modest, and modest is fine. It is the seam, and showing it is the argument that these are one design rather than two hobbies.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
 <sc-for list="{{ joinRows }}" as="j" hint-placeholder-count="6">
 <div style="background:var(--surface-page);padding:20px 22px 22px">
 <h3 style="font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.14;margin:0 0 14px;color:var(--text-heading)">{{ j.zone }}</h3>
@@ -1284,8 +1316,8 @@ main img{max-width:100%;height:auto}
 
 <div style="margin-top:120px;padding-top:56px;border-top:2px solid var(--border-strong)">
 <span style="font-family:var(--font-ui);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint)">Fourth document</span>
-<h2 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">The simulation</h2>
-<p style="font-size:22px;line-height:1.5;margin:0 0 24px;color:var(--text-muted);text-wrap:pretty">Whether the tuning rule holds, measured rather than asserted. August 2026.</p>
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(31px,5.4vw,52px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">The simulation</h2>
+<p style="font-size:clamp(18px,2.1vw,22px);line-height:1.5;margin:0 0 24px;color:var(--text-muted);text-wrap:pretty">Whether the tuning rule holds, measured rather than asserted. August 2026.</p>
 <div style="font-size:18px;line-height:1.62">
 <p style="margin:0 0 20px">The talent document sets a checkable rule and the class document inherits it: a capstone build and a mid-tree build should land in the same band. This document is the check. It runs three instruments across five fight scenarios at 120 seeds per cell, and 127 of 128 banded cells sit inside -7% to +7%. The one outside is Metamorphosis on switching, at about +15% by a choice of depth: level with Affliction on a long-lived target and ahead where the target dies every thirty seconds, named rather than moved. Necromancy, four cells out in the file before this one, is inside on all five since it was read as the pet tree its text describes. Radiance, measured on two scores, its healing and its healing with the damage it emits, is banded on both at weight one and inside on all six of its cells.</p>
 <p style="margin:0 0 20px;color:var(--text-heading)">The figures are relative, not absolute. The gear blocks are invented, and a real balance check needs Warcraft Logs data as the control. What the numbers can say is whether the design's own rule holds against the design's own trees. It holds for every core pair and on thirty-four of the absorbed trees' thirty-five cells, and it did not hold on first measurement: the Warrior pairs read +22.7% and +33.0% until the cause was traced to the gear calibration's rage economy rather than to a talent. Findings of that kind are what the check is for.</p>
@@ -1298,7 +1330,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">A single-target damage simulator returned no significant difference for seven of thirteen pairs, and that was three separate problems wearing the same result. Burst cooldowns vanish into a 300-second average. Ramp and uptime effects need movement or target deaths to matter. And Repentance is a stun: no damage simulator will ever measure it, and building one that appears to would be worse than admitting the gap.</p>
 <p style="margin:0 0 20px">So a talent's value is its profile across scenarios, not one number. Twelve talents carry an explicit not-simulable flag. Since stage I each is read by its cost, the node forced into the build its role bands against the same build without it, so gain, cost and net are three numbers on every cell; eight carry a priced cost or a priced permission, and four, Repentance, Damnation, Deep Slumber and Fixed Point, stay argued because no instrument prices what they remove.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <sc-for list="{{ simInstruments }}" as="s" hint-placeholder-count="3">
 <div style="background:var(--surface-page);padding:18px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px">{{ s.name }}</span>
@@ -1324,7 +1356,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">Four policies were priced against the same fifty cells, the ten pairs measurable at the time; the band they chose is applied unchanged to the sixty measured now. A signature-scenario exemption, argued for across four passes, performed worse than simply widening the band and was dropped. The likelier truth was that two capstones were individually overtuned, not that their shape entitled them.</p>
 <p style="margin:0 0 20px;color:var(--text-heading)">Adopted: a single band of -7% to +7%, every scenario. Tightening from -8 was free, because both bands failed the same four cells before tuning, and tuning cleared them.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <sc-for list="{{ simPolicies }}" as="p" hint-placeholder-count="4">
 <div style="background:var(--surface-page);padding:16px 20px">
 <p style="font-family:var(--font-ui);font-size:14.5px;line-height:1.35;margin:0;color:var(--text-heading)">{{ p.policy }}</p>
@@ -1355,7 +1387,7 @@ main img{max-width:100%;height:auto}
 </div>
 </sc-for>
 </div>
-<div style="margin-top:24px">
+<div style="margin-top:24px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="Reading the sign" hint-size="100%,72px">Positive means the capstone build leads, negative means the mid-tree build does. Arcane + Fire at +6.5% on burst is the widest cell in core, with Affliction + Destruction on cleave at +6.4% behind it: the Warlock pair's cleave cell is Dark Pact's second enemy inside a twelve-second window where the design wrote twenty, the lever that pays on cleave alone, and its sustained cells came in from -5% to -1% once four refresh clauses gained the Shadow Bolt their texts name. Combat + Assassination, +6.6% on burst in the file before this one, reads +5.0% with Improved Sinister Strike's combo point read on a critical only; Adrenaline Rush's window stays at five seconds, where vanilla's fifteen read +18.7% against a twenty-first Assassination point whose first rank carries no effect. Fury + Protection, which read +7.2% on burst at the stage 3 reading and +7.0% on 240 seeds, reads +4.6% after Bloodthirst's coefficient came down to 0.219 of its original: a forty-five second fight carries two and a half points of seed noise at these counts, so the cell was moved to the middle rather than to the line, and Death Wish's cooldown magnitude was inert for that pair because both builds carry it. Arms + Fury at -2.0% on burst against +4.3% sustained is the mid-tree shape carrying burst, which is the design working rather than failing.</x-import>
 </div>
 </section>
@@ -1429,7 +1461,7 @@ main img{max-width:100%;height:auto}
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
 <p style="margin:0 0 20px">{{ simRewriteHeadline }}</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <sc-for list="{{ simRewrites }}" as="r" hint-placeholder-count="11">
 <div style="background:var(--surface-page);padding:18px 20px">
 <p style="font-family:var(--font-ui);font-size:16px;margin:0;color:var(--text-heading)">{{ r.talent }}</p>
@@ -1450,7 +1482,7 @@ main img{max-width:100%;height:auto}
 </div>
 </sc-for>
 </div>
-<div style="margin-top:24px">
+<div style="margin-top:24px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="The rule worth carrying" accent="route" hint-size="100%,72px">{{ simLeverRule }}</x-import>
 </div>
 </section>
@@ -1463,7 +1495,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">{{ p }}</p>
 </sc-for>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:32px;align-items:baseline;margin-top:8px;padding:16px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
+<div style="display:flex;flex-wrap:wrap;gap:32px;align-items:baseline;justify-content:center;text-align:center;margin-top:8px;padding:16px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.DataField" label="Cross-tree edges, core" value="53" hint-size="auto,44px"></x-import>
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.DataField" label="Mutual pairs, core" value="26" hint-size="auto,44px"></x-import>
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.DataField" label="Mutual pairs, expanded" value="32" hint-size="auto,44px"></x-import>
@@ -1476,7 +1508,7 @@ main img{max-width:100%;height:auto}
 
 <section id="m-cannot" data-spy style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="7" title="What it cannot answer" level="{{ two }}" hint-size="100%,80px"></x-import>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <sc-for list="{{ simCannot }}" as="p" hint-placeholder-count="5">
 <div style="background:var(--surface-page);padding:18px 20px">
 <p style="font-size:14.5px;line-height:1.55;margin:0;color:var(--text-muted);text-wrap:pretty">{{ p }}</p>
@@ -1491,7 +1523,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">Every class, every tree, the absorbed tree alongside the three it joins. Fifty-one points at level 60, shared across the whole row. Left click spends, right click refunds, and the row gates enforce themselves, so a build that cannot exist cannot be entered.</p>
 <p style="margin:0 0 20px">The absorbed tree sits in the same panel as the vanilla three on purpose. It is a fourth tree rather than a fourth class, and the only way to judge whether it is splashable rather than mandatory is to spend the points against the same budget everything else spends from.</p>
 </div>
-<div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start;margin-top:28px;padding:14px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
+<div id="calc-controls" style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start;margin-top:28px;padding:14px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);padding-top:6px">Configuration</span>
 <div style="display:flex;flex-wrap:wrap;gap:8px">
 <sc-for list="{{ setChips }}" as="c" hint-placeholder-count="2">
@@ -1532,9 +1564,9 @@ main img{max-width:100%;height:auto}
 </sc-if>
 </div>
 </div>
-<div class="panel" style="margin-top:0;background:var(--stone);border:1px solid var(--gold-dim);border-top:0;display:flex;flex-wrap:wrap;overflow-x:auto">
+<div class="panel" ref="{{ calcPanelRef }}" style="margin-top:0;background:var(--stone);border:1px solid var(--gold-dim);border-top:0;display:flex;flex-wrap:nowrap;overflow-x:auto">
 <sc-for list="{{ calcTrees }}" as="t" hint-placeholder-count="4">
-<div style="flex:1 1 {{ t.panelMin }}px;min-width:{{ t.panelMin }}px;padding:16px 7px 20px;border-right:1px solid var(--rule-inverse)">
+<div style="flex:1 1 {{ calcPanelMin }}px;min-width:{{ calcPanelMin }}px;padding:16px 7px 20px;border-right:1px solid var(--rule-inverse)">
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--rule-inverse)">
 <div>
 <p style="font-family:var(--font-ui);font-size:16px;line-height:1.2;margin:0;color:var(--ink-inverse)">{{ t.name }}</p>
@@ -1545,9 +1577,15 @@ main img{max-width:100%;height:auto}
 </div>
 <span style="font-family:var(--font-ui);font-size:20px;color:var(--gold)">{{ t.spent }}</span>
 </div>
-<div style="position:relative;width:{{ t.gridW }}px;height:308px;margin-top:14px">
-<div style="position:absolute;left:18px;right:0;top:{{ t.bandY }}px;height:88px;background:rgba(255,209,0,.06);border-top:1px solid rgba(255,209,0,.22);border-bottom:1px solid rgba(255,209,0,.22)"></div>
-<svg width="{{ t.gridW }}" height="308" viewBox="0 0 {{ t.gridW }} 308" style="position:absolute;left:0;top:0">
+<div style="display:flex;gap:12px;margin-top:14px">
+<div style="position:relative;flex:0 0 22px;width:22px;height:{{ t.gridH }}px">
+<sc-for list="{{ t.gate }}" as="g" hint-placeholder-count="7">
+<div style="position:absolute;left:0;top:{{ g.y }}px;width:22px;text-align:right;font-family:var(--font-ui);font-size:11px;line-height:1.2;color:{{ g.color }}">{{ g.label }}</div>
+</sc-for>
+</div>
+<div style="position:relative;width:{{ t.gridW }}px;height:{{ t.gridH }}px;margin:0 auto">
+<div style="position:absolute;left:0;right:0;top:{{ t.bandY }}px;height:{{ t.bandH }}px;background:rgba(255,209,0,.06);border-top:1px solid rgba(255,209,0,.22);border-bottom:1px solid rgba(255,209,0,.22)"></div>
+<svg width="{{ t.gridW }}" height="{{ t.gridH }}" viewBox="0 0 {{ t.gridW }} {{ t.gridH }}" style="position:absolute;left:0;top:0">
 <sc-for list="{{ t.arrows }}" as="a" hint-placeholder-count="3">
 <polyline points="{{ a.line }}" fill="none" stroke="{{ a.stroke }}" stroke-width="2"></polyline>
 </sc-for>
@@ -1555,22 +1593,20 @@ main img{max-width:100%;height:auto}
 <polygon points="{{ a.head }}" fill="{{ a.stroke }}"></polygon>
 </sc-for>
 </svg>
-<sc-for list="{{ t.gate }}" as="g" hint-placeholder-count="7">
-<div style="position:absolute;left:0;top:{{ g.y }}px;width:16px;text-align:right;font-family:var(--font-ui);font-size:10.5px;line-height:1.2;color:{{ g.color }}">{{ g.label }}</div>
-</sc-for>
 <sc-for list="{{ t.cells }}" as="c" hint-placeholder-count="18">
-<div role="button" tabindex="0" aria-label="{{ c.aria }}" onClick="{{ c.onAdd }}" onContextMenu="{{ c.onRemove }}" onMouseEnter="{{ c.onHover }}" onFocus="{{ c.onHover }}" style="position:absolute;left:{{ c.x }}px;top:{{ c.y }}px;width:32px;height:32px;border:2px solid {{ c.border }};border-radius:2px;background-color:var(--stone-sunk);background-image:{{ c.bg }};background-size:cover;background-position:center;opacity:{{ c.opacity }};cursor:{{ c.cursor }}">
-<span style="position:absolute;right:-5px;bottom:-6px;min-width:22px;height:14px;padding:0 2px;background:var(--stone);border:1px solid {{ c.border }};border-radius:2px;font-family:var(--font-ui);font-size:9.5px;line-height:12px;text-align:center;color:{{ c.badgeColor }}">{{ c.rank }}</span>
+<div role="button" tabindex="0" aria-label="{{ c.aria }}" onClick="{{ c.onAdd }}" onContextMenu="{{ c.onRemove }}" onMouseEnter="{{ c.onHover }}" onFocus="{{ c.onHover }}" style="position:absolute;left:{{ c.x }}px;top:{{ c.y }}px;width:{{ calcIcon }}px;height:{{ calcIcon }}px;border:2px solid {{ c.border }};border-radius:2px;background-color:var(--stone-sunk);background-image:{{ c.bg }};background-size:cover;background-position:center;opacity:{{ c.opacity }};cursor:{{ c.cursor }}">
+<span style="position:absolute;right:-5px;bottom:-6px;min-width:{{ calcBadgeW }}px;height:{{ calcBadgeH }}px;padding:0 2px;background:var(--stone);border:1px solid {{ c.border }};border-radius:2px;font-family:var(--font-ui);font-size:{{ calcBadgeFS }}px;line-height:{{ calcBadgeLH }}px;text-align:center;color:{{ c.badgeColor }}">{{ c.rank }}</span>
 <sc-if value="{{ c.hasStatus }}" hint-placeholder-val="{{ false }}">
-<span aria-hidden="true" style="position:absolute;left:-5px;top:-6px;width:14px;height:14px;background:var(--stone);border:1px solid {{ c.statusColor }};border-radius:2px;font-family:var(--font-ui);font-size:10px;line-height:12px;text-align:center;color:{{ c.statusColor }}">{{ c.statusGlyph }}</span>
+<span aria-hidden="true" style="position:absolute;left:-5px;top:-6px;width:{{ calcGlyph }}px;height:{{ calcGlyph }}px;background:var(--stone);border:1px solid {{ c.statusColor }};border-radius:2px;font-family:var(--font-ui);font-size:10px;line-height:{{ calcGlyph }}px;text-align:center;color:{{ c.statusColor }}">{{ c.statusGlyph }}</span>
 </sc-if>
 </div>
 </sc-for>
 </div>
 </div>
+</div>
 </sc-for>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);border-top:0">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);border-top:0">
 <div style="background:var(--surface-page);padding:18px 20px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:{{ calcDetColor }};display:block">{{ calcDetKind }}</span>
 <p style="font-family:var(--font-ui);font-size:19px;line-height:1.25;margin:8px 0 0;color:var(--text-heading)">{{ calcDetName }}</p>
@@ -1630,7 +1666,7 @@ main img{max-width:100%;height:auto}
 </sc-for>
 </div>
 </div>
-<div style="margin-top:32px">
+<div style="margin-top:32px;--measure:100%;text-align:center">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.Note" label="How to read a build here" accent="route" hint-size="100%,72px">Thirty-one points reaches a capstone. Twenty does not reach tier 5, it reaches tier 4, because a tier-N talent costs 5(N-1) plus 1. Spend 30/21 or 26/25 in any class here and you own two deep talents and no capstone, which is the shape both canonical vanilla warlock raid builds take. The band covers tiers 5 and 6, the seats both documents converged on.</x-import>
 </div>
 <div style="margin-top:32px">
@@ -1638,7 +1674,7 @@ main img{max-width:100%;height:auto}
 <h3 style="font-family:var(--font-display);font-size:26px;font-weight:600;line-height:1.16;margin:0;color:var(--text-heading)">What the shapes would be called</h3>
 <p style="font-size:15px;line-height:1.55;margin:10px 0 0;color:var(--text-muted);text-wrap:pretty">Twenty-six mutual pairs exist in core and every one is buildable here. Eight produce signatures memorable enough to name, following the conventions vanilla actually used. The names stay out of the documents on purpose: builds are named by players, and the design’s job is only to make the names available.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:16px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:16px">
 <sc-for list="{{ calcPairs }}" as="p" hint-placeholder-count="8">
 <div style="background:var(--surface-page);padding:16px 20px">
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
@@ -1654,8 +1690,8 @@ main img{max-width:100%;height:auto}
 
 <div style="margin-top:120px;padding-top:56px;border-top:2px solid var(--border-strong)">
 <span style="font-family:var(--font-ui);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint)">Appendices</span>
-<h2 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">Appendices</h2>
-<p style="font-size:22px;line-height:1.5;margin:0 0 8px;color:var(--text-muted);text-wrap:pretty">The record behind everything above: the proposals by tier, the lore checks, the visual references, and where each idea came from.</p>
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(31px,5.4vw,52px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 20px;color:var(--text-heading)">Appendices</h2>
+<p style="font-size:clamp(18px,2.1vw,22px);line-height:1.5;margin:0 0 8px;color:var(--text-muted);text-wrap:pretty">The record behind everything above: the proposals by tier, the lore checks, the visual references, and where each idea came from.</p>
 </div>
 
 <section id="s-appa" data-spy="" style="padding:88px 0 0;scroll-margin-top:24px">
@@ -1693,7 +1729,7 @@ main img{max-width:100%;height:auto}
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
 <p style="margin:0 0 20px">Several common assumptions do not hold for vanilla specifically, and building on them would produce a design grounded in the wrong era. These are the places the document checked, and the places it corrected.</p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:32px">
 <sc-for list="{{ loreNotes }}" as="ln" hint-placeholder-count="6">
 <div style="background:var(--surface-page);padding:20px 22px 22px">
 <p style="font-family:var(--font-ui);font-size:15.5px;line-height:1.34;margin:0 0 10px;color:var(--text-heading);text-wrap:pretty">{{ ln.claim }}</p>
@@ -1710,7 +1746,7 @@ main img{max-width:100%;height:auto}
 <p style="margin:0 0 20px">Direct links per named location follow, for screenshots, zone maps, and terrain reference. Where a Classic-specific page exists, the index uses it: Stonetalon, Thousand Needles, Desolace, and Silverpine were all geographically rebuilt in Cataclysm, and the modern pages show terrain that does not exist in vanilla. The links follow the standard Wowpedia URL pattern, and a few may redirect to a merged or renamed page. Where this page carries a plate of the same ground, the entry also points to the section that holds it.</p>
 <p style="margin:0 0 20px">Wowhead's Classic zone pages carry interactive maps with NPC and resource-node overlays, which is the better tool for route and density work and more useful than static screenshots for anything in Sections 2, 3, and 6. The base path is <a href="https://www.wowhead.com/classic/zone=">wowhead.com/classic/zone=</a>.</p>
 </div>
-<div style="max-width:820px;margin-top:36px">
+<div id="appc-plates" style="margin-top:36px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Plates carried on this page</span>
 <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-1" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">A working camp, with NPCs mid-task rather than at posts</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Plate · Section 1</span></div>
 <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-1" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Veron Amberstill outside Kharanos, the job in the title and not in the hands</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Reference · Dun Morogh · Section 1</span></div>
@@ -1724,7 +1760,7 @@ main img{max-width:100%;height:auto}
 <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-12" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">The Lion’s Pride Inn as shipped, and two variations from the same kit of parts</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Shipped kit and variation · Section 12</span></div>
 <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="#s-maps" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Nine proposed zones and the continent comparison, community maps supplied with the brief</a><span style="font-family:var(--font-ui);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap">Proposed zones · Maps</span></div>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:40px;align-items:start">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:32px;margin-top:40px;align-items:start">
 <div>
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Section 1: Ambient life</span>
 <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-faint)"><a href="https://wowpedia.fandom.com/wiki/Tranquil_Gardens_Cemetery" style="font-family:var(--font-ui);font-size:14.5px;line-height:1.3">Tranquil Gardens Cemetery</a></div>
@@ -1824,8 +1860,9 @@ main img{max-width:100%;height:auto}
 </div>
 </sc-for>
 </div>
-<div style="max-width:820px;margin-top:40px">
+<div style="margin-top:40px">
 <span style="font-family:var(--font-ui);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-faint);display:block;padding-bottom:8px;border-bottom:1px solid var(--border-hairline)">Element by element</span>
+<div id="prov-cols" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px">
 <sc-for list="{{ provRows }}" as="r" hint-placeholder-count="8">
 <div style="padding:14px 0;border-bottom:1px solid var(--border-faint)">
 <div style="display:flex;justify-content:space-between;gap:16px;align-items:baseline">
@@ -1837,6 +1874,7 @@ main img{max-width:100%;height:auto}
 </sc-if>
 </div>
 </sc-for>
+</div>
 </div>
 </section>
 
@@ -2008,7 +2046,7 @@ class Component extends DCLogic {
   state = {
     proposals: [], loaded: false, failed: false,
     q: '', tiers: [], deploys: [], layers: [], changes: [], costs: [], zone: null,
-    spineId: null, activeSection: 's-0',
+    spineId: null, activeSection: 's-0', navOpen: false,
     trees: [], treeMeta: null, openItems: [], activeTree: 'blackguard', weapon: 'bladed', icons: [],
     points: {}, hoverTalent: null,
     vanilla: null,
@@ -2021,6 +2059,7 @@ class Component extends DCLogic {
   componentDidUpdate() {
     if (this._spineTimer) clearTimeout(this._spineTimer);
     this._spineTimer = setTimeout(() => this.decorateSpine(), 60);
+    if (this._measure) this._measure();
   }
 
   componentDidMount() {
@@ -2057,8 +2096,20 @@ class Component extends DCLogic {
       if (cur && cur !== this.state.activeSection) this.setState({ activeSection: cur });
     };
     window.addEventListener('scroll', this._onScroll, { passive: true });
+    // View 12 sizes its tree panels from the measured panel width so every tree of a class stays on one row
+    this._measure = () => {
+      const el = this.calcPanelEl;
+      if (!el) return;
+      const w = Math.round(el.clientWidth);
+      if (w > 0 && w !== this.state.calcPanelW) this.setState({ calcPanelW: w });
+    };
+    this._measure();
+    window.addEventListener('resize', this._onResize = () => this._measure(), { passive: true });
   }
-  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onResize);
+  }
 
   toggle(key, v) {
     this.setState(s => {
@@ -2738,6 +2789,9 @@ class Component extends DCLogic {
     return {
       two: 2,
       activeSection: s.activeSection,
+      navOpen: s.navOpen,
+      openNav: () => this.setState({ navOpen: true }),
+      closeNav: () => this.setState({ navOpen: false }),
       tocItems: SECTIONS.map(([id, number, title]) => ({ id, number, title, group: 'Document' }))
         .concat([
           { id: 's-maps', number: '\u00b7', title: 'Where new content would go', group: 'Views' },
@@ -2910,6 +2964,10 @@ class Component extends DCLogic {
   v2Frame(tree, geom, pts, spent, totalSpent, budget, iconMap, onHover, onAdd, onRemove) {
     const { RAIL, STEPX, STEPY, ICON } = geom;
     const P = this.v2Prereq(tree);
+    // the 1.12 client lays a tree on a fixed column grid and centres a short row in it rather than packing it left.
+    // Integer offsets keep the arrow router's cell grid intact.
+    const cols = Math.max(4, tree.rows.reduce((m, r2) => Math.max(m, r2.talents.length), 0));
+    const offOf = r => Math.floor((cols - r.talents.length) / 2);
     const cells = [];
     tree.rows.forEach(r => r.talents.forEach((t, i) => {
       const cur = pts[t.id] || 0;
@@ -2930,7 +2988,7 @@ class Component extends DCLogic {
         : t.crossTree ? ['\u2194', 'var(--quality-rare)']
         : t.availableIn ? ['+', 'var(--gold-dim)'] : null;
       cells.push({
-        key: t.id, x: RAIL + i * STEPX, y: (r.row - 1) * STEPY,
+        key: t.id, x: RAIL + (offOf(r) + i) * STEPX, y: (r.row - 1) * STEPY,
         bg: iconMap[t.id] ? 'url(' + iconMap[t.id] + ')' : 'none',
         iconBg: iconMap[t.id] ? 'url(' + iconMap[t.id] + ')' : 'none',
         rank: cur + '/' + t.ranks, border: border, badgeBorder: border,
@@ -2948,22 +3006,26 @@ class Component extends DCLogic {
     // prerequisite arrows, drawn as the 1.12 client draws them: gold once the prerequisite holds its required points, dim until then.
     // Cells here are packed by index rather than by an authored grid column, so a leg must never pass through another cell:
     // v2Route runs legs in the gaps between rows and columns and enters the dependent from its top or its side.
-    const route = this.v2Route(geom, (row, col) => { const rr = tree.rows.find(z => z.row === row); return !!rr && rr.talents.length > col; });
+    const route = this.v2Route(geom, (row, col) => {
+      const rr = tree.rows.find(z => z.row === row);
+      if (!rr) return false;
+      const o = offOf(rr);
+      return col >= o && col < o + rr.talents.length;
+    });
     const arrows = [];
     tree.rows.forEach(r => r.talents.forEach((t, i) => {
       const q = P.reqOf(t);
       if (!q) return;
       const met = (pts[q.id] || 0) >= q.ranks;
-      const seg = route(q.src.col, q.src.r.row, i, r.row);
+      const seg = route(offOf(q.src.r) + q.src.col, q.src.r.row, offOf(r) + i, r.row);
       arrows.push({ key: t.id + '<' + q.id, line: seg.line, head: seg.head, met: met, stroke: met ? 'var(--gold)' : 'rgba(232,220,196,.26)' });
     }));
     const gate = [1, 2, 3, 4, 5, 6, 7].map(r => ({
-      key: tree.id + 'g' + r, y: (r - 1) * STEPY + (ICON < 40 ? 9 : 13), label: String((r - 1) * 5),
+      key: tree.id + 'g' + r, y: (r - 1) * STEPY + Math.round(ICON / 2) - 7, label: String((r - 1) * 5),
       color: spent >= (r - 1) * 5 ? 'var(--gold-dim)' : 'var(--ink-inverse-50)'
     }));
-    const cols = Math.max(4, tree.rows.reduce((m, r2) => Math.max(m, r2.talents.length), 0));
     const gridW = RAIL + (cols - 1) * STEPX + ICON;
-    return { cells: cells, arrows: arrows, gate: gate, gateRail: gate, prereq: P, gridW: gridW, cols: cols };
+    return { cells: cells, arrows: arrows, gate: gate, gateRail: gate, prereq: P, gridW: gridW, cols: cols, gridH: 6 * STEPY + ICON };
   }
 
   v2RankList(t, cur) {
@@ -3219,7 +3281,24 @@ class Component extends DCLogic {
       byKey[key] = cur;
       return { calcPoints: byKey, calcHover2: t.id };
     });
-    const geom = { RAIL: 16, STEPX: 47, STEPY: 46, ICON: 32 };
+    // panel geometry is measured rather than assumed: every tree of the class shares one row, so the icon step
+    // shrinks for the wide trees (Restoration druid runs eight seats) instead of the last tree wrapping to a second line.
+    const rowLen = r => r.talents.filter(t => !(cfg === 'core' && t.availableIn && t.availableIn.length)).length;
+    const maxCols = Math.max(4, show.reduce((m, tr) => Math.max(m, tr.rows.reduce((n, r) => Math.max(n, rowLen(r)), 0)), 0));
+    // under 760px the panels stack one tree per row, so each tree gets the whole measured width rather than a quarter of it
+    const measured = s.calcPanelW || 1264;
+    const panelW = Math.max(190, measured < 760 ? measured - 8 : Math.floor(measured / Math.max(1, show.length)));
+    const availW = panelW - 48;
+    const GAP = maxCols >= 7 ? 8 : 10;
+    const ICON = Math.max(22, Math.min(38, Math.floor((availW - GAP * (maxCols - 1)) / maxCols)));
+    const geom = { RAIL: 0, STEPX: ICON + GAP, STEPY: ICON + 22, ICON: ICON };
+    out.calcPanelRef = el => { this.calcPanelEl = el; };
+    out.calcIcon = ICON;
+    out.calcBadgeW = Math.max(19, Math.round(ICON * 0.6));
+    out.calcBadgeH = Math.max(12, Math.round(ICON * 0.39));
+    out.calcBadgeLH = Math.max(10, Math.round(ICON * 0.39) - 2);
+    out.calcBadgeFS = ICON >= 34 ? 10 : 9;
+    out.calcGlyph = Math.max(12, Math.round(ICON * 0.37));
     let hovered = null;
     out.calcTrees = show.map(tr => {
       const treePts = {};
@@ -3238,9 +3317,11 @@ class Component extends DCLogic {
         isCandidate: String(tr.status || '').indexOf('candidate') === 0,
         spent: String(spentByTree[tr.id]),
         cells: fr.cells, arrows: fr.arrows, gate: fr.gate,
-        bandY: 4 * geom.STEPY - 5, gridW: fr.gridW, gridH: 308, panelMin: fr.gridW + 14
+        bandY: 4 * geom.STEPY - 5, bandH: geom.STEPY + geom.ICON + 10, gridW: fr.gridW, gridH: fr.gridH, panelMin: fr.gridW + 48
       };
     });
+    // every panel takes the widest tree's basis so the four columns render at equal width
+    out.calcPanelMin = out.calcTrees.reduce((m, t) => Math.max(m, t.panelMin), 0);
     out.calcTreeCount = show.length + ' trees';
     out.calcSpentLabel = totalSpent + ' of 51 points spent';
     out.calcRemaining = String(BUDGET - totalSpent);
