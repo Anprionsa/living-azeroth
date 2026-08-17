@@ -122,6 +122,11 @@ for pp in patch_paths:
         if e:
             errors.append(f"{tid}: " + "; ".join(e))
             continue
+        if "col" in ch:
+            c = ch["col"]
+            if c is None: tal.pop("col", None)
+            elif isinstance(c, int) and 0 <= c <= 3: tal["col"] = c
+            else: errors.append(f"{tid}: col {c!r} outside 0..3")
         if "requires" in ch:
             if ch["requires"] is None: tal.pop("requires", None)
             else: tal["requires"] = {"talent": ch["requires"]["talent"], "ranks": ch["requires"].get("ranks", tree_of[ch["requires"]["talent"]][2]["ranks"])}

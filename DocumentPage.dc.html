@@ -1013,7 +1013,7 @@ main img{max-width:100%;height:auto}
 <section id="t-open" data-spy style="padding:88px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="Register" title="What is settled, what is open" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
-<p style="margin:0 0 20px">No decision blocks the design. All 27 vanilla trees are rebuilt, the seven absorbed trees are revised to the same rules, and both configurations, core and expanded, pass 26 validation rules with zero errors and zero warnings, every talent prerequisite among them, and no row of any tree holds more than four talents. What is settled rests on that suite and on the simulation below; what is open is what neither can reach. Where the documents on this page disagree, this register governs, and the six items that follow are its state.</p>
+<p style="margin:0 0 20px">No decision blocks the design. All 27 vanilla trees are rebuilt, the seven absorbed trees are revised to the same rules, and both configurations, core and expanded, pass 27 validation rules with zero errors and zero warnings, every talent prerequisite among them, no row of any tree holds more than four talents, and every talent's place on the four-column grid is authored so that a prerequisite arrow runs straight wherever the rows allow. What is settled rests on that suite and on the simulation below; what is open is what neither can reach. Where the documents on this page disagree, this register governs, and the six items that follow are its state.</p>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:1px;background:var(--border-faint);border:1px solid var(--border-hairline);margin-top:28px">
 <div style="background:var(--surface-page);padding:18px 20px">
@@ -1512,7 +1512,7 @@ main img{max-width:100%;height:auto}
 <section id="t-calc" data-spy="" style="padding:96px 0 0;scroll-margin-top:24px">
 <x-import component-from-global-scope="ALivingAzerothDesignSystem_623682.SectionHeading" number="View 12" title="The full calculator" level="{{ two }}" hint-size="100%,80px"></x-import>
 <div style="font-size:18px;line-height:1.62;margin-top:16px">
-<p style="margin:0 0 20px">Every class, every tree, the absorbed tree alongside the three it joins. Fifty-one points at level 60, shared across the whole row. Left click spends, right click refunds, and the row gates enforce themselves, so a build that cannot exist cannot be entered.</p>
+<p style="margin:0 0 20px">Every class, every tree, the absorbed tree alongside the three it joins. Fifty-one points at level 60, shared across the whole row. Left click spends, right click refunds, and the row gates enforce themselves, so a build that cannot exist cannot be entered. An arrow is a prerequisite and enforces itself the same way, and each talent's column is placed so that an arrow runs straight down to the talent it gates wherever the rows allow, as the 1.12 client lays its trees out.</p>
 <p style="margin:0 0 20px">The absorbed tree sits in the same panel as the vanilla three on purpose. It is a fourth tree rather than a fourth class, and the only way to judge whether it is splashable rather than mandatory is to spend the points against the same budget everything else spends from.</p>
 </div>
 <div id="calc-controls" style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start;margin-top:28px;padding:14px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline)">
@@ -2180,7 +2180,7 @@ class Component extends DCLogic {
       flat.push({
         ta: ta, row: r.row,
         req: Math.min(r.points != null ? r.points : (r.row - 1) * 5, (r.row - 1) * 5),
-        col: Math.max(0, Math.min(3, ta.col ? ta.col - 1 : i))
+        col: Math.max(0, Math.min(3, typeof ta.col === 'number' ? ta.col : i))
       });
     }));
     const byName = {};
@@ -2520,7 +2520,7 @@ class Component extends DCLogic {
       const nodes = [];
       (t.rows || []).forEach(r => (r.talents || []).forEach((ta, i) => {
         nodes.push({
-          name: ta.name, row: r.row, col: Math.min(3, ta.col ? ta.col - 1 : i),
+          name: ta.name, row: r.row, col: Math.min(3, typeof ta.col === 'number' ? ta.col : i),
           ranks: ta.ranks, gate: (r.row - 1) * 5, prereq: ta.requires || null,
           text: ta.text, note: ta.note || '', kind: 'effect', status: ta.status || null,
           icon: ta.icon || (have.has(slugOf(t.id, ta.name)) ? 'icons/' + slugOf(t.id, ta.name) + '.png' : '')
@@ -2701,7 +2701,7 @@ class Component extends DCLogic {
       armsNodes = [];
       armsTree.rows.forEach(r => r.talents.forEach((t, i) => {
         const q = P.reqOf(t);
-        armsNodes.push({ name: t.name, row: r.row, col: i, ranks: t.ranks,
+        armsNodes.push({ name: t.name, row: r.row, col: typeof t.col === 'number' ? t.col : i, ranks: t.ranks,
           kind: t.buys === 'ability' ? 'button' : t.buys === 'number' ? 'number' : 'effect',
           gate: r.gate, prereq: q ? q.name : null, prereqRanks: q ? q.ranks : 0,
           text: t.text, icon: (s.iconMap || {})[t.id] || '', t: t, r: r });
@@ -2958,8 +2958,12 @@ class Component extends DCLogic {
     const P = this.v2Prereq(tree);
     // the 1.12 client lays a tree on a fixed column grid and centres a short row in it rather than packing it left.
     // Integer offsets keep the arrow router's cell grid intact.
-    const cols = Math.max(4, tree.rows.reduce((m, r2) => Math.max(m, r2.talents.length), 0));
+    // An authored talent.col (0-based, unique within its row) places a cell on the grid; without one a row is centred by index.
+    const cols = Math.max(4, tree.rows.reduce((m, r2) => Math.max(m, r2.talents.length, r2.talents.reduce((k, t2) => Math.max(k, (typeof t2.col === 'number' ? t2.col : 0) + 1), 0)), 0));
     const offOf = r => Math.floor((cols - r.talents.length) / 2);
+    const colOf = (r, t, i) => typeof t.col === 'number' ? t.col : offOf(r) + i;
+    const occ = {};
+    tree.rows.forEach(r2 => r2.talents.forEach((t2, i2) => { occ[r2.row + ':' + colOf(r2, t2, i2)] = true; }));
     const cells = [];
     tree.rows.forEach(r => r.talents.forEach((t, i) => {
       const cur = pts[t.id] || 0;
@@ -2980,7 +2984,7 @@ class Component extends DCLogic {
         : t.crossTree ? ['\u2194', 'var(--quality-rare)']
         : t.availableIn ? ['+', 'var(--gold-dim)'] : null;
       cells.push({
-        key: t.id, x: RAIL + (offOf(r) + i) * STEPX, y: (r.row - 1) * STEPY,
+        key: t.id, x: RAIL + colOf(r, t, i) * STEPX, y: (r.row - 1) * STEPY,
         bg: iconMap[t.id] ? 'url(' + iconMap[t.id] + ')' : 'none',
         iconBg: iconMap[t.id] ? 'url(' + iconMap[t.id] + ')' : 'none',
         rank: cur + '/' + t.ranks, border: border, badgeBorder: border,
@@ -2996,20 +3000,15 @@ class Component extends DCLogic {
       });
     }));
     // prerequisite arrows, drawn as the 1.12 client draws them: gold once the prerequisite holds its required points, dim until then.
-    // Cells here are packed by index rather than by an authored grid column, so a leg must never pass through another cell:
-    // v2Route runs legs in the gaps between rows and columns and enters the dependent from its top or its side.
-    const route = this.v2Route(geom, (row, col) => {
-      const rr = tree.rows.find(z => z.row === row);
-      if (!rr) return false;
-      const o = offOf(rr);
-      return col >= o && col < o + rr.talents.length;
-    });
+    // Placement is authored so an arrow runs straight wherever the rows allow; where it cannot, a leg must never pass through
+    // another cell: v2Route runs legs in the gaps between rows and columns and enters the dependent from its top or its side.
+    const route = this.v2Route(geom, (row, col) => !!occ[row + ':' + col]);
     const arrows = [];
     tree.rows.forEach(r => r.talents.forEach((t, i) => {
       const q = P.reqOf(t);
       if (!q) return;
       const met = (pts[q.id] || 0) >= q.ranks;
-      const seg = route(offOf(q.src.r) + q.src.col, q.src.r.row, offOf(r) + i, r.row);
+      const seg = route(colOf(q.src.r, q.src.t, q.src.col), q.src.r.row, colOf(r, t, i), r.row);
       arrows.push({ key: t.id + '<' + q.id, line: seg.line, head: seg.head, met: met, stroke: met ? 'var(--gold)' : 'rgba(232,220,196,.26)' });
     }));
     const gate = [1, 2, 3, 4, 5, 6, 7].map(r => ({

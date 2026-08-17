@@ -253,6 +253,21 @@ def r_prereq(t):
             if back==x["id"]: bad.append(f"{x['name']} and {tg[1]['name']} require each other")
     return bad
 
+@rule("columns","error",["vanilla","rebuilt","absorbed","original"])
+def r_columns(t):
+    bad=[]
+    for r in t["rows"]:
+        seen={}
+        for x in r["talents"]:
+            c=x.get("col")
+            if c is None: continue
+            if not isinstance(c,int) or c<0 or c>3: bad.append(f"{x['name']}: col {c!r} outside 0..3")
+            elif c in seen: bad.append(f"{x['name']} and {seen[c]} share column {c} in row {r['row']}")
+            else: seen[c]=x['name']
+        if any(x.get("col") is not None for x in r["talents"]) and any(x.get("col") is None for x in r["talents"]):
+            bad.append(f"row {r['row']}: some talents carry col and some do not")
+    return bad
+
 errs=warns=0; report={}
 for t in D["trees"]:
     for name,sev,kinds,fn in R:

@@ -28,8 +28,8 @@
     "dividend": 30
    }
   },
-  "note": "Regenerated in August 2026 after stage N (HANDOFF-stageN.md, HANDOFF-findings6.md; findings6-results.json) on the staging data files/sim-work/talent-data.json, which is canonical at commit f02a41d (the row cap and its retune, stages L and M) plus stageN_patch.py: Radiance ships the design's profile, banded on the healing score alone with the combined score at weight one reported, priest-corona's emission at the design's share, 0.11 of every heal healed on the ring and dealt to the enemy where the double band had bounded it to 0.02, and Holy Nova's cost clause and text returned to the design's authoring (0.7 on Holy Nova's own casts; the 0.81 on every heal that carries a Corona removed), so no Radiance tooltip differs from the design's. Read through the instrument as stage N left it: the build merged by talent id (stage F), every addTarget read for every hit in its scope (G), every when in the closed vocabulary decided by the table the instrument rolls or the target it acts on (H), a subtraction node forced into the build its role bands and read against the build without it and a tank's damage side reading the tank-valued build (I), a pet summon cast while there is room for it (J), the level set from outside (K), and in heal.py each share a heal carries beyond its target landing on the most wounded ally other than the one healed (N; before this the share was dropped whenever the healed ally was still the lowest, which on the tank pattern was every share once the second tank stood level with the first). sim.py, tank.py, nocapstone.py and leveling.py did not change under stage N and no damage, tank, sweep or leveling build buys a talent the stage touched, so the sixty core, thirty-five expanded, twelve tank and sweep cells, the leveling rows and the ten damage and tank subtraction nodes are carried from findings5-results.json as they read there and were not rerun; the healing cells (24 seeds through harness.py) and the two heal-role subtraction nodes (Deep Slumber, Apostasy, 24 seeds) were reread. Cells counted: sixty core, thirty-five expanded, twelve tank (three cells on four capstones), twelve healing (three patterns on four healers), three for Dreamer and three for Radiance (three patterns on the healing score; the combined score is reported in the row and not counted). 124 of 125 inside; the one outside is Metamorphosis on switching at +15.0%, named. Counting the Retribution + Holy row, as the stage handoffs do, 129 of 130. The findings5 file this replaces read 127 of 128 with Radiance counted on two scores at emission 0.02 (-4.3% / +0.1% / -3.0% healing, -0.8% / +3.9% / +0.1% combined); under stage N every banded healer moved within a point and stays inside, Radiance's healing score reads -0.8 / +2.0 / -4.0% at the design's share, and Apostasy, read by its cost, reads a gain on every pattern where it read a loss on the tank pattern. The row cap's state stands as the findings5 file recorded it: twelve of the sixty-six banded builds buy a different talent set on the capped rows, one cell left the band under stage L and stage M's one magnitude brought it back to +3.4%.",
-  "supersedes": "The findings5 file (findings5-results.json), the findings4 file (findings4-results.json), the findings3 file (findings3-results.json), the findings refresh file (findings2-results.json), the stage 3 file before them, and before them final-state.md, full-pass.md, suite-results.md, tuning-pass-expanded.md section 2 for the numbers; the prose findings of band-policy.md and candidate-test.md stand."
+  "note": "Regenerated in August 2026 after stage O (HANDOFF-stageO.md; findings7-results.json, every step of stageO_run.py rerun at the findings seed counts) on the staging data files/sim-work/talent-data.json, which is canonical after the placement pass: every rework talent carries an authored grid column so that a prerequisite arrow runs straight wherever the rows allow, fifteen talents moved one row where a straight arrow needed it under the row cap's rules, and four further moves were withdrawn after a stage 0 read their cost (Improved Immolate and Storm Caller taken to the hybrid seat took Affliction + Destruction on cleave to +7.8% and Conduit on cleave to +12.5%; placement is a visual and the gates are the design, so those two arrows bend). Fourteen of the sixty-six banded builds buy a different talent set under the fifteen moves and one pair moved: Destruction + Demonology, whose Demonic Empowerment sits at gate 20 now where a twenty-point splash cannot buy it, from -3.6% / +4.2% / -4.6% / -4.9% / -5.9% to -0.4% / +5.9% / -0.8% / -2.5% / -3.1%, inside; every other banded cell reads to the digit against findings6-results.json. Before that, stage N (HANDOFF-stageN.md, HANDOFF-findings6.md): the data is canonical at commit f02a41d (the row cap and its retune, stages L and M) plus stageN_patch.py: Radiance files/sim-work/talent-data.json, which is canonical at commit f02a41d (the row cap and its retune, stages L and M) plus stageN_patch.py: Radiance ships the design's profile, banded on the healing score alone with the combined score at weight one reported, priest-corona's emission at the design's share, 0.11 of every heal healed on the ring and dealt to the enemy where the double band had bounded it to 0.02, and Holy Nova's cost clause and text returned to the design's authoring (0.7 on Holy Nova's own casts; the 0.81 on every heal that carries a Corona removed), so no Radiance tooltip differs from the design's. Read through the instrument as stage N left it: the build merged by talent id (stage F), every addTarget read for every hit in its scope (G), every when in the closed vocabulary decided by the table the instrument rolls or the target it acts on (H), a subtraction node forced into the build its role bands and read against the build without it and a tank's damage side reading the tank-valued build (I), a pet summon cast while there is room for it (J), the level set from outside (K), and in heal.py each share a heal carries beyond its target landing on the most wounded ally other than the one healed (N; before this the share was dropped whenever the healed ally was still the lowest, which on the tank pattern was every share once the second tank stood level with the first). sim.py, tank.py, nocapstone.py and leveling.py did not change under stages N and O; under stage O every step was rerun (core and expanded at 120 seeds, tank at 30, heal at 24, the capstone-free sweep at 25, the twelve subtraction nodes at 60 / 30 / 24, the leveling instrument at 30 / 20 / 60 / 20). Cells counted: sixty core, thirty-five expanded, twelve tank (three cells on four capstones), twelve healing (three patterns on four healers), three for Dreamer and three for Radiance (three patterns on the healing score; the combined score is reported in the row and not counted). 124 of 125 inside; the one outside is Metamorphosis on switching at +15.0%, named. Counting the Retribution + Holy row, as the stage handoffs do, 129 of 130. The findings5 file this replaces read 127 of 128 with Radiance counted on two scores at emission 0.02 (-4.3% / +0.1% / -3.0% healing, -0.8% / +3.9% / +0.1% combined); under stage N every banded healer moved within a point and stays inside, Radiance's healing score reads -0.8 / +2.0 / -4.0% at the design's share, and Apostasy, read by its cost, reads a gain on every pattern where it read a loss on the tank pattern. The row cap's state stands as the findings5 file recorded it: twelve of the sixty-six banded builds buy a different talent set on the capped rows, one cell left the band under stage L and stage M's one magnitude brought it back to +3.4%; the placement pass adds its fourteen and moves one pair.",
+  "supersedes": "The findings6 file (findings6-results.json), the findings5 file (findings5-results.json), the findings4 file (findings4-results.json), the findings3 file (findings3-results.json), the findings refresh file (findings2-results.json), the stage 3 file before them, and before them final-state.md, full-pass.md, suite-results.md, tuning-pass-expanded.md section 2 for the numbers; the prose findings of band-policy.md and candidate-test.md stand."
  },
  "instruments": [
   {
@@ -202,11 +202,11 @@
     "alt": "Demonology",
     "build": "Destruction 31 / Demonology 20 against Destruction 30 / Demonology 21",
     "cells": [
-     "-3.6%",
-     "+4.2%",
-     "-4.6%",
-     "-4.9%",
-     "-5.9%"
+     "-0.4%",
+     "+5.9%",
+     "-0.8%",
+     "-2.5%",
+     "-3.1%"
     ]
    },
    {
@@ -258,7 +258,7 @@
     ]
    }
   ],
-  "note": "Each row is a capstone build against its mid-tree alternative, 31 / 20 against 30 / 21, at 120 seeds. Twelve pairs are measurable; Retribution + Holy is Repentance, simulable false, and is not a row: it read zero by construction until stage L, and reads -0.7% / +0.0% / -0.7% / -0.9% / -0.7% since, because the Holy 21 splash's last point buys Sanctified Judgement's first rank, Judgement's cooldown at 0.8, where it bought Divine Favor, a healing critical, now that Divine Favor sits at gate 25; the cells measure that rank and nothing of Repentance. Elemental + Enhancement is measured and reads within a tenth of zero on four cells: Elemental Mastery as modelled, a guaranteed critical on one spell, is worth about nothing against a twenty-first Enhancement point. Median capstone premium on patchwerk +0.7%, twelve of twelve inside five percent. Stages F to K were instrument repairs before they were tuning, and they moved four pairs by more than the stream. Affliction + Destruction reads -1.0% / +2.7% / -1.0% / +6.4% / -2.8% where the findings3 file before them read -5.0% / +1.7% / -5.0% / -3.3% / -3.7%: reading extra targets by tag put Dark Pact's three targets on every shadow spell and the cleave cell at +29.3%, and the retune reads Dark Pact's second enemy as one target inside a twelve-second window where the design wrote twenty (+8.9% at twenty with every other clause honest, the window at pull being worth eight Shadow Bolts and every periodic on a second enemy), one of stage G's two text changes, Bitter Cold's the other; then a refresh conditioned on a cast read as a refresh, and four Warlock refresh clauses whose texts name the Shadow Bolt or the Shadow critical that refreshes (Shadow and Flame, Soul Siphon, Improved Corruption rank 2, Shadow Mastery rank 5) gained the when their texts state, so Corruption is refreshed by every bolt and the sustained cells came in from -5 to -1 with no text changed. Destruction + Demonology reads -3.6% / +4.2% / -4.6% / -4.9% / -5.9% with Shadow and Flame conditioned; without the condition its capstone build kept an Immolate that never lapsed while the mid-tree build lost Improved Immolate's, and the pair read +7.5% on patchwerk. Combat + Assassination reads +0.5% / +5.0% / +0.6% / +0.6% / +0.4%: Bladework's combo point on a parry is inert for a rogue that attacks from behind, Improved Sinister Strike's and Puncturing Wounds' read on a critical only, and the burst cell came in from +6.6% to +5.0% with Adrenaline Rush's window still at five seconds, where vanilla's fifteen read +18.7% against a twenty-first Assassination point whose first rank carries no effect. The Rogue rows are the recalibrated class: Riposte carries its parry condition and a damage-role rogue neither casts it nor counts it castable, so the gear block was refit by the calibration's own method (a factor of 2.78) and the depth coefficient re-levelled to hold the class's share. Arms + Fury reads +4.3% / -2.0% / +4.3% / -4.1% / +4.5%: Deep Wounds' bleed is paid on a critical only, Bloodletting's and Rupture Line's refresh on the cast named, Improved Cleave's third target for the first time, all in both builds; the mid-tree shape carrying burst is the design working rather than failing. Fire + Frost reads +2.6% / +5.3% / +2.9% / +3.4% / +2.7% (Improved Scorch's free Scorch after five landed, both builds; Combustion's critical window at 0.10 since Ignite was paid); its cleave cell is the one the row cap moved: with Improved Cone of Cold at gate 25 the Fire 30 / Frost 21 build's twenty-first Frost point buys Frost Channeling's fourth rank instead, whose cost clause, five percent off every frost spell, bought seven more Blizzards on a cleave rotation that ranks Blizzard first by its own reach and read the cell at +18.1%; the clause names channels, so it is read on Blizzard at two percent, and the cell reads +3.4% where it read +1.6% with the four single-target cells to the digit. Arcane + Fire reads +2.2% / +6.5% / +1.0% / -2.6% / +2.2% (Fire 21 buys Blast Wave and its fire-tag target, which the 31 / 20 build lacks, so cleave moved from +2.0% to -2.6%), Balance + Feral +0.9% / +1.5% / +0.9% / +1.3% / +0.7% (Nature's Grace on the spell after a critical, both builds; both builds spend four ranks of Starlight and Vengeance to open gate 20 for Improved Starfire since the row cap and reach Moonfury with one point where they reached it with five, and read within a tenth of what they read then, since Moonfury's ranks 2 to 5 read nothing the rotation casts). Fury + Protection reads +2.3% / +4.6% / +2.3% / -1.7% / +1.6%, unchanged since Bloodthirst's coefficient came down to 0.219 of its original: a forty-five second fight carries about two and a half points of seed noise at this count, which is why that cell was moved to the middle rather than to the line, and Death Wish's cooldown magnitude was inert for the pair, since both builds carry it. Marksmanship + Beast Mastery's cleave cell reads +5.0% under the sweep read in expectation, Trueshot's sweep widened to two enemies on every third shot; nothing read for the Hunter changed under stages F to M. Shadow + Discipline reads +4.5% / +1.7% / +4.5% / +4.5% / +4.5%: since the row cap both its builds open gate 25 with Mind Melt in place of Inner Light and buy Silence there before Darkness's fifth rank, whose shadow vulnerability is the talent's one authored effect, so both fall fifteen percent in absolute output (437.7 against 418.8 on patchwerk where they read 516.5 against 494.2) and the gap holds, burst by a fifth of a point; the selector values a talent whole, and a player takes Darkness 5 / 5 and leaves Silence, which is named and not tuned. Every other pair reads to the digit under stages L and M. The third Rogue pair, Subtlety 31 / Combat 20 against 30 / 21, is not a core row and reads +0.3% / +2.0% / +0.3% / +0.3% / +0.3%.",
+  "note": "Each row is a capstone build against its mid-tree alternative, 31 / 20 against 30 / 21, at 120 seeds. Twelve pairs are measurable; Retribution + Holy is Repentance, simulable false, and is not a row: it read zero by construction until stage L, and reads -0.7% / +0.0% / -0.7% / -0.9% / -0.7% since, because the Holy 21 splash's last point buys Sanctified Judgement's first rank, Judgement's cooldown at 0.8, where it bought Divine Favor, a healing critical, now that Divine Favor sits at gate 25; the cells measure that rank and nothing of Repentance. Elemental + Enhancement is measured and reads within a tenth of zero on four cells: Elemental Mastery as modelled, a guaranteed critical on one spell, is worth about nothing against a twenty-first Enhancement point. Median capstone premium on patchwerk +0.7%, twelve of twelve inside five percent. Stages F to K were instrument repairs before they were tuning, and they moved four pairs by more than the stream. Affliction + Destruction reads -1.0% / +2.7% / -1.0% / +6.4% / -2.8% where the findings3 file before them read -5.0% / +1.7% / -5.0% / -3.3% / -3.7%: reading extra targets by tag put Dark Pact's three targets on every shadow spell and the cleave cell at +29.3%, and the retune reads Dark Pact's second enemy as one target inside a twelve-second window where the design wrote twenty (+8.9% at twenty with every other clause honest, the window at pull being worth eight Shadow Bolts and every periodic on a second enemy), one of stage G's two text changes, Bitter Cold's the other; then a refresh conditioned on a cast read as a refresh, and four Warlock refresh clauses whose texts name the Shadow Bolt or the Shadow critical that refreshes (Shadow and Flame, Soul Siphon, Improved Corruption rank 2, Shadow Mastery rank 5) gained the when their texts state, so Corruption is refreshed by every bolt and the sustained cells came in from -5 to -1 with no text changed. Destruction + Demonology reads -0.4% / +5.9% / -0.8% / -2.5% / -3.1% with Shadow and Flame conditioned; without the condition its capstone build kept an Immolate that never lapsed while the mid-tree build lost Improved Immolate's, and the pair read +7.5% on patchwerk; under the placement pass Demonic Empowerment sits at gate 20 and neither build buys it, which moved the pair from -3.6% / +4.2% / -4.6% / -4.9% / -5.9% and is the one pair the pass moved. Combat + Assassination reads +0.5% / +5.0% / +0.6% / +0.6% / +0.4%: Bladework's combo point on a parry is inert for a rogue that attacks from behind, Improved Sinister Strike's and Puncturing Wounds' read on a critical only, and the burst cell came in from +6.6% to +5.0% with Adrenaline Rush's window still at five seconds, where vanilla's fifteen read +18.7% against a twenty-first Assassination point whose first rank carries no effect. The Rogue rows are the recalibrated class: Riposte carries its parry condition and a damage-role rogue neither casts it nor counts it castable, so the gear block was refit by the calibration's own method (a factor of 2.78) and the depth coefficient re-levelled to hold the class's share. Arms + Fury reads +4.3% / -2.0% / +4.3% / -4.1% / +4.5%: Deep Wounds' bleed is paid on a critical only, Bloodletting's and Rupture Line's refresh on the cast named, Improved Cleave's third target for the first time, all in both builds; the mid-tree shape carrying burst is the design working rather than failing. Fire + Frost reads +2.6% / +5.3% / +2.9% / +3.4% / +2.7% (Improved Scorch's free Scorch after five landed, both builds; Combustion's critical window at 0.10 since Ignite was paid); its cleave cell is the one the row cap moved: with Improved Cone of Cold at gate 25 the Fire 30 / Frost 21 build's twenty-first Frost point buys Frost Channeling's fourth rank instead, whose cost clause, five percent off every frost spell, bought seven more Blizzards on a cleave rotation that ranks Blizzard first by its own reach and read the cell at +18.1%; the clause names channels, so it is read on Blizzard at two percent, and the cell reads +3.4% where it read +1.6% with the four single-target cells to the digit. Arcane + Fire reads +2.2% / +6.5% / +1.0% / -2.6% / +2.2% (Fire 21 buys Blast Wave and its fire-tag target, which the 31 / 20 build lacks, so cleave moved from +2.0% to -2.6%), Balance + Feral +0.9% / +1.5% / +0.9% / +1.3% / +0.7% (Nature's Grace on the spell after a critical, both builds; both builds spend four ranks of Starlight and Vengeance to open gate 20 for Improved Starfire since the row cap and reach Moonfury with one point where they reached it with five, and read within a tenth of what they read then, since Moonfury's ranks 2 to 5 read nothing the rotation casts). Fury + Protection reads +2.3% / +4.6% / +2.3% / -1.7% / +1.6%, unchanged since Bloodthirst's coefficient came down to 0.219 of its original: a forty-five second fight carries about two and a half points of seed noise at this count, which is why that cell was moved to the middle rather than to the line, and Death Wish's cooldown magnitude was inert for the pair, since both builds carry it. Marksmanship + Beast Mastery's cleave cell reads +5.0% under the sweep read in expectation, Trueshot's sweep widened to two enemies on every third shot; nothing read for the Hunter changed under stages F to M. Shadow + Discipline reads +4.5% / +1.7% / +4.5% / +4.5% / +4.5%: since the row cap both its builds open gate 25 with Mind Melt in place of Inner Light and buy Silence there before Darkness's fifth rank, whose shadow vulnerability is the talent's one authored effect, so both fall fifteen percent in absolute output (437.7 against 418.8 on patchwerk where they read 516.5 against 494.2) and the gap holds, burst by a fifth of a point; the selector values a talent whole, and a player takes Darkness 5 / 5 and leaves Silence, which is named and not tuned. Every other pair reads to the digit under stages L and M. The third Rogue pair, Subtlety 31 / Combat 20 against 30 / 21, is not a core row and reads +0.3% / +2.0% / +0.3% / +0.3% / +0.3%.",
   "excluded": {
    "pair": "Retribution",
    "cells": [
@@ -559,9 +559,9 @@
   "note": "Healers are read across three fight shapes, steady damage, spikes on one target, and damage spread across the raid, and on two numbers in each: healing done per second, and healing done per point of mana. Both have to land within seven percent, because a healer who wins on throughput by burning twice the mana has not won anything. Radiance, the new healing tree, is banded on its healing alone, with the score that folds in the damage it deals reported beside it, since a tree that heals by dealing damage is otherwise easy to flatter. Both readings land inside."
  },
  "hybrids": {
-  "headline": "Every class has a build that skips its capstone and still competes. The Druid's ties its capstone build exactly, the Hunter's and the Warlock's come out ahead at 4.6% and 2.2%, and the widest gap of the six is the Warrior's at 5.0% behind.",
+  "headline": "Every class has a build that skips its capstone and still competes. The Druid's ties its capstone build exactly, the Hunter's and the Warlock's come out ahead at 4.6% and 1.7%, and the widest gap of the six is the Warrior's at 5.0% behind.",
   "items": [
-   "The shapes differ by class. A rogue, a mage and a druid reach it by moving a single point, Assassination 30 / Subtlety 21, Fire 30 / Frost 21 and Feral Combat 30 / Balance 21, landing 0.3% and 2.9% behind and dead level. The two that come out ahead spread wider: Beast Mastery 30 with eleven points in Marksmanship and ten in Survival, and Demonology 26 with sixteen in Affliction and nine in Destruction.",
+   "The shapes differ by class. A rogue, a mage and a druid reach it by moving a single point, Assassination 30 / Subtlety 21, Fire 30 / Frost 21 and Feral Combat 30 / Balance 21, landing 0.3% and 2.9% behind and dead level. The two that come out ahead spread wider: Beast Mastery 30 with eleven points in Marksmanship and ten in Survival, and Affliction 30 with sixteen points in Destruction and five in Demonology.",
    "Competing is not the same as spreading freely. Most ways of dividing fifty-one points come out far worse than any shape above, because points in a healing tree buy a damage build nothing, and where a talent only pays inside its own tree, splitting is a straight loss. These are the builds that work, not evidence that everything does."
   ],
   "table": [
@@ -698,43 +698,43 @@
     "cls": "Warlock",
     "bestCapstoneBuild": "Affliction 31 / Destruction 20",
     "bestCapstoneDps": 943.1,
-    "bestCapstoneFree": "Demonology 26 / Affliction 16 / Destruction 9",
-    "gap": "+2.2%",
-    "within7": "35 of 114",
-    "beating": 9,
-    "distinct": "78 of 114",
-    "median": "-11.8%",
+    "bestCapstoneFree": "Affliction 30 / Destruction 16 / Demonology 5",
+    "gap": "+1.7%",
+    "within7": "11 of 114",
+    "beating": 6,
+    "distinct": "72 of 114",
+    "median": "-12.5%",
     "ladder": [
      {
       "build": "Affliction 31 / Destruction 20",
       "dps": 943.1
      },
      {
-      "build": "Demonology 31 / Affliction 20",
-      "dps": 912.0
-     },
-     {
       "build": "Destruction 31 / Affliction 20",
       "dps": 861.8
      },
      {
-      "build": "Affliction 31 / Demonology 20",
-      "dps": 795.3
+      "build": "Demonology 31 / Affliction 20",
+      "dps": 849.7
      },
      {
-      "build": "Demonology 31 / Destruction 20",
-      "dps": 785.6
+      "build": "Affliction 31 / Demonology 20",
+      "dps": 796.9
      },
      {
       "build": "Destruction 31 / Demonology 20",
-      "dps": 704.7
+      "dps": 726.2
+     },
+     {
+      "build": "Demonology 31 / Destruction 20",
+      "dps": 723.2
      }
     ],
     "damageTreesOnly": {
      "shapes": 114,
-     "best": "Demonology 26 / Affliction 16 / Destruction 9",
-     "gap": "+2.2%",
-     "within7": 35
+     "best": "Affliction 30 / Destruction 16 / Demonology 5",
+     "gap": "+1.7%",
+     "within7": 11
     }
    },
    {
@@ -825,66 +825,6 @@
    }
   ],
   "method": "nocapstone.py's 114 shapes per class, 51 points and no tree above 30, on patchwerk at 25 seeds, against the class's best capstone build measured the same way. Damage-tree shapes are counted separately, because a shape that puts points in a healing or tank tree is measuring how many ways there are to spend points badly, which reading-the-number.md recorded. Since stage A a Warrior shape whose deepest tree is Protection holds a shield; since stage B an effect conditioned on a target's death reads nothing on patchwerk, and an ability conditioned on a parry is not cast by a damage build (Counterattack, and Riposte since stage D); since stage C a proc of damage is paid in expectation and a rank-keyed effect applies from its rank; since stage F the trees of a shape merge by talent id; since stage H a condition is decided by the hit that reads it; since stage L every shape buys against rows capped at four talents, so a twenty-point splash reaches what row 4 holds and a 25 or 26 splash the seat as the moves left it. The sweep is of greedy builds: the leveling instrument's hill-climb found level-60 builds that improve when a talent the selector valued is forbidden (Conflagrate and Destructive Reach from Destruction 31 / Affliction 20, +38.9%; Improved Mind Blast and Mana Burn from Shadow 31 / Discipline 20, +38.9%), which the banded cells, two greedy builds against each other, do not see and the absolute figures here would."
- },
- "changed": {
-  "headline": "Most of Classic's talent points bought a number. Five ranks for a few percent of damage, or a percentage chance that something might happen: a tree could be read end to end without naming a single decision a player would make. The rebuild spends those same points on behaviour, and the pairs below set a real Classic tooltip beside what the talent reads now.",
-  "note": "The simulation is what keeps that trade honest. A talent that changes what a class does is easy to write and easy to overtune, and eleven were rewritten after measurement showed the first version did not work. One talent per class is shown here. Every tree is spendable in the calculator below.",
-  "talents": [
-   {
-    "cls": "Druid",
-    "talent": "Nature's Grasp",
-    "tree": "Balance",
-    "why": "Classic gave a one in three chance to root a single attacker, and only under open sky. It roots reliably now, indoors as well, and while it holds the Nature spells cast behind it reach a second target."
-   },
-   {
-    "cls": "Hunter",
-    "talent": "Deterrence",
-    "tree": "Survival",
-    "why": "A quarter more dodge and parry reads as a survival cooldown and plays as a pause in the rotation. Deflected attacks now return a shot, so the ten seconds are spent doing something."
-   },
-   {
-    "cls": "Mage",
-    "talent": "Presence of Mind",
-    "tree": "Arcane",
-    "why": "The ten second limit in the Classic text existed to stop one interaction and nothing else. Removing it, and letting the spell go off while silenced, is closer to the talent players believed they were buying."
-   },
-   {
-    "cls": "Paladin",
-    "talent": "Holy Shield",
-    "tree": "Protection",
-    "why": "Three numbers and a charge counter share one tooltip. The block and the threat both survive as behaviour, and reading the talent no longer means doing arithmetic."
-   },
-   {
-    "cls": "Priest",
-    "talent": "Inner Focus",
-    "tree": "Discipline",
-    "why": "The Classic text spends two clauses on percentages for a spell cast once a fight. The free spell is now uninterruptible as well, which is the reason a healer would hold it."
-   },
-   {
-    "cls": "Rogue",
-    "talent": "Adrenaline Rush",
-    "tree": "Combat",
-    "why": "Doubling a resource is worth whatever the gear of the week makes it worth. Finishers costing nothing during the window is worth the same to every rogue who takes it."
-   },
-   {
-    "cls": "Shaman",
-    "talent": "Elemental Fury",
-    "tree": "Elemental",
-    "why": "Doubled critical damage is invisible while it is happening. A totem discharging what it had left when it dies is something a shaman can see, and can drop a totem to cause."
-   },
-   {
-    "cls": "Warlock",
-    "talent": "Dark Pact",
-    "tree": "Affliction",
-    "why": "Classic drained the pet for mana a deep Affliction build already had, and measurement showed the deeper build finishing behind the shallower one. It now spends the demon itself, and taking it means giving up summoning another."
-   },
-   {
-    "cls": "Warrior",
-    "talent": "Death Wish",
-    "tree": "Fury",
-    "why": "A flat twenty percent on a single point is more than most talents buy with five, and it left Warrior with one build worth taking. What it does now cannot be had by spending the points anywhere else."
-   }
-  ]
  },
  "pairs": {
   "core": {
@@ -987,7 +927,8 @@
   "A level is a set of terms set from outside the instrument, and the vanilla trees carry no effects, so measuring the early levels meant an author's table and an explicit dividend curve. The first pass valued a grants list at nothing and bought no Aimed Shot for a vanilla hunter, which read the rebuilt hunter at +94% at level 20; with the grant effect it reads +4.3%. The rebuilt trees back-load, below vanilla in three classes at 20 and below their level-60 relation in seven, which is the design's stated shape read as a number and not tuned.",
   "A row is not a lever, but the simulator buys against gates, so capping every row at four talents moved thirty-four talents and read twelve of sixty-six banded builds with a different talent set without a text or an effect changing. One cell left the band, because a talent that had never been bought (Frost Channeling's fourth rank) came into reach with a clause on the whole frost tag that its text gives to channels; the Warrior's gate-20 seat, rid of a heal, put six capstone-free shapes within seven percent where one had been; and both Shadow builds fell fifteen percent in absolute output with their gap held, because at gate 25 the selector values Silence whole above Darkness's fifth rank. The band saw one of the three.",
   "A clause read where it had never been bought is a clause read for the first time. Frost Channeling's five percent discount on every frost spell was authored on the tag and never reached by a banded build until a row moved; on a cleave rotation that ranks Blizzard first by its own reach it bought seven more channels and sixteen points of gap. Read on the channel its text names at two percent, the cell is inside and the Frost-heavy shapes lose a discount the text never gave Frostbolt; what the rotation reads a filler by is the instrument fact under both.",
-  "A share a heal carried beyond its target was dropped whenever the ally just healed was still the lowest, and on a two-tank pattern that was every share once the second tank stood level with the first, so the emission's ring landed nowhere on the tank pattern and a real emission read Radiance's steady at -19.6% at any share, flat, while no cost clause the design could imply banded it by more than a third of a point. Landing the share on the most wounded ally other than the one healed moved no banded healer by more than a point, read the emission as a flat lever across the three patterns, and showed the mana lever the tank pattern needed to be the mechanic's own free healing half; the design's share, 0.11, and the design's Holy Nova ship, and no clause is written on any text. A bound the band appears to set on a design number should be checked against where the instrument puts the number before it is called the band's."
+  "A share a heal carried beyond its target was dropped whenever the ally just healed was still the lowest, and on a two-tank pattern that was every share once the second tank stood level with the first, so the emission's ring landed nowhere on the tank pattern and a real emission read Radiance's steady at -19.6% at any share, flat, while no cost clause the design could imply banded it by more than a third of a point. Landing the share on the most wounded ally other than the one healed moved no banded healer by more than a point, read the emission as a flat lever across the three patterns, and showed the mana lever the tank pattern needed to be the mechanic's own free healing half; the design's share, 0.11, and the design's Holy Nova ship, and no clause is written on any text. A bound the band appears to set on a design number should be checked against where the instrument puts the number before it is called the band's.",
+  "A grid column is not a lever either, but a row is a gate, and laying every tree out so its arrows run straight moved nineteen talents one row before the stage 0 read the cost: two of them, an early staple each, had gone to the hybrid seat where a twenty-point splash cannot buy them, and each cost a banded cell (Affliction + Destruction on cleave +7.8%, Conduit +12.5%). Placement is a visual and the gates are the design, so those two arrows bend and fifteen moves stand; fourteen of sixty-six banded builds buy a different talent set under them and one pair moved, inside."
  ],
  "subtraction": {
   "headline": "Twelve talents carry simulable: false and each is read by its cost since stage I: the node forced into the build its role bands and read against the same build without it, its permission and its whole apart, so gain, cost and net are three numbers on every cell. Two are priced trades as the data stands (Unbreakable, Irreversible), two are priced under a stated assumption (Immovable, Silent Death), two read as pure losses (Grave Bargain, Sole Survivor), one reads as a gain on every pattern since stage N's ring repair (Apostasy at 0.8, its proxy levelled under the rule the stage repaired and named for the owner) and four are argued because no instrument prices their cost (Repentance, Damnation, Deep Slumber, Fixed Point); Irreversible's and Apostasy's proxies were re-levelled by the guarded method in stage I and no simulable flag changed",
@@ -1077,10 +1018,10 @@
     "permission": "as the gate-20 node; as the data stands its no_expiry is unread and it reads as an empty point",
     "costRead": "the same: in no instrument",
     "verdict": "argued: the cost is in no instrument; the banded Blackguard build carries it",
-    "W": "damage 785 / 925 / 785 / 850 / 766",
-    "gain": "damage -0.2 / +3.6 / -0.2 / -2.3 / +1.1",
+    "W": "damage 785 / 926 / 785 / 851 / 766",
+    "gain": "damage -0.3 / +3.6 / -0.3 / -2.4 / +1.1",
     "cost": "damage +0.0 / +0.0 / +0.0 / +0.0 / +0.0",
-    "net": "damage -0.2 / +3.6 / -0.2 / -2.3 / +1.1; as the data stood +0.0 / +0.0 / +0.0 / +0.1 / +0.0"
+    "net": "damage -0.3 / +3.6 / -0.3 / -2.4 / +1.1; as the data stood +0.0 / +0.0 / +0.0 / +0.0 / +0.0"
    },
    {
     "node": "Grave Bargain",
@@ -1198,19 +1139,19 @@
     "cls": "Druid",
     "cells": [
      "+10.5 / +10.3%",
-     "+26.1 / +26.1%",
-     "+27.6 / +31.7%",
+     "+19.4 / +20.5%",
+     "+21.5 / +25.5%",
      "+50.6 / +57.3%"
     ],
     "lessAnchor": [
      "-40.1",
-     "-24.5",
-     "-23.1"
+     "-31.3",
+     "-29.1"
     ],
     "bare": [
      "+6.7",
-     "+7.2",
-     "+15.1",
+     "+1.5",
+     "+9.6",
      "+29.3"
     ],
     "builds": {
@@ -1465,18 +1406,18 @@
     "cells": [
      "+8.1 / +18.6%",
      "+20.6 / +25.9%",
-     "+47.7 / +42.8%",
+     "+51.0 / +58.5%",
      "+49.7 / +62.0%"
     ],
     "lessAnchor": [
      "-41.6",
      "-29.1",
-     "-2.0"
+     "+1.3"
     ],
     "bare": [
      "+4.3",
      "+16.5",
-     "+42.0",
+     "+43.0",
      "+33.6"
     ],
     "builds": {
@@ -1489,7 +1430,7 @@
       "vanilla": "Affliction 11 / Destruction 10"
      },
      "40": {
-      "rebuilt": "Demonology 26 / Affliction 5",
+      "rebuilt": "Affliction 16 / Destruction 15",
       "vanilla": "Destruction 21 / Affliction 10"
      },
      "60": {
@@ -1538,18 +1479,6 @@
    }
   ],
   "earlyRows": [
-   {
-    "cls": "Warlock",
-    "level": 40,
-    "gate": 0,
-    "vanilla": "+34.8 (Improved Shadow Bolt +24.2, Cataclysm +7.3, Suppression +3.0)",
-    "rebuilt": "+14.2 (Improved Corruption +11.0, Familiar +3.2, Soulcraft +0.0)",
-    "gap": 20.7,
-    "vanillaNames": "Improved Shadow Bolt, Cataclysm and Suppression",
-    "rebuiltNames": "Improved Corruption and Familiar",
-    "vanillaWorth": 34.8,
-    "rebuiltWorth": 14.2
-   },
    {
     "cls": "Mage",
     "level": 40,
@@ -1671,6 +1600,18 @@
     "rebuiltWorth": 0.0
    },
    {
+    "cls": "Shaman",
+    "level": 20,
+    "gate": 5,
+    "vanilla": "+5.3 (Thundering Strikes +5.3)",
+    "rebuilt": "+0.0 (Guardian Totems +0.0, Elemental Cadence +0.0)",
+    "gap": 5.3,
+    "vanillaNames": "Thundering Strikes",
+    "rebuiltNames": "a row that reads nothing",
+    "vanillaWorth": 5.3,
+    "rebuiltWorth": 0.0
+   },
+   {
     "cls": "Warlock",
     "level": 20,
     "gate": 5,
@@ -1687,12 +1628,12 @@
     "level": 40,
     "gate": 5,
     "vanilla": "+0.0 (Thick Hide +0.0)",
-    "rebuilt": "+20.1 (Natural Shapeshifter +17.4, Menace +2.7, Brutal Impact +0.0)",
-    "gap": -20.1,
+    "rebuilt": "+22.6 (Natural Shapeshifter +19.9, Menace +2.6, Brutal Impact +0.0)",
+    "gap": -22.6,
     "vanillaNames": "a row that reads nothing",
     "rebuiltNames": "Natural Shapeshifter and Menace",
     "vanillaWorth": 0.0,
-    "rebuiltWorth": 20.1
+    "rebuiltWorth": 22.6
    },
    {
     "cls": "Priest",
@@ -1884,7 +1825,7 @@
     "60": 0.0
    }
   },
-  "note": "The card's example is the Warrior: at 20 it reads -3.7%, and its vanilla first row (Cruelty, Improved Rend, 6.9 points by removal) against the rebuilt (Bloodletting, Poise, 1.3) is where the gap is; the depth curve at eleven of thirty-one points does not close it. Where the rebuilt side leads early it is one clause: Mage +39.7% at 20 is Improved Fireball's vulnerability on a mage who casts nothing else, Priest +29.0% at 30 is Shadow Affinity's refresh (Shadow Word: Pain never lapses, the unconditioned refresh of stage H's finding on the vanilla side too), Druid +26.1% at 30 is Natural Shapeshifter's opening window and Rend and Tear, Warlock +20.6% at 30 is Improved Corruption's instant cast and Improved Immolate's consume. The widest early-row gaps: Warlock at 40, gate 0, +20.7 (Improved Shadow Bolt, Cataclysm and Suppression, 34.8 points, against Improved Corruption and Familiar, 14.2); Mage at 40, gate 5, +16.5 (Arcane Concentration and Ice Shards, 16.5, against Frostbite and Deep Freeze, which read nothing); Hunter at 40, gate 0, +12.0 (Efficiency, 12.0, against Steady Aim, an attack speed add the instrument does not read); Rogue at 20, gate 0, +11.1 (Improved Sinister Strike and Malice, 12.8, against Opportunity, 1.7). Two findings outside the card: given 1.12 effects the vanilla trees read below the rebuilt trees at 60 in every class under one block, which nothing pinned, since the band compares 31 / 20 with 30 / 21 and the calibration scaled the block on rebuilt builds; and the greedy selector's level-60 best builds improve when a talent it valued is forbidden (Conflagrate and Destructive Reach, Improved Mind Blast and Mana Burn, each +38.9%), which the banded cells do not see. Bare, without the curve, four classes read below vanilla at 20 (Rogue -10.1, Warrior -6.3, Shaman -5.6, Hunter -2.3). This stage measured and did not tune: whether the early rows are retuned, and by which lever (the rows that read nothing, the curve's shape, or nothing if 5.6's back-loading is the intent), is the owner's, and any retune is a stage with a stage 0 on every banded cell. The row cap moved four anchors and two mid rows without a text or an effect changing, since the hill-climb buys against gates: Warrior 40 and 60 read +18.7% and +18.2% where they read +16.0% and +16.6% (Second Wind out of Arms' seat, the points on Mortal Cleave and Sure Strike); Priest 60 reads +7.8% where it read +21.0%, because the Shadow 31 build buys Silence at gate 25 before Darkness's fifth rank and the class's best rebuilt shape at 60 on patchwerk is Shadow 26 / Discipline 25 (Priest 40 stands, the hill-climb forbidding Silence there); Paladin 60 reads +8.1% where it read +7.7%, Retribution 30 / Holy 21 with Sanctified Judgement's first rank now the best rebuilt shape; and the Mage rows read +25.9% / +24.8% at 30, +16.0% / +21.6% at 40 and +36.3% / +72.3% at 60 where they read +33.5% / +26.6%, +20.9% / +29.9% and +38.0% / +74.4%, the Frost 21 shapes buying Frost Channeling's fourth rank and, after stage M's retune, reading its discount on Blizzard alone. Every other row is to the digit.",
+  "note": "The card's example is the Warrior: at 20 it reads -3.7%, and its vanilla first row (Cruelty, Improved Rend, 6.9 points by removal) against the rebuilt (Bloodletting, Poise, 1.3) is where the gap is; the depth curve at eleven of thirty-one points does not close it. Where the rebuilt side leads early it is one clause: Mage +39.7% at 20 is Improved Fireball's vulnerability on a mage who casts nothing else, Priest +29.0% at 30 is Shadow Affinity's refresh (Shadow Word: Pain never lapses, the unconditioned refresh of stage H's finding on the vanilla side too), Druid +19.4% at 30 is Natural Shapeshifter's opening window and Rend and Tear, Warlock +20.6% at 30 is Improved Corruption's instant cast and Improved Immolate's consume. The widest early-row gaps: Warlock at 40, gate 0, -9.0 (Improved Shadow Bolt, Cataclysm and Suppression, 34.8 points, against Improved Corruption, Improved Shadow Bolt and Suppression, 43.8); Mage at 40, gate 5, +16.5 (Arcane Concentration and Ice Shards, 16.5, against Frostbite and Deep Freeze, which read nothing); Hunter at 40, gate 0, +12.0 (Efficiency, 12.0, against Steady Aim, an attack speed add the instrument does not read); Rogue at 20, gate 0, +11.1 (Improved Sinister Strike and Malice, 12.8, against Opportunity, 1.7). Two findings outside the card: given 1.12 effects the vanilla trees read below the rebuilt trees at 60 in every class under one block, which nothing pinned, since the band compares 31 / 20 with 30 / 21 and the calibration scaled the block on rebuilt builds; and the greedy selector's level-60 best builds improve when a talent it valued is forbidden (Conflagrate and Destructive Reach, Improved Mind Blast and Mana Burn, each +38.9%), which the banded cells do not see. Bare, without the curve, four classes read below vanilla at 20 (Rogue -10.1, Warrior -6.3, Shaman -5.6, Hunter -2.3). This stage measured and did not tune: whether the early rows are retuned, and by which lever (the rows that read nothing, the curve's shape, or nothing if 5.6's back-loading is the intent), is the owner's, and any retune is a stage with a stage 0 on every banded cell. The row cap moved four anchors and two mid rows without a text or an effect changing, since the hill-climb buys against gates: Warrior 40 and 60 read +18.7% and +18.2% where they read +16.0% and +16.6% (Second Wind out of Arms' seat, the points on Mortal Cleave and Sure Strike); Priest 60 reads +7.8% where it read +21.0%, because the Shadow 31 build buys Silence at gate 25 before Darkness's fifth rank and the class's best rebuilt shape at 60 on patchwerk is Shadow 26 / Discipline 25 (Priest 40 stands, the hill-climb forbidding Silence there); Paladin 60 reads +8.1% where it read +7.7%, Retribution 30 / Holy 21 with Sanctified Judgement's first rank now the best rebuilt shape; and the Mage rows read +25.9% / +24.8% at 30, +16.0% / +21.6% at 40 and +36.3% / +72.3% at 60 where they read +33.5% / +26.6%, +20.9% / +29.9% and +38.0% / +74.4%, the Frost 21 shapes buying Frost Channeling's fourth rank and, after stage M's retune, reading its discount on Blizzard alone. Every other row is to the digit.",
   "cannotSay": "absolute output at a level (the block is a scaled level-60 block); the worth of hit and haste talents beyond the reads the instrument has (attack speed adds are unread on both sides, Flurry, Frenzy, Improved Aspect of the Hawk, Steady Aim, Blade Flurry among them); a stat curve's interactions (the curve is a multiplier); the vanilla talents beyond an author's table; the cat rotation before 22 (Claw and Rake carry no numbers) and Ferocious Bite's finisher flag; a mob that dies in twenty seconds; whether the early rows are fun",
   "seeds": {
    "chosen": 20,
@@ -1895,5 +1836,65 @@
   "identicalToStageK": false,
   "dividendIdenticalToFindings4": false,
   "dividendIdenticalToStageM": true
+ },
+ "changed": {
+  "headline": "Most of Classic's talent points bought a number. Five ranks for a few percent of damage, or a percentage chance that something might happen: a tree could be read end to end without naming a single decision a player would make. The rebuild spends those same points on behaviour, and the pairs below set a real Classic tooltip beside what the talent reads now.",
+  "note": "The simulation is what keeps that trade honest. A talent that changes what a class does is easy to write and easy to overtune, and eleven were rewritten after measurement showed the first version did not work. One talent per class is shown here. Every tree is spendable in the calculator below.",
+  "talents": [
+   {
+    "cls": "Druid",
+    "talent": "Nature's Grasp",
+    "tree": "Balance",
+    "why": "Classic gave a one in three chance to root a single attacker, and only under open sky. It roots reliably now, indoors as well, and while it holds the Nature spells cast behind it reach a second target."
+   },
+   {
+    "cls": "Hunter",
+    "talent": "Deterrence",
+    "tree": "Survival",
+    "why": "A quarter more dodge and parry reads as a survival cooldown and plays as a pause in the rotation. Deflected attacks now return a shot, so the ten seconds are spent doing something."
+   },
+   {
+    "cls": "Mage",
+    "talent": "Presence of Mind",
+    "tree": "Arcane",
+    "why": "The ten second limit in the Classic text existed to stop one interaction and nothing else. Removing it, and letting the spell go off while silenced, is closer to the talent players believed they were buying."
+   },
+   {
+    "cls": "Paladin",
+    "talent": "Holy Shield",
+    "tree": "Protection",
+    "why": "Three numbers and a charge counter share one tooltip. The block and the threat both survive as behaviour, and reading the talent no longer means doing arithmetic."
+   },
+   {
+    "cls": "Priest",
+    "talent": "Inner Focus",
+    "tree": "Discipline",
+    "why": "The Classic text spends two clauses on percentages for a spell cast once a fight. The free spell is now uninterruptible as well, which is the reason a healer would hold it."
+   },
+   {
+    "cls": "Rogue",
+    "talent": "Adrenaline Rush",
+    "tree": "Combat",
+    "why": "Doubling a resource is worth whatever the gear of the week makes it worth. Finishers costing nothing during the window is worth the same to every rogue who takes it."
+   },
+   {
+    "cls": "Shaman",
+    "talent": "Elemental Fury",
+    "tree": "Elemental",
+    "why": "Doubled critical damage is invisible while it is happening. A totem discharging what it had left when it dies is something a shaman can see, and can drop a totem to cause."
+   },
+   {
+    "cls": "Warlock",
+    "talent": "Dark Pact",
+    "tree": "Affliction",
+    "why": "Classic drained the pet for mana a deep Affliction build already had, and measurement showed the deeper build finishing behind the shallower one. It now spends the demon itself, and taking it means giving up summoning another."
+   },
+   {
+    "cls": "Warrior",
+    "talent": "Death Wish",
+    "tree": "Fury",
+    "why": "A flat twenty percent on a single point is more than most talents buy with five, and it left Warrior with one build worth taking. What it does now cannot be had by spending the points anywhere else."
+   }
+  ]
  }
 }
