@@ -562,12 +562,15 @@
    "verb": "copied",
    "verbNote": "The rogue watches someone fight and learns it by imitation. The least mystical acquisition on the list and the most in character.",
    "professionGate": "Leatherworking",
-   "professionNote": "For the glaives and the harness.",
+   "professionNote": "For the glaives and the harness. The fist half of the fork depends on a fist weapon lane that vanilla leaves thin, and section 9.5 of the class document specifies that lane band by band, existing items and proposed ones.",
    "permanentCost": null,
    "tier": 3,
    "deployment": "fresh",
-   "worldAnchors": [],
-   "worldAnchorGap": "Unspecified. Section 8.6 names chains for Blackguard, Necromancy, Metamorphosis, and Runeblade only. This is an open item.",
+   "worldAnchors": [
+    "Stranglethorn Vale",
+    "Feralas",
+    "Searing Gorge"
+   ],
    "loreAnchor": "The Blademaster and the Aldrachi glaive tradition are both available as naming material without importing the Illidari. The Pandaren Brewmaster was a hireable Warcraft III neutral hero, not a race requirement.",
    "weaponFork": {
     "note": "The tree does not ask which fantasy you are. Your main hand answers. Vanilla already gates Backstab and Ambush on daggers and carries per-weapon specialization talents in Combat, so this is the existing rule rather than a new one.",
@@ -779,8 +782,11 @@
    "permanentCost": null,
    "tier": 3,
    "deployment": "fresh",
-   "worldAnchors": [],
-   "worldAnchorGap": "Unspecified. Elemental sites would be the obvious home but Section 8.6 does not name them. Open item.",
+   "worldAnchors": [
+    "Azshara",
+    "Arathi Highlands",
+    "Silithus"
+   ],
    "loreAnchor": "Dragonflight-era Evoker lore does not exist in a Classic timeframe and should not be imported. The shaman's existing relationship with the elements carries the whole tree.",
    "rows": [
     {
@@ -1128,8 +1134,11 @@
    "deployment": "ptr",
    "isRework": true,
    "reworkNote": "The only entry that reworks an existing tree rather than adding a fourth, which is why it is Tier 2 and does not need a fresh realm. Vanilla's Survival is already full of traps and melee-adjacent talents and is the weakest of the three precisely because it never committed to either.",
-   "worldAnchors": [],
-   "worldAnchorGap": "Unspecified. Open item.",
+   "worldAnchors": [
+    "Desolace",
+    "Feralas",
+    "Stonetalon Mountains"
+   ],
    "loreAnchor": "Rexxar exists in Warcraft III and in vanilla, fights in melee alongside Misha, and is the archetype fully realized. A hunter tree that produces Rexxar is a tree that produces something the setting already contains.",
    "rows": [
     {
@@ -1798,9 +1807,5 @@
    "description": "A healer who bonds a totem to the tank. Probably the most immediately popular build on this list."
   }
  ],
- "openItems": [
-  "Three acquisition chains are unspecified: Bladedancer, Conduit, and Survival. Section 8.6 names locations for the other four only.",
-  "Fist weapon itemization in vanilla is thin, and the Bladedancer weapon fork depends on it. Filling that lane in is additive Tier 1 work but it is a prerequisite rather than a nice-to-have.",
-  "Chronomancer gives mage two absorbed trees and therefore five in total, against four for every other host. Five is the stated ceiling. The justification is in chronomancer.md section 2 and rests on the talent audit rather than on symmetry."
- ]
+ "openItems": []
 }
