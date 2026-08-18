@@ -8,7 +8,7 @@
    {
     "tree": "Metamorphosis",
     "scenario": "switching",
-    "gap": "+15.0%"
+    "gap": "+11.7%"
    }
   ],
   "seeds": {
@@ -28,7 +28,7 @@
     "dividend": 30
    }
   },
-  "note": "Regenerated in August 2026 after stage O (HANDOFF-stageO.md; findings7-results.json, every step of stageO_run.py rerun at the findings seed counts) on the staging data files/sim-work/talent-data.json, which is canonical after the placement pass: every rework talent carries an authored grid column so that a prerequisite arrow runs straight wherever the rows allow, fifteen talents moved one row where a straight arrow needed it under the row cap's rules, and four further moves were withdrawn after a stage 0 read their cost (Improved Immolate and Storm Caller taken to the hybrid seat took Affliction + Destruction on cleave to +7.8% and Conduit on cleave to +12.5%; placement is a visual and the gates are the design, so those two arrows bend). Fourteen of the sixty-six banded builds buy a different talent set under the fifteen moves and one pair moved: Destruction + Demonology, whose Demonic Empowerment sits at gate 20 now where a twenty-point splash cannot buy it, from -3.6% / +4.2% / -4.6% / -4.9% / -5.9% to -0.4% / +5.9% / -0.8% / -2.5% / -3.1%, inside; every other banded cell reads to the digit against findings6-results.json. Before that, stage N (HANDOFF-stageN.md, HANDOFF-findings6.md): the data is canonical at commit f02a41d (the row cap and its retune, stages L and M) plus stageN_patch.py: Radiance files/sim-work/talent-data.json, which is canonical at commit f02a41d (the row cap and its retune, stages L and M) plus stageN_patch.py: Radiance ships the design's profile, banded on the healing score alone with the combined score at weight one reported, priest-corona's emission at the design's share, 0.11 of every heal healed on the ring and dealt to the enemy where the double band had bounded it to 0.02, and Holy Nova's cost clause and text returned to the design's authoring (0.7 on Holy Nova's own casts; the 0.81 on every heal that carries a Corona removed), so no Radiance tooltip differs from the design's. Read through the instrument as stage N left it: the build merged by talent id (stage F), every addTarget read for every hit in its scope (G), every when in the closed vocabulary decided by the table the instrument rolls or the target it acts on (H), a subtraction node forced into the build its role bands and read against the build without it and a tank's damage side reading the tank-valued build (I), a pet summon cast while there is room for it (J), the level set from outside (K), and in heal.py each share a heal carries beyond its target landing on the most wounded ally other than the one healed (N; before this the share was dropped whenever the healed ally was still the lowest, which on the tank pattern was every share once the second tank stood level with the first). sim.py, tank.py, nocapstone.py and leveling.py did not change under stages N and O; under stage O every step was rerun (core and expanded at 120 seeds, tank at 30, heal at 24, the capstone-free sweep at 25, the twelve subtraction nodes at 60 / 30 / 24, the leveling instrument at 30 / 20 / 60 / 20). Cells counted: sixty core, thirty-five expanded, twelve tank (three cells on four capstones), twelve healing (three patterns on four healers), three for Dreamer and three for Radiance (three patterns on the healing score; the combined score is reported in the row and not counted). 124 of 125 inside; the one outside is Metamorphosis on switching at +15.0%, named. Counting the Retribution + Holy row, as the stage handoffs do, 129 of 130. The findings5 file this replaces read 127 of 128 with Radiance counted on two scores at emission 0.02 (-4.3% / +0.1% / -3.0% healing, -0.8% / +3.9% / +0.1% combined); under stage N every banded healer moved within a point and stays inside, Radiance's healing score reads -0.8 / +2.0 / -4.0% at the design's share, and Apostasy, read by its cost, reads a gain on every pattern where it read a loss on the tank pattern. The row cap's state stands as the findings5 file recorded it: twelve of the sixty-six banded builds buy a different talent set on the capped rows, one cell left the band under stage L and stage M's one magnitude brought it back to +3.4%; the placement pass adds its fourteen and moves one pair.",
+  "note": "Regenerated in August 2026 after stage O (HANDOFF-stageO.md; findings7-results.json, every step of stageO_run.py rerun at the findings seed counts) on the staging data files/sim-work/talent-data.json, which is canonical after the placement pass: every rework talent carries an authored grid column so that a prerequisite arrow runs straight wherever the rows allow, fifteen talents moved one row where a straight arrow needed it under the row cap's rules, and four further moves were withdrawn after a stage 0 read their cost (Improved Immolate and Storm Caller taken to the hybrid seat took Affliction + Destruction on cleave to +7.8% and Conduit on cleave to +12.5%; placement is a visual and the gates are the design, so those two arrows bend). Fourteen of the sixty-six banded builds buy a different talent set under the fifteen moves and one pair moved: Destruction + Demonology, whose Demonic Empowerment sits at gate 20 now where a twenty-point splash cannot buy it, from -3.6% / +4.2% / -4.6% / -4.9% / -5.9% to -0.4% / +5.9% / -0.8% / -2.5% / -3.1%, inside; every other banded cell reads to the digit against findings6-results.json. Before that, stage N (HANDOFF-stageN.md, HANDOFF-findings6.md): the data is canonical at commit f02a41d (the row cap and its retune, stages L and M) plus stageN_patch.py: Radiance files/sim-work/talent-data.json, which is canonical at commit f02a41d (the row cap and its retune, stages L and M) plus stageN_patch.py: Radiance ships the design's profile, banded on the healing score alone with the combined score at weight one reported, priest-corona's emission at the design's share, 0.11 of every heal healed on the ring and dealt to the enemy where the double band had bounded it to 0.02, and Holy Nova's cost clause and text returned to the design's authoring (0.7 on Holy Nova's own casts; the 0.81 on every heal that carries a Corona removed), so no Radiance tooltip differs from the design's. Read through the instrument as stage N left it: the build merged by talent id (stage F), every addTarget read for every hit in its scope (G), every when in the closed vocabulary decided by the table the instrument rolls or the target it acts on (H), a subtraction node forced into the build its role bands and read against the build without it and a tank's damage side reading the tank-valued build (I), a pet summon cast while there is room for it (J), the level set from outside (K), and in heal.py each share a heal carries beyond its target landing on the most wounded ally other than the one healed (N; before this the share was dropped whenever the healed ally was still the lowest, which on the tank pattern was every share once the second tank stood level with the first). sim.py, tank.py, nocapstone.py and leveling.py did not change under stages N and O; under stage O every step was rerun (core and expanded at 120 seeds, tank at 30, heal at 24, the capstone-free sweep at 25, the twelve subtraction nodes at 60 / 30 / 24, the leveling instrument at 30 / 20 / 60 / 20). Cells counted: sixty core, thirty-five expanded, twelve tank (three cells on four capstones), twelve healing (three patterns on four healers), three for Dreamer and three for Radiance (three patterns on the healing score; the combined score is reported in the row and not counted). 124 of 125 inside; the one outside is Metamorphosis on switching at +11.7%, named. Counting the Retribution + Holy row, as the stage handoffs do, 129 of 130. The findings5 file this replaces read 127 of 128 with Radiance counted on two scores at emission 0.02 (-4.3% / +0.1% / -3.0% healing, -0.8% / +3.9% / +0.1% combined); under stage N every banded healer moved within a point and stays inside, Radiance's healing score reads -0.8 / +2.0 / -4.0% at the design's share, and Apostasy, read by its cost, reads a gain on every pattern where it read a loss on the tank pattern. The row cap's state stands as the findings5 file recorded it: twelve of the sixty-six banded builds buy a different talent set on the capped rows, one cell left the band under stage L and stage M's one magnitude brought it back to +3.4%; the placement pass adds its fourteen and moves one pair.",
   "supersedes": "The findings6 file (findings6-results.json), the findings5 file (findings5-results.json), the findings4 file (findings4-results.json), the findings3 file (findings3-results.json), the findings refresh file (findings2-results.json), the stage 3 file before them, and before them final-state.md, full-pass.md, suite-results.md, tuning-pass-expanded.md section 2 for the numbers; the prose findings of band-policy.md and candidate-test.md stand."
  },
  "instruments": [
@@ -274,7 +274,7 @@
   "rogue": "The Rogue's six ordered capstone pairs on patchwerk at 25 seeds after the recalibration: Assassination 31 / Subtlety 20 961, Combat 31 / Subtlety 20 950, Subtlety 31 / Assassination 20 916, Subtlety 31 / Combat 20 897, Combat 31 / Assassination 20 890, Assassination 31 / Combat 20 864. Before Riposte read its condition the two builds without Combat's sixth point sat at half the others (Assassination 31 / Subtlety 20 at 485, Subtlety 31 / Assassination 20 at 445); the six now sit within eleven percent, and the class's best build is a capstone build; it read 970 after the merge by id restored Assassination's Opportunity and 961 once Seal Fate's combo point read on a critical only. The class's share of Arms 31 / Fury 20 was held at 89.1% by the depth coefficient (0.8295 to 0.7814 on every Rogue tree); whether that is the share wanted is the ladder decision open since stage 2."
  },
  "expanded": {
-  "headline": "Thirty-four of thirty-five cells inside the band; the one outside is Metamorphosis on switching at +15.0%, named; the widest inside are Blackguard on patchwerk at +6.8% and Runeblade on cleave at -6.1%",
+  "headline": "Thirty-four of thirty-five cells inside the band; the one outside is Metamorphosis on switching at +11.7%, named; the widest inside are Metamorphosis on movement at -7.0% and Trapper on switching at -6.7%",
   "columns": [
    "patchwerk",
    "burst",
@@ -288,11 +288,11 @@
     "host": "Retribution",
     "baseline": "Retribution 31 / Holy 20",
     "cells": [
-     "+6.8%",
-     "+1.4%",
-     "+6.8%",
-     "+0.1%",
-     "+4.2%"
+     "+6.7%",
+     "+6.2%",
+     "+6.7%",
+     "-1.9%",
+     "+5.4%"
     ]
    },
    {
@@ -312,11 +312,11 @@
     "host": "Destruction",
     "baseline": "Affliction 31 / Destruction 20",
     "cells": [
-     "-2.2%",
-     "+2.6%",
-     "-3.9%",
-     "-1.9%",
-     "+15.0%"
+     "-5.4%",
+     "-3.3%",
+     "-7.0%",
+     "-3.4%",
+     "+11.7%"
     ]
    },
    {
@@ -324,11 +324,11 @@
     "host": "Combat",
     "baseline": "Assassination 31 / Combat 20",
     "cells": [
-     "+0.3%",
-     "+3.5%",
-     "-1.5%",
-     "-0.5%",
-     "-5.0%"
+     "-0.1%",
+     "+3.3%",
+     "-1.8%",
+     "-1.4%",
+     "-5.4%"
     ]
    },
    {
@@ -348,11 +348,11 @@
     "host": "Arms",
     "baseline": "Fury 31 / Arms 20",
     "cells": [
-     "+1.6%",
-     "-5.0%",
-     "+1.6%",
-     "-6.1%",
-     "+1.3%"
+     "+3.8%",
+     "-2.7%",
+     "+3.8%",
+     "-3.7%",
+     "+3.4%"
     ]
    },
    {
@@ -360,15 +360,15 @@
     "host": "Marksmanship",
     "baseline": "Beast Mastery 31 / Marksmanship 20",
     "cells": [
-     "-4.1%",
-     "-2.7%",
-     "-1.9%",
-     "+2.6%",
-     "-2.6%"
+     "-4.2%",
+     "+5.8%",
+     "-1.0%",
+     "-0.1%",
+     "-6.7%"
     ]
    }
   ],
-  "note": "Each new tree at 31 with its host at 20, against a real two-tree damage build of the same class that duplicates neither, tune.gaps' rule; the baseline is named on each row. The earlier table compared against the class's best core build, which for Bladedancer, Conduit, Trapper and Runeblade duplicated the host and read part of the host's worth as the tree's: Trapper's -16.6% cleave and Runeblade's +8.6% burst in the shipped suite were that comparison and not the trees, and both were in band against the correct baseline before anything was tuned. Metamorphosis is a tank tree and its three tank cells are in the table below; its damage cells are here because a tank tree at 31 is also a damage build a warlock can play. Dreamer and Radiance are healing trees and sit in the healing table; Radiance is banded on the healing score, and its combined score at weight one is reported beside it. Necromancy is inside on all five cells since stage J, -0.7% / +0.5% / -3.5% / +1.2% / +1.5%, where it read -14.8% / -24.6% / -21.1% / -5.4% / -12.9% after stage H and -17.0% / -24.6% / -24.8% / +0.7% / -18.2% in the findings3 file before it: the tree is a pet tree, and the instrument reads it as one. Corpse Harvest's hold up to three, a reviewed clause no instrument read, is authored, so the build holds three Risen where it held one; a pet summon is cast while there is room for it rather than at the dying pet's expiry, which had lost every second Risen; and Rotting Touch's your Risen strike hardest when newly raised is an opening window on the Risen, at 1.0 for the fight's first twenty seconds, which is the tree's burst and the shape its text describes. The pull is met with three sixty-second Skeletons rather than a Boneyard; no tooltip changed and no spell was touched, and cleave stayed where it was because the Risen strike one target. What that leaves open is the mana race between Raise Skeleton at 300 and Frostbolt at 290, which decides how long the Risen stay up in a five-minute fight, and what the tree reads once its capstone's no longer expire is read (about +16 sustained under that repair, the flat pet level the retune then). Metamorphosis reads -2.2% / +2.6% / -3.9% / -1.9% / +15.0%, and its switching cell is the one outside. Under conditions the scenario decides its baseline's Corruption and Immolate are refreshed by the Shadow Bolts their texts name and lapse where the bolts pause, and the tree, half of whose global cooldowns are Shadow Cleaves, keeps up neither; against the honest baseline it read -15.5% / -11.4% / -16.9% / -15.2% / -0.8%, a spread on four sustained cells and level on switching, where a target that dies every thirty seconds takes the baseline's refreshed periodics with it and leaves Shadow Cleave untouched. No lever the tree carries pays on a long-lived target alone, so the spread lever, the depth coefficient, was re-levelled from 0.7781, set in stage 2 against a baseline whose Immolate ticked at a critical's strength for the whole fight, to 0.90; four cells came in with margin and switching is out and named. At 0.7781 four cells are out and switching in; a text that gives the tree a periodic its Shadow Cleave keeps up is the third reading, and the choice is the owner's. Runeblade reads +1.6% / -5.0% / +1.6% / -6.1% / +1.3%: its baseline, Fury 31 / Arms 20, gained Fury's own Bloodletting under the merge by id (a bleed proc of 0.4 on every strike and the sweep of every third blow, dropped behind Arms' talent of the same name) and Improved Cleave's third target under the tag read, and Bitter Cold, the tree's one cleave lever that reaches its single-target strikes, sweeps every second strike through two enemies where it swept every fifth through one, its rank 2 clause rewritten; its own frost procs stay at a twentieth of their value. Bladedancer reads +0.3% / +3.5% / -1.5% / -0.5% / -5.0%: Whirling Blades' and Unending Dance's extra targets, read on every melee hit under the tag read and worth +143% on cleave, are the granted finisher's own, and its baseline's Seal Fate and Puncturing Wounds read on a critical only. Conduit reads -2.5% / -1.5% / -2.5% / +3.4% / -3.0%, its spell-tag and nature-tag targets against a baseline with Storm Caller's, cleave from -2.7% to +3.4%. Blackguard reads +6.8% / +1.4% / +6.8% / +0.1% / +4.2%: cleave came in from +6.8% to +0.1% as its baseline gained Crusade's holy target; the other three cells at +6.8%, near the edge and not moved, and its capstone reads as an empty point (forbidding it and spending the point on Frozen Heart's second rank reads the same to the digit) because the no_expiry it carries is unread outside a subtraction node. Trapper reads -4.1% / -2.7% / -1.9% / +2.6% / -2.6%, unchanged since the rank rule. Stage L's row cap moved the reciprocal node each of the seven keys in a host tree from the gate-20 seat to row 4 (Snare Handler, Cold Command, Sanguine Rite and Grave Bulwark, Fluid Guard, Conduit's Grace, Fel Kindling, Rimeguard) and two of Bladedancer's own talents (Uninterrupted to gate 20, Evasive to gate 10), and none of the fourteen builds these rows compare buys a different talent set for it (stageM_tools.py builds), so every one of the thirty-five cells reads to the digit under stages L and M.",
+  "note": "Each new tree at 31 with its host at 20, against a real two-tree damage build of the same class that duplicates neither, tune.gaps' rule; the baseline is named on each row. The earlier table compared against the class's best core build, which for Bladedancer, Conduit, Trapper and Runeblade duplicated the host and read part of the host's worth as the tree's: Trapper's -16.6% cleave and Runeblade's +8.6% burst in the shipped suite were that comparison and not the trees, and both were in band against the correct baseline before anything was tuned. Metamorphosis is a tank tree and its three tank cells are in the table below; its damage cells are here because a tank tree at 31 is also a damage build a warlock can play. Dreamer and Radiance are healing trees and sit in the healing table; Radiance is banded on the healing score, and its combined score at weight one is reported beside it. Necromancy is inside on all five cells since stage J, -0.7% / +0.5% / -3.5% / +1.2% / +1.5%, where it read -14.8% / -24.6% / -21.1% / -5.4% / -12.9% after stage H and -17.0% / -24.6% / -24.8% / +0.7% / -18.2% in the findings3 file before it: the tree is a pet tree, and the instrument reads it as one. Corpse Harvest's hold up to three, a reviewed clause no instrument read, is authored, so the build holds three Risen where it held one; a pet summon is cast while there is room for it rather than at the dying pet's expiry, which had lost every second Risen; and Rotting Touch's your Risen strike hardest when newly raised is an opening window on the Risen, at 1.0 for the fight's first twenty seconds, which is the tree's burst and the shape its text describes. The pull is met with three sixty-second Skeletons rather than a Boneyard; no tooltip changed and no spell was touched, and cleave stayed where it was because the Risen strike one target. What that leaves open is the mana race between Raise Skeleton at 300 and Frostbolt at 290, which decides how long the Risen stay up in a five-minute fight, and what the tree reads once its capstone's no longer expire is read (about +16 sustained under that repair, the flat pet level the retune then). Metamorphosis reads -5.4% / -3.3% / -7.0% / -3.4% / +11.7%, and its switching cell is the one outside. Under conditions the scenario decides its baseline's Corruption and Immolate are refreshed by the Shadow Bolts their texts name and lapse where the bolts pause, and the tree, half of whose global cooldowns are Shadow Cleaves, keeps up neither; against the honest baseline it read -15.5% / -11.4% / -16.9% / -15.2% / -0.8%, a spread on four sustained cells and level on switching, where a target that dies every thirty seconds takes the baseline's refreshed periodics with it and leaves Shadow Cleave untouched. No lever the tree carries pays on a long-lived target alone, so the spread lever, the depth coefficient, was re-levelled from 0.7781, set in stage 2 against a baseline whose Immolate ticked at a critical's strength for the whole fight, to 0.90; four cells came in with margin and switching is out and named. At 0.7781 four cells are out and switching in; a text that gives the tree a periodic its Shadow Cleave keeps up is the third reading, and the choice is the owner's. Runeblade reads +3.8% / -2.7% / +3.8% / -3.7% / +3.4%: its baseline, Fury 31 / Arms 20, gained Fury's own Bloodletting under the merge by id (a bleed proc of 0.4 on every strike and the sweep of every third blow, dropped behind Arms' talent of the same name) and Improved Cleave's third target under the tag read, and Bitter Cold, the tree's one cleave lever that reaches its single-target strikes, sweeps every second strike through two enemies where it swept every fifth through one, its rank 2 clause rewritten; its own frost procs stay at a twentieth of their value. Bladedancer reads -0.1% / +3.3% / -1.8% / -1.4% / -5.4%: Whirling Blades' and Unending Dance's extra targets, read on every melee hit under the tag read and worth +143% on cleave, are the granted finisher's own, and its baseline's Seal Fate and Puncturing Wounds read on a critical only. Conduit reads -2.5% / -1.5% / -2.5% / +3.4% / -3.0%, its spell-tag and nature-tag targets against a baseline with Storm Caller's, cleave from -2.7% to +3.4%. Blackguard reads +6.7% / +6.2% / +6.7% / -1.9% / +5.4%: cleave came in from +6.8% to -1.9% as its baseline gained Crusade's holy target; the other three cells at +6.7%, near the edge and not moved, and its capstone reads as an empty point (forbidding it and spending the point on Frozen Heart's second rank reads the same to the digit) because the no_expiry it carries is unread outside a subtraction node. Trapper reads -4.2% / +5.8% / -1.0% / -0.1% / -6.7%, unchanged since the rank rule. Stage L's row cap moved the reciprocal node each of the seven keys in a host tree from the gate-20 seat to row 4 (Snare Handler, Cold Command, Sanguine Rite and Grave Bulwark, Fluid Guard, Conduit's Grace, Fel Kindling, Rimeguard) and two of Bladedancer's own talents (Uninterrupted to gate 20, Evasive to gate 10), and none of the fourteen builds these rows compare buys a different talent set for it (stageM_tools.py builds), so every one of the thirty-five cells reads to the digit under stages L and M.",
   "before": "Before the August rerun these read, against the correct baseline at 60 seeds: Bladedancer +20.2% patchwerk and +19.8% switching after the Rogue gear recalibration lifted a poison-free tree by the whole factor; Metamorphosis -24.9% burst and -14.9% movement, a Shadow Bolt caster on a short fight; Runeblade +23.9% to +30.4% once Bloodthirst was cut under it; Blackguard, Necromancy, Conduit and Trapper in band. Three trees needed three fixes: a level pass for Bladedancer with its capstone sweep tightened, two scenario levers for Metamorphosis, and a level pass for Runeblade with Bitter Cold's sweep trimmed. Necromancy's cleave lever had been oversized at +31.1% and was cut to every fifth strike in the tuning pass before this. After stage 3 three rows moved: Metamorphosis on switching from +7.0%, at the ceiling, to +5.5% through the capstone's shadow multiplier (1.11 to 1.08), Fel Aegis's opening window (0.7 to 0.8) and the capstone's moving damage (-0.10 to -0.05), each one notch; Runeblade re-levelled by 0.85 against the smaller Bloodthirst; Bladedancer re-levelled by 0.55 against an Assassination baseline that no longer reads Remorseless Attacks on every fight. The findings refresh then read thirty-five of thirty-five inside. Stages C and D moved five rows again: Necromancy out on four cells through its baseline's Ignite; Conduit and Runeblade retuned under the proc payment; Bladedancer through the recalibrated Rogue and the sweep read in expectation; Blackguard through procs on both sides; Metamorphosis through the proc payment on both sides and Trapper through the rank rule alone; the findings3 file read thirty-one of thirty-five. Stages F to K: Runeblade's baseline gained Fury's Bloodletting (stage F) and Improved Cleave's third target (stage G) and Bitter Cold's sweep widened; Bladedancer's Whirling Blades and Unending Dance were scoped to the finisher (stage G); Metamorphosis moved to -2.1 / -3.7 / -3.4 / -0.3 / +6.0 under the tag read, then to its present row under conditions the scenario decides and the depth at 0.90 (stage H); Necromancy came in on all five cells (stage J); Blackguard's cleave and Conduit's moved under the tag read; Trapper did not move. Stages L and M, the row cap and its one retune, moved no expanded cell. This file reads thirty-four of thirty-five.",
   "healing": [
    {
@@ -454,7 +454,7 @@
    {
     "pair": "Metamorphosis",
     "cells": [
-     "+6.5%",
+     "+5.8%",
      "+4.4%",
      "+4.2%"
     ],
@@ -462,10 +462,10 @@
     "shield": "none",
     "before": "+6.8% / +4.4% / +4.2%; +4.6% threat before the capstone's shadow multiplier came down to 1.08, +2.4% after; +1.2% since the proc repair, TPS 2,334 against 2,307 where it read 1,828 against 1,784; +6.4% since stage H (Immolate lapsing in both builds under conditions the scenario decides, the tree's depth at 0.90) and +6.5% since stage I, TPS 1,338 against 1,257 with the double count removed",
     "lever": "the capstone's shadow multiplier, 1.11 to 1.08, set on the damage side; the damage-side opening window sits on Fel Aegis so the tank pair does not carry it; the depth coefficient 0.7781 to 0.90 in stage H",
-    "raw": "TPS 1,338 against 1,257, DTPS 445 against 465, EHP 27,610 against 26,456, crit immune false both"
+    "raw": "TPS 1,476 against 1,394, DTPS 495 against 516, EHP 24,849 against 23,810, crit immune false both"
    }
   ],
-  "note": "Thirty seeds, host held: Fury, Retribution, Restoration, Destruction. Shield Slam read +32.5% threat with every scalable magnitude on the capstone at zero, so the tuner refused it by name: the excess was the granted ability's base damage. It took shape (b): the grant moved to gate 25 with its text unchanged, and Bastion is the capstone. Since stage A the damage side of a shield tank holds the shield, so its cost cancels in the gap and shows in the absolute figures; since stage I the damage side of every tank reads the tank-valued build, so both Protection warrior builds hold Unbreakable and pay its cost, no critical strikes, and the warrior pair's TPS reads 1,292 against 1,302 where it read 1,964 against 1,943 and, before the shield, 2,522 against 2,469; the Bastion gap reads -0.8% where it read +1.0%, because rage follows the smaller hit and Death Wish's window, which the 30 / 21 build carries, buys rage the 31 / 20 build lacks. Unbreakable itself is a priced trade in the subtraction table: crit immunity and six percent less damage taken for about a third of the threat, both clauses literal. The paladin's rose to +6.2% under the shield because the one-hand factor shrinks the white share of its damage, and reads +5.9%, with TPS 2,213 against 2,090 where it read 1,888 against 1,778: Eye for an Eye's proc and the paladin's threat adds read at their clause moved the absolute figures and not the gap, and Ardent Defender's 0.7 below 35% is read on effective health, the last third of the pool, and not on damage taken a second, which moved the raw damage taken and not the gap. Bear reads +6.7% threat with TPS 985 against 923 where it read 1,403 against 1,316: tank.py no longer multiplies threat by a debuff or a consume the damage side already pays, in both builds, so the raw threat lost a double count the gap barely carried. Metamorphosis's threat gap reads +6.5% where it read +1.2%, its TPS 1,338 against 1,257: Immolate lapsing in both builds under conditions the scenario decides and the tree's depth at 0.90, the double count removed. No tank build bought a different talent under stage L's row cap and every cell here reads to the digit under stages L and M. Two instrument caveats stand: threat riders are scope-blind, and block reaches damage taken and not effective health; the third, that a build's trees merged by name, closed in stage F."
+  "note": "Thirty seeds, host held: Fury, Retribution, Restoration, Destruction. Shield Slam read +32.5% threat with every scalable magnitude on the capstone at zero, so the tuner refused it by name: the excess was the granted ability's base damage. It took shape (b): the grant moved to gate 25 with its text unchanged, and Bastion is the capstone. Since stage A the damage side of a shield tank holds the shield, so its cost cancels in the gap and shows in the absolute figures; since stage I the damage side of every tank reads the tank-valued build, so both Protection warrior builds hold Unbreakable and pay its cost, no critical strikes, and the warrior pair's TPS reads 1,292 against 1,302 where it read 1,964 against 1,943 and, before the shield, 2,522 against 2,469; the Bastion gap reads -0.8% where it read +1.0%, because rage follows the smaller hit and Death Wish's window, which the 30 / 21 build carries, buys rage the 31 / 20 build lacks. Unbreakable itself is a priced trade in the subtraction table: crit immunity and six percent less damage taken for about a third of the threat, both clauses literal. The paladin's rose to +6.2% under the shield because the one-hand factor shrinks the white share of its damage, and reads +5.9%, with TPS 2,213 against 2,090 where it read 1,888 against 1,778: Eye for an Eye's proc and the paladin's threat adds read at their clause moved the absolute figures and not the gap, and Ardent Defender's 0.7 below 35% is read on effective health, the last third of the pool, and not on damage taken a second, which moved the raw damage taken and not the gap. Bear reads +6.7% threat with TPS 985 against 923 where it read 1,403 against 1,316: tank.py no longer multiplies threat by a debuff or a consume the damage side already pays, in both builds, so the raw threat lost a double count the gap barely carried. Metamorphosis's threat gap reads +5.8% where it read +1.2%, its TPS 1,476 against 1,394: Immolate lapsing in both builds under conditions the scenario decides and the tree's depth at 0.90, the double count removed. No tank build bought a different talent under stage L's row cap and every cell here reads to the digit under stages L and M. Two instrument caveats stand: threat riders are scope-blind, and block reaches damage taken and not effective health; the third, that a build's trees merged by name, closed in stage F."
  },
  "heal": {
   "headline": "Four of four healers in band on every pattern; Dreamer in band; Radiance banded on the healing score alone and inside on all three at the design's emission, its combined score at weight one reported; every healer moved within a point under stage N's ring repair, where the rows had stood to the digit through stages F to M",
@@ -1005,10 +1005,10 @@
     "permission": "Blight permanent, a clause Vile Contagion already carries in every banded Blackguard build, and a 1% melee proxy",
     "costRead": "no healing from others: in no instrument",
     "verdict": "argued: the cost is in no instrument",
-    "W": "damage 785 / 926 / 785 / 851 / 766",
-    "gain": "damage -0.3 / +3.6 / -0.3 / -2.3 / +1.1",
+    "W": "damage 788 / 970 / 788 / 837 / 779",
+    "gain": "damage +0.0 / +0.0 / +0.0 / +0.0 / +0.0",
     "cost": "damage +0.0 / +0.0 / +0.0 / +0.0 / +0.0",
-    "net": "damage -0.3 / +3.6 / -0.3 / -2.3 / +1.1"
+    "net": "damage +0.0 / +0.0 / +0.0 / +0.0 / +0.0"
    },
    {
     "node": "Damnation (capstone)",
@@ -1018,10 +1018,10 @@
     "permission": "as the gate-20 node; as the data stands its no_expiry is unread and it reads as an empty point",
     "costRead": "the same: in no instrument",
     "verdict": "argued: the cost is in no instrument; the banded Blackguard build carries it",
-    "W": "damage 785 / 926 / 785 / 851 / 766",
-    "gain": "damage -0.3 / +3.6 / -0.3 / -2.4 / +1.1",
+    "W": "damage 790 / 937 / 790 / 857 / 771",
+    "gain": "damage -0.3 / +3.5 / -0.3 / -2.3 / +1.1",
     "cost": "damage +0.0 / +0.0 / +0.0 / +0.0 / +0.0",
-    "net": "damage -0.3 / +3.6 / -0.3 / -2.4 / +1.1; as the data stood +0.0 / +0.0 / +0.0 / +0.0 / +0.0"
+    "net": "damage -0.3 / +3.5 / -0.3 / -2.3 / +1.1; as the data stood -0.3 / +3.5 / -0.3 / -2.3 / +1.1"
    },
    {
     "node": "Grave Bargain",
@@ -1044,10 +1044,10 @@
     "permission": "the form's bonuses double, consume 0.12 on shadow after the retune (0.25 as the data stood)",
     "costRead": "no demon, the Felhunter; leaving the form unpriced",
     "verdict": "priced: level after the retune to 0.12",
-    "W": "damage 924 / 1,713 / 908 / 1,369 / 786; threat 1,338; damage taken 445; EHP 27,610",
-    "gain": "damage +10.1 / +10.4 / +10.1 / +10.1 / +9.9; threat +10.3; damage taken +0.0; EHP +0.0",
-    "cost": "damage -6.9 / -3.9 / -7.0 / -4.7 / -8.1; threat -6.8; damage taken +0.0; EHP +0.0",
-    "net": "damage +2.5 / +6.1 / +2.4 / +5.0 / +1.0; as the data stood +13.5 / +17.4 / +13.3 / +15.9 / +11.8; threat +2.7; threat as the data stood +13.8; damage taken +0.0; damage taken as the data stood +0.0; EHP +0.0; EHP as the data stood +0.0"
+    "W": "damage 893 / 1,615 / 879 / 1,348 / 764; threat 1,476; damage taken 495; EHP 24,849",
+    "gain": "damage +10.2 / +10.4 / +10.2 / +10.2 / +10.0; threat +10.4; damage taken +0.0; EHP +0.0",
+    "cost": "damage -7.1 / -4.1 / -7.3 / -4.7 / -8.4; threat -6.2; damage taken +0.0; EHP +0.0",
+    "net": "damage +2.3 / +5.9 / +2.2 / +5.0 / +0.8; as the data stood +13.4 / +17.2 / +13.2 / +16.1 / +11.6; threat +3.6; threat as the data stood +14.9; damage taken +0.0; damage taken as the data stood +0.0; EHP +0.0; EHP as the data stood +0.0"
    },
    {
     "node": "Sole Survivor",
@@ -1057,10 +1057,10 @@
     "permission": "traps arm instantly and cannot be resisted: no trap is in the rotation and none carries a base damage, so nothing",
     "costRead": "no pet: the pet's swings and Coordinated Assault",
     "verdict": "priced on the cost side: a pure loss, named, not retuned",
-    "W": "damage 701 / 1,054 / 654 / 1,205 / 693",
+    "W": "damage 702 / 1,146 / 662 / 1,174 / 662",
     "gain": "damage +0.0 / +0.0 / +0.0 / +0.0 / +0.0",
-    "cost": "damage -22.8 / -16.7 / -25.5 / -13.3 / -22.9",
-    "net": "damage -22.8 / -16.7 / -25.5 / -13.3 / -22.9; as the data stood +0.0 / +0.0 / +0.0 / +0.0 / +0.0"
+    "cost": "damage -24.1 / -12.6 / -26.0 / -14.2 / -24.8",
+    "net": "damage -24.1 / -12.6 / -26.0 / -14.2 / -24.8; as the data stood +0.0 / +0.0 / +0.0 / +0.0 / +0.0"
    },
    {
     "node": "Fixed Point",
@@ -1102,7 +1102,7 @@
     "net": "healing +2.6 / +9.4 / +10.4; healing as the data stood -3.4 / -2.4 / -1.1; combined +1.5 / +8.3 / +8.7; combined as the data stood -4.5 / -3.3 / -2.6"
    }
   ],
-  "note": "Unbreakable buys crit immunity and 6.1% less damage taken for 31% of a Protection warrior's threat, both clauses literal, and both banded builds hold it. Irreversible at 0.12 reads net +2.5 / +6.1 / +2.4 / +5.0 / +1.0 on the damage side and +2.7 on threat, level, where 0.25 read +13.5 to +17.4. Immovable costs a Protection paladin 8.7% of its threat on the movement scenario at speed 0.7 and nothing on a stationary boss; the data's proxy reads 7.2% everywhere. Silent Death costs a Subtlety rogue nothing from behind and 4.7% when the target dies every thirty seconds, or 23% of its output as the data's melee x0.75 reads. Grave Bargain, re-read on the stage J data with three Risen, gains +17.0 on patchwerk from permanent Risen and costs -29.0 through spells x0.6, net -17.0 / -28.2 / -17.2 / -25.1 / -17.2 (as the text, spells at nothing, -67.9 to -78.2), a pure loss smaller than stage I's -29 to -36 and still one, because the model's pets are deliberately small; Sole Survivor costs a Trapper 23% on patchwerk for a permission that reads nothing, since no trap is transcribed. Apostasy at 0.8 reads net +2.6 / +9.4 / +10.4 healing under stage N's ring repair, a gain on every pattern where the findings5 file read -15.3 / -3.3 / +3.1: its two extra targets, dropped on the tank pattern whenever the healed ally was still the lowest, land on the ally beside the tank, so the permission reads +10.1 / +23.0 / +33.5 where it read +1.3 / +15.9 / +35.4 and the cost -6.8 / -11.1 / -17.3 where it read -16.4 / -16.6 / -23.8; at 0.7, its value before stage I's retune (as the data stood), it reads -3.4 / -2.4 / -1.1, level within four points. The retune to 0.8 was made under the rule stage N repaired, and the proxy is the owner's to re-level; it is not re-levelled here. Deep Slumber's permission reads +1.6 / +1.6 / +1.6 under the Threshold scope (from +1.6 / +1.3 / +1.6 under the old rule; the heal-tag scope as the data stood before stage I reads +12.1 / +10.7 / +16.3 where it read -3.3 / +5.7 / +11.3) and its cost is in no instrument; Damnation's permission reads -0.3 / +3.6 / -0.3 / -2.3 / +1.1 in a build that already holds Vile Contagion, and its capstone as authored reads as an empty point; Repentance and Fixed Point have no reading. Every node but Grave Bargain read to the digit as stage I read it through stages L and M, where no subtraction build bought a talent the row cap moved across a gate it reaches; under stage N the ten damage and tank nodes are carried from the findings5 file, since neither their instruments nor their builds changed, and the two heal-role nodes were reread.",
+  "note": "Unbreakable buys crit immunity and 6.1% less damage taken for 31% of a Protection warrior's threat, both clauses literal, and both banded builds hold it. Irreversible at 0.12 reads net +2.3 / +5.9 / +2.2 / +5.0 / +0.8 on the damage side and +3.6 on threat, level, where 0.25 read +13.4 to +17.2. Immovable costs a Protection paladin 8.7% of its threat on the movement scenario at speed 0.7 and nothing on a stationary boss; the data's proxy reads 7.2% everywhere. Silent Death costs a Subtlety rogue nothing from behind and 4.7% when the target dies every thirty seconds, or 23% of its output as the data's melee x0.75 reads. Grave Bargain, re-read on the stage J data with three Risen, gains +17.0 on patchwerk from permanent Risen and costs -29.0 through spells x0.6, net -17.0 / -28.2 / -17.2 / -25.1 / -17.2 (as the text, spells at nothing, -67.9 to -78.2), a pure loss smaller than stage I's -29 to -36 and still one, because the model's pets are deliberately small; Sole Survivor costs a Trapper 24% on patchwerk for a permission that reads nothing, since no trap is transcribed. Apostasy at 0.8 reads net +2.6 / +9.4 / +10.4 healing under stage N's ring repair, a gain on every pattern where the findings5 file read -15.3 / -3.3 / +3.1: its two extra targets, dropped on the tank pattern whenever the healed ally was still the lowest, land on the ally beside the tank, so the permission reads +10.1 / +23.0 / +33.5 where it read +1.3 / +15.9 / +35.4 and the cost -6.8 / -11.1 / -17.3 where it read -16.4 / -16.6 / -23.8; at 0.7, its value before stage I's retune (as the data stood), it reads -3.4 / -2.4 / -1.1, level within four points. The retune to 0.8 was made under the rule stage N repaired, and the proxy is the owner's to re-level; it is not re-levelled here. Deep Slumber's permission reads +1.6 / +1.6 / +1.6 under the Threshold scope (from +1.6 / +1.3 / +1.6 under the old rule; the heal-tag scope as the data stood before stage I reads +12.1 / +10.7 / +16.3 where it read -3.3 / +5.7 / +11.3) and its cost is in no instrument; Damnation's permission reads +0.0 / +0.0 / +0.0 / +0.0 / +0.0 in a build that already holds Vile Contagion, and its capstone as authored reads as an empty point; Repentance and Fixed Point have no reading. Every node but Grave Bargain read to the digit as stage I read it through stages L and M, where no subtraction build bought a talent the row cap moved across a gate it reaches; under stage N the ten damage and tank nodes are carried from the findings5 file, since neither their instruments nor their builds changed, and the two heal-role nodes were reread.",
   "argued": [
    "Repentance",
    "Damnation (gate 20 and the capstone)",
@@ -1835,7 +1835,7 @@
   },
   "identicalToStageK": false,
   "dividendIdenticalToFindings4": false,
-  "dividendIdenticalToStageM": true
+  "dividendIdenticalToStageM": null
  },
  "changed": {
   "headline": "Most of Classic's talent points bought a number. Five ranks for a few percent of damage, or a percentage chance that something might happen: a tree could be read end to end without naming a single decision a player would make. The rebuild spends those same points on behaviour, and the pairs below set a real Classic tooltip beside what the talent reads now.",

@@ -46347,18 +46347,19 @@
          "scope": {
           "tag": "periodic"
          },
-         "magnitude": 0.1,
+         "magnitude": 0.02,
          "source": "authored",
          "stat": "damage",
          "rank": 1
         },
         {
-         "op": "addTarget",
+         "op": "add",
          "scope": {
-          "tag": "periodic"
+          "tag": "holy"
          },
-         "magnitude": 1,
+         "magnitude": 0.032,
          "source": "authored",
+         "stat": "critChance",
          "rank": 2
         }
        ],
@@ -47479,7 +47480,7 @@
          "scope": {
           "tag": "pet"
          },
-         "magnitude": 0.1,
+         "magnitude": 0.05,
          "source": "authored",
          "stat": "critChance",
          "rank": 1
@@ -48690,32 +48691,33 @@
        "availableIn": null,
        "effects": [
         {
-         "op": "add",
-         "scope": {
-          "tag": "periodic"
-         },
-         "magnitude": 1,
-         "source": "authored",
-         "stat": "stack",
-         "rank": 1
-        },
-        {
-         "op": "consume",
-         "scope": {
-          "tag": "fire"
-         },
-         "source": "authored",
-         "stat": "stack",
-         "rank": 2
-        },
-        {
-         "op": "add",
+         "op": "multiply",
          "scope": {
           "tag": "shadow"
          },
-         "magnitude": 2,
+         "magnitude": 1.13,
          "source": "authored",
-         "stat": "stack",
+         "stat": "damage",
+         "rank": 1
+        },
+        {
+         "op": "multiply",
+         "scope": {
+          "ability": "warlock-conflagrate"
+         },
+         "magnitude": 1.15,
+         "source": "authored",
+         "stat": "damage",
+         "rank": 2
+        },
+        {
+         "op": "multiply",
+         "scope": {
+          "ability": "warlock-shadowburn"
+         },
+         "magnitude": 1.1,
+         "source": "authored",
+         "stat": "damage",
          "rank": 3
         }
        ],
@@ -49400,7 +49402,7 @@
          "scope": {
           "tag": "melee"
          },
-         "magnitude": 0.0851,
+         "magnitude": 0.045,
          "source": "authored",
          "stat": "vulnerability",
          "stacks": 5,
@@ -49593,7 +49595,7 @@
          "scope": {
           "tag": "melee"
          },
-         "magnitude": 0.0851,
+         "magnitude": 0.045,
          "source": "authored",
          "stat": "damage",
          "rank": 1
@@ -49839,20 +49841,21 @@
         {
          "op": "add",
          "scope": {
-          "tag": "stealth"
+          "tag": "melee"
          },
-         "magnitude": 1,
+         "magnitude": 0.03,
          "source": "authored",
-         "stat": "stack",
+         "stat": "damage",
          "rank": 1
         },
         {
-         "op": "consume",
+         "op": "multiply",
          "scope": {
-          "tag": "melee"
+          "tag": "stealth"
          },
+         "magnitude": 1.15,
          "source": "authored",
-         "stat": "stack",
+         "stat": "damage",
          "rank": 2
         }
        ],
@@ -51030,19 +51033,19 @@
         {
          "op": "enable",
          "scope": {
-          "tag": "heal"
+          "tag": "spell"
          },
          "source": "authored",
          "flag": "carry_forward",
          "rank": 1
         },
         {
-         "op": "enable",
+         "op": "addTarget",
          "scope": {
-          "tag": "nature"
+          "ability": "shaman-chain-heal"
          },
+         "magnitude": 1,
          "source": "authored",
-         "flag": "carry_forward",
          "rank": 2
         }
        ],
@@ -52219,20 +52222,23 @@
        "availableIn": null,
        "effects": [
         {
-         "op": "consume",
+         "op": "add",
          "scope": {
           "tag": "melee"
          },
+         "magnitude": 0.03,
          "source": "authored",
-         "stat": "stack",
+         "stat": "damage",
          "rank": 1
         },
         {
-         "op": "convert",
+         "op": "multiply",
          "scope": {
-          "tag": "melee"
+          "tag": "bleed"
          },
+         "magnitude": 1.2,
          "source": "authored",
+         "stat": "damage",
          "rank": 2
         }
        ],
@@ -53389,9 +53395,9 @@
         {
          "op": "add",
          "scope": {
-          "tag": "melee"
+          "tag": "ranged"
          },
-         "magnitude": 0.1,
+         "magnitude": 0.13,
          "source": "authored",
          "stat": "damage",
          "rank": 2
@@ -53399,7 +53405,7 @@
         {
          "op": "refresh",
          "scope": {
-          "tag": "periodic"
+          "ability": "hunter-serpent-sting"
          },
          "source": "authored",
          "rank": 3
