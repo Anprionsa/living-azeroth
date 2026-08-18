@@ -234,6 +234,15 @@ _rotbad=sorted({a for r in D.get("rotations",{}).values() for k in ("priority","
 if _rotbad: print(f"  FAIL  rotation-references          {len(_rotbad)}: {_rotbad[:4]}")
 else: print(f"  PASS  rotation-references          0 finding(s)")
 
+@rule("distinct-talents","error",["vanilla","rebuilt","absorbed","original"])
+def r_distinct(t):
+    seen={}; bad=[]
+    for r in t["rows"]:
+        for x in r["talents"]:
+            if x["name"] in seen: bad.append(f"{x['name']} appears twice, rows {seen[x['name']]} and {r['row']}")
+            else: seen[x["name"]]=r["row"]
+    return bad
+
 @rule("prerequisites","error",["vanilla","rebuilt","absorbed","original"])
 def r_prereq(t):
     where={x["id"]:(r["row"],x) for r in t["rows"] for x in r["talents"]}
