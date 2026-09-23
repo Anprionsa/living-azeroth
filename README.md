@@ -18,12 +18,21 @@ python -m http.server 8000
 |---|---|
 | `index.html` | the site, a copy of `DocumentPage.dc.html` |
 | `DocumentPage.dc.html` | the working page; after editing it, re-copy to `index.html` |
+| `forever.html` | the Forever issue tracker, a dated snapshot read from `data/forever-tracker.json` |
 | `data/` | canonical data. `talent-data.json` is canonical for what a talent does |
 | `tools/` | validators, renderers, and the rank audit, with repo-relative paths |
 | `assets/`, `icons/`, `_ds/`, `vendor/` | images, talent icons, the design system, vendored React |
 | `.image-slots.state.json` | image payloads for the page's six map and reference slots |
 
 The data is canonical for what a talent does; the documents rendered on the page are canonical for why. `data/rank-audit.md` lists what the tooltip data still leaves unbound.
+
+## Forever issue tracker
+
+`forever.html` tracks WoW Forever beta community issues against the team's stated goals, with who on the team each issue lands with. The working copy is a hosted page with a shared database; the site carries a dated snapshot of it. To refresh the snapshot, export the store's `issues`, `goals`, `team`, `premise`, and `meta` collections (one JSON file per document, in `<export>/<collection>/<id>.json`) and run:
+
+```bash
+python tools/build_forever_tracker.py <export> --date YYYY-MM-DD
+```
 
 ## Provenance
 

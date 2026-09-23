@@ -1,0 +1,2816 @@
+{
+ "issues": [
+  {
+   "id": "alchemy-thin",
+   "ask": "Treat any \"this profession is thin\" complaint as unreliable for now. Many recipes come from sources players haven't finished finding.",
+   "blizzard": "None needed.",
+   "category": "Professions and economy",
+   "community": "A thread called alchemy useless. A poster catalogued about 27 new recipes sold by the Azeroth Commerce Authority, plus world-drop recipes not on any database yet.",
+   "firstSeen": "2026-09-19",
+   "fit": "none",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Alchemy is still totally useless",
+     "url": "https://us.forums.blizzard.com/en/wow/t/alchemy-is-still-totally-useless/2355297"
+    }
+   ],
+   "status": "not-an-issue",
+   "title": "Alchemy looks useless",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "amd-lighting-crash",
+   "ask": "Straight bug report.",
+   "blizzard": "Not on the known issues list.",
+   "category": "Fog and lighting",
+   "community": "Crashes above \"Good.\" Fatal error in VirtualShadowMap.cpp that takes the driver down until a hard reset. Deeprun Tram crashes traced to it.",
+   "firstSeen": "2026-09-19",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "AMD users: Secondary Lighting crashes",
+     "url": "https://us.forums.blizzard.com/en/wow/t/amd-card-users-come-here-secondary-lighting-crashes-amd-drivers/2355091"
+    }
+   ],
+   "status": "open",
+   "title": "Secondary Lighting crashes AMD drivers",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "art-cohesion",
+   "ask": "Point at the new zones as proof it can be done. Extend SD to armor, weapons, and creatures (Warcraft III Reforged 2.0 precedent). Name specific clashing assets. Ask whether the vanilla-style rule covers character art, and who owns it.",
+   "blizzard": "Longdale named it a hard call. Matt Heyman (environment lead) stated new assets are built in vanilla style. Nobody for character, armor, weapon, or creature art has been named.",
+   "category": "Art and models",
+   "community": "Environments praised, including the new zones. Player models, armor, weapons, and creatures don't look like the same game. The toggle only covers player models.",
+   "firstSeen": "2026-09-14",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Does WoW Forever have a clear art direction?",
+     "url": "https://us.forums.blizzard.com/en/wow/t/does-wow-forever-have-a-clear-art-direction/2349717"
+    },
+    {
+     "label": "Evolving a Timeless World panel notes",
+     "url": "https://www.mmo-champion.com/threads/2669938-BlizzCon-2026-World-of-Warcraft-Forever-Evolving-a-Timeless-World"
+    }
+   ],
+   "status": "open",
+   "title": "HD models, armor, and creatures clash with the world",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "auto-shot-timing",
+   "ask": "Nothing to send. Useful as the first confirmed case of retail behavior inherited by default.",
+   "blizzard": "Confirmed unintended (Sept 23). Fix in an upcoming beta build, hopefully next week.",
+   "category": "Classes",
+   "community": "The 0.5-second windup before Auto Shot and wand shots isn't working, so ranged users barely stop moving. Some want to keep it. Others say indefinite kiting breaks the open world.",
+   "firstSeen": "2026-09-23",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Wowhead",
+     "url": "https://www.wowhead.com/forever/news/auto-shot-and-wanding-cast-time-reduction-in-wow-forever-not-intended-will-be-383064"
+    }
+   ],
+   "status": "change-coming",
+   "title": "Auto Shot and wand fire almost instantly",
+   "type": "Bug",
+   "updates": [
+    {
+     "date": "2026-09-23",
+     "note": "Blizzard confirms bug, fix coming."
+    }
+   ]
+  },
+  {
+   "id": "caster-weak-early",
+   "ask": "If a class makes people stop at level 10, that's a problem wherever it ends up at 60. Point at the window before the first spell power weapon, measured against Jones's viability claim.",
+   "blizzard": "Greenfield's redistribution answer disposes of the \"forgot the gear\" reading. Tim Jones (Sept 22): all 27 talent trees are viable for all content. Wowhead commenters asked for a druid Wrath ruling before launch.",
+   "category": "Classes",
+   "community": "A player quit druid at 10 for hitting half as hard as their hunter and mage. Wrath for 14-21 against a mage Fireball for 50-60. Bear form meleeing for 10-15, partly because forms now scale with weapons. 62 replies in four hours.",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Starting a druid and it feels incredibly weak",
+     "url": "https://us.forums.blizzard.com/en/wow/t/starting-a-druid-and-it-feels-incredibly-weak-am-i-doing-something-wrong/2356995"
+    }
+   ],
+   "status": "open",
+   "title": "Druid and casters weak before first spell power weapon",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "class-bugs",
+   "ask": "Straight bug reports.",
+   "blizzard": "Not on the known issues list.",
+   "category": "Classes",
+   "community": "Hunter pets losing abilities on relog, casting interrupted by auto-attack, spellcasting timing.",
+   "firstSeen": "2026-09-18",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [],
+   "status": "open",
+   "title": "Class bugs: pets, auto-attack interrupts, cast timing",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "commerce-authority",
+   "ask": "Watch the currency design, since the Commerce Authority is becoming Forever's main profession and cosmetic vendor.",
+   "blizzard": "No response.",
+   "category": "Professions and economy",
+   "community": "Cross-faction Pack Kodo called a retail smell. Counter: Horde have earned frostsabers since vanilla. The more durable worry is currencies (\"World of Currencycraft\").",
+   "firstSeen": "2026-09-23",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Wowhead",
+     "url": "https://www.wowhead.com/forever/news/kodo-mount-for-alliance-from-reputation-in-wow-forever-383049"
+    }
+   ],
+   "status": "open",
+   "title": "Commerce Authority currency and the Alliance kodo",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "controller-gaps",
+   "ask": "Send the gamepad-only player's list as is. Their verdict: excellent with pain points.",
+   "blizzard": "Partly addressed in build 69977 (see the fixed entry).",
+   "category": "Controller",
+   "community": "Critters untargetable (blocks the Sickly Gazelle quest), choppy targeting, cross bars not editable, Edit Mode not saving, no remapping, no auto-attack indicator, no auto-facing, fishing bobbers out of reach, clunky trade and mail. Steam Controller didn't work.",
+   "firstSeen": "2026-09-18",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Controller support feedback",
+     "url": "https://us.forums.blizzard.com/en/wow/t/controller-support-feedback-beta-impressions-so-far/2353149"
+    }
+   ],
+   "status": "open",
+   "title": "Controller gaps still open",
+   "type": "Request",
+   "updates": []
+  },
+  {
+   "id": "controller-quest-items",
+   "ask": "Nothing to send.",
+   "blizzard": "Fixed in build 1.60.1.69977 (Sept 23).",
+   "category": "Controller",
+   "community": "Quest-starting items needed the mouse. Controller navigation on character select was also broken.",
+   "firstSeen": "2026-09-18",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Controller support feedback",
+     "url": "https://us.forums.blizzard.com/en/wow/t/controller-support-feedback-beta-impressions-so-far/2353149"
+    },
+    {
+     "label": "Beta client update, Sept 23",
+     "url": "https://eu.forums.blizzard.com/en/wow/t/beta-client-update-23-september/630815"
+    }
+   ],
+   "status": "fixed",
+   "title": "Quest items have no Use prompt on controller",
+   "type": "Bug",
+   "updates": [
+    {
+     "date": "2026-09-23",
+     "note": "Fixed in build 69977."
+    }
+   ]
+  },
+  {
+   "id": "crafted-bop-boe",
+   "ask": "Hold until level 60 recipes are visible. The beta caps at 20 and nobody has seen the recipes this argument is about.",
+   "blizzard": "No response.",
+   "category": "Items and power",
+   "community": "Crafted blues are strong (a level 20 helm with 10 stamina, 8 agility). BoE side: BoP predetermines profession by armor type and makes recipes only temporarily valuable. BoP side: exclusive rewards are the only reason to craft while leveling. Middle: bind to account, or a Legacy perk.",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Please make crafted gear BoE",
+     "url": "https://us.forums.blizzard.com/en/wow/t/powerful-crafted-gear-is-great-please-make-it-boe-not-bop/2357004"
+    }
+   ],
+   "status": "open",
+   "title": "Crafted blues: BoP or BoE",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "dungeon-xp",
+   "ask": "Full XP on the first clear of each dungeon per day, diminishing returns on repeats, daily reset (relayed from Reddit). Kills grinding more precisely than a flat cut. The objection: per-character daily counters are a retail-shaped mechanic.",
+   "blizzard": "Zierhut: mob kill XP in dungeons came down a long way and dungeon quest XP went up, so the first run is amazing and repeats are worse than moving on. The target was boosting services. No response to beta feedback.",
+   "category": "Leveling and difficulty",
+   "community": "A full run is worth about 1 to 1.5 bars. 9 to 18 XP per elite in Ragefire Chasm. Groups run each dungeon once, skip every pack, and never come back. Defenders say a first clear pays about three runs' worth.",
+   "firstSeen": "2026-09-19",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Destroying game experience with nerfed dungeons",
+     "url": "https://us.forums.blizzard.com/en/wow/t/destroying-game-experience-with-nerfed-dungeons/2355743"
+    },
+    {
+     "label": "Icy Veins: Zierhut on dungeon XP",
+     "url": "https://www.icy-veins.com/wow-forever/news/wow-forever-cuts-dungeon-kill-xp-but-makes-dungeon-quests-more-rewarding/"
+    }
+   ],
+   "status": "open",
+   "title": "Dungeon XP nerfed too far",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "duskwood-sightline",
+   "ask": "Per-zone occlusion or a thicker boundary for the few zones whose identity depends on not being seen into.",
+   "blizzard": "No response. It's a product of removing the fog wall to open sightlines.",
+   "category": "Fog and lighting",
+   "community": "Duskwood is supposed to sit under a shroud and can now be seen from Elwynn.",
+   "firstSeen": "2026-09-20",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Reddit (relayed)",
+     "url": ""
+    }
+   ],
+   "status": "open",
+   "title": "Duskwood visible from Elwynn",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "dwarf-shaman-ghost-wolf",
+   "ask": "Ask for it unmistakably spectral, so it doesn't read as a player on a ram mount in PvP.",
+   "blizzard": "No response. Skyborne druids already have race-specific forms, and the serpent form varies color by race.",
+   "category": "Classes",
+   "community": "A dwarf shaman gets the orcish wolf spirit. Proposal: a spectral Alterac battle ram.",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Reddit (relayed)",
+     "url": "https://reddit.com/r/wowforever/comments/1wo24d0/dwarf_shaman_feels_off_and_i_know_why/"
+    }
+   ],
+   "status": "open",
+   "title": "Dwarf shamans use an orcish Ghost Wolf",
+   "type": "Request",
+   "updates": []
+  },
+  {
+   "id": "eu-latency",
+   "ask": "Check EU reports after the change.",
+   "blizzard": "Kaivax posted a routing change for EU connections (Sept 21). Whether it fixed things isn't settled.",
+   "category": "Launch and performance",
+   "community": "EU players report the beta unplayable from network timeouts. Many routed through VPNs for four days.",
+   "firstSeen": "2026-09-17",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "PC Gamer",
+     "url": "https://www.pcgamer.com/games/world-of-warcraft/wow-forever-lag-how-to-fix/"
+    }
+   ],
+   "status": "acknowledged",
+   "title": "EU latency and timeouts",
+   "type": "Bug",
+   "updates": [
+    {
+     "date": "2026-09-21",
+     "note": "EU routing change posted."
+    }
+   ]
+  },
+  {
+   "id": "extra-attack-animation",
+   "ask": "Confirm in the current beta build first, since the comparison is against demo footage. Group it with aggro and the skeleton issues as retail behavior carried over by default.",
+   "blizzard": "No response.",
+   "category": "Classes",
+   "community": "Windfury, Hand of Justice, and Sword Specialization procs play a distinct extra swing in Classic. BlizzCon footage shows only the tornado effect, which is the retail presentation.",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Reddit (relayed)",
+     "url": "https://reddit.com/r/classicwow/comments/1wnwfn0/missing_in_wow_forever_extra_attack_animation/"
+    }
+   ],
+   "status": "open",
+   "title": "Missing extra-attack swing animation",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "fog-density",
+   "ask": "The complaint is that specific zones miss the stated target. List them by zone, and ask for grading that errs neutral.",
+   "blizzard": "No response. Stated intent: fog placed per zone and each zone relit against the 1.12 client to keep its character.",
+   "category": "Fog and lighting",
+   "community": "Durotar, Westfall, Mulgore, Elwynn reported over-fogged or grey. Dun Morogh and Duskwood praised. Separate critique of color grading (Elwynn amber, Darkshore pink, Mulgore orange).",
+   "firstSeen": "2026-09-14",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Fog revamp aesthetic concerns",
+     "url": "https://us.forums.blizzard.com/en/wow/t/fog-revamp-aesthetic-concerns/2352979"
+    },
+    {
+     "label": "Too much fog",
+     "url": "https://us.forums.blizzard.com/en/wow/t/too-much-fog/2348928"
+    },
+    {
+     "label": "Clear air in the rotation",
+     "url": "https://us.forums.blizzard.com/en/wow/t/beta-feedback-fog-is-coolbut-can-we-please-still-have-some-clear-air-in-the-rotation/2353419"
+    },
+    {
+     "label": "classicwow.gg presentation",
+     "url": "https://classicwow.gg/forever/news/wow-forever-presentation-outlines-fog-lighting-and-water-rendering-changes-source-326"
+    }
+   ],
+   "status": "open",
+   "title": "Fog too heavy and too even",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "fog-slider",
+   "ask": "A density slider, and split fog from lighting so one can go without the other. The accessibility case is the strongest form of this.",
+   "blizzard": "No response.",
+   "category": "Fog and lighting",
+   "community": "Three posters cite headaches, failing eyesight, and trouble with sun rays. The only control is /console volumeFog 0, which also removes most of the new lighting.",
+   "firstSeen": "2026-09-14",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Why does every zone have to be foggy?",
+     "url": "https://us.forums.blizzard.com/en/wow/t/why-does-blizzard-think-that-every-zone-has-to-be-foggy/2349405"
+    },
+    {
+     "label": "VolumeFog/Lightning",
+     "url": "https://us.forums.blizzard.com/en/wow/t/volumefoglightning/2354916"
+    }
+   ],
+   "status": "open",
+   "title": "No fog slider (accessibility)",
+   "type": "Request",
+   "updates": []
+  },
+  {
+   "id": "gdkp-gold-buying",
+   "ask": "Nothing to send. Unverified: a vendor selling rare materials at fixed prices. Confirm in-game.",
+   "blizzard": "GDKP banned in Forever; gold buyers face punishment up to permanent account loss. Greenfield's main reason is guild structure, then new players, laundering, and past leniency. Blizzard will adjust material and consumable supply as needed.",
+   "category": "Professions and economy",
+   "community": "Largely welcomed. Icy Veins notes the Anniversary realm ban didn't stop botting or high consumable prices.",
+   "firstSeen": "2026-09-17",
+   "fit": "matches",
+   "lastChecked": "2026-09-23",
+   "owner": "Josh Greenfield",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Icy Veins",
+     "url": "https://www.icy-veins.com/wow-forever/news/blizzard-just-confirmed-gdkp-runs-wont-be-allowed-in-wow-forever/"
+    },
+    {
+     "label": "PC Gamer",
+     "url": "https://www.pcgamer.com/games/world-of-warcraft/blizzard-warns-world-of-warcraft-forever-players-it-will-very-aggressively-punish-anyone-who-buys-gold-with-real-money/"
+    }
+   ],
+   "status": "change-coming",
+   "title": "GDKP and gold buying",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "known-issues-sept-18",
+   "ask": "Nothing to send.",
+   "blizzard": "Acknowledged on the list. Most marked fixed in the next build.",
+   "category": "Launch and performance",
+   "community": "About 25 items: class and talent bugs, pet and stat display, Legacy opening with Y before 25, guild charters, Teldrassil escort, spell queue, Bear Form armor, resurrection sickness.",
+   "firstSeen": "2026-09-17",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Known Issues, Sept 18",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-known-issues-september-18/2352687"
+    }
+   ],
+   "status": "fixed",
+   "title": "Known issues list, Sept 18",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "layer-swap-pvp",
+   "ask": "A PvP combat lockout on layer swaps (about five minutes) covering borders and the prompt. Smallest change, closes the exploit, leaves layering alone.",
+   "blizzard": "No response. Blizzard warns before a forced phase so players can reach safety.",
+   "category": "PvP and layering",
+   "community": "Crossing a zone border forces a layer swap and exits PvP combat. The layer-now prompt can be accepted mid-fight. World PvP is concentrating on borders (Stonetalon/Barrens, Ashenvale edges, northern Duskwood).",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Reddit (relayed)",
+     "url": "https://reddit.com/r/classicwow/comments/1wnxa8t/current_layering_system_will_kill_world_pvp/"
+    }
+   ],
+   "status": "open",
+   "title": "Layer swaps at zone borders end PvP fights",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "leveling-too-easy",
+   "ask": "Frame it in their numbers: \"a level 4 mob dies in 3 seconds against a stated 10-15.\" Strongest feedback in the doc. Ask directly whether overworld tuning was raised to match the new gear.",
+   "blizzard": "No response to the beta feedback. Stated target from the Deep Dive: an ordinary creature should take a solo player 10-15 seconds, and combat feel stays Classic. Valleta (Sept 22): the world should be scary.",
+   "category": "Leveling and difficulty",
+   "community": "Valley of Trials at level 4-5: enemies barely do damage, no food needed. Worry that 1,000+ new quests will have players outleveling zones a quarter of the way through. Warrior may be the one class leveling at the described pace.",
+   "firstSeen": "2026-09-17",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Enemies are too weak",
+     "url": "https://us.forums.blizzard.com/en/wow/t/enemies-are-too-weak/2353436"
+    },
+    {
+     "label": "XP per level + new quests",
+     "url": "https://us.forums.blizzard.com/en/wow/t/xp-per-level-new-quests-being-added/2353442"
+    },
+    {
+     "label": "Deep Dive recap",
+     "url": "https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap"
+    }
+   ],
+   "status": "open",
+   "title": "Mobs and leveling too easy",
+   "type": "Design",
+   "updates": [
+    {
+     "date": "2026-09-22",
+     "note": "Windows Central interview restates intent (world scary, raids need prep). Not confirmation of tuning."
+    }
+   ]
+  },
+  {
+   "id": "linux-stutter",
+   "ask": "Straight bug report.",
+   "blizzard": "Not on the known issues list.",
+   "category": "Launch and performance",
+   "community": "Extreme stuttering, and clients stuck at 100% on load.",
+   "firstSeen": "2026-09-21",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [],
+   "status": "open",
+   "title": "Linux stuttering and load hangs",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "low-fps",
+   "ask": "Straight bug report.",
+   "blizzard": "Not on the known issues list.",
+   "category": "Launch and performance",
+   "community": "A 5090 with 9950X3D at 25-30 fps. 40-50 fps on both low and ultra. A possible memory leak (140 to 35-40 fps over an hour). FPS thread past 19,000 views.",
+   "firstSeen": "2026-09-17",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "FPS problems",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-fps-problems/2352692"
+    }
+   ],
+   "status": "open",
+   "title": "Low FPS on high-end hardware",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "mac-crashes",
+   "ask": "Confirm whether the crash threads quiet down after the build.",
+   "blizzard": "Build 69977 (Sept 23) lists fixes for Mac display and stability issues.",
+   "category": "Launch and performance",
+   "community": "Largest thread in the forum (142 replies). Anything above Fair Secondary Lighting hangs an M5 Pro GPU.",
+   "firstSeen": "2026-09-17",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Beta client update, Sept 23",
+     "url": "https://eu.forums.blizzard.com/en/wow/t/beta-client-update-23-september/630815"
+    }
+   ],
+   "status": "fixed",
+   "title": "Mac crashes",
+   "type": "Bug",
+   "updates": [
+    {
+     "date": "2026-09-23",
+     "note": "Mac fixes listed in build 69977. Not yet confirmed by players."
+    }
+   ]
+  },
+  {
+   "id": "mail-routing",
+   "ask": "How they fix it will show how fixed the two-part name decision is.",
+   "blizzard": "No response found.",
+   "category": "UI and names",
+   "community": "Mail appears to resolve on first name alone. Mail between one player's own characters landed on unrelated characters. Horde receiving Stormwind AH mail. Advice: avoid mail and the AH.",
+   "firstSeen": "2026-09-21",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Wowhead",
+     "url": "https://www.wowhead.com/forever/news/first-and-last-names-in-forever-causing-mailing-issues-383034"
+    },
+    {
+     "label": "Self-mail bug thread",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-self-mail-bug-same-first-name/2353657"
+    }
+   ],
+   "status": "open",
+   "title": "Mail routes to the wrong character",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "mob-aggro",
+   "ask": "One hypothesis covers both: retail aggro and leash behavior carried over wholesale. Measure aggro radius at several level gaps against the same pull in Classic Era. Nobody has posted numbers yet.",
+   "blizzard": "No response.",
+   "category": "Leveling and difficulty",
+   "community": "Two opposite reports. Forums: mobs attacking bystanders, packs turning on people when a trained mob leashes, neutral kodos joining unrelated fights. Reddit: skull-level aggro radius far too small, a level 8 walked through Silithus and pulled nothing.",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Mob aggro, training, leashing is totally broken",
+     "url": "https://us.forums.blizzard.com/en/wow/t/mob-aggro-training-leashing-is-totally-broken/2357037"
+    },
+    {
+     "label": "Skull-level aggro too small (Reddit)",
+     "url": "https://reddit.com/r/wowforever/comments/1wmd0j4/skull_level_mob_aggro_seems_to_be_ridiculously/"
+    }
+   ],
+   "status": "open",
+   "title": "Mob aggro, leashing, and aggro radius",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "multi-license",
+   "ask": "Straight bug report.",
+   "blizzard": "No response.",
+   "category": "Launch and performance",
+   "community": "A second login on a multi-license account disconnects the first player.",
+   "firstSeen": "2026-09-17",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [],
+   "status": "open",
+   "title": "No account selector for multiple licenses",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "night-city-lighting",
+   "ask": "Real light sources at city entrances, gates, and main streets, strong enough to reach the ground. Don't brighten night globally.",
+   "blizzard": "No response.",
+   "category": "Fog and lighting",
+   "community": "Thunder Bluff at night reads as flat silhouettes. Ironforge has lit windows that don't throw light. Stormwind Cathedral is blindingly overbright.",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Reddit (relayed)",
+     "url": "https://reddit.com/r/classicwow/comments/1wnxjdm/world_too_boring_at_night_needs_more_torchlight/"
+    }
+   ],
+   "status": "open",
+   "title": "Cities too dark at night",
+   "type": "Request",
+   "updates": []
+  },
+  {
+   "id": "no-arenas",
+   "ask": "Arena is a reversal ask. The version that could land: open-world arenas built like Gurubashi, competitive play inside the world.",
+   "blizzard": "No arenas announced, no rated PvP per the Sept 17 Q&A (secondhand). Seasonal Rank 14 ladder, Darkspear Islands 15v15, more battlegrounds later.",
+   "category": "PvP and layering",
+   "community": "Arena players organized and unhappy, asking for 2v2 and 3v3 or a rated battleground. A counter-thread doesn't want arenas as the main PvP.",
+   "firstSeen": "2026-09-14",
+   "fit": "reversal",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "No arenas? Withhold hype?",
+     "url": "https://us.forums.blizzard.com/en/wow/t/no-arenas-should-pvpers-withhold-hype/2347286"
+    },
+    {
+     "label": "Gurubashi-style arena proposal",
+     "url": "https://eu.forums.blizzard.com/en/wow/t/arena-mode-implementation-in-wow-forever/629158"
+    },
+    {
+     "label": "Method: PvP ranking",
+     "url": "https://www.method.gg/wow-forever/new-pvp-ranking-system-explained-in-world-of-warcraft-forever"
+    }
+   ],
+   "status": "wont-change",
+   "title": "No arenas or rated PvP",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "offensive-names",
+   "ask": "Nothing to send.",
+   "blizzard": "Banning testers. Players whose names violate policy may lose beta access.",
+   "category": "UI and names",
+   "community": "Players pairing names to spell out hateful messages.",
+   "firstSeen": "2026-09-21",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Mein MMO",
+     "url": "https://mein-mmo.de/wow-forever-vorname-nachname-aerger/"
+    },
+    {
+     "label": "Massively OP",
+     "url": "https://massivelyop.com/2026/09/21/world-of-warcraft-forever-beta-sees-crazy-numbers-weve-got-something-really-special-here/"
+    }
+   ],
+   "status": "acknowledged",
+   "title": "Offensive first-and-last name combinations",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "paladin-leveling",
+   "ask": "Testable at level 20. Needs numbers before it's worth sending.",
+   "blizzard": "No response.",
+   "category": "Classes",
+   "community": "Paladin reported as leveling faster and safer than others. Thin sourcing so far.",
+   "firstSeen": "2026-09-18",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [],
+   "status": "open",
+   "title": "Paladin too strong while leveling",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "power-creep",
+   "ask": "Ask the systems side directly about drop quality, and ask whether overworld and instances were tuned up to match. That second question is what every power-creep thread is circling.",
+   "blizzard": "Greenfield (Sept 21) explained spell power on gear (see its own entry) and said drop quality belongs to the systems designers. That half is unanswered.",
+   "category": "Items and power",
+   "community": "Gear stats too high for the level: a level 14 Ragefire staff compared to a 55+ dungeon item, a level 18 weapon with 49 healing, a green quest dagger beating level 50s blues. New-dungeon items far outclass old ones. Quest rewards get left behind.",
+   "firstSeen": "2026-09-18",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "Kris Zierhut",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Power creep already way too high",
+     "url": "https://us.forums.blizzard.com/en/wow/t/power-creep-is-already-way-too-high-and-were-not-even-level-30/2353638"
+    },
+    {
+     "label": "Comprehensive beta feedback",
+     "url": "https://us.forums.blizzard.com/en/wow/t/comprehensive-beta-feedback/2355283"
+    }
+   ],
+   "status": "open",
+   "title": "Power creep and drop quality",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "profession-qol",
+   "ask": "Small asks. Register once.",
+   "blizzard": "No response.",
+   "category": "Professions and economy",
+   "community": "Mining no longer needing multiple taps. Find Minerals and Find Herbs both active. More professions through the Legacy tree.",
+   "firstSeen": "2026-09-19",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "New trainers need to go",
+     "url": "https://us.forums.blizzard.com/en/wow/t/new-trainers-need-to-go/2355822"
+    }
+   ],
+   "status": "open",
+   "title": "Profession conveniences",
+   "type": "Request",
+   "updates": []
+  },
+  {
+   "id": "queues-login",
+   "ask": "Nothing to send.",
+   "blizzard": "Stone called the turnout insane and said they were scaling up. No longer the main topic by Sept 18.",
+   "category": "Launch and performance",
+   "community": "Three full queues, disconnects at zero. Paying players couldn't install from the launcher. \"Unable to launch\" thread passed 14,000 views.",
+   "firstSeen": "2026-09-17",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "TWIV",
+     "url": "https://thisweekinvideogames.com/news/world-of-warcraft-forever-beta-launches-to-technical-issues-long-queue-times/"
+    },
+    {
+     "label": "PC Gamer",
+     "url": "https://www.pcgamer.com/games/world-of-warcraft/world-of-warcraft-forever-beta-launch-times-how-to-sign-up-and-play-blizzards-twist-on-wow-classic/"
+    }
+   ],
+   "status": "fixed",
+   "title": "Queues, disconnects, and install failures",
+   "type": "Bug",
+   "updates": [
+    {
+     "date": "2026-09-18",
+     "note": "Queues and logins stop being the main topic."
+    }
+   ]
+  },
+  {
+   "id": "realmless-layering",
+   "ask": "Reversal ask. Layer size and group-invite phasing are the compatible versions.",
+   "blizzard": "Deliberate, to remove the launch realm choice.",
+   "category": "PvP and layering",
+   "community": "Complaints about realmless design and layering. Also the source of the mail bug and border swaps.",
+   "firstSeen": "2026-09-17",
+   "fit": "reversal",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "WoW Forever or Retail Forever?",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-or-retail-forever/2353519"
+    }
+   ],
+   "status": "open",
+   "title": "Realmless servers and layering",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "retail-ui",
+   "ask": "Transmog and models got toggles. A classic UI option follows their own logic.",
+   "blizzard": "No response.",
+   "category": "UI and names",
+   "community": "Portraits, professions, spellbook, and menus are all retail. Widely liked thread.",
+   "firstSeen": "2026-09-18",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "WoW Forever or Retail Forever?",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-or-retail-forever/2353519"
+    }
+   ],
+   "status": "open",
+   "title": "Retail UI with no classic option",
+   "type": "Request",
+   "updates": []
+  },
+  {
+   "id": "sd-model-gaps",
+   "ask": "Specific, scoped bug reports.",
+   "blizzard": "No response.",
+   "category": "Art and models",
+   "community": "Classic races run on the retail skeleton shared with WoD models. SD models lack the eye color selector. SD Forsaken faces look like low-res textures on HD models. HD human males look worst (TAGN).",
+   "firstSeen": "2026-09-18",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Feedback: Character Creation",
+     "url": "https://us.forums.blizzard.com/en/wow/t/feedback-character-creation/2353450"
+    },
+    {
+     "label": "TAGN weekend impressions",
+     "url": "https://tagn.wordpress.com/2026/09/22/first-weekend-with-the-wow-forever-beta/"
+    }
+   ],
+   "status": "open",
+   "title": "SD model gaps on classic races",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "shadow-lighting-settings",
+   "ask": "Keep separate from the fog-taste complaint: working-but-too-thick versus not rendering at all.",
+   "blizzard": "No response.",
+   "category": "Fog and lighting",
+   "community": "On one 5090, lighting and fog only appeared with Shadow Quality on Low or Fair. RX 9070 users see haze with none of the lighting. Some grey-haze complaints are the lighting failing, not fog working.",
+   "firstSeen": "2026-09-19",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Shadow settings remove new lighting",
+     "url": "https://us.forums.blizzard.com/en/wow/t/shadow-settings-remove-new-lightingfog-effects/2353634"
+    }
+   ],
+   "status": "open",
+   "title": "New lighting fails on some settings and hardware",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "shapeshift-sd-leak",
+   "ask": "Best-scoped SD/HD item: the setting says SD, the client shows HD. Reuse the Wrath 3.2 low-poly form colors as SD counterparts. Check other barber-shop appearances for the same leak.",
+   "blizzard": "No response.",
+   "category": "Art and models",
+   "community": "Barber-shop form variants show to everyone. For Night Elf and Tauren bears only the base variant is SD; variants 1-5 are HD. All four Skyborne bears are HD.",
+   "firstSeen": "2026-09-22",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Community image (relayed)",
+     "url": ""
+    }
+   ],
+   "status": "open",
+   "title": "Druid forms ignore the SD/HD setting",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "shared-tagging",
+   "ask": "Register once, don't repeat. Test recent allies during the beta and report on it, since Blizzard is leaning on it to carry the cost. The open levers are layer size, spawn rates, and quest-mob density.",
+   "blizzard": "Josh Greenfield on X (Sept 20): shared tagging is one of the things they must \"hold the line\" on, because friction feeds the social pillar. He expects other ways to reduce the frustration and pointed at recent allies as the mitigation.",
+   "category": "Leveling and difficulty",
+   "community": "Hundreds of players in starting zones after the same few mobs. One side wants shared tagging or hyper-spawns at launch. The other says contested tags push people to group. A middle position: shared tagging for named quest mobs only. Some expect it to stop mattering once players spread out (about a week, based on past Classic launches).",
+   "firstSeen": "2026-09-17",
+   "fit": "reversal",
+   "lastChecked": "2026-09-23",
+   "owner": "Josh Greenfield",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Spawn rates or shared tagging",
+     "url": "https://us.forums.blizzard.com/en/wow/t/spawn-rates-or-shared-tagging/2352635"
+    },
+    {
+     "label": "Greenfield on tagging (X)",
+     "url": "https://x.com/aggrendwow/status/2101711250342453367"
+    },
+    {
+     "label": "Greenfield on recent allies (X)",
+     "url": "https://x.com/aggrendwow/status/2101727439634547153"
+    }
+   ],
+   "status": "wont-change",
+   "title": "Mob tagging and spawn rates",
+   "type": "Design",
+   "updates": [
+    {
+     "date": "2026-09-17",
+     "note": "Most active design argument on day one."
+    },
+    {
+     "date": "2026-09-20",
+     "note": "Greenfield answers on X: holding the line, recent allies offered as mitigation."
+    }
+   ]
+  },
+  {
+   "id": "skyborne-bugs",
+   "ask": "Straight bug reports.",
+   "blizzard": "Not confirmed on the known issues list.",
+   "category": "Skyborne",
+   "community": "Broken quest \"Among the Faithful.\" Crash from Skyborne Druid Teleport: Moonglade. Bugged female bow animation. Wrath cast with arms at their sides.",
+   "firstSeen": "2026-09-17",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Skyborne starting zone",
+     "url": "https://us.forums.blizzard.com/en/wow/t/skyborne-starting-zone/2352828"
+    }
+   ],
+   "status": "open",
+   "title": "Skyborne quest, crash, and animation bugs",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "skyborne-neutrality",
+   "ask": "Keep separate from the paywall and art complaints so neither gets dismissed with the other.",
+   "blizzard": "No response. Datamined maps show Zephras Isle as its own map, so the separateness is structural.",
+   "category": "Skyborne",
+   "community": "Alliance and Horde Skyborne starting zones identical through level 7, functioning like Pandaren despite Blizzard stressing they aren't neutral. One claim: 52% of a player survey opposed a neutral race. Aesthetic complaints: MoP and Kyrian, not vanilla.",
+   "firstSeen": "2026-09-17",
+   "fit": "reversal",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Skyborne starting zone",
+     "url": "https://us.forums.blizzard.com/en/wow/t/skyborne-starting-zone/2352828"
+    }
+   ],
+   "status": "open",
+   "title": "Skyborne play as a neutral race",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "skyborne-paywall",
+   "ask": "Keep separate from design complaints about the Skyborne.",
+   "blizzard": "No change. No plans for WoW Tokens.",
+   "category": "Skyborne",
+   "community": "Race and starting zone only in the $30, $60, and $80 bundles, not the subscription. \"Cash elves.\" Against: dangerous precedent. For: it funds Forever, don't buy it.",
+   "firstSeen": "2026-09-13",
+   "fit": "reversal",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Massively OP",
+     "url": "https://massivelyop.com/2026/09/13/fans-raise-a-ruckus-over-the-paywalling-of-world-of-warcraft-forevers-skyborne-cash-elves/"
+    }
+   ],
+   "status": "open",
+   "title": "Skyborne locked behind paid bundles",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "skyborne-sd-models",
+   "ask": "Ask for SD models before launch. The SD toggle is working as an escape hatch for everyone else, which is why this lands badly.",
+   "blizzard": "No response. Longdale named SD versus HD as one of the hardest calls in development.",
+   "category": "Skyborne",
+   "community": "The HD toggle doesn't work on Skyborne. Called a broken promise that needs fixing by launch. One guess: the SD models aren't finished.",
+   "firstSeen": "2026-09-17",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Skyborne need SD models",
+     "url": "https://us.forums.blizzard.com/en/wow/t/skyborne-need-sd-models-and-other-races-need-a-fix/2352645"
+    }
+   ],
+   "status": "open",
+   "title": "Skyborne have no SD models",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "skyboxes",
+   "ask": "Reasonable, but it's new art, not relighting. Bigger than it sounds.",
+   "blizzard": "No response. Stated scope: the art itself was left alone, only the light changed.",
+   "category": "Fog and lighting",
+   "community": "Everything below the horizon got a lighting pass and the sky didn't.",
+   "firstSeen": "2026-09-20",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Reddit (relayed)",
+     "url": ""
+    }
+   ],
+   "status": "open",
+   "title": "Skyboxes not updated for new lighting",
+   "type": "Request",
+   "updates": []
+  },
+  {
+   "id": "spell-power-on-gear",
+   "ask": "Settled as intended. The open part lives in the caster-weak-early entry: whether the redistribution is smooth at every level.",
+   "blizzard": "Greenfield on X (Sept 21): base damage of every spell was cut and moved onto gear so caster upgrades land like weapon upgrades. Overall throughput should be essentially unchanged.",
+   "category": "Items and power",
+   "community": "Spell power and healing on low-level gear read as inflation. The druid thread's version: they nerfed the spells and forgot the gear.",
+   "firstSeen": "2026-09-18",
+   "fit": "matches",
+   "lastChecked": "2026-09-23",
+   "owner": "Josh Greenfield",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Greenfield on spell power (X)",
+     "url": "https://x.com/aggrendwow/status/2102156039907147912"
+    }
+   ],
+   "status": "wont-change",
+   "title": "Large spell damage on leveling gear",
+   "type": "Design",
+   "updates": [
+    {
+     "date": "2026-09-21",
+     "note": "Greenfield explains the redistribution."
+    }
+   ]
+  },
+  {
+   "id": "starter-trainers",
+   "ask": "Placement is load-bearing, presentation isn't. Give each trainer a tent, a camp, or a tie to an existing NPC family.",
+   "blizzard": "No response. Placement serves camping, which needs profession skill around 20 early. Blizzard's own \"found photographs\" standard says additions should sit alongside the original.",
+   "category": "Professions and economy",
+   "community": "Forums: forced placement, no reason to travel to a capital. Reddit: the NPCs read as bolted on. Most cross-channel objection of the beta. A middle proposal: keep original locations and add a starter quest that sends you to one.",
+   "firstSeen": "2026-09-19",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "New trainers need to go",
+     "url": "https://us.forums.blizzard.com/en/wow/t/new-trainers-need-to-go/2355822"
+    },
+    {
+     "label": "Found Photos recap",
+     "url": "https://news.blizzard.com/en-us/article/24304071/world-of-warcraft-forever-found-photos-panel-recap"
+    }
+   ],
+   "status": "open",
+   "title": "Gathering trainers in every starting sub-zone",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "thorns-scaling",
+   "ask": "Put it to Greenfield with the numbers: if base damage moved to spell power and throughput held, is a passive tripling on cheap consumables an exception, or a sign the redistribution is uneven at low level?",
+   "blizzard": "No response.",
+   "category": "Items and power",
+   "community": "A level 20-ish druid with crafted level 10 boots and the Staff of Orgrimmar: Minor Wizard Oil plus Minor Arcane Elixir take Thorns from 9 to 15, and real gear to 25. Thorns didn't scale with spell power in vanilla (Wrath added it, then halved it). Coldflame Sabre's frozen-target proc raises the same question.",
+   "firstSeen": "2026-09-21",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Reddit (relayed)",
+     "url": ""
+    }
+   ],
+   "status": "open",
+   "title": "Thorns scaling off spell power",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "two-part-names",
+   "ask": "Register once.",
+   "blizzard": "Deliberate: names are unique region-wide and across rulesets. Hazzikostas said surnames could come to retail depending on how players feel in Forever, so it's being watched.",
+   "category": "UI and names",
+   "community": "Complaints about mandatory surnames and immersion-breaking combinations.",
+   "firstSeen": "2026-09-17",
+   "fit": "reversal",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "2 names is a TERRIBLE IDEA",
+     "url": "https://us.forums.blizzard.com/en/wow/t/2-names-is-a-terrible-idea/2352612"
+    }
+   ],
+   "status": "acknowledged",
+   "title": "Mandatory first and last names",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "ui-settings-wiped",
+   "ask": "Straight bug report.",
+   "blizzard": "No response.",
+   "category": "UI and names",
+   "community": "UI and addon settings reset on client restart. Edit Mode not saving on controller.",
+   "firstSeen": "2026-09-21",
+   "fit": "bug",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Beta forum index",
+     "url": "https://us.forums.blizzard.com/en/wow/c/in-development/wow-forever-beta-discussion/349?page=1"
+    }
+   ],
+   "status": "open",
+   "title": "UI and addon settings wiped on restart",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "warrior-prot",
+   "ask": "A dead third spec is a gap, not distinctiveness. Revisit at 30.",
+   "blizzard": "No response. Jones: every tree viable.",
+   "category": "Classes",
+   "community": "Defense spec threat and damage don't scale with itemization, so it falls off after the first tier and fury tanking returns. Split between agreement and \"too early at 20.\"",
+   "firstSeen": "2026-09-18",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Warrior is in a really bad state",
+     "url": "https://us.forums.blizzard.com/en/wow/t/warrior-is-in-a-really-bad-state/2353811"
+    }
+   ],
+   "status": "open",
+   "title": "Protection warrior doesn't scale",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "water-no-bobbing",
+   "ask": "Check rivers and open ocean, and how other players look from your screen.",
+   "blizzard": "No response.",
+   "category": "World and audio",
+   "community": "Water has visible wave motion now, but characters float at a fixed height through it.",
+   "firstSeen": "2026-09-20",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Relayed",
+     "url": ""
+    }
+   ],
+   "status": "open",
+   "title": "Characters don't react to waves",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "water-splash-sound",
+   "ask": "Ask whether other ambient audio changed too. Nobody has audited sound.",
+   "blizzard": "Reportedly restoring the old sounds. Relayed, not yet sourced.",
+   "category": "World and audio",
+   "community": "The splashing sound is missing in water.",
+   "firstSeen": "2026-09-20",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Relayed",
+     "url": ""
+    }
+   ],
+   "status": "change-coming",
+   "title": "Missing water splash sound",
+   "type": "Bug",
+   "updates": []
+  },
+  {
+   "id": "weather",
+   "ask": "Weather should change what's available (fish, herbs, creatures), not what the player can do. Get that distinction in front of them before it's built.",
+   "blizzard": "Official short (Sept 23): increased weather effects coming to certain beta zones soon. Zones and effects not stated.",
+   "category": "Fog and lighting",
+   "community": "Requests for weather ambiance: lightning, dust devils. A second thread proposes heat stroke and frostbite.",
+   "firstSeen": "2026-09-22",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Weather in Forever",
+     "url": "https://us.forums.blizzard.com/en/wow/t/weather-in-forever/2357705"
+    },
+    {
+     "label": "Weather effects in WoW Forever",
+     "url": "https://us.forums.blizzard.com/en/wow/t/weather-effects-in-wow-forever/2358767"
+    },
+    {
+     "label": "Official short",
+     "url": "https://www.youtube.com/shorts/FBmc2eQunoY"
+    }
+   ],
+   "status": "change-coming",
+   "title": "Weather",
+   "type": "Request",
+   "updates": [
+    {
+     "date": "2026-09-23",
+     "note": "Blizzard teases increased weather effects."
+    }
+   ]
+  },
+  {
+   "id": "xp-curve-datamine",
+   "ask": "Nothing changed about XP requirements. Expect the old numbers to be quoted anyway. The useful part is the reaction: this community's line on leveling speed sits on the slow side.",
+   "blizzard": "Blizzard corrected Wowhead. The article now sits under a retracted headline.",
+   "category": "Leveling and difficulty",
+   "community": "Wowhead reported 26% less XP from 1 to 60. The \"before\" column was Legion's table (133,980 at 40, 254,000 at 60, matching retail 7.3.5). The \"after\" column is what Classic always required.",
+   "firstSeen": "2026-09-21",
+   "fit": "none",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "Wowhead (retracted)",
+     "url": "https://www.wowhead.com/forever/news/experience-requirements-significantly-reduced-in-wow-forever-383038"
+    }
+   ],
+   "status": "not-an-issue",
+   "title": "Datamined XP curve cut (retracted)",
+   "type": "Misinformation",
+   "updates": [
+    {
+     "date": "2026-09-21",
+     "note": "Published, caught by commenters within minutes, retracted."
+    }
+   ]
+  },
+  {
+   "id": "zone-density",
+   "ask": "Content density and life density are different. Complete unfinished ground; keep deliberately open ground open and make it inhabited instead of occupied.",
+   "blizzard": "Filling empty space is the plan. Clay Stone and Johnny Cash: leveling content will be added over time, steered by where players say they need more to do.",
+   "category": "World and audio",
+   "community": "One side wants more in zones. The other says open space is what makes the world large.",
+   "firstSeen": "2026-09-20",
+   "fit": "compatible",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": true,
+   "sources": [
+    {
+     "label": "Relayed",
+     "url": ""
+    }
+   ],
+   "status": "open",
+   "title": "Zones feel empty (or should stay open)",
+   "type": "Design",
+   "updates": []
+  },
+  {
+   "id": "zone-scaling",
+   "ask": "Reversal ask Blizzard has already answered. The community is policing this boundary harder than Blizzard is.",
+   "blizzard": "Stated before the beta: no scaling, no flex, no auto-tuning. Difficulty stays fixed while you outgear it (Resendez).",
+   "category": "Leveling and difficulty",
+   "community": "The OP asks for mobs scaled up toward the edge of trivial so old zones stay meaningful for a level 60 population. Overwhelmingly hostile response (top reply, 131 likes: go back to retail). A companion thread asks for an XP slider from -10% to +50%.",
+   "firstSeen": "2026-09-14",
+   "fit": "reversal",
+   "lastChecked": "2026-09-23",
+   "owner": "",
+   "relayed": false,
+   "sources": [
+    {
+     "label": "ZERO scaling? Of any kind?",
+     "url": "https://us.forums.blizzard.com/en/wow/t/zero-scaling-of-any-kind-is-that-really-whats-best/2349005"
+    },
+    {
+     "label": "Compromises and changes",
+     "url": "https://us.forums.blizzard.com/en/wow/t/compromises-and-changes/2356802"
+    }
+   ],
+   "status": "wont-change",
+   "title": "No scaling of any kind",
+   "type": "Design",
+   "updates": [
+    {
+     "date": "2026-09-21",
+     "note": "XP slider companion thread, same response."
+    }
+   ]
+  }
+ ],
+ "goals": [
+  {
+   "id": "the-four-pillars",
+   "date": "2026-09-12",
+   "note": "Both ends of the sentence match the recap on exact-phrase search.",
+   "order": 1,
+   "pillar": "The four pillars",
+   "quote": "Four core pillars guide the experience: approachable and familiar, the world as the main character, the journey before the destination, and protecting and nurturing the social experiences that make Azeroth feel alive.",
+   "relatedIssueIds": [
+    "retail-ui",
+    "zone-density",
+    "shared-tagging",
+    "leveling-too-easy"
+   ],
+   "role": "What's Next panel recap (Hazzikostas, Jones, Mills, Stone)",
+   "sourceLabel": "What's Next panel recap",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap",
+   "speaker": "Blizzard",
+   "venue": "BlizzCon 2026, What's Next panel",
+   "verification": "search"
+  },
+  {
+   "id": "azeroth-is-the-main-character",
+   "date": "2026-09-13",
+   "note": "",
+   "order": 2,
+   "pillar": "Azeroth is the main character",
+   "quote": "Azeroth is the main character, and every road, campfire, dungeon, and familiar name along the way is part of the story.",
+   "relatedIssueIds": [
+    "zone-density",
+    "mob-aggro",
+    "duskwood-sightline",
+    "fog-density",
+    "night-city-lighting",
+    "weather"
+   ],
+   "role": "Deep Dive panel recap (Stone, Greenfield, Resendez, Zierhut)",
+   "sourceLabel": "Deep Dive panel recap",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap",
+   "speaker": "Blizzard",
+   "venue": "BlizzCon 2026, Deep Dive panel",
+   "verification": "search"
+  },
+  {
+   "id": "the-journey-before-the-destination",
+   "date": "2026-09-12",
+   "note": "The second half matches the recap on exact-phrase search. The first half appears beside it in search snippets.",
+   "order": 3,
+   "pillar": "The journey before the destination",
+   "quote": "…leveling remains just as important as endgame, effort continues to matter, and rewards come from playing the game: leveling up, running dungeons, making friends, exploring the world, and taking on new challenges together.",
+   "relatedIssueIds": [
+    "leveling-too-easy",
+    "dungeon-xp",
+    "zone-scaling",
+    "xp-curve-datamine"
+   ],
+   "role": "What's Next panel recap",
+   "sourceLabel": "What's Next panel recap",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap",
+   "speaker": "Blizzard",
+   "venue": "BlizzCon 2026, What's Next panel",
+   "verification": "search"
+  },
+  {
+   "id": "social-friction-stays-on-purpose",
+   "date": "2026-09-20",
+   "note": "Posted on X, where the same reply opens: \"This is one of those things that we simply must hold the line on.\" Wording as PC Gamer quotes it.",
+   "order": 4,
+   "pillar": "Social friction stays on purpose",
+   "quote": "It's hard to see the value in something like this when you are frustrated in the moment but it is extremely important to our social pillar to maintain some of this friction.",
+   "relatedIssueIds": [
+    "shared-tagging",
+    "layer-swap-pvp",
+    "realmless-layering",
+    "gdkp-gold-buying"
+   ],
+   "role": "Senior Game Designer",
+   "sourceLabel": "PC Gamer, quoting his post",
+   "sourceUrl": "https://www.pcgamer.com/games/world-of-warcraft/world-of-warcraft-forever-players-competing-over-enemies-is-extremely-important-to-the-experience-blizzard-says-this-is-one-of-those-things-that-we-simply-must-hold-the-line-on/",
+   "speaker": "Josh Greenfield",
+   "venue": "X, on shared tagging",
+   "verification": "search"
+  },
+  {
+   "id": "the-world-should-be-scary",
+   "date": "2026-09-22",
+   "note": "The ellipsis is Windows Central's. Blizzard's own recaps name the lead software engineer Nora Mills, likely the same person.",
+   "order": 5,
+   "pillar": "The world should be scary",
+   "quote": "On the flip side, our attitude towards tuning and dungeon difficulty and raids is that the world should be scary ... raids should be difficult.",
+   "relatedIssueIds": [
+    "leveling-too-easy",
+    "mob-aggro",
+    "power-creep"
+   ],
+   "role": "Lead Software Engineer, per Windows Central",
+   "sourceLabel": "Windows Central",
+   "sourceUrl": "https://www.windowscentral.com/gaming/blizzard/i-spoke-to-the-world-of-warcraft-forever-team-about-balance-competing-with-retail-adding-classic-style-player-housing-and-more",
+   "speaker": "Nora Valleta",
+   "venue": "Windows Central interview",
+   "verification": "search"
+  },
+  {
+   "id": "dungeons-pay-on-the-first-run",
+   "date": "",
+   "note": "Said while explaining the cut to dungeon mob XP and the rise in dungeon quest XP. The rest of his answer is paraphrased in coverage, not quoted here.",
+   "order": 6,
+   "pillar": "Dungeons pay on the first run",
+   "quote": "So your first run through a dungeon is amazing.",
+   "relatedIssueIds": [
+    "dungeon-xp"
+   ],
+   "role": "Principal Game Designer",
+   "sourceLabel": "Icy Veins",
+   "sourceUrl": "https://www.icy-veins.com/wow-forever/news/wow-forever-cuts-dungeon-kill-xp-but-makes-dungeon-quests-more-rewarding/",
+   "speaker": "Kris Zierhut",
+   "venue": "Icy Veins interview",
+   "verification": "search"
+  },
+  {
+   "id": "every-talent-tree-is-viable",
+   "date": "2026-09-22",
+   "note": "He adds, in a separate line, \"That's one big class design goal.\"",
+   "order": 7,
+   "pillar": "Every talent tree is viable",
+   "quote": "Every single one of our 27 talent trees is now viable for all content in WoW: Forever.",
+   "relatedIssueIds": [
+    "caster-weak-early",
+    "warrior-prot",
+    "paladin-leveling",
+    "thorns-scaling"
+   ],
+   "role": "Lead Game Designer",
+   "sourceLabel": "Windows Central",
+   "sourceUrl": "https://www.windowscentral.com/gaming/blizzard/i-spoke-to-the-world-of-warcraft-forever-team-about-balance-competing-with-retail-adding-classic-style-player-housing-and-more",
+   "speaker": "Tim Jones",
+   "venue": "Windows Central interview",
+   "verification": "search"
+  },
+  {
+   "id": "itemization-unsolves-classic",
+   "date": "2026-09-13",
+   "note": "Kris Zierhut presented this part of the panel.",
+   "order": 8,
+   "pillar": "Itemization unsolves Classic",
+   "quote": "Itemization is changing with the same goal in mind: keeping the gameplay of Classic while 'unsolving' the path through it.",
+   "relatedIssueIds": [
+    "power-creep",
+    "spell-power-on-gear",
+    "crafted-bop-boe",
+    "thorns-scaling"
+   ],
+   "role": "Deep Dive panel recap",
+   "sourceLabel": "Deep Dive panel recap",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap",
+   "speaker": "Blizzard",
+   "venue": "BlizzCon 2026, Deep Dive panel",
+   "verification": "search"
+  },
+  {
+   "id": "additions-sit-alongside-the-original",
+   "date": "",
+   "note": "",
+   "order": 9,
+   "pillar": "Additions sit alongside the original",
+   "quote": "…WoW: Forever adds NPCs, quests, profession hooks, recipes, and small moments designed to sit alongside the original experience.",
+   "relatedIssueIds": [
+    "starter-trainers",
+    "commerce-authority",
+    "profession-qol"
+   ],
+   "role": "Found Photos panel recap (Greenfield, Evan Lee)",
+   "sourceLabel": "Found Photos panel recap",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24304071/world-of-warcraft-forever-found-photos-panel-recap",
+   "speaker": "Blizzard",
+   "venue": "BlizzCon 2026, Found Photos panel",
+   "verification": "search"
+  },
+  {
+   "id": "the-art-stays-timeless",
+   "date": "2026-09-12",
+   "note": "The cut is a list of examples: rivers in Elwynn Forest, mist over Darkshore, moonlight in Ashenvale. The panel phrase \"Azeroth as you remember it\" comes from community notes and is not credited to a speaker.",
+   "order": 10,
+   "pillar": "The art stays timeless",
+   "quote": "Rendering updates add small but powerful environmental touches … while preserving the timeless art style of original Azeroth.",
+   "relatedIssueIds": [
+    "art-cohesion",
+    "sd-model-gaps",
+    "skyborne-sd-models",
+    "shapeshift-sd-leak",
+    "fog-density",
+    "skyboxes"
+   ],
+   "role": "What's Next panel recap",
+   "sourceLabel": "What's Next panel recap",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap",
+   "speaker": "Blizzard",
+   "venue": "BlizzCon 2026, What's Next panel",
+   "verification": "search"
+  },
+  {
+   "id": "realmless-by-design",
+   "date": "2026-09-13",
+   "note": "",
+   "order": 11,
+   "pillar": "Realmless by design",
+   "quote": "World of Warcraft: Forever is going realmless, making it easier to connect with friends while still preserving the community feel that has always made realms memorable.",
+   "relatedIssueIds": [
+    "realmless-layering",
+    "two-part-names",
+    "mail-routing",
+    "layer-swap-pvp"
+   ],
+   "role": "Deep Dive panel recap",
+   "sourceLabel": "Deep Dive panel recap",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap",
+   "speaker": "Blizzard",
+   "venue": "BlizzCon 2026, Deep Dive panel",
+   "verification": "search"
+  },
+  {
+   "id": "transmog-is-the-player-s-choice",
+   "date": "",
+   "note": "The quote is about transmog only. The requests for a classic UI option and a fog slider lean on it as precedent.",
+   "order": 12,
+   "pillar": "Transmog is the player's choice",
+   "quote": "The system is being designed to support both perspectives: players who want to fully engage with appearance collection and players who would rather experience the world as if transmog does not exist.",
+   "relatedIssueIds": [
+    "retail-ui",
+    "fog-slider"
+   ],
+   "role": "Quoted by Warcraft Tavern",
+   "sourceLabel": "Warcraft Tavern",
+   "sourceUrl": "https://www.warcrafttavern.com/forever/news/transmog-in-world-of-warcraft-forever/",
+   "speaker": "Blizzard",
+   "venue": "Transmog announcement",
+   "verification": "search"
+  }
+ ],
+ "team": [
+  {
+   "id": "holly-longdale",
+   "confidence": "confirmed",
+   "discipline": "Leadership",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "art-cohesion",
+     "strength": "direct",
+     "why": "She named how close new zones get to modern fidelity, and SD versus HD models, as two of the hard calls, which is the decision at the center of this issue."
+    },
+    {
+     "id": "sd-model-gaps",
+     "strength": "likely",
+     "why": "The SD versus HD decision she called a hard call is the same one that leaves the classic-race SD models short of HD features."
+    },
+    {
+     "id": "skyborne-sd-models",
+     "strength": "likely",
+     "why": "The tracker cites her naming SD versus HD one of the hardest calls, though she has not spoken to the Skyborne models specifically."
+    },
+    {
+     "id": "shapeshift-sd-leak",
+     "strength": "possible",
+     "why": "The leak is a gap in the SD and HD toggle she described as a hard call, though the fix itself is character art work."
+    },
+    {
+     "id": "realmless-layering",
+     "strength": "possible",
+     "why": "Realmless play is a cross-cutting design call that sits at her level, although she has not spoken to it."
+    },
+    {
+     "id": "retail-ui",
+     "strength": "possible",
+     "why": "She said the SD versus HD decision had knock-on effects for the UI, and the classic UI request follows the same toggle logic."
+    },
+    {
+     "id": "skyborne-paywall",
+     "strength": "possible",
+     "why": "Selling the race only in paid bundles is a business call at the executive producer level, although she has not spoken to it."
+    }
+   ],
+   "name": "Holly Longdale",
+   "notes": "Speaks for the whole franchise. Forever's design calls sit with the Classic team.",
+   "onRecord": "Announced Forever at BlizzCon as the Classic+ players had asked for. Told Warcraft Tavern that nurturing the community is one of Forever's pillars. Named SD versus HD models, and how close new zones get to modern fidelity, as two of the hardest calls in development.",
+   "order": 1,
+   "role": "VP and Executive Producer, World of Warcraft",
+   "scope": "WoW-wide",
+   "sources": [
+    {
+     "label": "MMORPG, BlizzCon 2026 live blog",
+     "url": "https://www.mmorpg.com/event-blogs/blizzcon-2026-live-blog-follow-along-for-all-the-big-announcements-2000138915"
+    },
+    {
+     "label": "Warcraft Tavern, Longdale and Hazzikostas interview",
+     "url": "https://www.warcrafttavern.com/forever/news/ion-holly-interview-blizzcon-2026/"
+    }
+   ]
+  },
+  {
+   "id": "ion-hazzikostas",
+   "confidence": "confirmed",
+   "discipline": "Leadership",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "two-part-names",
+     "strength": "direct",
+     "why": "He said surnames could come to retail depending on how Forever players feel about them, so this feedback is being watched at his level."
+    },
+    {
+     "id": "offensive-names",
+     "strength": "possible",
+     "why": "The abuse comes from the two-part name system whose reception he said is being watched for retail."
+    }
+   ],
+   "name": "Ion Hazzikostas",
+   "notes": "The \"third pillar\" line often quoted from Windows Central appears to be the writer's paraphrase, not his words. He does not run Forever day to day.",
+   "onRecord": "Sat on the What's Next panel. Told Windows Central that Forever stands beside retail and Classic as its own game. Said asking what Classic+ means would produce a thousand answers, and that Season of Discovery showed where the boundary of change sits. Said surnames could come to retail depending on how Forever players take them.",
+   "order": 2,
+   "role": "Senior Game Director, World of Warcraft",
+   "scope": "WoW-wide",
+   "sources": [
+    {
+     "label": "Windows Central, Hazzikostas on Forever vs Retail",
+     "url": "https://www.windowscentral.com/gaming/blizzard/we-spoke-to-world-of-warcrafts-ion-hazzikostas-on-forever-vs-retail-horde-vs-alliance-and-more"
+    },
+    {
+     "label": "Warcraft Tavern, Longdale and Hazzikostas interview",
+     "url": "https://www.warcrafttavern.com/forever/news/ion-holly-interview-blizzcon-2026/"
+    },
+    {
+     "label": "What's Next panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap"
+    }
+   ]
+  },
+  {
+   "id": "clay-stone",
+   "confidence": "confirmed",
+   "discipline": "Production",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "queues-login",
+     "strength": "direct",
+     "why": "He called the beta turnout insane and said the team was scaling up, which the tracker records as the response to launch queues."
+    },
+    {
+     "id": "zone-density",
+     "strength": "direct",
+     "why": "He said on X that content will be added to the 1 to 60 leveling journey over time, which the tracker cites for this issue."
+    },
+    {
+     "id": "eu-latency",
+     "strength": "likely",
+     "why": "As associate production director he is the natural owner of launch capacity and regional connection problems."
+    },
+    {
+     "id": "known-issues-sept-18",
+     "strength": "likely",
+     "why": "Production decides which acknowledged bugs make each beta build, and most of this list was marked fixed in the next one."
+    },
+    {
+     "id": "multi-license",
+     "strength": "possible",
+     "why": "Account access at login is a launch and access problem of the kind production tracks until it is fixed."
+    }
+   ],
+   "name": "Clay Stone",
+   "notes": "PC Gamer renders the name Clayton Stone.",
+   "onRecord": "Opened the Deep Dive and sat on the What's Next panel. Told But Why Tho the team is starting more conservatively than Season of Discovery. Called the beta turnout insane and said they were scaling up. Said on X that content will be added to the 1 to 60 journey over time. Confirmed the serpent form was intended.",
+   "order": 3,
+   "role": "Associate Production Director, WoW Classic",
+   "scope": "Classic team",
+   "sources": [
+    {
+     "label": "But Why Tho, Stone and Resendez interview",
+     "url": "https://butwhytho.net/2026/09/wow-classic-devs-world-of-warcraft-forever/"
+    },
+    {
+     "label": "PC Gamer, beta launch coverage",
+     "url": "https://www.pcgamer.com/games/world-of-warcraft/world-of-warcraft-forever-beta-launch-times-how-to-sign-up-and-play-blizzards-twist-on-wow-classic/"
+    },
+    {
+     "label": "Deep Dive panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap"
+    },
+    {
+     "label": "WoW Scroll, the serpent form",
+     "url": "https://wowscroll.com/stories/editorial-forever-druid-fang-set-serpent"
+    }
+   ]
+  },
+  {
+   "id": "tom-ellis",
+   "confidence": "reported",
+   "discipline": "Production",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "queues-login",
+     "strength": "direct",
+     "why": "PC Gamer reported him saying on launch day that the beta environment was taking a beating."
+    },
+    {
+     "id": "eu-latency",
+     "strength": "likely",
+     "why": "Regional connection problems are beta operations, the area he has spoken for."
+    },
+    {
+     "id": "known-issues-sept-18",
+     "strength": "likely",
+     "why": "He speaks for beta operations and later said database updates relieved the launch-week loot and quest delays."
+    },
+    {
+     "id": "multi-license",
+     "strength": "likely",
+     "why": "A second login disconnecting the first is an access problem in the beta environment he has spoken for."
+    },
+    {
+     "id": "mail-routing",
+     "strength": "possible",
+     "why": "Mail landing on the wrong character is server-side state, the area of his database remark, though no one has claimed it."
+    }
+   ],
+   "name": "Tom Ellis",
+   "notes": "Speaks for beta operations. No source states which team he sits on.",
+   "onRecord": "Said on launch day that the beta environment was taking a beating. Later said database statistics updates relieved the launch-week loot and quest delays.",
+   "order": 4,
+   "role": "Senior Producer",
+   "scope": "Unclear",
+   "sources": [
+    {
+     "label": "PC Gamer, beta launch coverage",
+     "url": "https://www.pcgamer.com/games/world-of-warcraft/world-of-warcraft-forever-beta-launch-times-how-to-sign-up-and-play-blizzards-twist-on-wow-classic/"
+    }
+   ]
+  },
+  {
+   "id": "tim-jones",
+   "confidence": "confirmed",
+   "discipline": "Design",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "no-arenas",
+     "strength": "direct",
+     "why": "He described the seasonal Rank 14 ladder that stands in for rated PvP, and the doc links him to the Sept 17 Q&A."
+    },
+    {
+     "id": "zone-density",
+     "strength": "direct",
+     "why": "He described long-unfinished areas on the map as opportunities, which is the stated plan for filling empty ground."
+    },
+    {
+     "id": "caster-weak-early",
+     "strength": "likely",
+     "why": "The tracker measures this complaint against his statement that all 27 talent trees are viable for all content."
+    },
+    {
+     "id": "leveling-too-easy",
+     "strength": "likely",
+     "why": "Overworld tuning against the stated 10 to 15 second kill target is lead design work."
+    },
+    {
+     "id": "paladin-leveling",
+     "strength": "likely",
+     "why": "Class balance while leveling falls under the lead designer who said no tree should be strong enough to stack."
+    },
+    {
+     "id": "warrior-prot",
+     "strength": "likely",
+     "why": "The tracker answers this only with his statement that every tree is viable, which a spec that falls off after the first tier would contradict."
+    },
+    {
+     "id": "skyborne-neutrality",
+     "strength": "likely",
+     "why": "He is the developer on record explaining why the Skyborne exist, as a response to how popular elves are."
+    },
+    {
+     "id": "auto-shot-timing",
+     "strength": "possible",
+     "why": "The windup fix restores Classic combat timing, which is a design call under the lead designer."
+    },
+    {
+     "id": "layer-swap-pvp",
+     "strength": "possible",
+     "why": "He is the only designer on record describing Forever's PvP structure, and no PvP designer is named."
+    }
+   ],
+   "name": "Tim Jones",
+   "notes": "Also on the Sept 17 live Q&A.",
+   "onRecord": "\"Every single one of our 27 talent trees is now viable for all content in WoW: Forever.\" Described a seasonal Rank 14 ladder in place of rated PvP, new 10 and 20 player content every patch with no flex raiding, and long-unfinished map areas as opportunities. Explained the Skyborne as a response to how popular elves are.",
+   "order": 5,
+   "role": "Lead Game Designer (Windows Central); Lead Classic Designer (What's Next recap)",
+   "scope": "Classic team",
+   "sources": [
+    {
+     "label": "Windows Central, Jones and Valleta interview",
+     "url": "https://www.windowscentral.com/gaming/blizzard/i-spoke-to-the-world-of-warcraft-forever-team-about-balance-competing-with-retail-adding-classic-style-player-housing-and-more"
+    },
+    {
+     "label": "Method, PvP ranking (Kotaku interview)",
+     "url": "https://www.method.gg/wow-forever/new-pvp-ranking-system-explained-in-world-of-warcraft-forever"
+    },
+    {
+     "label": "Game Informer, Jones and Mills interview",
+     "url": "https://gameinformer.com/blizzcon-2026/2026/09/16/world-of-warcraft-forever-devs-answer-our-biggest-questions-at-blizzcon"
+    },
+    {
+     "label": "What's Next panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap"
+    }
+   ]
+  },
+  {
+   "id": "josh-greenfield",
+   "confidence": "confirmed",
+   "discipline": "Design",
+   "handle": "Aggrend, @aggrendwow",
+   "likelyIssues": [
+    {
+     "id": "gdkp-gold-buying",
+     "strength": "direct",
+     "why": "He gave the reasons for the GDKP ban, with protecting guild structure first."
+    },
+    {
+     "id": "spell-power-on-gear",
+     "strength": "direct",
+     "why": "He explained on X on Sept 21 that base spell damage was cut and moved onto gear, with overall throughput meant to stay essentially unchanged."
+    },
+    {
+     "id": "shared-tagging",
+     "strength": "direct",
+     "why": "He answered this on X on Sept 20, saying shared tagging is something the team must hold the line on and pointing to recent allies as the mitigation."
+    },
+    {
+     "id": "queues-login",
+     "strength": "direct",
+     "why": "PC Gamer reported that he said the team was investigating realm login issues on launch day."
+    },
+    {
+     "id": "caster-weak-early",
+     "strength": "likely",
+     "why": "His spell power redistribution answer rules out the forgot-the-gear reading but leaves open how casters feel before their first spell power weapon."
+    },
+    {
+     "id": "starter-trainers",
+     "strength": "likely",
+     "why": "He co-presented the Found Photos panel with Evan Lee (doc Sources: 'Found Photos panel recap (Greenfield and Evan Lee)'). The tracker says the trainers fail that standard. Evan Lee is mapped for the same reason and Greenfield was left off."
+    },
+    {
+     "id": "power-creep",
+     "strength": "likely",
+     "why": "He answered the spell power half on X and said drop quality belongs to the systems designers, so the other half is still open."
+    },
+    {
+     "id": "layer-swap-pvp",
+     "strength": "possible",
+     "why": "His recent allies mitigation depends on meeting the same players again, which frequent layer swaps at zone borders work against."
+    },
+    {
+     "id": "no-arenas",
+     "strength": "possible",
+     "why": "He hinted that a crater is coming back in Azshara, which points at the scrapped Azshara Crater battleground."
+    },
+    {
+     "id": "realmless-layering",
+     "strength": "possible",
+     "why": "Blizzard's stated aim for realmless is to remove the launch realm choice 'while keeping familiar faces' (doc, Designer intent). Greenfield offered recent allies, his mitigation for tagging, as the feature that brings back people you met, which is the familiar-faces part of that aim. The roster notes list this issue for him, but the mapping dropped it."
+    },
+    {
+     "id": "skyborne-neutrality",
+     "strength": "possible",
+     "why": "He was introduced at the Deep Dive as Forever's narrative point, and the neutrality complaint is partly a lore question about the Skyborne."
+    },
+    {
+     "id": "thorns-scaling",
+     "strength": "possible",
+     "why": "Thorns nearly tripling on cheap consumables tests his claim that the redistribution leaves throughput flat, and the doc suggests putting it to him in those terms."
+    },
+    {
+     "id": "zone-density",
+     "strength": "possible",
+     "why": "As a Found Photos co-presenter he is on record about adding new NPCs, quests and small moments to existing zones, the same scope that got Evan Lee mapped here."
+    }
+   ],
+   "name": "Josh Greenfield",
+   "notes": "Answers on X, not the forums. Says plainly when a question belongs to someone else; he sent item drop quality to the systems designers.",
+   "onRecord": "The only developer who has answered beta feedback in public. On shared tagging: \"This is one of those things that we simply must hold the line on.\" Explained that base spell damage moved onto gear, with throughput meant to hold. Gave guild structure as the main reason for the GDKP ban. Co-presented the Found Photos panel.",
+   "order": 6,
+   "role": "Senior Game Designer, WoW Classic; Forever's narrative point at the Deep Dive",
+   "scope": "Classic team",
+   "sources": [
+    {
+     "label": "PC Gamer, on shared tagging",
+     "url": "https://www.pcgamer.com/games/world-of-warcraft/world-of-warcraft-forever-players-competing-over-enemies-is-extremely-important-to-the-experience-blizzard-says-this-is-one-of-those-things-that-we-simply-must-hold-the-line-on/"
+    },
+    {
+     "label": "X, shared tagging",
+     "url": "https://x.com/aggrendwow/status/2101711250342453367"
+    },
+    {
+     "label": "X, recent allies",
+     "url": "https://x.com/aggrendwow/status/2101727439634547153"
+    },
+    {
+     "label": "X, spell power",
+     "url": "https://x.com/aggrendwow/status/2102156039907147912"
+    },
+    {
+     "label": "Icy Veins, GDKP ban",
+     "url": "https://www.icy-veins.com/wow-forever/news/blizzard-just-confirmed-gdkp-runs-wont-be-allowed-in-wow-forever/"
+    },
+    {
+     "label": "Found Photos panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24304071/world-of-warcraft-forever-found-photos-panel-recap"
+    }
+   ]
+  },
+  {
+   "id": "evan-lee",
+   "confidence": "confirmed",
+   "discipline": "Story and quests",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "starter-trainers",
+     "strength": "likely",
+     "why": "The trainers fail the found-photographs standard from his panel, that additions should sit alongside the original rather than look bolted on."
+    },
+    {
+     "id": "skyborne-neutrality",
+     "strength": "likely",
+     "why": "Identical Alliance and Horde Skyborne starting quests through level 7 are a content design problem."
+    },
+    {
+     "id": "zone-density",
+     "strength": "likely",
+     "why": "New NPCs, quests and small moments in existing zones are content design, his stated area."
+    },
+    {
+     "id": "leveling-too-easy",
+     "strength": "possible",
+     "why": "Whether more than 1,000 new quests push players past zones too fast depends partly on quest volume and placement."
+    },
+    {
+     "id": "skyborne-bugs",
+     "strength": "possible",
+     "why": "The broken quest Among the Faithful is content design, though the crash and animation bugs in the same entry are not."
+    }
+   ],
+   "name": "Evan Lee",
+   "notes": "An Evan Lee is credited on retail's The War Within and Midnight. Whether it is the same person is not established.",
+   "onRecord": "Presented the found photographs approach with Greenfield: new NPCs, quests, and small moments meant to sit alongside the original, drawn from local mysteries and underused characters, with stranger material used sparingly.",
+   "order": 7,
+   "role": "Lead Content Designer",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "Found Photos panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24304071/world-of-warcraft-forever-found-photos-panel-recap"
+    }
+   ]
+  },
+  {
+   "id": "johnny-cash",
+   "confidence": "reported",
+   "discipline": "Story and quests",
+   "handle": "@QuestTheLine",
+   "likelyIssues": [
+    {
+     "id": "zone-density",
+     "strength": "direct",
+     "why": "He said on X that new leveling content will respond to areas players feel need more to do, which the tracker cites."
+    },
+    {
+     "id": "leveling-too-easy",
+     "strength": "likely",
+     "why": "The worry that more than 1,000 new quests will have players outleveling zones is leveling content design, his stated area."
+    },
+    {
+     "id": "starter-trainers",
+     "strength": "possible",
+     "why": "The middle proposal of a starter quest that sends players to a trainer would be quest design."
+    }
+   ],
+   "name": "Johnny Cash",
+   "notes": "By his own account a decade on retail: Artifacts, Class Halls, and lead on Argus. The weakest-sourced entry on the roster.",
+   "onRecord": "Said on X that new leveling content will respond to areas players feel need more to do, or more variety for alts.",
+   "order": 8,
+   "role": "Principal Game Designer II, Forever and Classic (self-described)",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "X, relayed as screenshots with no post link",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "id": "kris-zierhut",
+   "confidence": "confirmed",
+   "discipline": "Systems and items",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "dungeon-xp",
+     "strength": "direct",
+     "why": "He explained cutting dungeon mob XP and raising dungeon quest XP so the first run is the rewarding one."
+    },
+    {
+     "id": "power-creep",
+     "strength": "direct",
+     "why": "The tracker names him as the Blizzard voice here, and Greenfield sent the drop quality question to the systems designers."
+    },
+    {
+     "id": "crafted-bop-boe",
+     "strength": "likely",
+     "why": "Binding and power on crafted blues are item reward questions, which Greenfield placed with the systems designers."
+    },
+    {
+     "id": "spell-power-on-gear",
+     "strength": "likely",
+     "why": "Caster weapons carrying spell damage is part of the itemization pass his panel presented."
+    },
+    {
+     "id": "thorns-scaling",
+     "strength": "likely",
+     "why": "Thorns now inheriting spell power from gear and consumables is a side effect of the itemization changes his panel presented."
+    },
+    {
+     "id": "commerce-authority",
+     "strength": "possible",
+     "why": "Merchant's Favor and the Commerce Authority reward vendor are reward systems design, the area Greenfield assigned to the systems designers."
+    },
+    {
+     "id": "caster-weak-early",
+     "strength": "possible",
+     "why": "The weak window before a caster's first spell power weapon depends on when itemization hands those weapons out."
+    },
+    {
+     "id": "profession-qol",
+     "strength": "possible",
+     "why": "No profession designer is named, and profession systems sit nearest to his systems and items role."
+    }
+   ],
+   "name": "Kris Zierhut",
+   "notes": "\"Unsolve the solved content\" reaches coverage through Method's summary, not a transcript, so it is not quoted here.",
+   "onRecord": "\"So your first run through a dungeon is amazing.\" Presented the itemization pass at the Deep Dive, including removing disappointing epics and making rare spawns worth killing. With Mike Nuthals, argued Forever makes a separate WoW sequel unnecessary.",
+   "order": 9,
+   "role": "Principal Game Designer, WoW Classic",
+   "scope": "Classic team",
+   "sources": [
+    {
+     "label": "Icy Veins, dungeon XP",
+     "url": "https://www.icy-veins.com/wow-forever/news/wow-forever-cuts-dungeon-kill-xp-but-makes-dungeon-quests-more-rewarding/"
+    },
+    {
+     "label": "Method, itemization summary",
+     "url": "https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more"
+    },
+    {
+     "label": "Deep Dive panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap"
+    },
+    {
+     "label": "MMOs.com, raids",
+     "url": "https://mmos.com/news/mmorpg-news/world-of-warcraft-forever-raids"
+    },
+    {
+     "label": "GameRant interview",
+     "url": "https://gamerant.com/video/world-of-warcraft-forever-devs-explain-the-new-race-campfires-and-onyxias-return/"
+    }
+   ]
+  },
+  {
+   "id": "aidan-moon",
+   "confidence": "reported",
+   "discipline": "Class design",
+   "handle": "Zirene",
+   "likelyIssues": [
+    {
+     "id": "caster-weak-early",
+     "strength": "likely",
+     "why": "The druid Wrath and bear form numbers are class tuning, and his only public work is a druid form."
+    },
+    {
+     "id": "dwarf-shaman-ghost-wolf",
+     "strength": "likely",
+     "why": "He gave each druid race its own serpent color, the same race-specific form treatment players want for dwarf shamans."
+    },
+    {
+     "id": "thorns-scaling",
+     "strength": "likely",
+     "why": "Thorns scaling off spell power is a druid spell change of the kind a class designer owns."
+    },
+    {
+     "id": "auto-shot-timing",
+     "strength": "possible",
+     "why": "The missing Auto Shot and wand windup is a class mechanic, and the fix is already confirmed."
+    },
+    {
+     "id": "class-bugs",
+     "strength": "possible",
+     "why": "Pet abilities, auto-attack interrupts and cast timing are class mechanics, his listed discipline."
+    },
+    {
+     "id": "shapeshift-sd-leak",
+     "strength": "possible",
+     "why": "Druid form variants leaking past the SD setting sit next to his serpent form work, though the fix is mostly character art."
+    },
+    {
+     "id": "paladin-leveling",
+     "strength": "possible",
+     "why": "Paladin leveling strength is class tuning, though no source ties him to paladins."
+    },
+    {
+     "id": "warrior-prot",
+     "strength": "possible",
+     "why": "Protection warrior threat and damage scaling is class design, though no source ties him to warriors."
+    }
+   ],
+   "name": "Aidan Moon",
+   "notes": "His only known work is the serpent appearance on a druid item set, so class links beyond druids are loose.",
+   "onRecord": "Apparently the designer behind the serpent form. Added that each druid race gets its own snake color and that prowl gets its own slithering animation.",
+   "order": 10,
+   "role": "Senior Game Designer, WoW Classic (per WoW Scroll)",
+   "scope": "Classic team",
+   "sources": [
+    {
+     "label": "WoW Scroll, the serpent form",
+     "url": "https://wowscroll.com/stories/editorial-forever-druid-fang-set-serpent"
+    },
+    {
+     "label": "Icy Veins, new druid form",
+     "url": "https://www.icy-veins.com/wow-forever/news/new-druid-form-found-on-the-world-of-warcraft-forever-beta/"
+    }
+   ]
+  },
+  {
+   "id": "mike-nuthals",
+   "confidence": "reported",
+   "discipline": "Raids and encounters",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "zone-scaling",
+     "strength": "likely",
+     "why": "He said there is no flex raiding and 10-player content keeps its full challenge, the same fixed-difficulty stance the tracker records against scaling."
+    },
+    {
+     "id": "mob-aggro",
+     "strength": "possible",
+     "why": "Creature aggro and leashing might sit with encounter design, but no source says so."
+    },
+    {
+     "id": "power-creep",
+     "strength": "possible",
+     "why": "No raid is in the beta yet, so whether raids hold up against the new gear is still untested."
+    },
+    {
+     "id": "warrior-prot",
+     "strength": "possible",
+     "why": "The complaint is that protection falls off after the first raid tier, where encounter design sets what tanks need."
+    }
+   ],
+   "name": "Mike Nuthals",
+   "notes": "No raid is in the beta, so nothing in the tracker lands squarely on him yet.",
+   "onRecord": "No flex raiding, and 10-player content keeps its full challenge and rewards. Barrow Deeps has about eight bosses, Hyjal Summit more.",
+   "order": 11,
+   "role": "Lead Encounter Designer",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "MMOs.com, raids",
+     "url": "https://mmos.com/news/mmorpg-news/world-of-warcraft-forever-raids"
+    },
+    {
+     "label": "GameRant interview",
+     "url": "https://gamerant.com/video/world-of-warcraft-forever-devs-explain-the-new-race-campfires-and-onyxias-return/"
+    }
+   ]
+  },
+  {
+   "id": "matthew-armstrong",
+   "confidence": "reported",
+   "discipline": "World building",
+   "handle": "@marmstrongwow",
+   "likelyIssues": [
+    {
+     "id": "zone-density",
+     "strength": "likely",
+     "why": "He built Riverglades, which opens at launch as the first large test of whether a new zone keeps its open ground."
+    },
+    {
+     "id": "night-city-lighting",
+     "strength": "possible",
+     "why": "World builders place lighting in zones, and the ask is for real light sources at city gates and streets."
+    },
+    {
+     "id": "duskwood-sightline",
+     "strength": "possible",
+     "why": "World builders handle terrain, asset placement and lighting, which is where a per-zone boundary fix would be made."
+    },
+    {
+     "id": "fog-density",
+     "strength": "possible",
+     "why": "World builders place lighting, and fog is placed per zone as part of that pass."
+    },
+    {
+     "id": "starter-trainers",
+     "strength": "possible",
+     "why": "Trainers reading as bolted on is a placement problem of the kind he says he pushes back on internally."
+    },
+    {
+     "id": "art-cohesion",
+     "strength": "possible",
+     "why": "He said he will keep pushing internally on anything that feels out of place, and the world-building side he works on is the one that followed the vanilla style."
+    }
+   ],
+   "name": "Matthew Armstrong",
+   "notes": "Eight years on retail: Level Designer on Shadowlands, World Builder on Dragonflight, World Designer on Midnight. Riverglades opens at launch, not in the beta.",
+   "onRecord": "Says Forever is for Classic and lapsed players, and that the team spent a year relearning older techniques rather than using the modern pipeline. Says he will keep pushing internally on anything that feels out of place. Framed the post as his own view, not the team's.",
+   "order": 12,
+   "role": "World Builder, Riverglades",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "X, who Forever is for",
+     "url": "https://x.com/marmstrongwow/status/2102585118305161513"
+    },
+    {
+     "label": "ArtStation, Midnight credits",
+     "url": "https://magazine.artstation.com/2026/04/blizzard-entertainment-world-of-warcraft-midnight/"
+    }
+   ]
+  },
+  {
+   "id": "matt-heyman",
+   "confidence": "reported",
+   "discipline": "Environment art",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "art-cohesion",
+     "strength": "direct",
+     "why": "He stated that new Forever assets were built in the vanilla style, and the tracker cites him for the environment side of this issue."
+    },
+    {
+     "id": "night-city-lighting",
+     "strength": "likely",
+     "why": "Placing real light sources at city gates and streets is environment lighting work."
+    },
+    {
+     "id": "duskwood-sightline",
+     "strength": "likely",
+     "why": "Duskwood showing from Elwynn comes from removing the fog wall, and the fix is a per-zone boundary treatment in the environment."
+    },
+    {
+     "id": "fog-density",
+     "strength": "likely",
+     "why": "The stated intent was fog placed zone by zone with each zone relit against the 1.12 client, which is environment art work."
+    },
+    {
+     "id": "skyboxes",
+     "strength": "likely",
+     "why": "A skybox pass is new environment art beyond the stated scope of relighting only."
+    },
+    {
+     "id": "weather",
+     "strength": "likely",
+     "why": "The weather effects coming to certain beta zones are environment atmosphere work."
+    }
+   ],
+   "name": "Matt Heyman",
+   "notes": "The only art voice Forever has had in public. Players want his vanilla-style rule applied to characters, armor, weapons, and creatures.",
+   "onRecord": "Co-presented the Evolving a Timeless World panel. Said WoW's art style has changed a lot over the years and that Forever's new assets were deliberately built in the vanilla style.",
+   "order": 13,
+   "role": "Lead Environment Artist",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "MMO-Champion, panel notes",
+     "url": "https://www.mmo-champion.com/threads/2669938-BlizzCon-2026-World-of-Warcraft-Forever-Evolving-a-Timeless-World"
+    },
+    {
+     "label": "WoW Forever Builds, graphics panel",
+     "url": "https://wowforeverbuilds.com/news/wow-forever-graphics-volumetric-fog-real-sun-shadows-and-flowing-water-for-origi"
+    }
+   ]
+  },
+  {
+   "id": "nora-mills",
+   "confidence": "confirmed",
+   "discipline": "Engineering",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "leveling-too-easy",
+     "strength": "direct",
+     "why": "The tracker cites her Windows Central interview, as Nora Valleta, saying the world should be scary."
+    },
+    {
+     "id": "zone-density",
+     "strength": "direct",
+     "why": "She described Riverglades, as Nora Valleta, as a way to fill landmass that had nothing on it."
+    },
+    {
+     "id": "linux-stutter",
+     "strength": "possible",
+     "why": "Platform stutter and load hangs are client engineering, though no outlet ties her to platform work."
+    },
+    {
+     "id": "low-fps",
+     "strength": "possible",
+     "why": "Client performance would fall to a lead software engineer, but that title is attributed to several people and none of her public remarks are about engineering."
+    },
+    {
+     "id": "mail-routing",
+     "strength": "possible",
+     "why": "Mail resolving on first name alone is a server bug with no named server engineer, so the lead engineer title is the nearest fit."
+    },
+    {
+     "id": "mob-aggro",
+     "strength": "possible",
+     "why": "If retail aggro code was carried over the fix is engineering, and it bears on her point that the world should be scary."
+    },
+    {
+     "id": "power-creep",
+     "strength": "possible",
+     "why": "Her point that raids should demand potions, buffs, gear and homework partly speaks to whether content was tuned up to match the new gear."
+    },
+    {
+     "id": "ui-settings-wiped",
+     "strength": "possible",
+     "why": "Saved settings being lost on restart is client engineering, and no UI engineer is named."
+    }
+   ],
+   "name": "Nora Mills",
+   "notes": "Mills and Valleta are likely one person. Four names carry the lead software engineer title across outlets. Also on the Sept 17 live Q&A.",
+   "onRecord": "As Valleta in Windows Central: the world should be scary and raids should be difficult, but not retail's 100-wipe Mythic. Called Forever a new continuity on an adjacent timeline, and Riverglades a way to fill landmass that had nothing on it.",
+   "order": 14,
+   "role": "Lead Software Engineer (What's Next recap, Game Informer); Nora Valleta in Windows Central",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "Windows Central, Jones and Valleta interview",
+     "url": "https://www.windowscentral.com/gaming/blizzard/i-spoke-to-the-world-of-warcraft-forever-team-about-balance-competing-with-retail-adding-classic-style-player-housing-and-more"
+    },
+    {
+     "label": "Game Informer, Jones and Mills interview",
+     "url": "https://gameinformer.com/blizzcon-2026/2026/09/16/world-of-warcraft-forever-devs-answer-our-biggest-questions-at-blizzcon"
+    },
+    {
+     "label": "What's Next panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap"
+    }
+   ]
+  },
+  {
+   "id": "ana-resendez",
+   "confidence": "confirmed",
+   "discipline": "Engineering",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "zone-scaling",
+     "strength": "direct",
+     "why": "The tracker cites her statement that there is no scaling, no flex and no auto-tuning, with difficulty fixed while players outgear it."
+    },
+    {
+     "id": "leveling-too-easy",
+     "strength": "possible",
+     "why": "She sat on the Deep Dive panel that set the 10 to 15 second kill target, though the doc does not say which panelist stated it."
+    },
+    {
+     "id": "power-creep",
+     "strength": "possible",
+     "why": "Her point that difficulty stays fixed while players outgear content is the other side of the question of whether gear has outrun the world."
+    }
+   ],
+   "name": "Ana Resendez",
+   "notes": "Everything she has said on record is about encounter design, so the engineering title may be misattributed.",
+   "onRecord": "New raids and dungeons should feel grounded rather than complex. No scaling, no flex, and no auto-tuning: content comes in 10s and 20s, and difficulty stays fixed while players outgear it.",
+   "order": 15,
+   "role": "Lead Software Engineer (per But Why Tho)",
+   "scope": "Classic team",
+   "sources": [
+    {
+     "label": "But Why Tho, Stone and Resendez interview",
+     "url": "https://butwhytho.net/2026/09/wow-classic-devs-world-of-warcraft-forever/"
+    },
+    {
+     "label": "Deep Dive panel recap",
+     "url": "https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap"
+    }
+   ]
+  },
+  {
+   "id": "jason-scott",
+   "confidence": "reported",
+   "discipline": "Engineering",
+   "handle": "",
+   "likelyIssues": [
+    {
+     "id": "water-no-bobbing",
+     "strength": "likely",
+     "why": "He co-presented the water pass, and characters not reacting to the new wave motion is a gap in it."
+    },
+    {
+     "id": "mac-crashes",
+     "strength": "likely",
+     "why": "The Mac hangs were tied to Secondary Lighting above Fair, which is part of the lighting pass he presented."
+    },
+    {
+     "id": "shadow-lighting-settings",
+     "strength": "likely",
+     "why": "New lighting failing on some shadow settings and graphics cards is a rendering bug in the pass he presented."
+    },
+    {
+     "id": "fog-slider",
+     "strength": "likely",
+     "why": "The request is to split volumeFog so fog can be reduced without losing the lighting from the pass he presented."
+    },
+    {
+     "id": "amd-lighting-crash",
+     "strength": "likely",
+     "why": "The crash traces to Secondary Lighting and a VirtualShadowMap error, both part of the new lighting tech."
+    },
+    {
+     "id": "night-city-lighting",
+     "strength": "possible",
+     "why": "The doc's Ironforge diagnosis is that the windows are glowing surfaces that don't throw light onto the ground. Whether emissive surfaces cast light is a question about the lighting pass he presented, not only about where lights are placed."
+    },
+    {
+     "id": "fog-density",
+     "strength": "possible",
+     "why": "He co-presented the volumetric fog system with Matt Heyman, and the complaint is about how that system is tuned."
+    },
+    {
+     "id": "low-fps",
+     "strength": "possible",
+     "why": "Frame rate problems could come from the new rendering, though reports say they do not track with graphics settings."
+    },
+    {
+     "id": "skyboxes",
+     "strength": "possible",
+     "why": "Updating skies to match the new lighting would touch the rendering pass, though it is mainly new art."
+    },
+    {
+     "id": "weather",
+     "strength": "possible",
+     "why": "The new water shader already reads each zone's wind, which is renderer groundwork a weather system could use."
+    }
+   ],
+   "name": "Jason Scott",
+   "notes": "May lead rendering specifically. No outlet says so.",
+   "onRecord": "Co-presented the fog, lighting, and water pass with Matt Heyman. No individual quote found.",
+   "order": 16,
+   "role": "Lead Software Engineer (per panel notes)",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "MMO-Champion, panel notes",
+     "url": "https://www.mmo-champion.com/threads/2669938-BlizzCon-2026-World-of-Warcraft-Forever-Evolving-a-Timeless-World"
+    },
+    {
+     "label": "WoW Forever Builds, graphics panel",
+     "url": "https://wowforeverbuilds.com/news/wow-forever-graphics-volumetric-fog-real-sun-shadows-and-flowing-water-for-origi"
+    }
+   ]
+  },
+  {
+   "id": "kaivax",
+   "confidence": "confirmed",
+   "discipline": "Community and live ops",
+   "handle": "Kaivax",
+   "likelyIssues": [
+    {
+     "id": "eu-latency",
+     "strength": "direct",
+     "why": "He posted the Sept 21 change to how EU beta connections are routed."
+    },
+    {
+     "id": "mac-crashes",
+     "strength": "direct",
+     "why": "His Sept 23 client update listed fixes for Mac display and stability."
+    },
+    {
+     "id": "controller-quest-items",
+     "strength": "direct",
+     "why": "His Sept 23 client update listed the fix for quest items on gamepad."
+    },
+    {
+     "id": "known-issues-sept-18",
+     "strength": "likely",
+     "why": "Known issues lists and fix notes are community management posts, and he is the only community manager the doc names."
+    },
+    {
+     "id": "auto-shot-timing",
+     "strength": "possible",
+     "why": "The confirmed fix is due in an upcoming beta build, which his client update posts would announce."
+    },
+    {
+     "id": "controller-gaps",
+     "strength": "possible",
+     "why": "The same client update fixed some controller problems, and the remaining ones would be reported in later update posts."
+    },
+    {
+     "id": "offensive-names",
+     "strength": "possible",
+     "why": "Naming policy warnings and beta access removals are community management messages."
+    },
+    {
+     "id": "weather",
+     "strength": "possible",
+     "why": "The weather effects teased for certain beta zones would arrive in a beta update of the kind he posts."
+    }
+   ],
+   "name": "Kaivax",
+   "notes": "Posts for all of WoW, not only Forever. The only community manager named so far.",
+   "onRecord": "Posted the Sept 21 change to EU beta routing and the Sept 23 client update for build 1.60.1.69977.",
+   "order": 17,
+   "role": "Community manager",
+   "scope": "WoW-wide",
+   "sources": [
+    {
+     "label": "Beta client update, Sept 23",
+     "url": "https://eu.forums.blizzard.com/en/wow/t/beta-client-update-23-september/630815"
+    }
+   ]
+  }
+ ],
+ "premise": [
+  {
+   "id": "reimagined-original-azeroth",
+   "order": 1,
+   "quote": "World of Warcraft: Forever invites you to begin again in a reimagined original Azeroth, where familiar roads lead to new discoveries, the journey matters as much as the destination, and the world is ready to grow for years to come.",
+   "role": "launch announcement",
+   "sourceLabel": "Carve a New Path with World of Warcraft: Forever",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24302093/carve-a-new-path-with-world-of-warcraft-forever",
+   "speaker": "Blizzard",
+   "verification": "search"
+  },
+  {
+   "id": "classic-plus",
+   "context": "The Classic+ players asked for",
+   "note": "Announcing Forever on stage as the Classic+ players had been asking for.",
+   "order": 2,
+   "quote": "what we've been hearing from you",
+   "role": "VP and Executive Producer",
+   "sourceLabel": "MMORPG, BlizzCon 2026 live blog",
+   "sourceUrl": "https://www.mmorpg.com/event-blogs/blizzcon-2026-live-blog-follow-along-for-all-the-big-announcements-2000138915",
+   "speaker": "Holly Longdale",
+   "verification": "doc-only"
+  },
+  {
+   "id": "third-experience",
+   "context": "Beside Modern and Classic",
+   "order": 3,
+   "quote": "Carve new paths and explore unseen corners of Azeroth in World of Warcraft: Forever, our new, third World of Warcraft experience alongside Modern and Classic.",
+   "role": "launch announcement",
+   "sourceLabel": "Carve a New Path",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24302093/carve-a-new-path-with-world-of-warcraft-forever",
+   "speaker": "Blizzard",
+   "verification": "search"
+  },
+  {
+   "id": "third-pillar",
+   "context": "Not Classic, its own pillar",
+   "order": 4,
+   "quote": "Forever is designed to be a third pillar alongside Retail and Classic",
+   "role": "Senior Game Director",
+   "sourceLabel": "Windows Central",
+   "sourceUrl": "https://www.windowscentral.com/gaming/blizzard/we-spoke-to-world-of-warcrafts-ion-hazzikostas-on-forever-vs-retail-horde-vs-alliance-and-more",
+   "speaker": "Ion Hazzikostas",
+   "verification": "doc-only"
+  },
+  {
+   "id": "permanent-home",
+   "context": "Permanent, not a season",
+   "order": 5,
+   "quote": "a new permanent home, a new beginning that never ends",
+   "role": "VP and Executive Producer",
+   "sourceLabel": "Carve a New Path",
+   "sourceUrl": "https://news.blizzard.com/en-us/article/24302093/carve-a-new-path-with-world-of-warcraft-forever",
+   "speaker": "Holly Longdale",
+   "verification": "search"
+  },
+  {
+   "id": "after-sod",
+   "context": "Why it isn't Season of Discovery 2",
+   "note": "After pushing the envelope as far as it would go in Season of Discovery.",
+   "order": 6,
+   "quote": "starting a little bit on a more conservative side",
+   "role": "Associate Production Director",
+   "sourceLabel": "But Why Tho",
+   "sourceUrl": "https://butwhytho.net/2026/09/wow-classic-devs-world-of-warcraft-forever/",
+   "speaker": "Clay Stone",
+   "verification": "doc-only"
+  },
+  {
+   "id": "heart-of-mmos",
+   "context": "What it's reaching for",
+   "order": 7,
+   "quote": "This is a new opportunity to get back to what the heart is of MMOs, and what makes them so damn special.",
+   "role": "VP and Executive Producer",
+   "sourceLabel": "PC Gamer, opening ceremony live blog",
+   "sourceUrl": "https://www.pcgamer.com/gaming-industry/news/live/blizzcon-2026-opening-ceremony-live-coverage-whats-next-for-warcraft-overwatch-diablo-and-starcraft/",
+   "speaker": "Holly Longdale",
+   "verification": "search"
+  }
+ ],
+ "source": {
+  "title": "WoW Forever Beta: Day One Feedback",
+  "seededOn": "2026-09-23"
+ },
+ "gaps": [
+  "Character, armor, weapon, and creature art. No lead and no Forever art director named.",
+  "Animation. Nobody named.",
+  "Audio and music. No composer or audio lead named. The only credit, Adam Burgess on fan uploads of Riverglades General, is unconfirmed, and he left Blizzard in August 2026.",
+  "UI and controller design. Nobody named.",
+  "Server, network, and layering engineering. Nobody named.",
+  "Creature behavior: aggro radius, leashing, threat. Nobody named.",
+  "PvP and battleground design. No dedicated designer named.",
+  "Professions and economy design. No dedicated designer named.",
+  "Narrative direction. No lead writer or narrative director named.",
+  "QA and support. Nobody named.",
+  "Leads not yet run down: the full Sept 17 live Q&A lineup, whoever posts the known issues lists, and the unnamed source who confirmed the Auto Shot bug."
+ ],
+ "unowned": [
+  {
+   "id": "auto-shot-timing",
+   "why": "Blizzard confirmed the fix without naming who owns it."
+  },
+  {
+   "id": "class-bugs",
+   "why": "Class bugs with no named QA or class owner. Aidan Moon's only known work is a druid appearance."
+  },
+  {
+   "id": "commerce-authority",
+   "why": "Reputation and currency design has no named owner. Zierhut's items role is the nearest fit."
+  },
+  {
+   "id": "controller-gaps",
+   "why": "No UI or controller designer has been named, and so far fixes have appeared only in Kaivax's client update posts."
+  },
+  {
+   "id": "extra-attack-animation",
+   "why": "Nobody on the roster works on animation, and the likely cause is the retail skeleton rather than class design."
+  },
+  {
+   "id": "layer-swap-pvp",
+   "why": "No PvP designer or layering engineer has been named. Jones and Greenfield only partly overlap with it."
+  },
+  {
+   "id": "linux-stutter",
+   "why": "No platform or client engineer has been named, and the Linux problems are not on the known issues list."
+  },
+  {
+   "id": "low-fps",
+   "why": "No client performance engineer has been named, and outlets give the lead software engineer title to several different people."
+  },
+  {
+   "id": "mail-routing",
+   "why": "No server engineer has been named. The bug comes from realmless play and two-part names meeting a mail system built on unique names."
+  },
+  {
+   "id": "mob-aggro",
+   "why": "Nobody has been named for creature behavior, aggro radius or leashing."
+  },
+  {
+   "id": "offensive-names",
+   "why": "Enforcement sits with policy and GMs, and nobody there is named."
+  },
+  {
+   "id": "profession-qol",
+   "why": "No professions designer has been named, and Zierhut's items role is the closest fit."
+  },
+  {
+   "id": "realmless-layering",
+   "why": "Presented as a Deep Dive pillar, but nobody on the roster has spoken to it since the beta opened."
+  },
+  {
+   "id": "retail-ui",
+   "why": "No UI designer or engineer has been named. Leadership has only framed Forever as distinct from retail."
+  },
+  {
+   "id": "sd-model-gaps",
+   "why": "Fixing the classic-race SD models is character art work, and no character artist or art director has been named. Longdale has spoken only to the SD versus HD decision."
+  },
+  {
+   "id": "shapeshift-sd-leak",
+   "why": "SD versions of the druid form variants are character and creature art, which has no named owner."
+  },
+  {
+   "id": "skyborne-bugs",
+   "why": "Nobody owns animation for the bow and Wrath cast bugs, and no engineer is named for the teleport crash. Evan Lee may take the broken quest."
+  },
+  {
+   "id": "skyborne-paywall",
+   "why": "A business decision. Nobody has spoken to it."
+  },
+  {
+   "id": "skyborne-sd-models",
+   "why": "Building SD Skyborne models is character art, which has no named owner. Longdale has spoken only to the SD versus HD call in general."
+  },
+  {
+   "id": "two-part-names",
+   "why": "Only Hazzikostas has spoken to it, as a signal for retail. Nobody on the Forever team has."
+  },
+  {
+   "id": "ui-settings-wiped",
+   "why": "No UI or client engineer has been named for saved settings."
+  },
+  {
+   "id": "water-splash-sound",
+   "why": "Blizzard has named no composer, audio lead or sound designer. The only audio credit is Adam Burgess's, which is unconfirmed, and he left Blizzard in August 2026."
+  }
+ ],
+ "exported": "2026-09-23"
+}
