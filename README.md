@@ -6,7 +6,7 @@ This is a design proposal, not a prediction. Blizzard has announced no product c
 
 ## Viewing
 
-The page is `index.html`, served by GitHub Pages. To view locally, serve the folder over HTTP; the page loads its data with fetch and does not work from `file://`.
+The site opens on `index.html`, the Forever issue tracker; the design document is `design.html`. Both are served by GitHub Pages. To view locally, serve the folder over HTTP; the page loads its data with fetch and does not work from `file://`.
 
 ```bash
 python -m http.server 8000
@@ -16,9 +16,9 @@ python -m http.server 8000
 
 | Path | What it is |
 |---|---|
-| `index.html` | the site, a copy of `DocumentPage.dc.html` |
-| `DocumentPage.dc.html` | the working page; after editing it, re-copy to `index.html` |
-| `forever.html` | the Forever issue tracker, a dated snapshot read from `data/forever-tracker.json` |
+| `index.html` | the landing page: the Forever issue tracker, a dated snapshot read from `data/forever-tracker.json` |
+| `design.html` | the design document, a copy of `DocumentPage.dc.html` |
+| `DocumentPage.dc.html` | the working page; after editing it, re-copy to `design.html` |
 | `data/` | canonical data. `talent-data.json` is canonical for what a talent does |
 | `tools/` | validators, renderers, and the rank audit, with repo-relative paths |
 | `assets/`, `icons/`, `_ds/`, `vendor/` | images, talent icons, the design system, vendored React |
@@ -28,7 +28,7 @@ The data is canonical for what a talent does; the documents rendered on the page
 
 ## Forever issue tracker
 
-`forever.html` tracks WoW Forever beta community issues against the team's stated goals, with who on the team each issue lands with. The working copy is a hosted page with a shared database; the site carries a dated snapshot of it. To refresh the snapshot, export the store's `issues`, `goals`, `team`, `premise`, and `meta` collections (one JSON file per document, in `<export>/<collection>/<id>.json`) and run:
+`index.html` tracks WoW Forever beta community issues against the team's stated goals, with who on the team each issue lands with. The working copy is a hosted page with a shared database; the site carries a dated snapshot of it. To refresh the snapshot, export the store's `issues`, `goals`, `team`, `premise`, and `meta` collections (one JSON file per document, in `<export>/<collection>/<id>.json`) and run:
 
 ```bash
 python tools/build_forever_tracker.py <export> --date YYYY-MM-DD

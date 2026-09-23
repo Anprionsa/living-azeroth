@@ -3,7 +3,7 @@
 The live tracker is a hosted working copy with a shared database; that store is
 canonical. This script turns a per-document export of it (one JSON file per
 document, in <export>/<collection>/<id>.json) into the single snapshot the
-site's forever.html reads.
+site's index.html reads.
 
     python tools/build_forever_tracker.py <export-dir> [--date YYYY-MM-DD]
 """
