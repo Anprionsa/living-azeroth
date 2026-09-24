@@ -47,7 +47,7 @@
   {
    "id": "art-cohesion",
    "ask": "Forward-looking, not a redo: hold every new asset, starting with the next content update, to three checks. Is the detail painted densely into the surface; does metal read as metal; does the palette stay earthy with saturated accents rather than pastel. Silhouette mass is not a criterion, since Classic was chunky from the start. Extending SD to armor, weapons, and creatures is the smaller ask.",
-   "blizzard": "Longdale named it a hard call. Matt Heyman (environment lead) stated new assets are built in vanilla style. Nobody for character, armor, weapon, or creature art has been named.",
+   "blizzard": "No commitment to revise shipped art. Greenfield (podcast, Sept 24): art director Jeff Parrot; target fidelity shifted during development and new assets are trending toward Classic. Sept 17 Q&A: the modern skeleton is a stated decision.",
    "category": "Art and models",
    "community": "Environments praised, including the new zones. Player models, armor, weapons, and creatures don't look like the same game. The toggle only covers player models. A Reddit post names the gap: Classic is pulp fantasy (noisy handmade detail, real metal, earthy palette with saturated accents), retail is whimsical high fantasy. Evidence cited: the new Cindercloth set, foam-looking new weapons, the new paladin mount, and the Skyborne's pastel design language.",
    "firstSeen": "2026-09-14",
@@ -71,15 +71,23 @@
     {
      "label": "Warcraft Tavern, Sept 17 Q&A recap",
      "url": "https://www.warcrafttavern.com/forever/news/wow-forever-developer-qa-elf-races-character-models-gdkp/"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "acknowledged",
    "title": "HD models, armor, and creatures clash with the world",
    "type": "Design",
    "updates": [
     {
      "date": "2026-09-24",
      "note": "Reframed by the pulp fantasy post (relayed): the problem is design language, not fidelity. SD doesn't fix it; a Skyborne looks the same with HD on or off. The Sept 17 Q&A made the modern skeleton a stated decision, and nothing public commits to revising shipped character art."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Greenfield named Jeff Parrot as Forever's art director. The target fidelity changed during development, the Skyborne were among the first assets made, and each new asset will land closer to the ideal. Jones said the artists are getting better at making work look older without the 2004 tools. Greenfield also said showing so many blue elves may not have been the right call."
     }
    ]
   },
@@ -276,13 +284,13 @@
   {
    "id": "dungeon-xp",
    "ask": "Full XP on the first clear of each dungeon per day, diminishing returns on repeats, daily reset (relayed from Reddit). Kills grinding more precisely than a flat cut. The objection: per-character daily counters are a retail-shaped mechanic.",
-   "blizzard": "Zierhut: mob kill XP in dungeons came down a long way and dungeon quest XP went up, so the first run is amazing and repeats are worse than moving on. The target was boosting services. No response to beta feedback.",
+   "blizzard": "Zierhut: first runs pay, repeats should not beat moving on. Greenfield (podcast, Sept 24): the intent is keeping players in the open world; they're watching it and won't change it before the level cap rises.",
    "category": "Leveling and difficulty",
    "community": "A full run is worth about 1 to 1.5 bars. 9 to 18 XP per elite in Ragefire Chasm. Groups run each dungeon once, skip every pack, and never come back. Defenders say a first clear pays about three runs' worth.",
    "firstSeen": "2026-09-19",
    "fit": "compatible",
    "lastChecked": "2026-09-24",
-   "owner": "",
+   "owner": "Josh Greenfield",
    "relayed": false,
    "sources": [
     {
@@ -296,15 +304,23 @@
     {
      "label": "Dungeon XP as a healer is a bummer",
      "url": "https://us.forums.blizzard.com/en/wow/t/dungeon-xp-as-a-healer-is-a-bummer/2357974"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "acknowledged",
    "title": "Dungeon XP nerfed too far",
    "type": "Design",
    "updates": [
     {
      "date": "2026-09-23",
      "note": "Healers are collateral: questing as a healer means one mob a minute, and priests find open-world leveling painful. The strongest case yet for daily diminishing returns."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Greenfield said moving XP from kills onto dungeon quests is meant to keep players in the open world. He called the split \"a vibe thing\" the team will keep watching, with no hasty changes before the cap rises."
     }
    ]
   },
@@ -637,24 +653,33 @@
   {
    "id": "layer-swap-pvp",
    "ask": "A PvP combat lockout on layer swaps (about five minutes) covering borders and the prompt. Smallest change, closes the exploit, leaves layering alone.",
-   "blizzard": "No response. Blizzard warns before a forced phase so players can reach safety.",
+   "blizzard": "Acknowledged by Tim Jones (podcast, Sept 24): working on solutions, fix unspecified. Layer caps are configured per zone.",
    "category": "PvP and layering",
    "community": "Crossing a zone border forces a layer swap and exits PvP combat. The layer-now prompt can be accepted mid-fight. World PvP is concentrating on borders (Stonetalon/Barrens, Ashenvale edges, northern Duskwood).",
    "firstSeen": "2026-09-21",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
-   "owner": "",
+   "lastChecked": "2026-09-24",
+   "owner": "Tim Jones",
    "relayed": true,
    "sources": [
     {
      "label": "Reddit (relayed)",
      "url": "https://reddit.com/r/classicwow/comments/1wnxa8t/current_layering_system_will_kill_world_pvp/"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "acknowledged",
    "title": "Layer swaps at zone borders end PvP fights",
    "type": "Design",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Tim Jones has seen the Duskwood and Elwynn border clips, recognizes it as an issue, doesn't want world PvP to hinge on an opponent dropping into another layer, and is working on solutions. Layer caps are set per zone, weighted by size and PvP likelihood."
+    }
+   ]
   },
   {
    "id": "legacy-power-perks",
@@ -685,8 +710,8 @@
   },
   {
    "id": "leveling-too-easy",
-   "ask": "Frame it in their numbers: \"a level 4 mob dies in 3 seconds against a stated 10-15.\" Strongest feedback in the doc. Ask directly whether overworld tuning was raised to match the new gear.",
-   "blizzard": "No response to the beta feedback. Stated target from the Deep Dive: an ordinary creature should take a solo player 10-15 seconds, and combat feel stays Classic. Valleta (Sept 22): the world should be scary.",
+   "ask": "Drop the pace argument. Keep the difficulty one, in their terms: a level 4 mob dying in 3 seconds against a stated 10 to 15.",
+   "blizzard": "Pace answered with data (podcast, Sept 24): 1 to 20 takes 20.5 hours in Forever against 20.4 in Classic Era. No answer yet on mob difficulty against the stated 10 to 15 second kill.",
    "category": "Leveling and difficulty",
    "community": "Valley of Trials at level 4-5: enemies barely do damage, no food needed. Worry that 1,000+ new quests will have players outleveling zones a quarter of the way through. Warrior may be the one class leveling at the described pace.",
    "firstSeen": "2026-09-17",
@@ -710,6 +735,10 @@
     {
      "label": "Test reducing experience rewards from quests",
      "url": "https://us.forums.blizzard.com/en/wow/t/test-reducing-experience-rewards-from-quests/2359656"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
    "status": "open",
@@ -723,6 +752,10 @@
     {
      "date": "2026-09-24",
      "note": "A thread asks Blizzard to test lower quest XP, crediting the pace to added player power, better low-level gear, and quest distribution. The sharpest reply blames dungeon quest XP and wants it cut by more than half. Legacy's Talented and Thrill of Adventure perks add to the pace too."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Blizzard's data puts 1 to 20 at 20.4 hours in Classic Era and 20.5 in Forever. Zaryu's side-by-side mage matched. Jones put the sense of speed down to large spell damage numbers on gear. The pace half is answered; whether mobs are too soft is still open."
     }
    ]
   },
@@ -746,24 +779,33 @@
   {
    "id": "low-fps",
    "ask": "Straight bug report.",
-   "blizzard": "Not on the known issues list.",
+   "blizzard": "Greenfield (podcast, Sept 24): part of the city drops traced to graphics settings toggled while grouped. A hotfix may already be out; unconfirmed.",
    "category": "Launch and performance",
    "community": "A 5090 with 9950X3D at 25-30 fps. 40-50 fps on both low and ultra. A possible memory leak (140 to 35-40 fps over an hour). FPS thread past 19,000 views.",
    "firstSeen": "2026-09-17",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
-   "owner": "",
+   "lastChecked": "2026-09-24",
+   "owner": "Josh Greenfield",
    "relayed": false,
    "sources": [
     {
      "label": "FPS problems",
      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-fps-problems/2352692"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "acknowledged",
    "title": "Low FPS on high-end hardware",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: engineers traced part of the city frame-rate drops to players toggling graphics settings while grouped. Zaryu reported higher frame rates the same day, suggesting a hotfix."
+    }
+   ]
   },
   {
    "id": "mac-crashes",
@@ -986,13 +1028,13 @@
   {
    "id": "power-creep",
    "ask": "Ask the systems side directly about drop quality, and ask whether overworld and instances were tuned up to match. That second question is what every power-creep thread is circling.",
-   "blizzard": "Greenfield (Sept 21) explained spell power on gear (see its own entry) and said drop quality belongs to the systems designers. That half is unanswered.",
+   "blizzard": "Greenfield (Sept 21): spell damage on gear is a redistribution. Tim Jones (podcast, Sept 24): quest blues come too early and too often, and changes are likely in the next beta build. Whether overworld tuning was raised is still unanswered.",
    "category": "Items and power",
    "community": "Gear stats too high for the level: a level 14 Ragefire staff compared to a 55+ dungeon item, a level 18 weapon with 49 healing, a green quest dagger beating level 50s blues. New-dungeon items far outclass old ones. Quest rewards get left behind.",
    "firstSeen": "2026-09-18",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
-   "owner": "Kris Zierhut",
+   "lastChecked": "2026-09-24",
+   "owner": "Tim Jones",
    "relayed": false,
    "sources": [
     {
@@ -1002,12 +1044,21 @@
     {
      "label": "Comprehensive beta feedback",
      "url": "https://us.forums.blizzard.com/en/wow/t/comprehensive-beta-feedback/2355283"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "change-coming",
    "title": "Power creep and drop quality",
    "type": "Design",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Tim Jones agreed blues arrive too early and too often. The intended graduation is white, then greens around 10, then blues around 20. Next beta build: some quests reward only XP and gold, and dungeon quest lines consolidate to one blue instead of four."
+    }
+   ]
   },
   {
    "id": "profession-qol",
@@ -1077,6 +1128,10 @@
     {
      "label": "WoW Forever or Retail Forever?",
      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-or-retail-forever/2353519"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
    "status": "open",
@@ -1086,30 +1141,43 @@
     {
      "date": "2026-09-24",
      "note": "A thread says layering on local-area group invites is frustrating, the same friction as the zone-border swaps."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Greenfield called the group-invite layer swap, where inviting someone makes a rare vanish, a bug they intend to fix. A several-hundred-player Ashenvale battle ran with far less lag than any earlier version."
     }
    ]
   },
   {
    "id": "retail-ui",
-   "ask": "Transmog and models got toggles. A classic UI option follows their own logic.",
-   "blizzard": "No response.",
+   "ask": "Restyle the retail unit frames and cast bar in Forever's own bronze. Zaryu likes the new action bars and minimap and objects mainly to those two pieces. That is achievable inside their stated reason.",
+   "blizzard": "Declined for now (Tim Jones, podcast, Sept 24): the bronze UI is Forever's identity. Add-ons remain the route for a different look.",
    "category": "UI and names",
    "community": "Portraits, professions, spellbook, and menus are all retail. Widely liked thread.",
    "firstSeen": "2026-09-18",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
-   "owner": "",
+   "lastChecked": "2026-09-24",
+   "owner": "Tim Jones",
    "relayed": false,
    "sources": [
     {
      "label": "WoW Forever or Retail Forever?",
      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-or-retail-forever/2353519"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "wont-change",
    "title": "Retail UI with no classic option",
    "type": "Request",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Tim Jones said the bronze, weathered UI is deliberate, so Forever reads as its own pillar at a glance. Add-ons are the route for anything else. Greenfield said they're still listening."
+    }
+   ]
   },
   {
    "id": "rogue-dual-wield-10",
@@ -1228,25 +1296,34 @@
   },
   {
    "id": "shapeshift-sd-leak",
-   "ask": "Best-scoped SD/HD item: the setting says SD, the client shows HD. Reuse the Wrath 3.2 low-poly form colors as SD counterparts. Check other barber-shop appearances for the same leak.",
-   "blizzard": "No response.",
+   "ask": "Name the geometry: which forms carry extra shapes in the silhouette. Pair it with the Wrath 3.2 low-poly form colors as SD counterparts.",
+   "blizzard": "Greenfield (podcast, Sept 24): textures already downscaled to classic fidelity; extra geometry is under discussion, nothing announced. He and art director Jeff Parrot worked on the downscaling.",
    "category": "Art and models",
    "community": "Barber-shop form variants show to everyone. For Night Elf and Tauren bears only the base variant is SD; variants 1-5 are HD. All four Skyborne bears are HD.",
    "firstSeen": "2026-09-22",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
-   "owner": "",
+   "lastChecked": "2026-09-24",
+   "owner": "Josh Greenfield",
    "relayed": true,
    "sources": [
     {
      "label": "Community image (relayed)",
      "url": ""
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "acknowledged",
    "title": "Druid forms ignore the SD/HD setting",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: Greenfield said the druid forms were downscaled more than once to match classic texture fidelity, and side by side the textures match. The remaining gap is geometry sticking out of the silhouette, which the team is discussing, with nothing to announce."
+    }
+   ]
   },
   {
    "id": "shared-tagging",
@@ -1256,7 +1333,7 @@
    "community": "Hundreds of players in starting zones after the same few mobs. One side wants shared tagging or hyper-spawns at launch. The other says contested tags push people to group. A middle position: shared tagging for named quest mobs only. Some expect it to stop mattering once players spread out (about a week, based on past Classic launches).",
    "firstSeen": "2026-09-17",
    "fit": "reversal",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "Josh Greenfield",
    "relayed": false,
    "sources": [
@@ -1271,6 +1348,10 @@
     {
      "label": "Greenfield on recent allies (X)",
      "url": "https://x.com/aggrendwow/status/2101727439634547153"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
    "status": "wont-change",
@@ -1284,6 +1365,10 @@
     {
      "date": "2026-09-20",
      "note": "Greenfield answers on X: holding the line, recent allies offered as mitigation."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: recent allies is working as hoped. Greenfield kept running into one player from the Skyborne start every six hours or so; Zaryu crossed paths with one priest about twenty times before running a dungeon with him."
     }
    ]
   },
@@ -1317,24 +1402,33 @@
   {
    "id": "skyborne-neutrality",
    "ask": "Keep separate from the paywall and art complaints so neither gets dismissed with the other.",
-   "blizzard": "No response. Datamined maps show Zephras Isle as its own map, so the separateness is structural.",
+   "blizzard": "Greenfield and Jones (podcast, Sept 24): the split is narrative and both reputations lead to future patch content. The Skyborne are small by design, a starting zone to 12. Greenfield conceded the blue probably shouldn't have led the presentation.",
    "category": "Skyborne",
    "community": "Alliance and Horde Skyborne starting zones identical through level 7, functioning like Pandaren despite Blizzard stressing they aren't neutral. One claim: 52% of a player survey opposed a neutral race. Aesthetic complaints: MoP and Kyrian, not vanilla.",
    "firstSeen": "2026-09-17",
    "fit": "reversal",
-   "lastChecked": "2026-09-23",
-   "owner": "",
+   "lastChecked": "2026-09-24",
+   "owner": "Josh Greenfield",
    "relayed": false,
    "sources": [
     {
      "label": "Skyborne starting zone",
      "url": "https://us.forums.blizzard.com/en/wow/t/skyborne-starting-zone/2352828"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
-   "status": "open",
+   "status": "acknowledged",
    "title": "Skyborne play as a neutral race",
    "type": "Design",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: the faction split is narrative. Arcane-leaning elves go Alliance toward Dalaran; naturalist Windshaper elves go Horde toward a new Earthen Ring area in Mulgore. Both reputations open future content. No Skyborne priests, since the race treats organized religion as the enemy; Greenfield called that a possible narrative mistake."
+    }
+   ]
   },
   {
    "id": "skyborne-paywall",
@@ -1373,6 +1467,10 @@
     {
      "label": "Skyborne need SD models",
      "url": "https://us.forums.blizzard.com/en/wow/t/skyborne-need-sd-models-and-other-races-need-a-fix/2352645"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ],
    "status": "open",
@@ -1382,6 +1480,10 @@
     {
      "date": "2026-09-24",
      "note": "Nothing found says Skyborne SD models are coming. On first login players choose classic or enhanced, and Blizzard presents that toggle as the answer to SD versus HD."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Podcast: the Skyborne were among the first assets built, before the team settled its target fidelity. Still no word on SD models."
     }
    ]
   },
@@ -2252,8 +2354,8 @@
     },
     {
      "id": "skyborne-neutrality",
-     "strength": "likely",
-     "why": "He is the developer on record explaining why the Skyborne exist, as a response to how popular elves are."
+     "strength": "direct",
+     "why": "Explained on the podcast why the Skyborne came first."
     },
     {
      "id": "auto-shot-timing",
@@ -2262,8 +2364,8 @@
     },
     {
      "id": "layer-swap-pvp",
-     "strength": "possible",
-     "why": "He is the only designer on record describing Forever's PvP structure, and no PvP designer is named."
+     "strength": "direct",
+     "why": "Acknowledged the border problem on the podcast and said they're working on it."
     },
     {
      "id": "warrior-rage",
@@ -2289,11 +2391,21 @@
      "id": "legacy-power-perks",
      "strength": "possible",
      "why": "No Legacy designer is named, and the perks touch leveling pace and class power."
+    },
+    {
+     "id": "power-creep",
+     "strength": "direct",
+     "why": "Said on the podcast that quest blues are being pulled back next build."
+    },
+    {
+     "id": "retail-ui",
+     "strength": "direct",
+     "why": "Declined a classic UI toggle on the podcast: the bronze UI is Forever's identity."
     }
    ],
    "name": "Tim Jones",
    "notes": "Also on the Sept 17 live Q&A.",
-   "onRecord": "\"Every single one of our 27 talent trees is now viable for all content in WoW: Forever.\" Described a seasonal Rank 14 ladder in place of rated PvP, new 10 and 20 player content every patch with no flex raiding, and long-unfinished map areas as opportunities. Explained the Skyborne as a response to how popular elves are.",
+   "onRecord": "\"Every single one of our 27 talent trees is now viable for all content in WoW: Forever.\" Described a seasonal Rank 14 ladder in place of rated PvP, new 10 and 20 player content every patch with no flex raiding, and long-unfinished map areas as opportunities. Explained the Skyborne as a response to how popular elves are. On the first WoW Forever Podcast (Sept 24): quest blues are being pulled back, the bronze UI stays as Forever's identity, and layer swaps at zone borders are a known problem being worked on.",
    "order": 5,
    "role": "Lead Game Designer (Windows Central); Lead Classic Designer (What's Next recap)",
    "scope": "Classic team",
@@ -2313,6 +2425,10 @@
     {
      "label": "What's Next panel recap",
      "url": "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ]
   },
@@ -2374,8 +2490,8 @@
     },
     {
      "id": "skyborne-neutrality",
-     "strength": "possible",
-     "why": "He was introduced at the Deep Dive as Forever's narrative point, and the neutrality complaint is partly a lore question about the Skyborne."
+     "strength": "direct",
+     "why": "Explained the faction split and conceded the blue shouldn't have led."
     },
     {
      "id": "thorns-scaling",
@@ -2391,11 +2507,31 @@
      "id": "illidari-quelthalas",
      "strength": "likely",
      "why": "Introduced at the Deep Dive as Forever's narrative point."
+    },
+    {
+     "id": "dungeon-xp",
+     "strength": "direct",
+     "why": "Explained the dungeon XP intent on the podcast."
+    },
+    {
+     "id": "shapeshift-sd-leak",
+     "strength": "direct",
+     "why": "Worked on downscaling the druid forms and said the geometry is under discussion."
+    },
+    {
+     "id": "art-cohesion",
+     "strength": "likely",
+     "why": "Named the art director and said new assets are trending toward Classic."
+    },
+    {
+     "id": "low-fps",
+     "strength": "possible",
+     "why": "Relayed the engineers' cause for the city frame drops."
     }
    ],
    "name": "Josh Greenfield",
    "notes": "Answers on X, not the forums. Says plainly when a question belongs to someone else; he sent item drop quality to the systems designers. The podcast is the most direct route for feedback that isn't a bug.",
-   "onRecord": "The only developer who has answered beta feedback in public. On shared tagging: \"This is one of those things that we simply must hold the line on.\" Explained that base spell damage moved onto gear, with throughput meant to hold. Gave guild structure as the main reason for the GDKP ban. Co-presented the Found Photos panel. Starting a weekly podcast following Forever through beta and launch, covering player reception with developer guests. Posted Sept 21 that he had been fixing content held back from the beta.",
+   "onRecord": "The only developer who has answered beta feedback in public. On shared tagging: \"This is one of those things that we simply must hold the line on.\" Explained that base spell damage moved onto gear, with throughput meant to hold. Gave guild structure as the main reason for the GDKP ban. Co-presented the Found Photos panel. Starting a weekly podcast following Forever through beta and launch, covering player reception with developer guests. Posted Sept 21 that he had been fixing content held back from the beta. Launched the weekly WoW Forever Podcast on Sept 24 with Tim Jones. Said recent allies is working, the group-invite layer swap is a bug, and the team meets at 9am daily to triage beta reports.",
    "order": 6,
    "role": "Senior Game Designer, WoW Classic; Forever's narrative point at the Deep Dive",
    "scope": "Classic team",
@@ -2423,6 +2559,10 @@
     {
      "label": "Found Photos panel recap",
      "url": "https://news.blizzard.com/en-us/article/24304071/world-of-warcraft-forever-found-photos-panel-recap"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
     }
    ]
   },
@@ -2564,7 +2704,7 @@
    ],
    "name": "Kris Zierhut",
    "notes": "\"Unsolve the solved content\" reaches coverage through Method's summary, not a transcript, so it is not quoted here.",
-   "onRecord": "\"So your first run through a dungeon is amazing.\" Presented the itemization pass at the Deep Dive, including removing disappointing epics and making rare spawns worth killing. With Mike Nuthals, argued Forever makes a separate WoW sequel unnecessary.",
+   "onRecord": "\"So your first run through a dungeon is amazing.\" Presented the itemization pass at the Deep Dive, including removing disappointing epics and making rare spawns worth killing. With Mike Nuthals, argued Forever makes a separate WoW sequel unnecessary. Slated to appear on a later episode of the WoW Forever Podcast.",
    "order": 9,
    "role": "Principal Game Designer, WoW Classic",
    "scope": "Classic team",
@@ -3107,6 +3247,51 @@
      "url": "https://x.com/ClaytonStone"
     }
    ]
+  },
+  {
+   "id": "jeff-parrot",
+   "order": 20,
+   "name": "Jeff Parrot",
+   "handle": "",
+   "role": "Art Director, WoW Forever",
+   "discipline": "Character and creature art",
+   "scope": "Forever",
+   "confidence": "reported",
+   "onRecord": "Named by Greenfield on the podcast as Forever's art director. Spent many hours reviewing renders with Greenfield and worked on downscaling the druid forms to classic texture fidelity. Gave interviews at BlizzCon.",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
+    }
+   ],
+   "notes": "Spelling comes from the podcast transcript. His BlizzCon interviews are worth finding.",
+   "likelyIssues": [
+    {
+     "id": "art-cohesion",
+     "strength": "direct",
+     "why": "Art director for Forever."
+    },
+    {
+     "id": "shapeshift-sd-leak",
+     "strength": "direct",
+     "why": "Worked on downscaling the druid forms."
+    },
+    {
+     "id": "skyborne-sd-models",
+     "strength": "likely",
+     "why": "Character art sits under the art director."
+    },
+    {
+     "id": "sd-model-gaps",
+     "strength": "likely",
+     "why": "Character art sits under the art director."
+    },
+    {
+     "id": "chain-cast-animation",
+     "strength": "possible",
+     "why": "Animation may sit under art direction; nobody is named for it."
+    }
+   ]
   }
  ],
  "premise": [
@@ -3194,7 +3379,7 @@
   "seededOn": "2026-09-23"
  },
  "gaps": [
-  "Character, armor, weapon, and creature art. No lead and no Forever art director named.",
+  "Character, armor, weapon, and creature art. Jeff Parrot is Forever's art director (podcast, Sept 24); no individual character, armor, weapon, or creature artists are named.",
   "Animation. Nobody named.",
   "Audio and music. No composer or audio lead named. Clay Stone credited the Audio Team as a team for the weather pass. The only individual credit, Adam Burgess on fan uploads of Riverglades General, is unconfirmed, and he left Blizzard in August 2026.",
   "UI and controller design. Nobody named.",
@@ -3228,16 +3413,8 @@
    "why": "Nobody on the roster works on animation, and the likely cause is the retail skeleton rather than class design."
   },
   {
-   "id": "layer-swap-pvp",
-   "why": "No PvP designer or layering engineer has been named. Jones and Greenfield only partly overlap with it."
-  },
-  {
    "id": "linux-stutter",
    "why": "No platform or client engineer has been named, and the Linux problems are not on the known issues list."
-  },
-  {
-   "id": "low-fps",
-   "why": "No client performance engineer has been named, and outlets give the lead software engineer title to several different people."
   },
   {
    "id": "mail-routing",
@@ -3260,28 +3437,12 @@
    "why": "Presented as a Deep Dive pillar, but nobody on the roster has spoken to it since the beta opened."
   },
   {
-   "id": "retail-ui",
-   "why": "No UI designer or engineer has been named. Leadership has only framed Forever as distinct from retail."
-  },
-  {
-   "id": "sd-model-gaps",
-   "why": "Fixing the classic-race SD models is character art work, and no character artist or art director has been named. Longdale has spoken only to the SD versus HD decision."
-  },
-  {
-   "id": "shapeshift-sd-leak",
-   "why": "SD versions of the druid form variants are character and creature art, which has no named owner."
-  },
-  {
    "id": "skyborne-bugs",
    "why": "Nobody owns animation for the bow and Wrath cast bugs, and no engineer is named for the teleport crash. Evan Lee may take the broken quest."
   },
   {
    "id": "skyborne-paywall",
    "why": "A business decision. Nobody has spoken to it."
-  },
-  {
-   "id": "skyborne-sd-models",
-   "why": "Building SD Skyborne models is character art, which has no named owner. Longdale has spoken only to the SD versus HD call in general."
   },
   {
    "id": "two-part-names",
