@@ -69,7 +69,7 @@ h1{font-family:var(--font-display);font-weight:500;font-size:52px;line-height:1.
 .source .lab{font-family:var(--font-ui);font-size:var(--ui-xs);letter-spacing:var(--track-wide);text-transform:uppercase;color:var(--ink-50);white-space:nowrap}
 
 /* Tabs: flat, hairline, gold under the selected tab */
-.tabs{display:flex;gap:4px;border-bottom:1px solid var(--gold-dim);overflow-x:auto}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--gold-dim)}
 .tab{font-family:var(--font-ui);font-size:var(--ui-lg);letter-spacing:var(--track);padding:9px 16px 10px;background:none;border:1px solid transparent;border-bottom:0;border-radius:var(--radius) var(--radius) 0 0;color:var(--ink-70);cursor:pointer;margin-bottom:-1px;white-space:nowrap;transition:color var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease)}
 .tab:hover{color:var(--ink);background:var(--gold-wash)}
 .tab[aria-selected="true"]{color:var(--link);background:var(--parchment-raised);border-color:var(--gold-dim);border-bottom:1px solid var(--parchment-raised)}
