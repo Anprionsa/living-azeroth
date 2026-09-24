@@ -30,19 +30,28 @@
    "community": "Crashes above \"Good.\" Fatal error in VirtualShadowMap.cpp that takes the driver down until a hard reset. Deeprun Tram crashes traced to it.",
    "firstSeen": "2026-09-19",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "AMD users: Secondary Lighting crashes",
      "url": "https://us.forums.blizzard.com/en/wow/t/amd-card-users-come-here-secondary-lighting-crashes-amd-drivers/2355091"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
    "title": "Secondary Lighting crashes AMD drivers",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Not in the Sept 24 build notes."
+    }
+   ]
   },
   {
    "id": "art-cohesion",
@@ -99,7 +108,7 @@
    "community": "The 0.5-second windup before Auto Shot and wand shots isn't working, so ranged users barely stop moving. Some want to keep it. Others say indefinite kiting breaks the open world.",
    "firstSeen": "2026-09-23",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -115,35 +124,48 @@
     {
      "date": "2026-09-23",
      "note": "Blizzard confirms bug, fix coming."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Not confirmed in the Sept 24 build. Coverage still describes the fix as coming in an upcoming build."
     }
    ]
   },
   {
    "id": "caster-weak-early",
-   "ask": "If a class makes people stop at level 10, that's a problem wherever it ends up at 60. Point at the window before the first spell power weapon, measured against Jones's viability claim.",
-   "blizzard": "Greenfield's redistribution answer disposes of the \"forgot the gear\" reading. Tim Jones (Sept 22): all 27 talent trees are viable for all content. Wowhead commenters asked for a druid Wrath ruling before launch.",
+   "ask": "Recheck a druid at 10 and 20 against a mage and hunter. If the gap closes, this is done.",
+   "blizzard": "Sept 24 build: Wrath base damage up about 50%; druid heals can crit. Several notes describe smoothing progression moments while leveling.",
    "category": "Classes",
    "community": "A player quit druid at 10 for hitting half as hard as their hunter and mage. Wrath for 14-21 against a mage Fireball for 50-60. Bear form meleeing for 10-15, partly because forms now scale with weapons. 62 replies in four hours.",
    "firstSeen": "2026-09-21",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "Starting a druid and it feels incredibly weak",
      "url": "https://us.forums.blizzard.com/en/wow/t/starting-a-druid-and-it-feels-incredibly-weak-am-i-doing-something-wrong/2356995"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
-   "status": "open",
+   "status": "fixed",
    "title": "Druid and casters weak before first spell power weapon",
    "type": "Design",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: Wrath's base damage raised about 50%, and Rejuvenation, Tranquility, and Wild Growth can now crit. A direct answer to the largest class thread in the forum."
+    }
+   ]
   },
   {
    "id": "chain-cast-animation",
-   "ask": "Report it as one chain-cast issue across classes. The Skyborne Wrath report is probably this, not a race-specific bug.",
-   "blizzard": "No response.",
+   "ask": "Confirm Smite, Lightning Bolt, and Wrath chain-cast with raised arms.",
+   "blizzard": "Fixed in the Sept 24 build.",
    "category": "Art and models",
    "community": "Priest Smite, shaman Lightning Bolt, and druid Wrath cast back to back play with the arms at the sides: the hands glow but the arms never raise. Players think it happens when a new cast starts before the previous animation finishes. One reply says it happened in 2004 too.",
    "firstSeen": "2026-09-24",
@@ -155,15 +177,23 @@
     {
      "label": "Casting animation",
      "url": "https://us.forums.blizzard.com/en/wow/t/casting-animation/2360114"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
-   "status": "open",
+   "status": "fixed",
    "title": "Cast animation drops when chain-casting",
    "type": "Bug",
    "updates": [
     {
      "date": "2026-09-24",
      "note": "Logged from the working notes, revision 113."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: fixed casters not playing their precast animations and standing while casting."
     }
    ]
   },
@@ -208,25 +238,34 @@
   },
   {
    "id": "controller-gaps",
-   "ask": "Send the gamepad-only player's list as is. Their verdict: excellent with pain points.",
+   "ask": "Critters and fishing bobbers are what's left from the gamepad-only player's list. Send those two.",
    "blizzard": "Partly addressed in build 69977 (see the fixed entry).",
    "category": "Controller",
    "community": "Critters untargetable (blocks the Sickly Gazelle quest), choppy targeting, cross bars not editable, Edit Mode not saving, no remapping, no auto-attack indicator, no auto-facing, fishing bobbers out of reach, clunky trade and mail. Steam Controller didn't work.",
    "firstSeen": "2026-09-18",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "Controller support feedback",
      "url": "https://us.forums.blizzard.com/en/wow/t/controller-support-feedback-beta-impressions-so-far/2353149"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
    "title": "Controller gaps still open",
    "type": "Request",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: Edit Mode layouts now apply with the gamepad UI on. Added class flyouts, a compact action bar, fixed party targeting on the directional pad, and options to swap targeting sides. Critter targeting and fishing bobber reach aren't mentioned."
+    }
+   ]
   },
   {
    "id": "controller-quest-items",
@@ -441,6 +480,10 @@
     {
      "label": "Warcraft Tavern, Sept 17 Q&A recap",
      "url": "https://www.warcrafttavern.com/forever/news/wow-forever-developer-qa-elf-races-character-models-gdkp/"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
@@ -450,6 +493,10 @@
     {
      "date": "2026-09-24",
      "note": "Correction: the modern skeleton is a stated decision (Sept 17 Q&A), not an oversight. The missing swing is a gap inside that decision rather than evidence of behavior carried over unchecked."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "A Blizzard survey (relayed) promises \"original character models and spell animations,\" which the Sept 17 Q&A's modern-skeleton answer doesn't match. That sharpens this report."
     }
    ]
   },
@@ -495,7 +542,7 @@
    "community": "Three posters cite headaches, failing eyesight, and trouble with sun rays. The only control is /console volumeFog 0, which also removes most of the new lighting.",
    "firstSeen": "2026-09-14",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -506,12 +553,21 @@
     {
      "label": "VolumeFog/Lightning",
      "url": "https://us.forums.blizzard.com/en/wow/t/volumefoglightning/2354916"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
    "title": "No fog slider (accessibility)",
    "type": "Request",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: the unintended fog-disabling setting was removed. The console command isn't mentioned, and there's still no slider."
+    }
+   ]
   },
   {
    "id": "footsteps-wood",
@@ -636,19 +692,28 @@
    "community": "About 25 items: class and talent bugs, pet and stat display, Legacy opening with Y before 25, guild charters, Teldrassil escort, spell queue, Bear Form armor, resurrection sickness.",
    "firstSeen": "2026-09-17",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "Known Issues, Sept 18",
      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-known-issues-september-18/2352687"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "fixed",
    "title": "Known issues list, Sept 18",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24: Paladin Holy Strike ranks now always improve. Kaivax marked the Teldrassil escort resolved, and Loch Modan's \"Snowbound\" no longer overpays experience."
+    }
+   ]
   },
   {
    "id": "layer-swap-pvp",
@@ -739,6 +804,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
@@ -756,6 +825,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: Blizzard's data puts 1 to 20 at 20.4 hours in Classic Era and 20.5 in Forever. Zaryu's side-by-side mage matched. Jones put the sense of speed down to large spell damage numbers on gear. The pace half is answered; whether mobs are too soft is still open."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24: Loch Modan's \"Snowbound\" was tuned down for overpaying experience, the pattern of fixing XP quest by quest. A Blizzard survey describes \"a slower, more deliberate leveling experience,\" which their own data puts level with Classic, not slower."
     }
    ]
   },
@@ -767,19 +840,29 @@
    "community": "Extreme stuttering, and clients stuck at 100% on load.",
    "firstSeen": "2026-09-21",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
-   "sources": [],
+   "sources": [
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
+    }
+   ],
    "status": "open",
    "title": "Linux stuttering and load hangs",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Not in the Sept 24 build notes."
+    }
+   ]
   },
   {
    "id": "low-fps",
    "ask": "Straight bug report.",
-   "blizzard": "Greenfield (podcast, Sept 24): part of the city drops traced to graphics settings toggled while grouped. A hotfix may already be out; unconfirmed.",
+   "blizzard": "Greenfield (podcast, Sept 24): part of the city drops came from settings toggled while grouped. Sept 24 build: a memory leak causing gradual performance loss is fixed. The high-end frame rate reports aren't addressed directly.",
    "category": "Launch and performance",
    "community": "A 5090 with 9950X3D at 25-30 fps. 40-50 fps on both low and ultra. A possible memory leak (140 to 35-40 fps over an hour). FPS thread past 19,000 views.",
    "firstSeen": "2026-09-17",
@@ -795,6 +878,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "acknowledged",
@@ -804,6 +891,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: engineers traced part of the city frame-rate drops to players toggling graphics settings while grouped. Zaryu reported higher frame rates the same day, suggesting a hotfix."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: a memory leak causing gradual performance loss is fixed, which fits the day-one report of 140 fps sliding to 35 within an hour. Linux stutter and AMD crashes aren't mentioned."
     }
    ]
   },
@@ -815,13 +906,17 @@
    "community": "Largest thread in the forum (142 replies). Anything above Fair Secondary Lighting hangs an M5 Pro GPU.",
    "firstSeen": "2026-09-17",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "Beta client update, Sept 23",
      "url": "https://eu.forums.blizzard.com/en/wow/t/beta-client-update-23-september/630815"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "fixed",
@@ -831,18 +926,22 @@
     {
      "date": "2026-09-23",
      "note": "Mac fixes listed in build 69977. Not yet confirmed by players."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: Mac display artifacts and a Mac water display issue fixed."
     }
    ]
   },
   {
    "id": "mail-routing",
-   "ask": "How they fix it will show how fixed the two-part name decision is.",
-   "blizzard": "No response found.",
+   "ask": "Confirm mail and the auction house route by full name. How they fixed it would say how settled two-part names are.",
+   "blizzard": "Fixed in the Sept 24 build.",
    "category": "UI and names",
    "community": "Mail appears to resolve on first name alone. Mail between one player's own characters landed on unrelated characters. Horde receiving Stormwind AH mail. Advice: avoid mail and the AH.",
    "firstSeen": "2026-09-21",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -853,12 +952,21 @@
     {
      "label": "Self-mail bug thread",
      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-self-mail-bug-same-first-name/2353657"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
-   "status": "open",
+   "status": "fixed",
    "title": "Mail routes to the wrong character",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: in-game mail ignoring surnames is fixed. How it was fixed isn't stated."
+    }
+   ]
   },
   {
    "id": "mob-aggro",
@@ -1048,6 +1156,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "change-coming",
@@ -1057,6 +1169,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: Tim Jones agreed blues arrive too early and too often. The intended graduation is white, then greens around 10, then blues around 20. Next beta build: some quests reward only XP and gold, and dungeon quest lines consolidate to one blue instead of four."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: some quest rewards corrected to their proper item level and a few early caster rewards adjusted. Not yet the one-blue-per-dungeon consolidation Jones described."
     }
    ]
   },
@@ -1132,6 +1248,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
@@ -1145,6 +1265,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: Greenfield called the group-invite layer swap, where inviting someone makes a rare vanish, a bug they intend to fix. A several-hundred-player Ashenvale battle ran with far less lag than any earlier version."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24: layering on group changes is now an official known issue, with improvements promised."
     }
    ]
   },
@@ -1194,6 +1318,10 @@
     {
      "label": "Rogues: dual wield at 10 with no +hit gear",
      "url": "https://us.forums.blizzard.com/en/wow/t/rogues-its-kind-of-cruel-to-give-them-dual-wield-at-level-10-with-no-hit-gear/2359642"
+    },
+    {
+     "label": "Icy Veins: Sept 24 development notes",
+     "url": "https://www.icy-veins.com/wow-forever/news/class-and-race-changes-gamepad-support-and-more-wow-forever-beta-development-notes-september-24th/"
     }
    ],
    "status": "open",
@@ -1203,6 +1331,10 @@
     {
      "date": "2026-09-23",
      "note": "Logged from the working notes, revision 113."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: rogue and druid energy now regenerates smoothly instead of in server ticks, and Relentless Strikes became baseline. Nothing on +hit at low level. From search coverage of the notes."
     }
    ]
   },
@@ -1274,25 +1406,34 @@
   },
   {
    "id": "shadow-lighting-settings",
-   "ask": "Keep separate from the fog-taste complaint: working-but-too-thick versus not rendering at all.",
-   "blizzard": "No response.",
+   "ask": "Confirm the new lighting renders at High and Ultra shadows. AMD cards seeing haze without lighting is a separate report.",
+   "blizzard": "Most likely fixed in the Sept 24 build; the notes don't name the setting.",
    "category": "Fog and lighting",
    "community": "On one 5090, lighting and fog only appeared with Shadow Quality on Low or Fair. RX 9070 users see haze with none of the lighting. Some grey-haze complaints are the lighting failing, not fog working.",
    "firstSeen": "2026-09-19",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "Shadow settings remove new lighting",
      "url": "https://us.forums.blizzard.com/en/wow/t/shadow-settings-remove-new-lightingfog-effects/2353634"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
-   "status": "open",
+   "status": "fixed",
    "title": "New lighting fails on some settings and hardware",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: removed \"a setting that could disable fog in an unintended manner.\" The notes don't name it, but it most likely covers High and Ultra shadows turning off the fog and lighting."
+    }
+   ]
   },
   {
    "id": "shapeshift-sd-leak",
@@ -1352,6 +1493,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "wont-change",
@@ -1369,6 +1514,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: recent allies is working as hoped. Greenfield kept running into one player from the Skyborne start every six hours or so; Zaryu crossed paths with one priest about twenty times before running a dungeon with him."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: respawns shortened for contested mobs and quest objectives across Elwynn, Dun Morogh, Durotar, Silverpine, Mulgore, and Westfall, and one Elwynn rare's quest item can now be looted by every party member. The non-tagging mitigations Greenfield pointed to, shipping."
     }
    ]
   },
@@ -1387,6 +1536,10 @@
     {
      "label": "Skyborne starting zone",
      "url": "https://us.forums.blizzard.com/en/wow/t/skyborne-starting-zone/2352828"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
@@ -1396,6 +1549,10 @@
     {
      "date": "2026-09-24",
      "note": "The arms-at-sides Wrath is probably the cross-class chain-cast issue, logged separately, not a Skyborne bug."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: the arms-at-sides cast is fixed as part of the precast animation fix. The quest, teleport crash, and bow animation aren't mentioned."
     }
    ]
   },
@@ -1564,25 +1721,34 @@
   },
   {
    "id": "thorns-scaling",
-   "ask": "Put it to Greenfield with the numbers: if base damage moved to spell power and throughput held, is a passive tripling on cheap consumables an exception, or a sign the redistribution is uneven at low level?",
-   "blizzard": "No response.",
+   "ask": "Nothing to send unless Thorns still spikes with real gear at higher levels.",
+   "blizzard": "Sept 24 build: Thorns scaling is intended; the cheap Wizard Oil boost that drove the example was cut back to Classic Era values.",
    "category": "Items and power",
    "community": "A level 20-ish druid with crafted level 10 boots and the Staff of Orgrimmar: Minor Wizard Oil plus Minor Arcane Elixir take Thorns from 9 to 15, and real gear to 25. Thorns didn't scale with spell power in vanilla (Wrath added it, then halved it). Coldflame Sabre's frozen-target proc raises the same question.",
    "firstSeen": "2026-09-21",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": true,
    "sources": [
     {
      "label": "Reddit (relayed)",
      "url": ""
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
-   "status": "open",
+   "status": "fixed",
    "title": "Thorns scaling off spell power",
    "type": "Design",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: Thorns now updates dynamically with the caster's spell power, so the scaling is intended. Minor, Lesser, and regular Wizard Oil were reverted to Classic Era values (8, 16, 24 spell power), and wands no longer gain from spell damage."
+    }
+   ]
   },
   {
    "id": "two-part-names",
@@ -1623,19 +1789,28 @@
    "community": "UI and addon settings reset on client restart. Edit Mode not saving on controller.",
    "firstSeen": "2026-09-21",
    "fit": "bug",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "Beta forum index",
      "url": "https://us.forums.blizzard.com/en/wow/c/in-development/wow-forever-beta-discussion/349?page=1"
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
    "title": "UI and addon settings wiped on restart",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: Edit Mode layouts now apply with the gamepad UI. General settings wiping on restart isn't mentioned."
+    }
+   ]
   },
   {
    "id": "warrior-prot",
@@ -1661,10 +1836,10 @@
   },
   {
    "id": "warrior-rage",
-   "ask": "Name it precisely: rage behaving like a modern normalized system, with no rage from crits and little from damage taken. That is the same shape as the Auto Shot bug Blizzard already fixed. Set it against Jones's claim that all 27 trees are viable.",
-   "blizzard": "No response.",
+   "ask": "Ask for the missing half, in their own terms: compensation for arms and fury. Candidates in rough order of scope: a shorter, weaker Recklessness; Rend ticks that generate rage; a small rage bonus on crits; rage from Deep Wounds; an instant Slam proc; a medium-cooldown generator. The classes episode of the podcast is the place to raise it.",
+   "blizzard": "Normalization is deliberate: Greenfield wrote during Season of Discovery that rage should be normalized with major compensating changes. Protection got those (cheaper Shield Block, rage on dodge and parry, cheaper Revenge and Shield Slam). Arms and fury haven't.",
    "category": "Classes",
-   "community": "Several white swings per Sunder with a one-hander, no rage from crits, little rage from taking hits in dungeons. One reply calls it Cataclysm-style normalized rage, reduced further. Bear druids report the same, so players expect a fix before launch. A separate prot thread asks Forever not to repeat Season of Discovery's mistakes.",
+   "community": "Several white swings per Sunder with a one-hander, no rage from crits, little rage from taking hits in dungeons. One reply calls it Cataclysm-style normalized rage, reduced further. Bear druids report the same, so players expect a fix before launch. A separate prot thread asks Forever not to repeat Season of Discovery's mistakes. A longtime warrior's video analysis projects fury at about 400 rage a minute at 60, barely enough for Bloodthirst and Whirlwind, with arms at about half that and unable to keep Mortal Strike up. Recklessness is still a 30-minute cooldown.",
    "firstSeen": "2026-09-23",
    "fit": "compatible",
    "lastChecked": "2026-09-24",
@@ -1674,15 +1849,23 @@
     {
      "label": "Need More Rage! Warrior scuffed?",
      "url": "https://us.forums.blizzard.com/en/wow/t/need-more-rage-warrior-scuffed/2359574"
+    },
+    {
+     "label": "Warrior rage normalization (video analysis)",
+     "url": "https://youtu.be/UqaascDE62A"
     }
    ],
    "status": "open",
    "title": "Warriors starved of rage",
-   "type": "Bug",
+   "type": "Design",
    "updates": [
     {
      "date": "2026-09-23",
      "note": "Logged from the working notes, revision 113."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Correction: rage normalization is deliberate, not inherited. During Season of Discovery Greenfield wrote that if they did it over they'd normalize rage and make major compensating changes to warrior gameplay. Sept 24 build: Sunder threat corrected, Focused Rage moved earlier, Bloodthrill doubled, Slam cooldown raised to 18 seconds. Protection got its compensation; arms and fury didn't."
     }
    ]
   },
@@ -1694,24 +1877,33 @@
    "community": "Water has visible wave motion now, but characters float at a fixed height through it.",
    "firstSeen": "2026-09-20",
    "fit": "compatible",
-   "lastChecked": "2026-09-23",
+   "lastChecked": "2026-09-24",
    "owner": "",
    "relayed": true,
    "sources": [
     {
      "label": "Relayed",
      "url": ""
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
    "status": "open",
    "title": "Characters don't react to waves",
    "type": "Bug",
-   "updates": []
+   "updates": [
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: a Mac water display issue was fixed. The missing wave reaction isn't mentioned."
+    }
+   ]
   },
   {
    "id": "water-splash-sound",
-   "ask": "Ask whether other ambient audio changed too. Nobody has audited sound.",
-   "blizzard": "Reportedly restoring the old sounds. Relayed, not yet sourced.",
+   "ask": "Listen for whether the new splash matches Classic's.",
+   "blizzard": "Changed in the Sept 24 build.",
    "category": "World and audio",
    "community": "The splashing sound is missing in water.",
    "firstSeen": "2026-09-20",
@@ -1723,15 +1915,23 @@
     {
      "label": "Relayed",
      "url": ""
+    },
+    {
+     "label": "Blizzard: Beta development notes, Sept 24",
+     "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-september-24/2360696"
     }
    ],
-   "status": "change-coming",
+   "status": "fixed",
    "title": "Missing water splash sound",
    "type": "Bug",
    "updates": [
     {
      "date": "2026-09-24",
      "note": "Footsteps on wood now play the grass sound. Both are surface-driven sounds, so one fault may explain both. Logged separately."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Sept 24 build: the sound for jumping into water was changed to be \"more aesthetically pleasing.\" A change, not explicitly a restoration."
     }
    ]
   },
@@ -1775,6 +1975,10 @@
     {
      "date": "2026-09-24",
      "note": "The short passed 1.2M views in a day. Clay Stone credited the Environment Artists, Rendering Engineers, and Audio Team, and called the indoor sound transition perfect."
+    },
+    {
+     "date": "2026-09-24",
+     "note": "Not in the Sept 24 build. Coverage reports 41 weather definitions in the beta client that no other WoW client has."
     }
    ]
   },
@@ -2527,11 +2731,16 @@
      "id": "low-fps",
      "strength": "possible",
      "why": "Relayed the engineers' cause for the city frame drops."
+    },
+    {
+     "id": "warrior-rage",
+     "strength": "direct",
+     "why": "Wrote during Season of Discovery that rage should be normalized with major compensating changes."
     }
    ],
    "name": "Josh Greenfield",
    "notes": "Answers on X, not the forums. Says plainly when a question belongs to someone else; he sent item drop quality to the systems designers. The podcast is the most direct route for feedback that isn't a bug.",
-   "onRecord": "The only developer who has answered beta feedback in public. On shared tagging: \"This is one of those things that we simply must hold the line on.\" Explained that base spell damage moved onto gear, with throughput meant to hold. Gave guild structure as the main reason for the GDKP ban. Co-presented the Found Photos panel. Starting a weekly podcast following Forever through beta and launch, covering player reception with developer guests. Posted Sept 21 that he had been fixing content held back from the beta. Launched the weekly WoW Forever Podcast on Sept 24 with Tim Jones. Said recent allies is working, the group-invite layer swap is a bug, and the team meets at 9am daily to triage beta reports.",
+   "onRecord": "The only developer who has answered beta feedback in public. On shared tagging: \"This is one of those things that we simply must hold the line on.\" Explained that base spell damage moved onto gear, with throughput meant to hold. Gave guild structure as the main reason for the GDKP ban. Co-presented the Found Photos panel. Starting a weekly podcast following Forever through beta and launch, covering player reception with developer guests. Posted Sept 21 that he had been fixing content held back from the beta. Launched the weekly WoW Forever Podcast on Sept 24 with Tim Jones. Said recent allies is working, the group-invite layer swap is a bug, and the team meets at 9am daily to triage beta reports. During Season of Discovery he wrote that if they did it over, they'd normalize rage and make major changes to warrior gameplay to compensate.",
    "order": 6,
    "role": "Senior Game Designer, WoW Classic; Forever's narrative point at the Deep Dive",
    "scope": "Classic team",
@@ -3161,8 +3370,8 @@
     },
     {
      "id": "known-issues-sept-18",
-     "strength": "likely",
-     "why": "Known issues lists and fix notes are community management posts, and he is the only community manager the doc names."
+     "strength": "direct",
+     "why": "Marked the Teldrassil escort and Snowbound XP resolved on Sept 24."
     },
     {
      "id": "auto-shot-timing",
@@ -3187,7 +3396,7 @@
    ],
    "name": "Kaivax",
    "notes": "Posts for all of WoW, not only Forever. The only community manager named so far.",
-   "onRecord": "Posted the Sept 21 change to EU beta routing and the Sept 23 client update for build 1.60.1.69977.",
+   "onRecord": "Posted the Sept 21 change to EU beta routing and the Sept 23 client update for build 1.60.1.69977. Marked the Teldrassil escort and Loch Modan's Snowbound resolved in the known issues thread on Sept 24.",
    "order": 17,
    "role": "Community manager",
    "scope": "WoW-wide",
@@ -3250,21 +3459,9 @@
   },
   {
    "id": "jeff-parrot",
-   "order": 20,
-   "name": "Jeff Parrot",
-   "handle": "",
-   "role": "Art Director, WoW Forever",
-   "discipline": "Character and creature art",
-   "scope": "Forever",
    "confidence": "reported",
-   "onRecord": "Named by Greenfield on the podcast as Forever's art director. Spent many hours reviewing renders with Greenfield and worked on downscaling the druid forms to classic texture fidelity. Gave interviews at BlizzCon.",
-   "sources": [
-    {
-     "label": "WoW Forever Podcast, episode 1",
-     "url": "https://youtu.be/m49-jvGPCkA"
-    }
-   ],
-   "notes": "Spelling comes from the podcast transcript. His BlizzCon interviews are worth finding.",
+   "discipline": "Character and creature art",
+   "handle": "",
    "likelyIssues": [
     {
      "id": "art-cohesion",
@@ -3290,6 +3487,53 @@
      "id": "chain-cast-animation",
      "strength": "possible",
      "why": "Animation may sit under art direction; nobody is named for it."
+    }
+   ],
+   "name": "Jeff Parrot",
+   "notes": "Spelling comes from the podcast transcript. His BlizzCon interviews are worth finding.",
+   "onRecord": "Named by Greenfield on the podcast as Forever's art director. Spent many hours reviewing renders with Greenfield and worked on downscaling the druid forms to classic texture fidelity. Gave interviews at BlizzCon.",
+   "order": 20,
+   "role": "Art Director, WoW Forever",
+   "scope": "Forever",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 1",
+     "url": "https://youtu.be/m49-jvGPCkA"
+    }
+   ]
+  },
+  {
+   "id": "kyle-hartline",
+   "order": 21,
+   "name": "Kyle Hartline",
+   "handle": "@Zorbrix",
+   "role": "Lead Game Producer, World of Warcraft",
+   "discipline": "Production",
+   "scope": "WoW-wide",
+   "confidence": "reported",
+   "onRecord": "Announced the first weekly beta build day on Sept 24. On launch day he reported the login queue processing much better and database load as the next bottleneck. His team ran retail's Race to World First, BlizzCon, and the Forever beta back to back. Creator of the Mythic Dungeon International.",
+   "sources": [
+    {
+     "label": "Kyle Hartline on X",
+     "url": "https://x.com/Zorbrix"
+    }
+   ],
+   "notes": "Posts relayed as screenshots in the working notes.",
+   "likelyIssues": [
+    {
+     "id": "queues-login",
+     "strength": "direct",
+     "why": "Reported launch-day queue and database load progress."
+    },
+    {
+     "id": "known-issues-sept-18",
+     "strength": "likely",
+     "why": "Announces build days, which carry the known issue fixes."
+    },
+    {
+     "id": "eu-latency",
+     "strength": "possible",
+     "why": "Live operations covers regional connection problems."
     }
    ]
   }
@@ -3463,10 +3707,6 @@
   {
    "id": "emote-sounds",
    "why": "Audio and social systems, with nobody named for either."
-  },
-  {
-   "id": "chain-cast-animation",
-   "why": "Animation. Nobody named."
   },
   {
    "id": "rp-pvp-ruleset",
