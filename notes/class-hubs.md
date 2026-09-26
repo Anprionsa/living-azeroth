@@ -189,8 +189,45 @@ People gather where something recurs and where other people already are. Everloo
 What to avoid:
 
 1) The hub should not replace the capital. Proposal 1.6 wants the cities full, and moving every service out empties them. The hub is a second home that people drift through, and it should never be the only place a class can function.
-2) Nothing on a daily timer. A daily turns "want to" into "have to", which is the same toll 14 describes for world buffs.
+2) No required dailies. A repeatable quest that exists for fun is fine, with a toy or a cosmetic mount as its reward and no power attached. The class mount belongs to the campaign, not to a daily.
 3) A player should not need the hub to play the class well. They go because it is the best place to be that class. That is the difference between wanting to hang out there and having to go there.
+
+## Basics stay, better versions at the hub
+
+Nothing a class uses today gets moved out of the city. Removing a vendor is revisionary in the 11.4 sense: it changes something players already know, and it costs trust rather than engineering. Hub versions go on top of what the city sells.
+
+"Better" means convenience, not power. A version with more power turns the hub into a toll, and the Forever tracker already carries a power creep issue. What that looks like:
+
+1) The same reagent in a bigger stack, or cheaper in bulk.
+2) The same poison or ammunition in a lighter form, or with a longer shelf life.
+3) A cosmetic variant of a class item (a symbol, a totem, a quiver) with the same effect.
+4) A class container upgrade. The Forever tracker's hunter ammo complaint (ammo takes a bag slot) has an answer here: a better quiver or ammo pouch from the lodge, earned rather than bought.
+
+## Chapters
+
+A class order has one hall in the world and a chapter in each of its faction's capitals. Each chapter is the room the class already uses, expanded, and the chapters differ the way the races do. For Alliance paladins, the Cathedral and Ironforge's Hall of Mysteries are two chapters of the same order, with Light's Hope or Uther's Tomb as the hall.
+
+The rooms that already exist in 1.12 `[db]`:
+
+| Class | Alliance chapters | Horde chapters |
+|---|---|---|
+| Warrior | Pig and Whistle, Old Town. Hall of Arms, Ironforge. Warrior's Terrace, Darnassus | Hall of the Brave, Orgrimmar. Undercity. Thunder Bluff |
+| Paladin | Cathedral of Light. Hall of Mysteries, Ironforge | none (Forever's Undercity room, unconfirmed) |
+| Priest | Cathedral of Light. Mystic Ward, Ironforge. Temple of the Moon | Undercity. Valley of Spirits, Orgrimmar |
+| Hunter | Stormwind. Hall of Arms, Ironforge. Cenarion Enclave | Hunter's Hall, Orgrimmar. Hunter Rise, Thunder Bluff |
+| Rogue | SI:7. Forlorn Cavern, Ironforge. Darnassus | Cleft of Shadow (the Shattered Hand). Rogues' Quarter (the Deathstalkers) |
+| Mage | Wizard's Sanctum. Ironforge | Magic Quarter, Undercity. Orgrimmar. Thunder Bluff |
+| Warlock | Slaughtered Lamb. Ironforge | Cleft of Shadow. Undercity |
+| Shaman | none in 1.12 (Forever adds an Ironforge trainer `[search]`) | Valley of Wisdom, Orgrimmar. Spirit Rise, Thunder Bluff |
+| Druid | Cenarion Enclave, Darnassus | Elder Rise, Thunder Bluff |
+
+Forever's new combinations leave gaps that need a room built or expanded:
+
+1) Dwarf shaman: Ironforge has no shaman chapter.
+2) Undead paladin: the Undercity has no paladin chapter.
+3) Gnome priest, orc mage, troll warlock and human hunter: these fit rooms that already exist.
+
+Building out these rooms is the city density proposal (1.6) given a purpose. The capital stays the everyday home, and the hall is where the order's work happens.
 
 ## Decisions so far
 
