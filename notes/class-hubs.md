@@ -143,6 +143,29 @@ Troll priests have no church. Their trainer is Ur'kyo in Orgrimmar, and the Zand
 4) **13.4, inward additions.** Bandarion Keep is Blizzard doing 13.4 for a class.
 5) **The Forever tracker's Moonglade issue.** Nighthaven is already the shared class hub, and in the beta it is being used as a gank spot. Any hub shared across factions inherits that problem.
 
+## What to take from Legion
+
+Legion's halls had eight parts. Each one is below, with what it becomes here. `[search]` for the Legion facts unless marked, and `[db]` for anything standing in 1.12.
+
+1) **The class campaign.** A story per class that recruited champions and ended in a finale. Take it. Vanilla already has the steps, at levels 10, 20, 30, 40, 52 and 60, but they read as errands for a trainer. A hub gives those steps one voice and one place to come back to. The absorbed tree chains are the natural last act.
+2) **Champions.** Named heroes of the class who joined the hall. Take them, but the reverse way round. Several of Legion's champions are already standing in 1.12:
+   a) Lord Maxwell Tyrosus at Light's Hope (paladin).
+   b) Aelthalyste in the Undercity (priest).
+   c) Lord Jorach Ravenholdt (rogue).
+   d) Hemet Nesingwary in Stranglethorn (hunter).
+   These four are confirmed as champions `[search]` and in the 1.12 data `[db]`. Rexxar in Desolace and Keeper Remulos in Moonglade are also in the 1.12 data `[db]`, but their champion status is from memory `[unverified]`. So the roster doesn't need to be recruited from outside. It only needs to be gathered.
+3) **The mission table.** Champions sent on timed missions from a map. Leave it. It is the part players disliked most, and it moves the world into a menu. The version that suits this document is champions who are physically out in the world on their errands, where a player can run into them. That is Section 1 and Section 6 applied to class NPCs.
+4) **Order advancement.** A research tree that upgraded the hall. Adapt it into something visible. The hub fills in as the class does its work, with more NPCs, a restored wing, and a forge relit. That is a one-way additive change on the Lakeshire bridge model (6.9), per character or per realm.
+5) **Artifact weapons.** A weapon per spec, upgraded in the hall. Adapt it. Vanilla already has class weapons earned through quests: Verigan's Fist, the Whirlwind weapon, Rhok'delar and Benediction `[db]`. The hub is where they are made and where they return to. Nothing new has to be invented for the item slot.
+6) **Class mounts.** Patch 7.2 gave every class a flying mount at the end of its campaign. Take it, grounded. Warlocks and paladins already have class mounts, and Forever gives Forsaken paladins their own `[search]`. That leaves seven classes without one. Some candidates are already in the world, such as the Wintersaber Trainers' frostsabers near Starfall Village for Alliance hunters `[db]`.
+7) **Class appearance sets.** Transmog sets for finishing the campaign. Adapt them. Classic has no transmog, but it does have Dungeon Set 2, a quest line that upgraded a class set (tier 0.5) `[unverified on the patch]`. A tabard or a set earned through the hub fits the same model.
+8) **Getting in, and keeping others out.** Each class had its own way in (Death Gate, Jump to Skyhold). A non-rogue who pushed into the Hall of Shadows was sapped and dropped at a Dalaran inn, and a non-druid in the Dreamgrove fell asleep and was sent out. Take the keeping-out. It is cheap and it makes the room feel like it belongs to someone: the sap applies to SI:7's inner room and Ravenholdt's cellar, and a guard turns people away at the rest. Be careful with the travel spell. Teleport: Moonglade is the vanilla precedent, but a teleport per class cuts against the pillar that the journey matters. It could work to the hub only, with a long cooldown, or for no class but the druid.
+
+Two more things come out of Legion's reception rather than its feature list:
+
+1) The hall worked as a place where a player met others of their class. Hazzikostas called it "a private club house" `[search: blizzplanet gamescom 2015]`. Vanilla already has content that needs several players of one class: the warlock's Ritual of Doom and the Dreadsteed summoning circle `[unverified on player counts]`. A hub is where those groups would form.
+2) The complaints were time gates and alts redoing everything. The hub quests should be doable once, at the character's own pace, with nothing on a timer.
+
 ## Decisions so far
 
 1) The design assumes Forever's race and class matrix. That means 17 hubs if every class is split and the druids share.
