@@ -143,13 +143,24 @@ Troll priests have no church. Their trainer is Ur'kyo in Orgrimmar, and the Zand
 4) **13.4, inward additions.** Bandarion Keep is Blizzard doing 13.4 for a class.
 5) **The Forever tracker's Moonglade issue.** Nighthaven is already the shared class hub, and in the beta it is being used as a gank spot. Any hub shared across factions inherits that problem.
 
+## Decisions so far
+
+1) The design assumes Forever's race and class matrix. That means 17 hubs if every class is split and the druids share.
+2) The Winterspring hub is the Starfall Village lodge. Its layout matches Farstrider Lodge's, which is why it reads as a hunting lodge. It gives the Alliance hunter a lodge at each stage of leveling: Loch Modan, the Hinterlands, then Quel'Lithien or Starfall at 60.
+3) City trainers can stay or go, class by class. A class whose hub is out in the world can still keep its trainer in the capital.
+4) Moonglade stays shared. It already holds both factions, tauren and night elf druids, and the Cenarion Circle. Forever's Skyborne can be druids on both sides `[search: news.blizzard]`, so they arrive there too.
+5) Ravenholdt stays shared, with SI:7 as the Alliance rogues' own house in Stormwind. The Horde has two groups doing SI:7's job in 1.12 `[db]`:
+   a) The Shattered Hand in Orgrimmar's Cleft of Shadow, for orc and troll rogues. Taskmaster Fizzule in the Barrens is its "covert operative".
+   b) The Deathstalkers in Undercity's Rogues' Quarter, for Forsaken rogues. Mennet Carkad runs them, reporting to Varimathras.
+   So each faction has a house of its own, plus Ravenholdt shared above it.
+
 ## Open questions
 
-1) Which matrix does this design assume, vanilla's or Forever's? That decides whether it's 15 hubs or 17.
-2) The Winterspring lodge: Starfall Village, Frostsaber Rock, or somewhere else?
-3) Moonglade, Ravenholdt and Fray Island already mix the factions. Are they exceptions like the druids, or do they split?
-4) What a hub holds: a trainer, a class quest line, the entry to an absorbed tree, or some mix. Legion's mission table and followers are the part players did not want back.
-5) Do city trainers stay? Moving them out would make this revisionary.
+1) Warriors. Fray Island is in the Barrens (a 10 to 25 zone), although its Berserker Stance quest is level 30. So it is not an endgame space. The alternatives:
+   a) A warrior serves their faction, so they gather in their city. That is the Pig and Whistle in Old Town, which the wiki calls the secret headquarters of Stormwind's warriors' guild `[search]`, the Hall of Arms in Ironforge, and the Hall of the Brave in Orgrimmar `[search]`.
+   b) A front-line keep for each side: Stromgarde Keep or Nethergarde for the Alliance, Kargath or Hammerfall for the Horde.
+   c) A neutral fighting ground for both factions, such as the Gurubashi Arena or Dire Maul's arena, where warriors meet as rivals rather than as allies.
+2) What a hub holds: a trainer, a class quest line, the entry to an absorbed tree, or some mix. Legion's mission table and followers are the part players did not want back.
 
 ## Not confirmed
 
