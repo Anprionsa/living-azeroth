@@ -212,9 +212,9 @@ The rooms that already exist in 1.12 `[db]`:
 | Class | Alliance chapters | Horde chapters |
 |---|---|---|
 | Warrior | Pig and Whistle, Old Town. Hall of Arms, Ironforge. Warrior's Terrace, Darnassus | Hall of the Brave, Orgrimmar. Undercity. Thunder Bluff |
-| Paladin | Cathedral of Light. Hall of Mysteries, Ironforge | none (Forever's Undercity room, unconfirmed) |
+| Paladin | Cathedral of Light. Hall of Mysteries, Ironforge | none. Bandarion Keep serves as hall and chapter both |
 | Priest | Cathedral of Light. Mystic Ward, Ironforge. Temple of the Moon | Undercity. Valley of Spirits, Orgrimmar |
-| Hunter | Stormwind. Hall of Arms, Ironforge. Cenarion Enclave | Hunter's Hall, Orgrimmar. Hunter Rise, Thunder Bluff |
+| Hunter | Stormwind. Hall of Arms, Ironforge. Cenarion Enclave | Orgrimmar's hunter trainers (the room's name unconfirmed). Hunter Rise, Thunder Bluff |
 | Rogue | SI:7. Forlorn Cavern, Ironforge. Darnassus | Cleft of Shadow (the Shattered Hand). Rogues' Quarter (the Deathstalkers) |
 | Mage | Wizard's Sanctum. Ironforge | Magic Quarter, Undercity. Orgrimmar. Thunder Bluff |
 | Warlock | Slaughtered Lamb. Ironforge | Cleft of Shadow. Undercity |
@@ -224,21 +224,61 @@ The rooms that already exist in 1.12 `[db]`:
 Forever's new combinations leave gaps that need a room built or expanded:
 
 1) Dwarf shaman: Ironforge has no shaman chapter.
-2) Undead paladin: the Undercity has no paladin chapter.
+2) Undead paladin: the Undercity has no paladin chapter, and it doesn't need one. The Forsaken distrust their paladins, so the order living out at Bandarion Keep is the lore. The inconvenience is part of the class.
 3) Gnome priest, orc mage, troll warlock and human hunter: these fit rooms that already exist.
 
 Building out these rooms is the city density proposal (1.6) given a purpose. The capital stays the everyday home, and the hall is where the order's work happens.
 
+## A draft roster
+
+One hall per class per faction, with Moonglade and Ravenholdt shared. That makes 16 halls, not 17, because the rogues share. Strength is how much the world already supports the pick: strong means the place, its people and a class quest are all already there; weak means only the place is.
+
+| Class | Alliance hall | Horde hall | Strength |
+|---|---|---|---|
+| Warrior | Stromgarde Keep, Arathi. Prince Galen Trollbane holds a keep that gives nothing, and Stromgarde was the warrior kingdom | Kargath, Badlands. Warlord Goretooth already sends players into Blackrock | medium, pending the open question |
+| Paladin | Uther's Tomb, with Chillwind Camp. The level 52 chain already ends with Thel'danis. Light's Hope stays with the Argent Dawn | Bandarion Keep (Forever) | strong / strong |
+| Priest | Northshire Abbey. Three wings, a library, and empty past level 10 | Deathknell church. The Cult of Forgotten Shadow's seat, which troll priests are sent to as well | medium / strong |
+| Hunter | Farstrider Lodge, with Quel'Danil and Starfall as outposts | Camp Mojache, Feralas | strong / weak |
+| Rogue | Ravenholdt (shared) | Ravenholdt (shared) | strong |
+| Mage | Nethergarde Keep. A Kirin Tor fortress with a mage tower, facing the Dark Portal | The Sepulcher, Silverpine. Dalar Dawnweaver already runs the Forsaken's watch on Dalaran | medium / weak |
+| Warlock | Tower of Ilgalar, Redridge. Taken from Morganth once Theocritus's quests (levels 21 to 27) have him killed, which gives the Stormwind warlocks somewhere to go that isn't a basement | Skull Rock or Dreadmist Peak. Burning Blade sites the Horde warlock's first quests already raid | weak / weak |
+| Shaman | Aerie Peak. The Wildhammer, and Forever's dwarf shaman quests already pass through Loch Modan and the Wetlands | Freewind Post, Thousand Needles, around Prate Cloudseer and the Call of Air | medium / weak |
+| Druid | Moonglade (shared) | Moonglade (shared) | strong |
+
+The weak slots are where the design has to invent the most:
+
+1) Horde hunter.
+2) Horde mage.
+3) Both warlocks.
+4) Horde shaman.
+
+Four of the halls sit in zones the document already calls ghost towns, or in zones next to them: Loch Modan, Redridge, Thousand Needles and Silverpine.
+
+## Worked example: the Alliance hunter
+
+The Farstriders as an order, with three lodges and one camp.
+
+1) **Level 10.** The taming quests (Grif Wildheart in Kharanos, Dazalar in Dolanaar, and a Stormwind trainer for Forever's human hunters) end with a letter to Farstrider Lodge.
+2) **10 to 20, Farstrider Lodge.** Marek Ironheart runs the order's youngest lodge. The lodge's existing quests (A Hunter's Boast, A Hunter's Challenge, Vyrin's Revenge) become the first chapter. Vyrin Swiftwind is the one high elf left, and his story carries the order's history.
+3) **40s, Quel'Danil Lodge.** The Highvale rangers are the order at its oldest and proudest. A beast-lore chain with the Wildhammer at Aerie Peak runs next door.
+4) **52.** Ogtinc's chain in Azshara stays as it is, and the lodge points to it.
+5) **60, Starfall Village.** The order's northern lodge. The Wintersaber Trainers on Frostsaber Rock are the class mount, and Artorius, one of the four Rhok'delar demons, is in the same zone. Quel'Lithien Lodge on the Quel'Thalas border is where the order's story ends: the lodge closest to home, under Scourge pressure.
+6) **Champions.** Vyrin Swiftwind, Marek Ironheart and a Highvale ranger, all in the world already. Hemet Nesingwary is neutral and visits.
+7) **What keeps people coming.** The lodge knows where rare tameables were last seen. It sells a better quiver and ammo pouch, earned there. Its trophy wall carries the realm's first Rhok'delar.
+8) **What stays in the city.** The trainer, the stable master and basic ammunition.
+
 ## Decisions so far
 
-1) The design assumes Forever's race and class matrix. That means 17 hubs if every class is split and the druids share.
+1) The design assumes Forever's race and class matrix. That means 16 halls: every class split, except the druids and rogues, who share.
 2) The Winterspring hub is the Starfall Village lodge. Its layout matches Farstrider Lodge's, which is why it reads as a hunting lodge. It gives the Alliance hunter a lodge at each stage of leveling: Loch Modan, the Hinterlands, then Quel'Lithien or Starfall at 60.
 3) City trainers can stay or go, class by class. A class whose hub is out in the world can still keep its trainer in the capital.
 4) Moonglade stays shared. It already holds both factions, tauren and night elf druids, and the Cenarion Circle. Forever's Skyborne can be druids on both sides `[search: news.blizzard]`, so they arrive there too.
-5) Ravenholdt stays shared, with SI:7 as the Alliance rogues' own house in Stormwind. The Horde has two groups doing SI:7's job in 1.12 `[db]`:
+5) Forsaken paladins go to Bandarion Keep and have no chapter in the Undercity. The hub doesn't always need to be convenient.
+6) Ravenholdt stays shared, with SI:7 as the Alliance rogues' own house in Stormwind. The Horde has two groups doing SI:7's job in 1.12 `[db]`:
    a) The Shattered Hand in Orgrimmar's Cleft of Shadow, for orc and troll rogues. Taskmaster Fizzule in the Barrens is its "covert operative".
    b) The Deathstalkers in Undercity's Rogues' Quarter, for Forsaken rogues. Mennet Carkad runs them, reporting to Varimathras.
    So each faction has a house of its own, plus Ravenholdt shared above it.
+7) Hub versions add convenience and never power, and city vendors stay. Dailies are optional and cosmetic.
 
 ## Open questions
 
