@@ -166,6 +166,32 @@ Two more things come out of Legion's reception rather than its feature list:
 1) The hall worked as a place where a player met others of their class. Hazzikostas called it "a private club house" `[search: blizzplanet gamescom 2015]`. Vanilla already has content that needs several players of one class: the warlock's Ritual of Doom and the Dreadsteed summoning circle `[unverified on player counts]`. A hub is where those groups would form.
 2) The complaints were time gates and alts redoing everything. The hub quests should be doable once, at the character's own pace, with nothing on a timer.
 
+## Why a player would stay
+
+People gather where something recurs and where other people already are. Everlook, Light's Hope and the Ironforge bank prove it. A hub that is only a quest giver gets visited once per chain and then emptied. What follows are the levers, strongest first.
+
+1) **The hub knows things.** It becomes the class's intelligence board, run on the 8.11 guard hint rules (a region and how old the report is, never coordinates):
+   a) The lodge knows where a rare tameable was seen.
+   b) The rogue house knows which strongbox is worth cracking this week.
+   c) The warlock den knows where a rare demon has broken loose.
+   d) The mage tower knows where a ley disturbance is showing.
+   The information goes stale, so a player comes back to check. It sends them out into the world rather than keeping them in the hub.
+2) **Low levels need high levels there.** Some class trials need a player of the same class who is already past them, to spar, witness or anchor a ritual. The warlock summoning rituals already need several warlocks. Extend that to the rest. A level 60 gets something for showing up (reputation, a title, the hub's growth), and a level 20 has a reason to look for them in the hub rather than in a channel.
+3) **Recurring services the class actually uses.** These are the class reagents and consumables:
+   a) Poisons and thieves' tools.
+   b) Arrows and pet food, plus a stable master.
+   c) Symbols, candles, ankhs and feathers.
+   Add a mailbox and a place to bind. Keep the price the same as the city vendor, so the hub is where a player chooses to restock rather than the only place they can.
+4) **The hub grows with the class on the realm.** Per 6.9, one-way and additive. A wall of names for first completions of a chain (first Rhok'delar, first charger), and a wing that opens when enough of the class have done the work. A player comes back to see what has changed, and to find their name.
+5) **Downtime with a use.** A place to spend time between tasks that fits the class: a sparring ring for warriors, a range with targets for hunters, a library for mages. Resting there earns rested experience as an inn does.
+6) **It sits on a road people already travel.** Farstrider Lodge had no flight path in 1.12, and that alone keeps it empty. Every hub needs a flight master, or at least to stand near one.
+
+What to avoid:
+
+1) The hub should not replace the capital. Proposal 1.6 wants the cities full, and moving every service out empties them. The hub is a second home that people drift through, and it should never be the only place a class can function.
+2) Nothing on a daily timer. A daily turns "want to" into "have to", which is the same toll 14 describes for world buffs.
+3) A player should not need the hub to play the class well. They go because it is the best place to be that class. That is the difference between wanting to hang out there and having to go there.
+
 ## Decisions so far
 
 1) The design assumes Forever's race and class matrix. That means 17 hubs if every class is split and the druids share.
