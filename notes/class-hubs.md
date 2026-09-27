@@ -229,29 +229,51 @@ Forever's new combinations leave gaps that need a room built or expanded:
 
 Building out these rooms is the city density proposal (1.6) given a purpose. The capital stays the everyday home, and the hall is where the order's work happens.
 
-## A draft roster
+## Strongholds, chapters and outposts
 
-One hall per class per faction, with Moonglade and Ravenholdt shared. That makes 16 halls, not 17, because the rogues share. Strength is how much the world already supports the pick: strong means the place, its people and a class quest are all already there; weak means only the place is.
+Each class order has three tiers, and each faction has its own of each.
 
-| Class | Alliance hall | Horde hall | Strength |
-|---|---|---|---|
-| Warrior | Stromgarde Keep, Arathi. Prince Galen Trollbane holds a keep that gives nothing, and Stromgarde was the warrior kingdom | Kargath, Badlands. Warlord Goretooth already sends players into Blackrock | medium, pending the open question |
-| Paladin | Uther's Tomb, with Chillwind Camp. The level 52 chain already ends with Thel'danis. Light's Hope stays with the Argent Dawn | Bandarion Keep (Forever) | strong / strong |
-| Priest | Northshire Abbey. Three wings, a library, and empty past level 10 | Deathknell church. The Cult of Forgotten Shadow's seat, which troll priests are sent to as well | medium / strong |
-| Hunter | Farstrider Lodge, with Quel'Danil and Starfall as outposts | Hunter Rise, Thunder Bluff, with the great hunt's camps as outposts (see below) | strong / strong |
-| Rogue | Ravenholdt (shared) | Ravenholdt (shared) | strong |
-| Mage | Nethergarde Keep. A Kirin Tor fortress with a mage tower, facing the Dark Portal | Tarren Mill, Hillsbrad (see below) | medium / medium |
-| Warlock | Tower of Ilgalar, Redridge (see below) | Skull Rock, Durotar (see below) | medium / medium |
-| Shaman | Aerie Peak. The Wildhammer, and Forever's dwarf shaman quests already pass through Loch Modan and the Wetlands | The four totem shrines, with Spirit Rise as the seat (see below) | medium / medium |
-| Druid | Moonglade (shared) | Moonglade (shared) | strong |
+1) **The stronghold.** One per class per faction, out in the world. The rule is to expand a friendly settlement that already stands, rather than take a ruin or build new. Where a place is short on quests, on look, or on both, the expansion supplies it. A stronghold grows as the realm's members of the class do their work (6.9).
+2) **Chapters.** The rooms the class already uses in its faction's capitals (see Chapters above). This is where the class spends everyday time and where the basic services stay.
+3) **Outposts.** The places the class quests already send players, spread by level and by region. Each faction has its own. An outpost can be as small as one NPC and a campfire. Its job is to carry the class campaign through zones the faction actually levels in.
 
-Three of the halls sit in zones the document already calls ghost towns: Loch Modan, Redridge, and Thousand Needles (the air shrine).
+Moonglade and Ravenholdt are the two shared strongholds. Each faction still has its own chapters and outposts under them.
+
+`[db]` for the NPCs and sites below. "Needs" says what the expansion has to supply: quests, look, or both.
+
+| Class | Faction | Stronghold | Needs | Outposts |
+|---|---|---|---|---|
+| Warrior | Alliance | Refuge Pointe, Arathi. A hilltop camp: Captain Nials's Stromgarde remnant, Commander Amaren, and the League of Arathor | look | Yorus Barleybrew, Lakeshire (20). Stromgarde Keep as the objective the campaign retakes. Fray Island (neutral, 30) |
+| Warrior | Horde | Hammerfall, Arathi. Named for Doomhammer. Drum Fel's "Call to Arms" is already here | look | Uzzek, Far Watch Post (10). Ruga Ragetotem, Camp Taurajo (20). Kargath, where Warlord Goretooth sends players into Blackrock |
+| Paladin | Alliance | Chillwind Camp, Western Plaguelands. Commander Ashlam Valorfist already runs the level 52 chain from here, and Uther's Tomb is its shrine | look | Northshire Abbey (1 to 10). Daphne Stilwell, Westfall, and Jordan Stilwell outside Ironforge (20s). Light's Hope (neutral) |
+| Paladin | Horde | Bandarion Keep, Tirisfal (Forever) | neither | Forever's own chain `[search]` |
+| Priest | Alliance | Northshire Abbey. Three wings and a library, empty past level 10 | quests | Priestess Josetta, Goldshire. Maxan Anvol, Kharanos. Laurna Morninglight, Dolanaar. High Priest Thel'danis, Uther's Tomb. Eris Havenfire (60) |
+| Priest | Horde | Deathknell church, Tirisfal. The seat of the Cult of Forgotten Shadow | both | Dark Cleric Beryl, Brill. Tai'jin, Razor Hill. Yojamba Isle for troll priests (neutral) |
+| Hunter | Alliance | Farstrider Lodge, Loch Modan | look | Quel'Danil Lodge, Hinterlands (40s). Starfall Village, Winterspring (60). Quel'Lithien Lodge, Eastern Plaguelands (60) |
+| Hunter | Horde | Camp Mojache, Feralas. The camp becomes the great hunt's lodge, raised from tents to a longhouse | look | Melor Stonehoof, Hunter Rise (10 to 45, a chapter that sends hunts out). Senani Thunderheart, Splintertree (20 to 30). Roon Wildmane, Shadowprey (31) |
+| Rogue | shared | Ravenholdt Manor | quests | Alliance: Lucius, Lakeshire (the thieves' school). Agent Kearnen watching Klaven's Tower, Westfall. Horde: Wrenix, Ratchet. Taskmaster Fizzule, Barrens. Fenwick Thatros, Lordamere dock |
+| Mage | Alliance | Nethergarde Keep, Blasted Lands. A Kirin Tor fortress with a mage tower | quests | Tower of Azora, Elwynn (20s). Dalaran's crater, Alterac. Tabetha, Dustwallow (neutral, 30 to 40) |
+| Mage | Horde | Tarren Mill, Hillsbrad. Magus Wordeen Voidglare, and a church the priests don't need | both | The Sepulcher, Silverpine. Un'Thuwa, Sen'jin. The Balnir Farmstead, Tirisfal (10) |
+| Warlock | Alliance | Tower of Ilgalar, Redridge. Hostile now, taken during the campaign | both | Surena Caledon, Brackwell Pumpkin Patch, Elwynn (10). Takar the Seer, Barrens, an Alliance warlock contact on Horde ground (20) |
+| Warlock | Horde | Skull Rock, Durotar. Cleared of the Burning Blade | both | Ophek, Razor Hill. Ageron Kargal, Brill. Ak'Zeloth, northern Barrens |
+| Shaman | Alliance | Aerie Peak, Hinterlands. The Wildhammer | quests | Forever's dwarf chain in Anvilmar, Loch Modan and the Wetlands `[search]` |
+| Shaman | Horde | Freewind Post, Thousand Needles. Mesa-top tauren settlement, next to Prate Cloudseer's air shrine | both | The other three shrines: Spirit Rock and Kodo Rock (earth), the Shrine of Eternal Flame (fire), Brine's hut (water) |
+| Druid | shared | Moonglade | neither | Alliance: Alanndarian Nightsong, Auberdine, and the Darkshore Moonkin Stone. Horde: Tonga Runetotem, Crossroads, and the Moonkin Stone west of Camp Taurajo. Jannos Lighthoof, Camp Mojache |
+
+Four things the table shows:
+
+1) **The warriors' two strongholds face each other across Arathi, with Arathi Basin between them.** Refuge Pointe and Hammerfall are both small hilltop camps. Expanding them into musters for the faction's warriors gives Arathi's front line a look to match what the battleground says happens there.
+2) **Three pairs of strongholds face each other.** The warriors across Arathi. The mages across Alterac, if the Alliance hall moves to Dalaran's crater. The priests and paladins across the Plaguelands, where Chillwind Camp and Deathknell sit at either end of the Scourge's land.
+3) **Only two strongholds need nothing.** Bandarion Keep, which Forever built, and Moonglade. Everything else is short on look, on quests, or on both.
+4) **Both warlock halls and the Horde priest, mage and shaman halls need the most work.** Those are where the design has to write the most, and they are what a cost estimate should be built around.
 
 ## The weak slots, reworked
 
 `[db]` throughout unless marked. Five slots rated weak in the first pass. Four came up stronger once the quest text was read, and none needs a new building.
 
-### Horde hunter: the hall stays in Thunder Bluff and the hunt goes out
+### Horde hunter: the hunt starts in Thunder Bluff and goes out
+
+Superseded in part by the three-tier roster: Hunter Rise is the chapter where Melor's hunts start, and Camp Mojache is the stronghold.
 
 The Horde already has a hunter campaign, and it runs from Hunter Rise. Melor Stonehoof sends hunters out on a ladder of named hunts:
 
@@ -312,7 +334,7 @@ The totem quests already put each element at its own site:
 
 Legion's shaman hall had four elemental wings around one center. Here the four wings already exist, spread across the Horde's lands, and the seat is Spirit Rise in Thunder Bluff. A shaman's campaign is a circuit of the shrines, and each shrine grows as the realm's shamans tend it (6.9). The seers at the three later shrines (Telf Joolam, Islen Waterseer and Prate Cloudseer, all levels 35 to 37) are the champions.
 
-## Warriors: capitals or the front
+## Warriors: capitals or the front (decided: see Decisions)
 
 **Option A: warriors gather in their capitals.** The chapters are the Pig and Whistle, the Hall of Arms and the Warrior's Terrace for the Alliance, and the Hall of the Brave for the Horde.
 
@@ -365,11 +387,14 @@ The Farstriders as an order, with three lodges and one camp.
    b) The Deathstalkers in Undercity's Rogues' Quarter, for Forsaken rogues. Mennet Carkad runs them, reporting to Varimathras.
    So each faction has a house of its own, plus Ravenholdt shared above it.
 7) Hub versions add convenience and never power, and city vendors stay. Dailies are optional and cosmetic.
+8) Three tiers per class per faction: a stronghold in the world, chapters in the capitals, and outposts where the class quests run. A stronghold expands a friendly settlement that already stands, and the expansion adds what it lacks in quests or look.
+9) Warriors: Refuge Pointe and Hammerfall, facing each other across Arathi. Stromgarde Keep and Kargath become outposts and objectives, and the capitals keep the chapters.
 
 ## Open questions
 
-1) Warriors: capitals, the front, or both. The pros and cons are above. Option C is the recommendation.
-2) What a hub holds: a trainer, a class quest line, the entry to an absorbed tree, or some mix. Legion's mission table and followers are the part players did not want back.
+1) What a stronghold holds: a trainer, a class quest line, the entry to an absorbed tree, or some mix. Legion's mission table and followers are the part players did not want back.
+2) The Alliance mage stronghold: Nethergarde Keep, facing the Dark Portal, or Dalaran's crater, facing Tarren Mill.
+3) Whether the Horde hunting camps move between set sites, on the 8.10 rules.
 
 ## Not confirmed
 
