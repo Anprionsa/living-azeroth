@@ -238,21 +238,107 @@ One hall per class per faction, with Moonglade and Ravenholdt shared. That makes
 | Warrior | Stromgarde Keep, Arathi. Prince Galen Trollbane holds a keep that gives nothing, and Stromgarde was the warrior kingdom | Kargath, Badlands. Warlord Goretooth already sends players into Blackrock | medium, pending the open question |
 | Paladin | Uther's Tomb, with Chillwind Camp. The level 52 chain already ends with Thel'danis. Light's Hope stays with the Argent Dawn | Bandarion Keep (Forever) | strong / strong |
 | Priest | Northshire Abbey. Three wings, a library, and empty past level 10 | Deathknell church. The Cult of Forgotten Shadow's seat, which troll priests are sent to as well | medium / strong |
-| Hunter | Farstrider Lodge, with Quel'Danil and Starfall as outposts | Camp Mojache, Feralas | strong / weak |
+| Hunter | Farstrider Lodge, with Quel'Danil and Starfall as outposts | Hunter Rise, Thunder Bluff, with the great hunt's camps as outposts (see below) | strong / strong |
 | Rogue | Ravenholdt (shared) | Ravenholdt (shared) | strong |
-| Mage | Nethergarde Keep. A Kirin Tor fortress with a mage tower, facing the Dark Portal | The Sepulcher, Silverpine. Dalar Dawnweaver already runs the Forsaken's watch on Dalaran | medium / weak |
-| Warlock | Tower of Ilgalar, Redridge. Taken from Morganth once Theocritus's quests (levels 21 to 27) have him killed, which gives the Stormwind warlocks somewhere to go that isn't a basement | Skull Rock or Dreadmist Peak. Burning Blade sites the Horde warlock's first quests already raid | weak / weak |
-| Shaman | Aerie Peak. The Wildhammer, and Forever's dwarf shaman quests already pass through Loch Modan and the Wetlands | Freewind Post, Thousand Needles, around Prate Cloudseer and the Call of Air | medium / weak |
+| Mage | Nethergarde Keep. A Kirin Tor fortress with a mage tower, facing the Dark Portal | Tarren Mill, Hillsbrad (see below) | medium / medium |
+| Warlock | Tower of Ilgalar, Redridge (see below) | Skull Rock, Durotar (see below) | medium / medium |
+| Shaman | Aerie Peak. The Wildhammer, and Forever's dwarf shaman quests already pass through Loch Modan and the Wetlands | The four totem shrines, with Spirit Rise as the seat (see below) | medium / medium |
 | Druid | Moonglade (shared) | Moonglade (shared) | strong |
 
-The weak slots are where the design has to invent the most:
+Three of the halls sit in zones the document already calls ghost towns: Loch Modan, Redridge, and Thousand Needles (the air shrine).
 
-1) Horde hunter.
-2) Horde mage.
-3) Both warlocks.
-4) Horde shaman.
+## The weak slots, reworked
 
-Four of the halls sit in zones the document already calls ghost towns, or in zones next to them: Loch Modan, Redridge, Thousand Needles and Silverpine.
+`[db]` throughout unless marked. Five slots rated weak in the first pass. Four came up stronger once the quest text was read, and none needs a new building.
+
+### Horde hunter: the hall stays in Thunder Bluff and the hunt goes out
+
+The Horde already has a hunter campaign, and it runs from Hunter Rise. Melor Stonehoof sends hunters out on a ladder of named hunts:
+
+1) Sergra Darkthorn in the Barrens (level 10).
+2) Steelsnap (30).
+3) Frostmaw in the Alterac Mountains (37).
+4) Deadmire in Dustwallow Marsh (45).
+
+His quest text is the brief: "At times we hunt for food. At times we hunt for honor. And at times we hunt to earn the Earthmother's teachings." Before him, Skorn Whitecloud at Bloodhoof tells young tauren that "hunting is a Tauren's greatest honor" and sends them to Hunter Rise. Camp Narache's first quest says "Tauren hunt out of necessity and for sport."
+
+So the Horde answer is the reverse of the Alliance one. The Farstriders are an order of fixed lodges. The tauren hunt is a hall in the capital, and camps out in the world:
+
+1) Splintertree Post, Ashenvale. Senani Thunderheart runs the Ashenvale Hunt (20 to 30).
+2) Shadowprey Village, Desolace. Roon Wildmane once hunted with Hemet Nesingwary, and his quest says "even the enmity between our peoples was forgotten." He sends Horde hunters to Nesingwary's camp (31).
+3) Camp Mojache, Feralas. The tribal leatherworking master and the skinning trainer are here, and it sits on the Trapper tree's Feralas anchor.
+4) Rexxar, who walks the road between Desolace and Stonetalon.
+
+Two things this points to:
+
+1) These camps could move. A hunting camp is tents by nature. It could relocate between a few set sites on the weighted rules from 8.10, so that finding this season's camp is part of being a Horde hunter.
+2) Roon Wildmane's line gives the one sanctioned place where hunters of both factions share a fire: Nesingwary's Expedition. That stays neutral, as it is now.
+
+### Horde mage: Tarren Mill, facing Dalaran
+
+Magus Wordeen Voidglare (61.6,20.8) is a Forsaken mage in Tarren Mill. He sends players against Dalaran in "Prison Break In" and "Dalaran Patrols" (34 to 35), and Dalaran's dome is visible across the Lordamere hills.
+
+The town's church is free, because the Horde priest hall is at Deathknell. That makes Tarren Mill the Forsaken's arcane watch on the Kirin Tor. Orc and troll mages join as the Horde's own school, which is a story in itself, since both races are new to the class in Forever.
+
+It also gives the two mage halls a shape. If the Alliance hall moves from Nethergarde to Dalaran's crater, Archmage Ansirem Runeweaver and Magus Voidglare face each other across Alterac. The Sepulcher stays as a chapter-sized outpost, where Dalar Dawnweaver runs the Silverpine quests against Dalaran.
+
+### Alliance warlock: the Tower of Ilgalar
+
+The tower already carries the story. The level 26 Alliance mage quest says: "Long ago, three mages studied in this tower until one fell to the dark arts." Morganth, who lives there now, "searches for the Scythe of Elune". The Alliance warlocks take a tower where a mage became what they are.
+
+It stays hidden, as the Slaughtered Lamb does. Zardeth's "A Noble Brew" in Stormwind poisons the lord pressing for an investigation, so Stormwind's warlocks already cover their tracks. The alternative is to build the hall downward under the Slaughtered Lamb, into the canal crypts. That keeps the class in its city, and in its basement.
+
+Redridge is on the document's ghost-town list, so the tower also gives the zone a reason to be visited.
+
+### Horde warlock: Skull Rock, under watch
+
+The Horde keeps its warlocks close and watched. Gan'rul Bloodeye's first quest says: "So few warlocks remain... We risk much, but the risks are warranted." His Voidwalker quest sends the warlock into Skull Rock, the Burning Blade cave just east of Orgrimmar, to take back the Tablet of Verga.
+
+So the hall is Skull Rock, cleared of the cult. It is within sight of the gate, and it answers to the Warchief. Two watchers are already in the world:
+
+1) Neeru Fireblade in the Cleft of Shadow reads the cult's captured messages.
+2) Ak'Zeloth in the northern Barrens (62.3,20.1) has "searched for sources of demonic corruption in orc society" since the last war.
+
+Either is the hall's warden. Demon Fall Canyon was the other candidate, but Grom's Monument stands there. A warlock hall at the place where Grom killed Mannoroth and broke the blood pact is a story the Horde would not allow.
+
+### Horde shaman: four shrines, one seat
+
+The totem quests already put each element at its own site:
+
+1) Earth: Spirit Rock in Durotar and Kodo Rock in Mulgore.
+2) Fire: the Shrine of Eternal Flame on Telf Joolam's peak in Durotar.
+3) Water: Brine's hut in the southern Barrens, and the Brazier of Everfount in Silverpine.
+4) Air: Prate Cloudseer in Thousand Needles.
+
+Legion's shaman hall had four elemental wings around one center. Here the four wings already exist, spread across the Horde's lands, and the seat is Spirit Rise in Thunder Bluff. A shaman's campaign is a circuit of the shrines, and each shrine grows as the realm's shamans tend it (6.9). The seers at the three later shrines (Telf Joolam, Islen Waterseer and Prate Cloudseer, all levels 35 to 37) are the champions.
+
+## Warriors: capitals or the front
+
+**Option A: warriors gather in their capitals.** The chapters are the Pig and Whistle, the Hall of Arms and the Warrior's Terrace for the Alliance, and the Hall of the Brave for the Horde.
+
+Pros:
+1) It fits a warrior who serves their faction. Soldiers muster where the army is.
+2) It feeds the city density proposal (1.6), and nothing new needs to be built.
+3) The Stormwind chapter is already a tavern, which is a social room by nature.
+
+Cons:
+1) Warriors become the one class with no place in the world to travel to. That reads as the class being left out rather than as a choice.
+2) It revives no ghost-town zone.
+3) Warriors are the most numerous class, and the capitals are already the busiest places in the game. A hall there adds crowding rather than a destination.
+
+**Option B: a front-line keep per faction.** Stromgarde Keep for the Alliance, Kargath for the Horde.
+
+Pros:
+1) The warrior fantasy is the front line. Stromgarde was the warrior kingdom, and its prince stands in a keep that gives nothing.
+2) Kargath already sends players into Blackrock, next to the Runeblade tree's anchors (Blackrock Depths, Searing Gorge, the Burning Steppes).
+3) Retaking the keep is the hall growing, visibly and one-way (6.9). It ties into flare-ups (6) and the Blackrock war (6.8).
+
+Cons:
+1) Stromgarde's keep is shared with the Syndicate and the Boulderfist ogres. Clearing them changes quest areas players know, which is revisionary.
+2) Kargath is small and far from everything.
+3) It costs more to build than option A.
+
+**Option C: both.** Warriors muster in the capital and deploy to the front. The capital chapter is where they spend time. The keep is where the campaign goes and what it wins back, and it is a place visited rather than lived in. This keeps what is true in A (the warrior serves the faction) and gives B's destination without asking the keep to hold a crowd.
 
 ## Worked example: the Alliance hunter
 
@@ -282,10 +368,7 @@ The Farstriders as an order, with three lodges and one camp.
 
 ## Open questions
 
-1) Warriors. Fray Island is in the Barrens (a 10 to 25 zone), although its Berserker Stance quest is level 30. So it is not an endgame space. The alternatives:
-   a) A warrior serves their faction, so they gather in their city. That is the Pig and Whistle in Old Town, which the wiki calls the secret headquarters of Stormwind's warriors' guild `[search]`, the Hall of Arms in Ironforge, and the Hall of the Brave in Orgrimmar `[search]`.
-   b) A front-line keep for each side: Stromgarde Keep or Nethergarde for the Alliance, Kargath or Hammerfall for the Horde.
-   c) A neutral fighting ground for both factions, such as the Gurubashi Arena or Dire Maul's arena, where warriors meet as rivals rather than as allies.
+1) Warriors: capitals, the front, or both. The pros and cons are above. Option C is the recommendation.
 2) What a hub holds: a trainer, a class quest line, the entry to an absorbed tree, or some mix. Legion's mission table and followers are the part players did not want back.
 
 ## Not confirmed
