@@ -263,7 +263,7 @@ Moonglade and Ravenholdt are the two shared strongholds. Each faction still has 
 Four things the table shows:
 
 1) **The warriors' two strongholds face each other across Arathi, with Arathi Basin between them.** Refuge Pointe and Hammerfall are both small hilltop camps. Expanding them into musters for the faction's warriors gives Arathi's front line a look to match what the battleground says happens there.
-2) **Three pairs of strongholds face each other.** The warriors across Arathi. The mages across Alterac, if the Alliance hall moves to Dalaran's crater. The priests and paladins across the Plaguelands, where Chillwind Camp and Deathknell sit at either end of the Scourge's land.
+2) **Three pairs of strongholds face each other.** The warriors across Arathi. The mages across Alterac, if the Alliance stronghold is a restored Dalaran facing Tarren Mill. The priests and paladins across the Plaguelands, where Chillwind Camp and Deathknell sit at either end of the Scourge's land.
 3) **Only two strongholds need nothing.** Bandarion Keep, which Forever built, and Moonglade. Everything else is short on look, on quests, or on both.
 4) **Both warlock halls and the Horde priest, mage and shaman halls need the most work.** Those are where the design has to write the most, and they are what a cost estimate should be built around.
 
@@ -302,7 +302,7 @@ Magus Wordeen Voidglare (61.6,20.8) is a Forsaken mage in Tarren Mill. He sends 
 
 The town's church is free, because the Horde priest hall is at Deathknell. That makes Tarren Mill the Forsaken's arcane watch on the Kirin Tor. Orc and troll mages join as the Horde's own school, which is a story in itself, since both races are new to the class in Forever.
 
-It also gives the two mage halls a shape. If the Alliance hall moves from Nethergarde to Dalaran's crater, Archmage Ansirem Runeweaver and Magus Voidglare face each other across Alterac. The Sepulcher stays as a chapter-sized outpost, where Dalar Dawnweaver runs the Silverpine quests against Dalaran.
+It also gives the two mage halls a shape. Forever restores Dalaran as a city (its interior a dungeon). If the Alliance stronghold is Dalaran, Tarren Mill faces a living city across the hills. The Sepulcher stays as a chapter-sized outpost, where Dalar Dawnweaver runs the Silverpine quests against Dalaran.
 
 ### Alliance warlock: the Tower of Ilgalar
 
@@ -362,6 +362,27 @@ Cons:
 
 **Option C: both.** Warriors muster in the capital and deploy to the front. The capital chapter is where they spend time. The keep is where the campaign goes and what it wins back, and it is a place visited rather than lived in. This keeps what is true in A (the warrior serves the faction) and gives B's destination without asking the keep to hold a crowd.
 
+## The roving hunt camp (Horde hunter)
+
+Camp Mojache is the Horde hunter stronghold, and it does not move. The thing that moves is a hunting party, which works as an outpost.
+
+1) **What it is.** A small tauren hunt camp: tents, a fire, a skinning rack, a hunt leader, and a pet trainer. It carries the "where the beasts are" part of the intelligence board.
+2) **Where it goes.** A short list of fixed campsites the design places in advance, for example in Ashenvale, Desolace, Feralas and Stonetalon. It is never anywhere else.
+3) **How it moves.** It stays a set time, then packs up and moves to another site from the list, picked by weight rather than in order. These are the same rules as the wandering trainers in 8.10, so it can be learned but not predicted to the day.
+4) **How to find it.** The chapter at Hunter Rise and the stronghold both say which region it went to and how old that report is, never coordinates. This is the 8.11 guard hint rule.
+5) **What it offers.** That season's hunt quests, aimed at the beasts near the current site, a rare-tameable lead, and a trophy for taking part. The basic services stay at the stronghold and in the chapters, so a player who can't find the camp loses nothing they need.
+
+Why do it:
+
+1) It makes the Horde hunter different from the Alliance one. The Farstriders are an order of fixed lodges, and the tauren hunt is a people on the move. "Wander, and hunt" is Skorn Whitecloud's own line.
+2) It sends hunters into zones people have outgrown.
+3) The pieces already exist in the document's other proposals (8.10 and 8.11), so it needs no system of its own.
+
+The costs:
+
+1) It is Tier 2 rather than Tier 1, because the camp is server state that moves. It also needs a public test realm first, for the datamining risk 8.11 already names.
+2) It depends on 8.10 shipping. Without it, this is a Tier 1 fixed camp, which is still worth doing.
+
 ## Worked example: the Alliance hunter
 
 The Farstriders as an order, with three lodges and one camp.
@@ -389,12 +410,12 @@ The Farstriders as an order, with three lodges and one camp.
 7) Hub versions add convenience and never power, and city vendors stay. Dailies are optional and cosmetic.
 8) Three tiers per class per faction: a stronghold in the world, chapters in the capitals, and outposts where the class quests run. A stronghold expands a friendly settlement that already stands, and the expansion adds what it lacks in quests or look.
 9) Warriors: Refuge Pointe and Hammerfall, facing each other across Arathi. Stromgarde Keep and Kargath become outposts and objectives, and the capitals keep the chapters.
+10) The stronghold holds the most: the trainer, the class campaign, the entry to an absorbed tree, the better versions, and the intelligence board. Chapters hold the everyday basics. Outposts hold quest steps.
 
 ## Open questions
 
-1) What a stronghold holds: a trainer, a class quest line, the entry to an absorbed tree, or some mix. Legion's mission table and followers are the part players did not want back.
-2) The Alliance mage stronghold: Nethergarde Keep, facing the Dark Portal, or Dalaran's crater, facing Tarren Mill.
-3) Whether the Horde hunting camps move between set sites, on the 8.10 rules.
+1) The Alliance mage stronghold. Forever restores Dalaran in the Alterac Mountains, and the city's interior is a level 28 to 33, nine-boss dungeon, "City of Dalaran" `[search: outputlag, azerothplus]`. So Dalaran can't be a crater hub. It could still be the stronghold once the realm has cleared the dungeon's trouble (6.9), if Forever gives it a friendly open area. Whether it has one is not confirmed. Nethergarde Keep stays the fallback.
+2) Whether the Horde's roving hunt camp (below) ships.
 
 ## Not confirmed
 
