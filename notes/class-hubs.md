@@ -411,11 +411,12 @@ The Farstriders as an order, with three lodges and one camp.
 8) Three tiers per class per faction: a stronghold in the world, chapters in the capitals, and outposts where the class quests run. A stronghold expands a friendly settlement that already stands, and the expansion adds what it lacks in quests or look.
 9) Warriors: Refuge Pointe and Hammerfall, facing each other across Arathi. Stromgarde Keep and Kargath become outposts and objectives, and the capitals keep the chapters.
 10) The stronghold holds the most: the trainer, the class campaign, the entry to an absorbed tree, the better versions, and the intelligence board. Chapters hold the everyday basics. Outposts hold quest steps.
+11) The Horde's roving hunt camp ships as described, with Camp Mojache fixed. It falls back to a fixed camp if 8.10 doesn't ship.
+12) Dalaran becomes the Alliance mage stronghold if Forever gives it a friendly area, with Nethergarde as the fallback.
 
 ## Open questions
 
 1) The Alliance mage stronghold. Forever restores Dalaran in the Alterac Mountains, and the city's interior is a level 28 to 33, nine-boss dungeon, "City of Dalaran" `[search: outputlag, azerothplus]`. So Dalaran can't be a crater hub. It could still be the stronghold once the realm has cleared the dungeon's trouble (6.9), if Forever gives it a friendly open area. Whether it has one is not confirmed. Nethergarde Keep stays the fallback.
-2) Whether the Horde's roving hunt camp (below) ships.
 
 ## Not confirmed
 
