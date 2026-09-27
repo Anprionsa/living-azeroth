@@ -396,6 +396,29 @@ The Farstriders as an order, with three lodges and one camp.
 7) **What keeps people coming.** The lodge knows where rare tameables were last seen. It sells a better quiver and ammo pouch, earned there. Its trophy wall carries the realm's first Rhok'delar.
 8) **What stays in the city.** The trainer, the stable master and basic ammunition.
 
+## Not yet accounted for
+
+Ordered by how much each could change the design.
+
+1) **The quest data is 1.12, not Forever.** Forever adds about 1,000 quests and has already rewritten some class content (Bandarion Keep, the dwarf shaman chain). Any outpost or trainer placed from the 1.12 data needs checking against Forever's before it is written up as fact.
+2) **Forever is realmless and layered.** The tracker carries a realmless-layering issue. "The stronghold grows with the realm" assumes a realm, which Forever doesn't have. Three options:
+   a) Per character, through phasing. It's cheap and private, but it loses the shared wall of names.
+   b) Per layer. That breaks, because layers merge and split.
+   c) Region-wide. Growth driven by everyone's work, like a war effort. It's the closest to the intent.
+3) **When a player can first reach their stronghold.** Several strongholds sit in zones well above where the class campaign starts. A level 10 human paladin can't get to Chillwind Camp, and a level 10 dwarf shaman can't get to Aerie Peak. Each stronghold needs an arrival level, with the earlier steps held at chapters and outposts, and a first trip there that feels earned.
+4) **Strongholds inside shared towns.** Refuge Pointe, Hammerfall, Tarren Mill and Freewind Post serve every class. The sap-and-dump exclusivity can only apply to an inner room: a barracks, a crypt, a tower floor. The town stays open to everyone.
+5) **World PvP at the facing pairs.** Hammerfall and Refuge Pointe across Arathi, and Tarren Mill and Southshore across Hillsbrad, are gank corridors today. The tracker's layer-swap issue says fights already bunch on zone borders. Strongholds need guards and sanctuary rules that hold, and so do the shared ones (Moonglade's issue is already on the tracker, and Ravenholdt is next).
+6) **Race fit inside a faction.** Orc mages in a Forsaken town, troll priests at a Forsaken church, gnome priests at a human abbey. Some friction is story (Forsaken paladins), but each stronghold needs a presence for every race that can play the class, or the chapter carries it.
+7) **The Skyborne and Forever's new zones.** Horde Skyborne shamans and Alliance Skyborne mages come from Zephras, and none of the strongholds account for them. Mount Hyjal is a Forever zone and an obvious druid outpost, which this roster ignores.
+8) **Absorbed trees that turn against the order.** Blackguard (fallen), Radiance (recanted) and Necromancy (taught at Scholomance) go against what their stronghold stands for. The stronghold has to react: expel, mourn, or watch. That reaction is story material, and it should be decided rather than left to chance.
+9) **Alts.** The Legion complaint was redoing everything on every character. Forever's Legacy system is account-wide. Campaign unlocks could carry through it, provided they stay convenience and never power (the tracker's legacy-power-perks issue is the warning).
+10) **Cost and order.** Sixteen strongholds is the largest art bill in the document after new zones. They should ship in order of need:
+    a) First, the two that need nothing (Moonglade, Bandarion Keep).
+    b) Then those that need only look.
+    c) Then those that need both.
+    Each one is additive and can ship on its own.
+11) **Links to the systems already proposed.** Strongholds sit on trade routes (2, 3, 9), in seasonal zones (10, and the Winterspring thaw at Starfall), and in flare-up zones (6, Arathi above all). The design has to say whether a stronghold can be attacked, restocked by caravan, or snowed in, or state that it is exempt.
+
 ## Decisions so far
 
 1) The design assumes Forever's race and class matrix. That means 16 halls: every class split, except the druids and rogues, who share.
