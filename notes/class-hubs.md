@@ -257,8 +257,8 @@ Moonglade and Ravenholdt are the two shared strongholds. Each faction still has 
 | Warlock | Alliance | Tower of Ilgalar, Redridge. Hostile now, taken during the campaign | both | Surena Caledon, Brackwell Pumpkin Patch, Elwynn (10). Takar the Seer, Barrens, an Alliance warlock contact on Horde ground (20) |
 | Warlock | Horde | Skull Rock, Durotar. Cleared of the Burning Blade | both | Ophek, Razor Hill. Ageron Kargal, Brill. Ak'Zeloth, northern Barrens |
 | Shaman | Alliance | Aerie Peak, Hinterlands. The Wildhammer (see below) | quests | Forever's dwarf chain: Braldir Ashmantle's spirit stone and Norric Lochthane in Loch Modan, Hervdana Saegrund's Wetlands cave by Grim Batol `[weak]` |
-| Shaman | Horde | Freewind Post, Thousand Needles. Mesa-top tauren settlement, next to Prate Cloudseer's air shrine | both | The other three shrines: Spirit Rock and Kodo Rock (earth), the Shrine of Eternal Flame (fire), Brine's hut (water) |
-| Druid | shared | Moonglade | neither | Alliance: Alanndarian Nightsong, Auberdine, and the Darkshore Moonkin Stone. Horde: Tonga Runetotem, Crossroads, and the Moonkin Stone west of Camp Taurajo. Jannos Lighthoof, Camp Mojache |
+| Shaman | Horde | Freewind Post, Thousand Needles, as the Earthen Ring's seat in Kalimdor. Mesa-top tauren settlement, next to Prate Cloudseer's air shrine | both | The other three shrines: Spirit Rock and Kodo Rock (earth), the Shrine of Eternal Flame (fire), Brine's hut (water). Lumina Windsinger's Windshaper post, Silverpine `[trace]` |
+| Druid | shared | Moonglade | neither (Hyjal's Cenarion camp as the level 60 outpost) | Alliance: Alanndarian Nightsong, Auberdine, and the Darkshore Moonkin Stone. Horde: Tonga Runetotem, Crossroads, and the Moonkin Stone west of Camp Taurajo. Jannos Lighthoof, Camp Mojache |
 
 Four things the table shows:
 
@@ -565,6 +565,45 @@ The Alliance shaman's three tiers:
 1) **Chapter:** Ironforge, where Forever's shaman trainer stands `[search]`. Also Anvilmar, where the class starts.
 2) **Outposts:** Forever's own path. Braldir Ashmantle's spirit stone in Loch Modan. Norric Lochthane on the loch. Hervdana Saegrund's waterfall cave in the Wetlands, within sight of Grim Batol.
 3) **Stronghold:** Aerie Peak, arrival around 40. The campaign's turn is the Bronzebeard shaman being sent to the Wildhammer to learn what Ironforge never taught. Needs quests and a shaman presence (a stormcaller's circle on the peak), not new buildings.
+
+## The Skyborne and Mount Hyjal (step 2)
+
+From the Forever trace `[trace]` unless marked.
+
+### Where the Skyborne go after Zephras
+
+Both factions' Skyborne start on Zephras Isle (levels 1 to 12). Each leaves by an arrival quest at level 13 that ends with their faction's leader:
+
+1) **Horde.** Ayessa Dawnsinger gives "The Earthen Ring" (13), which leads to Alaana Stormwalker. Her "Welcome to Azeroth" ends with Thrall in Orgrimmar. So the Horde Skyborne are brought into the Horde through the Earthen Ring.
+2) **Alliance.** Elaadrin Evengale gives "The Magical City of Dalaran". Denaaris Stargale's "Welcome to Azeroth", at the edge of Dalaran, ends with Highlord Bolvar Fordragon in Stormwind. So the Alliance Skyborne come to the Alliance through the Kirin Tor.
+
+Class threads on the island:
+
+1) Illaya Amberwind gives "The Windshapers" and Rathiril Sunlance gives "The High Order" (both level 6).
+2) Windshaper Boro gives "Call of Earth" at (43,23).
+3) Sessaria Skystride, Aarnor Galestrike and Olariaan Swiftburn give "Call of Fire" (level 10).
+
+After the island, one Horde Skyborne thread is visible. Lumina Windsinger, a Windshaper in Silverpine at (64,34), gives "The Windshaper's Wrath" (22). An Image of Archmage Modera stands nearby at (68,45).
+
+What this means for the roster:
+
+1) **The Horde shaman stronghold as the Earthen Ring's seat is now Forever's own framing.** The Horde Skyborne literally arrive through the Earthen Ring. Freewind Post, with Prate Cloudseer's air shrine, is the natural seat for a people of the wind. Lumina Windsinger's Silverpine post becomes a Windshaper outpost on the Eastern Kingdoms side.
+2) **The Alliance Skyborne mage's path already runs Dalaran, then Stormwind.** The Tower of Azora, an hour from Stormwind, is the next step on a road Forever already built. The Kirin Tor stay neutral and pass their students on, as decided.
+
+### Trainers the trace confirms
+
+1) Garen Largo, the Undercity paladin trainer (47,14). There are also new Forsaken paladin quests in the Undercity: Tanis Alderwood's "A Lesson in Divinity", and Morbin Lightbane's "Light's Justice".
+2) Eldrun Stormbreaker, the Ironforge shaman trainer (46,13), who gives the dwarf "Call of Fire" and "Call of Water".
+3) Josephine Carson and Quel'ana Quickgale give "Training the Beast" (level 10) for the new hunter races. Their spawns are not in the trace.
+
+### Mount Hyjal
+
+Hyjal is a level 60 zone in Forever, with the Hyjal Summit raid and flight points for both factions `[search: gameinformer]` `[weak]`. The trace shows two settled camps:
+
+1) **Around (68 to 70, 47 to 50).** Night elves and tauren together: Tiala Whitemane, Aili Greenwillow, Toron Rockhoof, Marn Euhorn and Noruu. That reads as a Cenarion or Guardians of Hyjal camp, where both druid races already stand side by side.
+2) **Around (13 to 16, 50 to 54).** A mixed camp with peons, peasants, Ortak Lomgok, Chagrak Hammerstrike, Sefira Everbright and Mirt.
+
+What this means for the roster: Hyjal's Cenarion camp becomes the druids' level 60 outpost under Moonglade, shared as Moonglade is. It fits the one class that already shares, in a zone Forever built for both factions.
 
 ## Decisions so far
 
