@@ -488,6 +488,57 @@ Steps, in order:
 4) Add the proposals to the dataset, update the counts, and re-copy the page to `design.html`.
 5) Serve it locally and read it on the page before it goes to main.
 
+## Forever check (step 1)
+
+Two sources, one new tag:
+
+1) `[trace]` is Questie's Forever delta data: `forever-trace-base-db` in github.com/Questie/QuestieDB, generated from Wowhead's Forever database. It lists new and changed NPCs, with spawns, and the quests they give. It is the strongest source available for Forever content. It is still beta data.
+2) `[search]` and `[weak]` are as before. Weak means SEO or boosting sites.
+
+One thing a trace can't do is prove that nothing changed. "No change found" means no new NPCs in the trace within the site's bounds, and nothing in search.
+
+### Changed
+
+1) **Dalaran is a living city in the open world** `[trace]`. The Alterac map holds 60-odd new NPCs, among them:
+   a) Thirty-eight level 55 Kirin Tor Guards, and Kirin Tor Enforcers.
+   b) Two bankers (Teller Althiellis, Teller Gee).
+   c) Archmage Modera (60), and High Order Mages. The High Order are the Alliance Skyborne mages.
+   d) Vendors, and the Skyborne arrival quest, "Welcome to Azeroth" (level 13), from Denaaris Stargale at the city's edge.
+   Search describes the city as a Sanctuary, with a Kirin Tor reputation faction `[weak]`, and says the Alliance Skyborne "pursue the arcane legacy alongside the Kirin Tor" `[search: news.blizzard]`. The City of Dalaran dungeon (28 to 33) runs under it, through the sewers and the Underbelly `[weak]`.
+2) **Bandarion Keep is a new area, not a rebuilt one** `[trace]` `[search: news.blizzard found-photos recap]`. It is in the Whispering Wood in northwest Tirisfal (around 21,46), with Bandarion Keep Paladins (55), Jorin Croge, Ephram Barbaro, Relreo Emberlight, and Deathguard Billmuth, who gives "A Lesson in Divinity". The order is Tyr's Watch `[weak]`. Undead paladins also start in Deathknell with new quests `[weak]`, and a paladin trainer is reported in the Undercity `[weak]`.
+3) **Redridge is now the road into the Riverglades** `[search: icy-veins]`. The Riverglades is a new contested zone (35 to 45), with Farhold Keep for the Alliance, Ragmar for the Horde, and Powderfuse Port for the goblins. The Tower of Ilgalar now sits on a road people will use.
+4) **Southshore is a ship stop** on a new Menethil, Southshore and Auberdine route `[search: wowhead news]`. That puts Tarren Mill closer to traffic.
+5) **Dwarf shamans have their own world path, and it doesn't touch the Wildhammer** `[weak: warcrafttavern]`. The path runs:
+   a) Teo Hammerstorm at Anvilmar.
+   b) Braldir Ashmantle at a spirit stone on a Loch Modan peak.
+   c) Norric Lochthane on the loch shore.
+   d) Hervdana Saegrund in a Wetlands waterfall cave.
+   e) Ashenvale by boat.
+   Nothing ties them to Aerie Peak. A forum thread asks for exactly that tie, which suggests it doesn't exist.
+6) **The Skyborne have faction-and-class allegiances** `[search: news.blizzard]`. Horde Windshapers (shamans) work with the Earthen Ring, and Alliance High Order (mages) work with the Kirin Tor. Their shaman trainers on Zephras Isle are reported as Windshaper Boro and others `[weak]`. Where they train after the island is not published.
+7) **Moonglade has a new druid form quest** `[trace]`. The Avatar of Saeyleenan gives "The Great Windborne Cat Spirit", which is most likely the Skyborne druid's form, run through Moonglade as the other forms are.
+8) **Northshire has a new human hunter start** `[weak]`, ending at a hunter trainer behind the abbey.
+9) **Mount Hyjal is a level 60 zone** with the Hyjal Summit raid, Guardians of Hyjal storylines, and flight points for both factions `[search: gameinformer]` `[weak]`.
+10) **The Hinterlands has new Emerald Dream content** around Seradane `[trace]`: Emerald Wardens, fallen moonkin, and dream-touched beasts. That's druid outpost material next to Aerie Peak.
+
+### No change found
+
+Farstrider Lodge, Starfall Village, Refuge Pointe, Hammerfall, Stromgarde Keep, Ravenholdt, Skull Rock, Freewind Post, Camp Mojache, Chillwind Camp, Uther's Tomb, Nethergarde Keep and Aerie Peak have no new NPCs in the trace, and nothing turned up in search. Warlock pet quests still run as in 1.12 `[weak]`. Nothing was found on the level 52 class quests or the warrior stance quests.
+
+No Forever feature resembles class halls. Bandarion Keep is the closest thing to one.
+
+### What this changes in the roster
+
+1) **Alliance mage.** Dalaran exists and is friendly, so it replaces Nethergarde. But if it is a neutral Sanctuary, both factions' mages can walk in. That makes it a third shared stronghold, like Moonglade and Ravenholdt, unless it leans Alliance. Decision needed.
+2) **Alliance shaman.** Forever's dwarf shamans live in Loch Modan and the Wetlands, not the Hinterlands. Two options:
+   a) The stronghold moves to Loch Modan's spirit stone peak, and Aerie Peak becomes a later outpost.
+   b) Aerie Peak stays as the stronghold, and the Wildhammer tie is added.
+   Decision needed.
+3) **Undead paladin.** Forever has an Undercity paladin trainer, so the no-chapter decision is moot. The trainer stays where it is, and the order lives at Bandarion Keep.
+4) **Skyborne.** Alliance Skyborne mages already arrive at Dalaran, which answers their question if Dalaran is the mage stronghold. Horde Skyborne shamans belong to the Earthen Ring, which vanilla never placed. The Horde shaman stronghold can be written as the Earthen Ring's seat in Kalimdor.
+5) **Druid outposts.** Mount Hyjal, and the Hinterlands' new Dream content at Seradane, join Moonglade's outpost list.
+6) Every other stronghold stands as drafted.
+
 ## Decisions so far
 
 1) The design assumes Forever's race and class matrix. That means 16 halls: every class split, except the druids and rogues, who share.
@@ -504,11 +555,12 @@ Steps, in order:
 9) Warriors: Refuge Pointe and Hammerfall, facing each other across Arathi. Stromgarde Keep and Kargath become outposts and objectives, and the capitals keep the chapters.
 10) The stronghold holds the most: the trainer, the class campaign, the entry to an absorbed tree, the better versions, and the intelligence board. Chapters hold the everyday basics. Outposts hold quest steps.
 11) The Horde's roving hunt camp ships as described, with Camp Mojache fixed. It falls back to a fixed camp if 8.10 doesn't ship.
-12) Dalaran becomes the Alliance mage stronghold if Forever gives it a friendly area, with Nethergarde as the fallback.
+12) Forever gives Dalaran a friendly open-world city, so it replaces Nethergarde as the mage stronghold. Whether it is shared or the Alliance's is open.
 
 ## Open questions
 
-1) The Alliance mage stronghold. Forever restores Dalaran in the Alterac Mountains, and the city's interior is a level 28 to 33, nine-boss dungeon, "City of Dalaran" `[search: outputlag, azerothplus]`. So Dalaran can't be a crater hub. It could still be the stronghold once the realm has cleared the dungeon's trouble (6.9), if Forever gives it a friendly open area. Whether it has one is not confirmed. Nethergarde Keep stays the fallback.
+1) Dalaran: a shared mage stronghold like Moonglade, or the Alliance's? See the Forever check.
+2) The Alliance shaman stronghold: Loch Modan's spirit stone, or Aerie Peak with a new Wildhammer tie?
 
 ## Not confirmed
 
