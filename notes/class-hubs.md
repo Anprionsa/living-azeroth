@@ -252,11 +252,11 @@ Moonglade and Ravenholdt are the two shared strongholds. Each faction still has 
 | Hunter | Alliance | Farstrider Lodge, Loch Modan | look | Quel'Danil Lodge, Hinterlands (40s). Starfall Village, Winterspring (60). Quel'Lithien Lodge, Eastern Plaguelands (60) |
 | Hunter | Horde | Camp Mojache, Feralas. The camp becomes the great hunt's lodge, raised from tents to a longhouse | look | Melor Stonehoof, Hunter Rise (10 to 45, a chapter that sends hunts out). Senani Thunderheart, Splintertree (20 to 30). Roon Wildmane, Shadowprey (31) |
 | Rogue | shared | Ravenholdt Manor | quests | Alliance: Lucius, Lakeshire (the thieves' school). Agent Kearnen watching Klaven's Tower, Westfall. Horde: Wrenix, Ratchet. Taskmaster Fizzule, Barrens. Fenwick Thatros, Lordamere dock |
-| Mage | Alliance | Nethergarde Keep, Blasted Lands. A Kirin Tor fortress with a mage tower | quests | Tower of Azora, Elwynn (20s). Dalaran's crater, Alterac. Tabetha, Dustwallow (neutral, 30 to 40) |
+| Mage | Alliance | Tower of Azora, Elwynn (recommended over Nethergarde; see below) | both | Dalaran and the Kirin Tor (neutral, both factions). Tabetha, Dustwallow (neutral, 30 to 40). Nethergarde as a Kirin Tor post |
 | Mage | Horde | Tarren Mill, Hillsbrad. Magus Wordeen Voidglare, and a church the priests don't need | both | The Sepulcher, Silverpine. Un'Thuwa, Sen'jin. The Balnir Farmstead, Tirisfal (10) |
 | Warlock | Alliance | Tower of Ilgalar, Redridge. Hostile now, taken during the campaign | both | Surena Caledon, Brackwell Pumpkin Patch, Elwynn (10). Takar the Seer, Barrens, an Alliance warlock contact on Horde ground (20) |
 | Warlock | Horde | Skull Rock, Durotar. Cleared of the Burning Blade | both | Ophek, Razor Hill. Ageron Kargal, Brill. Ak'Zeloth, northern Barrens |
-| Shaman | Alliance | Aerie Peak, Hinterlands. The Wildhammer | quests | Forever's dwarf chain in Anvilmar, Loch Modan and the Wetlands `[search]` |
+| Shaman | Alliance | Aerie Peak, Hinterlands. The Wildhammer (see below) | quests | Forever's dwarf chain: Braldir Ashmantle's spirit stone and Norric Lochthane in Loch Modan, Hervdana Saegrund's Wetlands cave by Grim Batol `[weak]` |
 | Shaman | Horde | Freewind Post, Thousand Needles. Mesa-top tauren settlement, next to Prate Cloudseer's air shrine | both | The other three shrines: Spirit Rock and Kodo Rock (earth), the Shrine of Eternal Flame (fire), Brine's hut (water) |
 | Druid | shared | Moonglade | neither | Alliance: Alanndarian Nightsong, Auberdine, and the Darkshore Moonkin Stone. Horde: Tonga Runetotem, Crossroads, and the Moonkin Stone west of Camp Taurajo. Jannos Lighthoof, Camp Mojache |
 
@@ -539,6 +539,33 @@ No Forever feature resembles class halls. Bandarion Keep is the closest thing to
 5) **Druid outposts.** Mount Hyjal, and the Hinterlands' new Dream content at Seradane, join Moonglade's outpost list.
 6) Every other stronghold stands as drafted.
 
+## Mages and the Kirin Tor
+
+Decided: mages don't share a stronghold. Each faction's mages are its arcane power, and each faction keeps its own quiet. The Kirin Tor are the neutral body that works across factions, and Dalaran is their city. They are an outpost for both factions' mages, not a stronghold.
+
+1) **Dalaran's role.** A neutral city in the class campaign's middle levels (the dungeon runs 28 to 33). Both factions' mages are sent there to study, trade and be watched. It works as Nesingwary's camp does for hunters: the one place the rivals share. Alliance Skyborne mages arrive there `[trace]` and are then drawn into the Alliance's own order. That's a story in itself, because it means the Kirin Tor hand their students on.
+2) **Horde stronghold.** Tarren Mill stays. It is the Forsaken's arcane watch on Dalaran, and it now looks across the hills at a living city rather than a dome.
+3) **Alliance stronghold.** Two candidates, and the Tower of Azora is the recommendation:
+   a) **The Tower of Azora, Elwynn.** Theocritus's tower, an hour's walk from Stormwind's Mage Quarter, in a zone empty past level 10. It is Stormwind's own, with no Kirin Tor claim on it, so the Alliance keeps its arcane work under its own roof. It needs both look and quests. Its rival tower, Ilgalar, becomes the Alliance warlocks' stronghold, so Redridge and Elwynn hold the two halves of the same old story: three mages, one of whom fell.
+   b) **Nethergarde Keep, Blasted Lands.** The strongest look, but it is a Kirin Tor garrison. That makes it the neutral body's outpost rather than the Alliance's own.
+
+## The Wildhammer and the Alliance shaman
+
+Decided: expand the Alliance shaman to the Wildhammer, given a lore reason from earlier sources. There are four:
+
+1) **The Warcraft RPG's *Alliance Player's Guide* (2006)** makes the Wildhammer a shamanic people. They are "prone to revelry, shamanism and daring acts of bravery". Their shamans and priests tell "myths of nature, and the Earth Mother", and they are "dedicated to elemental earth and storm magic, drawing their power from the mountains" `[search: wowwiki-archive Alliance Player's Guide; wowpedia Wildhammer dwarf]`. The RPG is a secondary source, so this is supporting evidence rather than a foundation.
+2) **Cataclysm (2010) made dwarf shamans playable because of the Wildhammer.** A contemporary lore column put it plainly: "The Wildhammer were shaman, the only dwarf shaman that existed", and dwarf shamans became playable "as a direct result of the Wildhammer's much more active involvement in dwarven society" `[search: engadget Know Your Lore, August 2010]`. So Blizzard's own reasoning for dwarf shamans ran through the Wildhammer.
+3) **Stormcaller Mylra** is a Wildhammer shaman of the Earthen Ring (Cataclysm, and a Legion champion) `[search: wowpedia Wildhammer dwarf]`. She shows the Wildhammer inside the same shamanic order the Horde Skyborne answer to in Forever.
+4) **Grim Batol, the Wildhammer's ancestral home, is in the Wetlands**, and Forever's dwarf shaman water quest already goes to a Wetlands waterfall cave `[weak: warcrafttavern]`. The path Forever built already passes the old Wildhammer seat.
+
+Aerie Peak itself has no shaman in 1.12. It has Falstad, the gryphon masters, and Agnar Beastamer `[db]`. The expansion adds the Wildhammer's shamans, which fits what the older sources say they always were.
+
+The Alliance shaman's three tiers:
+
+1) **Chapter:** Ironforge, where Forever's shaman trainer stands `[search]`. Also Anvilmar, where the class starts.
+2) **Outposts:** Forever's own path. Braldir Ashmantle's spirit stone in Loch Modan. Norric Lochthane on the loch. Hervdana Saegrund's waterfall cave in the Wetlands, within sight of Grim Batol.
+3) **Stronghold:** Aerie Peak, arrival around 40. The campaign's turn is the Bronzebeard shaman being sent to the Wildhammer to learn what Ironforge never taught. Needs quests and a shaman presence (a stormcaller's circle on the peak), not new buildings.
+
 ## Decisions so far
 
 1) The design assumes Forever's race and class matrix. That means 16 halls: every class split, except the druids and rogues, who share.
@@ -555,12 +582,12 @@ No Forever feature resembles class halls. Bandarion Keep is the closest thing to
 9) Warriors: Refuge Pointe and Hammerfall, facing each other across Arathi. Stromgarde Keep and Kargath become outposts and objectives, and the capitals keep the chapters.
 10) The stronghold holds the most: the trainer, the class campaign, the entry to an absorbed tree, the better versions, and the intelligence board. Chapters hold the everyday basics. Outposts hold quest steps.
 11) The Horde's roving hunt camp ships as described, with Camp Mojache fixed. It falls back to a fixed camp if 8.10 doesn't ship.
-12) Forever gives Dalaran a friendly open-world city, so it replaces Nethergarde as the mage stronghold. Whether it is shared or the Alliance's is open.
+12) Mages don't share a stronghold. Dalaran and the Kirin Tor are a neutral outpost for both factions' mages. Tarren Mill is the Horde stronghold, and the Alliance's is the Tower of Azora (recommended) or Nethergarde.
+13) The Alliance shaman stronghold is Aerie Peak, justified by the Wildhammer's shamanic tradition in the RPG, in Cataclysm, and in Stormcaller Mylra. Forever's Loch Modan and Wetlands path supplies its outposts.
 
 ## Open questions
 
-1) Dalaran: a shared mage stronghold like Moonglade, or the Alliance's? See the Forever check.
-2) The Alliance shaman stronghold: Loch Modan's spirit stone, or Aerie Peak with a new Wildhammer tie?
+1) The Alliance mage stronghold: the Tower of Azora (recommended) or Nethergarde Keep. See the section on mages and the Kirin Tor.
 
 ## Not confirmed
 
