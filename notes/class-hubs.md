@@ -419,6 +419,75 @@ Ordered by how much each could change the design.
     Each one is additive and can ship on its own.
 11) **Links to the systems already proposed.** Strongholds sit on trade routes (2, 3, 9), in seasonal zones (10, and the Winterspring thaw at Starfall), and in flare-up zones (6, Arathi above all). The design has to say whether a stronghold can be attacked, restocked by caravan, or snowed in, or state that it is exempt.
 
+## Plan: folding the gaps in
+
+Two parts. First, a rule for each gap, so the design answers it instead of leaving it open. Second, how the idea goes into the document as a section and as proposals.
+
+### A rule for each gap
+
+1) **Forever's rewrites.** Before anything is written up, check every stronghold, chapter, outpost and quest giver named here against Forever's quest data. Mark each row confirmed, moved or gone, using search and whatever quest database covers Forever. This is step one, and it may move rows.
+2) **No realms.** Stronghold growth is region-wide, like a war effort. Each stage opens once the region's members of the class pass a threshold of work, it opens one way, and it never closes (6.9). The personal story scenes are phased per character. The wall of names shows a character's own firsts and those of their guild, not a region-sized list.
+3) **Arrival levels.** Each stronghold gets an arrival level. Until then the campaign runs through chapters and outposts, and arrival is its own quest: a summons, and a journey that ends at a flight master the stronghold adds. The first estimates are below. Where a faction's arrival comes much later than the other's, the gap is closed with an early outpost rather than by moving the stronghold.
+4) **Shared towns.** The stronghold is a building inside the town: Refuge Pointe's barracks, Tarren Mill's church, the crypt at Deathknell. The town stays open to every class. Other classes are kept out of the inner room only.
+5) **World PvP.** The inner room is a sanctuary. The town around it follows the zone's normal rules, because Arathi and Hillsbrad are meant to be contested. For the shared strongholds (Moonglade and Ravenholdt), the tracker's suggestion applies: reputation loss with the host faction for attacking inside it.
+6) **Race fit.** Every race that can play the class has a named mentor at the stronghold, and a chapter in its own capital. For example, orc and troll mages hold a wing at Tarren Mill as the Horde's new school, and troll priests keep a Loa shrine beside the Deathknell church.
+7) **The Skyborne and Forever's new zones.** Skyborne characters reach their faction's stronghold by a first-trip quest from Zephras. Mount Hyjal becomes a druid outpost for both factions under Moonglade. Both need a Forever research pass before they are written.
+8) **Trees that turn.** Each absorbed tree names its stronghold's reaction:
+   a) Blackguard: Chillwind Camp or Bandarion Keep shuts its inner room to the fallen paladin, and Scholomance opens instead.
+   b) Radiance: a Forsaken priest who recants leaves Deathknell for Light's Hope.
+   c) Necromancy: Dalaran condemns it, and the Sepulcher looks away.
+   The chapters stay open in every case, so no one loses their trainer.
+9) **Alts.** Through Forever's Legacy system, once one character of a class and faction finishes the campaign, later ones get the travel unlocks and the option to skip the story. Nothing that raises power carries over.
+10) **Ship order.** Strongholds ship in waves:
+    a) Wave 1 needs nothing: Moonglade, Bandarion Keep, and Ravenholdt's sanctuary rule.
+    b) Wave 2 needs look only: Refuge Pointe, Hammerfall, Chillwind Camp, Farstrider Lodge, Camp Mojache.
+    c) Wave 3 needs quests: Northshire, Nethergarde or Dalaran, Aerie Peak.
+    d) Wave 4 needs both: Deathknell, Tarren Mill, Ilgalar, Skull Rock, Freewind Post.
+11) **The other systems.**
+    a) Strongholds can't be captured, but their outposts can come under threat in flare-ups (6).
+    b) A stronghold on a caravan route is restocked by it, visibly (9.4).
+    c) Seasonal change touches a stronghold's look only (10.7). Starfall Village snows in during the Winterspring thaw's early years.
+
+### Arrival levels, first estimates
+
+| Stronghold | Arrival |
+|---|---|
+| Northshire Abbey, Deathknell church, Bandarion Keep | 1 to 10 |
+| Moonglade (by teleport), Skull Rock, Farstrider Lodge | 10 |
+| Tower of Ilgalar, Ravenholdt (the existing letter) | about 24 |
+| Tarren Mill, Freewind Post | 25 to 30 |
+| Refuge Pointe, Hammerfall, Dalaran or Nethergarde | 30 |
+| Camp Mojache, Aerie Peak | 40 |
+| Chillwind Camp | 50 |
+
+The late arrivals, Alliance paladins and Horde hunters, lean hardest on their chapters and outposts. The Alliance hunter's early outpost is the lodge itself. The Alliance paladin's is Northshire, until Chillwind.
+
+### Into the document
+
+A new Section 15, "Class orders", in the chronicle voice, with its proposals added to `data/proposals.json` and scored on the five axes. First pass at the split:
+
+| id | Title | Tier | Cost | Deployment | Layer | Change | Depends on |
+|---|---|---|---|---|---|---|---|
+| class-strongholds | Class strongholds in friendly settlements | 2 | high | ptr (taste) | 2 | additive | settlement-differentiation |
+| class-chapters | Class chapters in the capitals | 1 | medium | ptr (load) | 1 | additive | city-density |
+| class-campaigns | Class campaigns through outposts | 1 | high | ptr (taste) | 2 | additive | class-strongholds |
+| stronghold-growth | Region-wide stronghold growth | 3 | medium | ptr (load) | 4 | additive | additive-permanent-events |
+| order-intelligence | The order's intelligence board | 2 | low | ptr (exploit) | 2 | additive | guard-hints |
+| roving-hunt-camp | The roving hunt camp | 2 | low | ptr (exploit) | 2 | additive | wandering-trainers |
+| order-sanctuary | Inner rooms and sanctuary rules | 1 | low | ptr (exploit) | 1 | additive | none |
+| order-goods | Convenience goods at the stronghold | 1 | low | live | 3 | additive | vendor-restock |
+| order-reactions | Strongholds that answer a turned tree | 1 | low | live | 2 | additive | class-strongholds |
+
+The page's counts change with it: proposals from 74 to 83 and sections from 14 to 15, with the dataset's meta count updated to match. The join to the class absorption document also widens. Strongholds are named places, so trees whose anchors share a zone with one show up in the "Where the two documents meet" view without new code.
+
+Steps, in order:
+
+1) The Forever check, which may move rows.
+2) The Skyborne and Hyjal research.
+3) Draft the Section 15 prose. That is the chronicle voice for the world, and the auditor voice for the tier and cost sentences.
+4) Add the proposals to the dataset, update the counts, and re-copy the page to `design.html`.
+5) Serve it locally and read it on the page before it goes to main.
+
 ## Decisions so far
 
 1) The design assumes Forever's race and class matrix. That means 16 halls: every class split, except the druids and rogues, who share.
