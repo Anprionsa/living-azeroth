@@ -116,13 +116,17 @@
    "community": "The 0.5-second windup before Auto Shot and wand shots isn't working, so ranged users barely stop moving. Some want to keep it. Others say indefinite kiting breaks the open world.",
    "firstSeen": "2026-09-23",
    "fit": "bug",
-   "lastChecked": "2026-09-24",
+   "lastChecked": "2026-10-01",
    "owner": "",
    "relayed": false,
    "sources": [
     {
      "label": "Wowhead",
      "url": "https://www.wowhead.com/forever/news/auto-shot-and-wanding-cast-time-reduction-in-wow-forever-not-intended-will-be-383064"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ],
    "status": "change-coming",
@@ -136,6 +140,10 @@
     {
      "date": "2026-09-24",
      "note": "Not confirmed in the Sept 24 build. Coverage still describes the fix as coming in an upcoming build."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Podcast 2: Auto Shot and wand timers are bugged, including the half-second windup. More hunter stable slots are coming."
     }
    ]
   },
@@ -147,7 +155,7 @@
    "community": "A player quit druid at 10 for hitting half as hard as their hunter and mage. Wrath for 14-21 against a mage Fireball for 50-60. Bear form meleeing for 10-15, partly because forms now scale with weapons. 62 replies in four hours.",
    "firstSeen": "2026-09-21",
    "fit": "compatible",
-   "lastChecked": "2026-09-30",
+   "lastChecked": "2026-10-01",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -162,6 +170,10 @@
     {
      "label": "Blizzard: Class deep dives, Hunter and Druid",
      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301515"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ],
    "status": "fixed",
@@ -175,29 +187,33 @@
     {
      "date": "2026-09-30",
      "note": "Sept 30 deep dive: Wrath was redesigned to cost much less and hit for less, on purpose; forms scaling with weapons is intended; bear rage and threat were rebuilt; Restoration's Naturalist now raises all damage. What's left is the levels before a first weapon upgrade."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Podcast 2: Wrath was briefly free and wand-like; zero mana was too strong and its damage was never raised enough. The 50% buff adds about 2% to druid damage at 60, and druids will probably be trimmed elsewhere to pay for it."
     }
    ]
   },
   {
    "id": "cat-form-quest",
-   "title": "Druid cat form quest blocked",
-   "category": "Classes",
-   "type": "Bug",
-   "status": "fixed",
-   "fit": "bug",
-   "firstSeen": "2026-09-27",
-   "lastChecked": "2026-09-30",
-   "community": "Players collecting three relics in Stormrage Barrow Den got \"no loot\" errors; relics were lootable by one person at a time, and griefers spam-clicked them to block others.",
-   "blizzard": "Wowhead reports it resolved. Johnny Cash used this quest as his example of a contested objective that runs too long.",
    "ask": "Nothing to send.",
+   "blizzard": "Wowhead reports it resolved. Johnny Cash used this quest as his example of a contested objective that runs too long.",
+   "category": "Classes",
+   "community": "Players collecting three relics in Stormrage Barrow Den got \"no loot\" errors; relics were lootable by one person at a time, and griefers spam-clicked them to block others.",
+   "firstSeen": "2026-09-27",
+   "fit": "bug",
+   "lastChecked": "2026-09-30",
+   "owner": "",
+   "relayed": false,
    "sources": [
     {
      "label": "Wowhead: druid cat form quest",
      "url": "https://www.wowhead.com/forever/news/players-struggling-to-complete-druid-cat-form-quest-in-forever-due-to-quest-383152"
     }
    ],
-   "relayed": false,
-   "owner": "",
+   "status": "fixed",
+   "title": "Druid cat form quest blocked",
+   "type": "Bug",
    "updates": [
     {
      "date": "2026-09-27",
@@ -256,6 +272,33 @@
    "title": "Class bugs: pets, auto-attack interrupts, cast timing",
    "type": "Bug",
    "updates": []
+  },
+  {
+   "id": "class-buttons-thin",
+   "title": "Classes feel thin: too few buttons",
+   "category": "Classes",
+   "type": "Design",
+   "status": "acknowledged",
+   "fit": "compatible",
+   "firstSeen": "2026-10-01",
+   "lastChecked": "2026-10-01",
+   "community": "Players find rotations sparse, rogues and mages especially flat.",
+   "blizzard": "Zierhut (podcast 2): three to four buttons for anything under 10 seconds, cooldowns spread across 15 seconds to two minutes, empty global cooldowns left on purpose for procs, utility and interrupts. Every buff is paid for within a fixed damage budget tied to 2004-05 fight lengths, about 1% per talent point. Zirene (relayed, after recording): the damage target has since been raised, \"so we'll be adding things in again.\" Mages getting more buttons is being worked on in the next few weeks.",
+   "ask": "The budget is the constraint, and it just moved. Watch which cuts come back first, mage and rogue especially.",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
+    }
+   ],
+   "relayed": false,
+   "owner": "Kris Zierhut",
+   "updates": [
+    {
+     "date": "2026-10-01",
+     "note": "Logged from the working notes."
+    }
+   ]
   },
   {
    "id": "commerce-authority",
@@ -364,14 +407,41 @@
    "updates": []
   },
   {
+   "id": "dalaran-alliance-only",
+   "title": "Dalaran is an Alliance-only hub",
+   "category": "World and audio",
+   "type": "Design",
+   "status": "open",
+   "fit": "compatible",
+   "firstSeen": "2026-09-29",
+   "lastChecked": "2026-10-01",
+   "community": "Dalaran is live in the beta as an Alliance sanctuary: trainers, seven profession trainers, a stable master, barber, transmogrifier, and battlemasters for all four battlegrounds. Horde aren't welcome inside the walls. It's the Wrath-sized city with Wrath's shop and NPC names.",
+   "blizzard": "No response. It matches the Skyborne split, where the arcane elves go Alliance toward the Kirin Tor and the Windshaper elves go Horde toward a new Earthen Ring area in Mulgore.",
+   "ask": "Check whether the Earthen Ring area gives Horde matching battlemasters and services. A full city hub on one side only is a real asymmetry.",
+   "sources": [
+    {
+     "label": "Wowhead: what to do in Dalaran",
+     "url": "https://www.wowhead.com/forever/news/what-to-do-in-dalaran-in-wow-forever-383146"
+    }
+   ],
+   "relayed": false,
+   "owner": "",
+   "updates": [
+    {
+     "date": "2026-09-29",
+     "note": "Logged from the working notes."
+    }
+   ]
+  },
+  {
    "id": "dungeon-xp",
-   "ask": "Full XP on the first clear of each dungeon per day, diminishing returns on repeats, daily reset (relayed from Reddit). Kills grinding more precisely than a flat cut. The objection: per-character daily counters are a retail-shaped mechanic.",
+   "ask": "A tuning ask, compatible with intent: test Ruins of Lordaeron specifically (16 to 19.5, quests in ten minutes) and trim the outliers. The daily diminishing-returns proposal still fits both directions.",
    "blizzard": "Zierhut: first runs pay, repeats should not beat moving on. Greenfield (podcast, Sept 24): the intent is keeping players in the open world; they're watching it and won't change it before the level cap rises.",
    "category": "Leveling and difficulty",
    "community": "A full run is worth about 1 to 1.5 bars. 9 to 18 XP per elite in Ragefire Chasm. Groups run each dungeon once, skip every pack, and never come back. Defenders say a first clear pays about three runs' worth.",
    "firstSeen": "2026-09-19",
    "fit": "compatible",
-   "lastChecked": "2026-09-24",
+   "lastChecked": "2026-10-01",
    "owner": "Josh Greenfield",
    "relayed": false,
    "sources": [
@@ -390,6 +460,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "Leveling is accelerated by dungeon chaining",
+     "url": "https://us.forums.blizzard.com/en/wow/t/leveling-is-accelerated-and-its-because-of-dungeon-chaining-real-journey-gamers-are-unhappy/2367029"
     }
    ],
    "status": "acknowledged",
@@ -403,6 +477,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: Greenfield said moving XP from kills onto dungeon quests is meant to keep players in the open world. He called the split \"a vibe thing\" the team will keep watching, with no hasty changes before the cap rises."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "The argument flipped (Sept 30): quest XP now overshoots. Ruins of Lordaeron reportedly takes a player from 16 to 19.5 with quests collected in ten minutes; one Wailing Caverns quest pays about 15,000 XP. A claimed path reaches 25 with little time in the Barrens. 150 replies in eight hours, no blue reply. Proposals: halve low-level dungeon quest XP and raise kill XP about 30%; trim quest XP and give repeats diminishing returns; pay big quest XP only where the zone assumes the dungeon."
     }
    ]
   },
@@ -449,6 +527,33 @@
    "title": "Dwarf shamans use an orcish Ghost Wolf",
    "type": "Request",
    "updates": []
+  },
+  {
+   "id": "emergent-tricks",
+   "title": "Power shifting, totem twisting, and seal twisting removed",
+   "category": "Classes",
+   "type": "Design",
+   "status": "wont-change",
+   "fit": "compatible",
+   "firstSeen": "2026-10-01",
+   "lastChecked": "2026-10-01",
+   "community": "Power shifting, totem twisting, and seal twisting were where much of Classic's skill ceiling lived for many players.",
+   "blizzard": "Removed as unintuitive to new players (podcast 2). Shifting Power replaces power shifting: 40 energy for cat form's mana cost on a 16 second cooldown, talented to 8, so intellect, Innervate, and mana potions matter again. Zirene floated a seal-twisting version with a bonus for perfect timing; Zierhut argued back that a new player watching a swing timer \"stood in the fire.\"",
+   "ask": "Push on the replacements, not the removal: Shifting Power and Twist of Light should keep the payoff of the old trick. Ask for the timing-bonus version of seal twisting.",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
+    }
+   ],
+   "relayed": false,
+   "owner": "Kris Zierhut",
+   "updates": [
+    {
+     "date": "2026-10-01",
+     "note": "Logged from the working notes."
+    }
+   ]
   },
   {
    "id": "emote-sounds",
@@ -785,24 +890,24 @@
   },
   {
    "id": "kyles-quest",
-   "title": "Kyle's Gone Missing! is missing",
-   "category": "Lore and continuity",
-   "type": "Request",
-   "status": "change-coming",
-   "fit": "compatible",
-   "firstSeen": "2026-09-27",
-   "lastChecked": "2026-09-30",
-   "community": "The Mulgore quest designed and voiced by Ezra Chatterton through Make-A-Wish, added in TBC, is missing from Forever. A request to restore it passed 54 replies and 12,000 views.",
-   "blizzard": "Blue reply: \"We're working on it. Stay tuned!\"",
    "ask": "Nothing to send. A TBC-era addition made on request, the same door the Illidari and Draenei asks knock on.",
+   "blizzard": "Blue reply: \"We're working on it. Stay tuned!\"",
+   "category": "Lore and continuity",
+   "community": "The Mulgore quest designed and voiced by Ezra Chatterton through Make-A-Wish, added in TBC, is missing from Forever. A request to restore it passed 54 replies and 12,000 views.",
+   "firstSeen": "2026-09-27",
+   "fit": "compatible",
+   "lastChecked": "2026-09-30",
+   "owner": "",
+   "relayed": false,
    "sources": [
     {
      "label": "Wowhead: Make-A-Wish quest returning",
      "url": "https://www.wowhead.com/forever/news/blizzard-working-on-putting-make-a-wish-quest-back-in-wow-forever-383161"
     }
    ],
-   "relayed": false,
-   "owner": "",
+   "status": "change-coming",
+   "title": "Kyle's Gone Missing! is missing",
+   "type": "Request",
    "updates": [
     {
      "date": "2026-09-27",
@@ -870,13 +975,13 @@
   },
   {
    "id": "leveling-too-easy",
-   "ask": "Drop the pace argument. Keep the difficulty one, in their terms: a level 4 mob dying in 3 seconds against a stated 10 to 15.",
+   "ask": "Ask for the distribution, not the mean: how fast the fastest quartile reaches 20 and 30, and how much of it is dungeon quests.",
    "blizzard": "Pace answered with data (podcast, Sept 24): 1 to 20 takes 20.5 hours in Forever against 20.4 in Classic Era. No answer yet on mob difficulty against the stated 10 to 15 second kill.",
    "category": "Leveling and difficulty",
    "community": "Valley of Trials at level 4-5: enemies barely do damage, no food needed. Worry that 1,000+ new quests will have players outleveling zones a quarter of the way through. Warrior may be the one class leveling at the described pace.",
    "firstSeen": "2026-09-17",
    "fit": "compatible",
-   "lastChecked": "2026-09-30",
+   "lastChecked": "2026-10-01",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -907,6 +1012,10 @@
     {
      "label": "Johnny Cash on Jasperlode",
      "url": "https://x.com/QuestTheLine/status/2105304282371182787"
+    },
+    {
+     "label": "Leveling is accelerated by dungeon chaining",
+     "url": "https://us.forums.blizzard.com/en/wow/t/leveling-is-accelerated-and-its-because-of-dungeon-chaining-real-journey-gamers-are-unhappy/2367029"
     }
    ],
    "status": "open",
@@ -932,6 +1041,10 @@
     {
      "date": "2026-09-30",
      "note": "\"Leveling is far too easy\" passed 228 replies and keeps growing. Johnny Cash cut Jasperlode Mine's hyperspawn and the Sept 24 build removed the candles from Jasperlode and Fargodeep: specific spots pulled back toward Classic difficulty."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Pushback on Blizzard's 20.5 versus 20.4 hours: beta players test, attend events, and try professions, so equal averages can hide a faster route. Mob health is up; one test had an elite kill take about 40% longer. Time per mob up, time per level possibly down."
     }
    ]
   },
@@ -1143,16 +1256,15 @@
   },
   {
    "id": "name-bans",
-   "title": "Beta access removed over names",
-   "category": "UI and names",
-   "type": "Design",
-   "status": "wont-change",
-   "fit": "compatible",
-   "firstSeen": "2026-09-24",
-   "lastChecked": "2026-09-30",
-   "community": "Blizzard issued forced renames and removed beta access for the worst names. Threads allege bans over generated names and names used for twenty years (\"Thousands banned for literally no reason,\" 214 replies), and a refund thread passed 290 replies because access came with the $60 bundle. Mark Kern, who helped write the original naming policy, argued for forced renames over bans and even enforcement. Others report actioned names referencing child sexual abuse.",
-   "blizzard": "Blizzard (Sept 24): every action individually reviewed, no appeals through Customer Service, an automated filter coming. Tom Ellis (Sept 25): no new standard, 0.18% of names led to removal, most got renames, one likely false positive found and the list re-read. The filter wasn't ready for two-part names. Ellis later left X after threats. Policy unchanged.",
    "ask": "The design questions under the noise: forced renames versus loss of access, an appeal path for false positives, and what removing paid access means. Early name reservation runs Oct 27 to Nov 3.",
+   "blizzard": "Blizzard (Sept 24): every action individually reviewed, no appeals through Customer Service, an automated filter coming. Tom Ellis (Sept 25): no new standard, 0.18% of names led to removal, most got renames, one likely false positive found and the list re-read. The filter wasn't ready for two-part names. Ellis later left X after threats. Policy unchanged.",
+   "category": "UI and names",
+   "community": "Blizzard issued forced renames and removed beta access for the worst names. Threads allege bans over generated names and names used for twenty years (\"Thousands banned for literally no reason,\" 214 replies), and a refund thread passed 290 replies because access came with the $60 bundle. Mark Kern, who helped write the original naming policy, argued for forced renames over bans and even enforcement. Others report actioned names referencing child sexual abuse.",
+   "firstSeen": "2026-09-24",
+   "fit": "compatible",
+   "lastChecked": "2026-09-30",
+   "owner": "Tom Ellis",
+   "relayed": false,
    "sources": [
     {
      "label": "Blizzard: account actions for name violations",
@@ -1171,8 +1283,9 @@
      "url": "https://gamerant.com/world-of-warcraft-wow-forever-beta-name-ban-tom-ellis/"
     }
    ],
-   "relayed": false,
-   "owner": "Tom Ellis",
+   "status": "wont-change",
+   "title": "Beta access removed over names",
+   "type": "Design",
    "updates": [
     {
      "date": "2026-09-24",
@@ -1355,16 +1468,15 @@
   },
   {
    "id": "pvp-crit-halved",
-   "title": "Crits deal half their bonus against players",
-   "category": "PvP and layering",
-   "type": "Bug",
-   "status": "change-coming",
-   "fit": "bug",
-   "firstSeen": "2026-09-26",
-   "lastChecked": "2026-09-30",
-   "community": "Critical strikes against players deal half their bonus: melee from 200% to 150%, spells from 150% to 125%, damage over time cut the same way. Consistent across abilities, so it read as an undisclosed rule. It would have hit burst builds (Frost Mage on frozen targets, Destruction, Elemental) hardest.",
-   "blizzard": "Aidan \"Zirene\" Moon (X, Sept 29): \"the reduced critical strike damage in PvP is a bug. That won't be staying.\" Fix in a future build.",
    "ask": "Confirm the fix lands before the community duel tournament on Oct 17 and 18.",
+   "blizzard": "Aidan \"Zirene\" Moon (X, Sept 29): \"the reduced critical strike damage in PvP is a bug. That won't be staying.\" Fix in a future build.",
+   "category": "PvP and layering",
+   "community": "Critical strikes against players deal half their bonus: melee from 200% to 150%, spells from 150% to 125%, damage over time cut the same way. Consistent across abilities, so it read as an undisclosed rule. It would have hit burst builds (Frost Mage on frozen targets, Destruction, Elemental) hardest.",
+   "firstSeen": "2026-09-26",
+   "fit": "bug",
+   "lastChecked": "2026-09-30",
+   "owner": "Aidan Moon",
+   "relayed": false,
    "sources": [
     {
      "label": "Zirene on X",
@@ -1375,8 +1487,9 @@
      "url": "https://www.wowhead.com/forever/news/blizzard-confirms-crit-nerf-in-pvp-is-a-bug-in-wow-forever-383163"
     }
    ],
-   "relayed": false,
-   "owner": "Aidan Moon",
+   "status": "change-coming",
+   "title": "Crits deal half their bonus against players",
+   "type": "Bug",
    "updates": [
     {
      "date": "2026-09-26",
@@ -1416,29 +1529,64 @@
    ]
   },
   {
-   "id": "raid-power-vertical",
-   "title": "Raid tiers raise player power",
-   "category": "Items and power",
+   "id": "raid-auras",
+   "title": "Raids need four shamans and four druids for buffs",
+   "category": "Classes",
    "type": "Design",
-   "status": "wont-change",
-   "fit": "reversal",
-   "firstSeen": "2026-09-26",
-   "lastChecked": "2026-09-30",
-   "community": "A thread reads Forever as vertical progression despite the horizontal framing at BlizzCon, and asks for a hard power ceiling in the style of Guild Wars 2 or Elder Scrolls Online. Replies say BlizzCon promised chase items keeping old tiers relevant, not full horizontal progression, and that a subscription game needs numbers to go up.",
-   "blizzard": "Tim Jones and Mike Nuthals (IGN Nordic, as quoted in the thread): each raid tier has better loot, \"increasing player power in a responsible way.\" Season of Discovery went too far, and earlier-tier gear should stay useful. \"Horizontal\" in Blizzard's usage describes Legacy and the world, not raid gear.",
+   "status": "acknowledged",
+   "fit": "compatible",
+   "firstSeen": "2026-10-01",
+   "lastChecked": "2026-10-01",
+   "community": "Players building 20-player raids find they need four shamans and four druids to cover party-wide auras.",
+   "blizzard": "Making Leader of the Pack and the Moonkin aura raid-wide is under discussion (podcast 2).",
+   "ask": "Raid-wide auras for the party-only buffs, so composition follows roles rather than aura coverage.",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
+    }
+   ],
+   "relayed": false,
+   "owner": "",
+   "updates": [
+    {
+     "date": "2026-10-01",
+     "note": "Logged from the working notes."
+    }
+   ]
+  },
+  {
+   "id": "raid-power-vertical",
    "ask": "A hard ceiling contradicts the stated tier plan. The compatible ask is how small the steps are and how many chase items keep old tiers useful.",
+   "blizzard": "Tim Jones and Mike Nuthals (IGN Nordic, as quoted in the thread): each raid tier has better loot, \"increasing player power in a responsible way.\" Season of Discovery went too far, and earlier-tier gear should stay useful. \"Horizontal\" in Blizzard's usage describes Legacy and the world, not raid gear.",
+   "category": "Items and power",
+   "community": "A thread reads Forever as vertical progression despite the horizontal framing at BlizzCon, and asks for a hard power ceiling in the style of Guild Wars 2 or Elder Scrolls Online. Replies say BlizzCon promised chase items keeping old tiers relevant, not full horizontal progression, and that a subscription game needs numbers to go up.",
+   "firstSeen": "2026-09-26",
+   "fit": "reversal",
+   "lastChecked": "2026-10-01",
+   "owner": "Tim Jones",
+   "relayed": false,
    "sources": [
     {
      "label": "Forever will be a vertical progression mode",
      "url": "https://us.forums.blizzard.com/en/wow/t/wow-forever-will-be-a-vertical-progression-mode-it-shouldnt-be/2362749"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ],
-   "relayed": false,
-   "owner": "Tim Jones",
+   "status": "wont-change",
+   "title": "Raid tiers raise player power",
+   "type": "Design",
    "updates": [
     {
      "date": "2026-09-26",
      "note": "Logged from the working notes."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Podcast 2: Zierhut says tier sets were designed about eight months ago, classes have changed since, the Hyjal NPC selling them was removed on purpose, and rechecking them is one of the last jobs of the beta. Current set bonuses aren't final."
     }
    ]
   },
@@ -1524,7 +1672,7 @@
    "community": "Dual wield arrives at level 10 with no +hit gear available. One longtime rogue reported missing most swings and doing more damage with a single dagger. Replies split between spamming Sinister Strike for the energy refund and saying rogue feels better than ever once hits land.",
    "firstSeen": "2026-09-23",
    "fit": "compatible",
-   "lastChecked": "2026-09-30",
+   "lastChecked": "2026-10-01",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -1539,6 +1687,14 @@
     {
      "label": "Wowhead: class highlights, Warrior, Rogue, Shaman",
      "url": "https://www.wowhead.com/forever/news/class-highlights-for-warriors-rogues-and-shamans-in-wow-forever-383189"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
+    },
+    {
+     "label": "Wowhead: rogues will have the highest single-target damage",
+     "url": "https://www.wowhead.com/forever/news/rogues-will-have-the-highest-single-target-damage-in-wow-forever-383209"
     }
    ],
    "status": "open",
@@ -1556,6 +1712,10 @@
     {
      "date": "2026-09-30",
      "note": "Sept 30 class video: energy regenerates continuously, Subtlety's Cutthroat allows Ambush outside stealth, Mutilate strikes with both weapons, and Combat's Hack and Slash covers several weapon types. Nothing on low-level +hit."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Podcast 2: rogues will be \"the highest single target damage dealers in the game\" on a stand-still boss; Subtlety's 31-point talent becomes Death Mark; no energy changes \"at this time.\" Zirene afterwards (relayed): rogues lost most early-alpha changes when damage targets came in low, and now \"our DPS target has changed so we'll be adding things in again.\""
     }
    ]
   },
@@ -1672,7 +1832,7 @@
    "community": "Barber-shop form variants show to everyone. For Night Elf and Tauren bears only the base variant is SD; variants 1-5 are HD. All four Skyborne bears are HD.",
    "firstSeen": "2026-09-22",
    "fit": "compatible",
-   "lastChecked": "2026-09-24",
+   "lastChecked": "2026-10-01",
    "owner": "Josh Greenfield",
    "relayed": true,
    "sources": [
@@ -1683,6 +1843,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ],
    "status": "acknowledged",
@@ -1692,6 +1856,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: Greenfield said the druid forms were downscaled more than once to match classic texture fidelity, and side by side the textures match. The remaining gap is geometry sticking out of the silhouette, which the team is discussing, with nothing to announce."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Podcast 2: Greenfield, on Skyborne models and druid forms together: \"thinking about and talking about a lot internally,\" with something more substantive hoped \"pretty soon.\""
     }
    ]
   },
@@ -1764,16 +1932,15 @@
   },
   {
    "id": "skinning-group",
-   "title": "Every skinner in a group can skin the same corpse",
-   "category": "Professions and economy",
-   "type": "Design",
-   "status": "open",
-   "fit": "compatible",
-   "firstSeen": "2026-09-28",
-   "lastChecked": "2026-09-30",
-   "community": "As in modern WoW, every skinner in a group skins each corpse. Players report 30 to 40 person skinning raids forcing fast respawns, and expect leather to flood and push skinners into other gathering. Each skin can also roll the new Scarce material, Pristine Leather. The other side: less hassle, and cheaper materials. 108 replies in a day.",
-   "blizzard": "No response. Blizzard said it would actively manage material supply, and this multiplies supply by group size. It may be modern behavior carried over, or deliberately pro-social like round-robin quest drops.",
    "ask": "Borrow Blizzard's own fix from quest drops: keep one skin per corpse and round-robin it within the group, or let every skinner skin but split the yield. Grouping still helps without multiplying leather.",
+   "blizzard": "No response. Blizzard said it would actively manage material supply, and this multiplies supply by group size. It may be modern behavior carried over, or deliberately pro-social like round-robin quest drops.",
+   "category": "Professions and economy",
+   "community": "As in modern WoW, every skinner in a group skins each corpse. Players report 30 to 40 person skinning raids forcing fast respawns, and expect leather to flood and push skinners into other gathering. Each skin can also roll the new Scarce material, Pristine Leather. The other side: less hassle, and cheaper materials. 108 replies in a day.",
+   "firstSeen": "2026-09-28",
+   "fit": "compatible",
+   "lastChecked": "2026-09-30",
+   "owner": "",
+   "relayed": false,
    "sources": [
     {
      "label": "Please remove the retail skinning function",
@@ -1784,8 +1951,9 @@
      "url": "https://www.icy-veins.com/wow-forever/news/every-gathering-node-in-wow-forever-can-drop-a-scarce-material-youll-want/"
     }
    ],
-   "relayed": false,
-   "owner": "",
+   "status": "open",
+   "title": "Every skinner in a group can skin the same corpse",
+   "type": "Design",
    "updates": [
     {
      "date": "2026-09-28",
@@ -1830,24 +1998,24 @@
   },
   {
    "id": "skyborne-cross-faction-language",
-   "title": "Skyborne can talk across factions",
-   "category": "Skyborne",
-   "type": "Bug",
-   "status": "open",
-   "fit": "compatible",
-   "firstSeen": "2026-09-28",
-   "lastChecked": "2026-09-30",
-   "community": "All Skyborne currently know Darnassian, so High Order (Alliance) and Windshaper (Horde) players can talk to each other.",
-   "blizzard": "No response. Unclear whether intended; it cuts against Greenfield's framing of the split as mortal enemies.",
    "ask": "Small enough to file as a bug report.",
+   "blizzard": "No response. Unclear whether intended; it cuts against Greenfield's framing of the split as mortal enemies.",
+   "category": "Skyborne",
+   "community": "All Skyborne currently know Darnassian, so High Order (Alliance) and Windshaper (Horde) players can talk to each other.",
+   "firstSeen": "2026-09-28",
+   "fit": "compatible",
+   "lastChecked": "2026-09-30",
+   "owner": "",
+   "relayed": false,
    "sources": [
     {
      "label": "Wowhead: elves speak cross-faction",
      "url": "https://www.wowhead.com/forever/news/elves-can-speak-cross-faction-in-wow-forever-383133"
     }
    ],
-   "relayed": false,
-   "owner": "",
+   "status": "open",
+   "title": "Skyborne can talk across factions",
+   "type": "Bug",
    "updates": [
     {
      "date": "2026-09-28",
@@ -1929,7 +2097,7 @@
    "community": "The HD toggle doesn't work on Skyborne. Called a broken promise that needs fixing by launch. One guess: the SD models aren't finished.",
    "firstSeen": "2026-09-17",
    "fit": "compatible",
-   "lastChecked": "2026-09-24",
+   "lastChecked": "2026-10-01",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -1940,6 +2108,10 @@
     {
      "label": "WoW Forever Podcast, episode 1",
      "url": "https://youtu.be/m49-jvGPCkA"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ],
    "status": "open",
@@ -1953,6 +2125,10 @@
     {
      "date": "2026-09-24",
      "note": "Podcast: the Skyborne were among the first assets built, before the team settled its target fidelity. Still no word on SD models."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Podcast 2: Greenfield says Skyborne models are something the team is \"thinking about and talking about a lot internally,\" hoping to have \"something else more substantive to say pretty soon.\" A step past last week's \"nothing to announce.\""
     }
    ]
   },
@@ -2011,16 +2187,15 @@
   },
   {
    "id": "spell-scaling",
-   "title": "Spell scaling: hybrid tax, downranking, hidden coefficients",
+   "ask": "The design is stated. Still open: tooltip coefficients, and whether the modeled gear curve matches what players actually find while leveling.",
+   "blizzard": "Greenfield: throughput equal with gear. Sept 24 build fixed ranks one by one. Zierhut (podcast 2): base damage was cut against a modeled gear curve; hybrid DPS targets about 5% below pure DPS and stays weak at off-healing by design.",
    "category": "Items and power",
-   "type": "Design",
-   "status": "acknowledged",
-   "fit": "compatible",
-   "firstSeen": "2026-09-22",
-   "lastChecked": "2026-09-30",
    "community": "The largest thread in the beta forum (226 replies). Base damage cuts (about 50% on most damage over time, 25% on most direct damage, 10% on most heals) make gear a requirement rather than a bonus. Elemental, Balance, holy-damage Priest, and Warlock direct damage reportedly need 300 or more spell power to match a naked Classic Era character. Side effects: hybrids do little off-role, higher ranks stop feeling like upgrades so players downrank, and nothing shows each spell's coefficient. Priest leveling (71 replies) and casters out of mana after every pull (62) feed it. The other side: spell power weapons are easy to get and making caster gear matter was the point.",
-   "blizzard": "Greenfield (Sept 21): throughput should be essentially unchanged with gear. The Sept 24 build answered rank by rank: Wrath up about 50%, Lightning Bolt ranks 3 and 4 and early Lava Burst raised, Holy Strike ranks made real upgrades, heal-over-time crits restored. The Sept 30 deep dive gives Restoration druids a damage bonus through Naturalist.",
-   "ask": "The asks still open: tooltip coefficients so players can judge gear, and a real off-role for hybrids. Measure both against Jones's all-trees-viable goal.",
+   "firstSeen": "2026-09-22",
+   "fit": "compatible",
+   "lastChecked": "2026-10-01",
+   "owner": "Kris Zierhut",
+   "relayed": false,
    "sources": [
     {
      "label": "Why the Spell Scaling is bad",
@@ -2029,14 +2204,23 @@
     {
      "label": "Blizzard: Class deep dives, Hunter and Druid",
      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301515"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ],
-   "relayed": false,
-   "owner": "",
+   "status": "acknowledged",
+   "title": "Spell scaling: hybrid tax, downranking, hidden coefficients",
+   "type": "Design",
    "updates": [
     {
      "date": "2026-09-22",
      "note": "Logged from the working notes."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Podcast 2: Zierhut built a curve of the spell power a player has from typical questing greens plus a spell power weapon at each level, then cut each spell's base damage by its coefficient against it, so casters care about gear the way melee do. Hybrid DPS specs target about 5% less damage, everyone except hunters, mages, rogues, and warlocks counts as a hybrid, and hybrid DPS specs stay weak at healing on purpose: \"We want you to need other players.\""
     }
    ]
   },
@@ -2165,19 +2349,19 @@
   },
   {
    "id": "undead-paladin-cannibalize",
-   "title": "Undead paladins with Cannibalize",
-   "category": "Classes",
-   "type": "Request",
-   "status": "open",
-   "fit": "compatible",
-   "firstSeen": "2026-09-28",
-   "lastChecked": "2026-09-30",
-   "community": "A Light-wielding paladin feeding on corpses clashes with the most righteous class fantasy, and undead paladins are new to a Classic ruleset. The ask is a paladin version of the racial.",
-   "blizzard": "No response. Undead priests have done this since 2004. The Sept 24 build flattened Gnome Eureka into one discount and restyled Human Will to Survive to match Dispel Magic.",
    "ask": "Keep Cannibalize's effect for paladins, give it a Light-fitting name and visual. Costs nothing in balance, and the same build already restyled a racial for fit.",
-   "sources": [],
-   "relayed": false,
+   "blizzard": "No response. Undead priests have done this since 2004. The Sept 24 build flattened Gnome Eureka into one discount and restyled Human Will to Survive to match Dispel Magic.",
+   "category": "Classes",
+   "community": "A Light-wielding paladin feeding on corpses clashes with the most righteous class fantasy, and undead paladins are new to a Classic ruleset. The ask is a paladin version of the racial.",
+   "firstSeen": "2026-09-28",
+   "fit": "compatible",
+   "lastChecked": "2026-09-30",
    "owner": "",
+   "relayed": false,
+   "sources": [],
+   "status": "open",
+   "title": "Undead paladins with Cannibalize",
+   "type": "Request",
    "updates": [
     {
      "date": "2026-09-28",
@@ -2193,7 +2377,7 @@
    "community": "Defense spec threat and damage don't scale with itemization, so it falls off after the first tier and fury tanking returns. Split between agreement and \"too early at 20.\"",
    "firstSeen": "2026-09-18",
    "fit": "compatible",
-   "lastChecked": "2026-09-30",
+   "lastChecked": "2026-10-01",
    "owner": "",
    "relayed": false,
    "sources": [
@@ -2204,6 +2388,10 @@
     {
      "label": "Wowhead: class highlights, Warrior, Rogue, Shaman",
      "url": "https://www.wowhead.com/forever/news/class-highlights-for-warriors-rogues-and-shamans-in-wow-forever-383189"
+    },
+    {
+     "label": "Blizzard: Class deep dives, Priest and Warrior",
+     "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301514/world-of-warcraft-forever-class-deep-dives-priest-and-warrior"
     }
    ],
    "status": "acknowledged",
@@ -2213,19 +2401,23 @@
     {
      "date": "2026-09-30",
      "note": "Sept 30: rage from taking damage scales with weapon speed and uses damage before mitigation, Thunder Clap works in Defensive Stance, Vanguard allows Charge from Defensive Stance, and Shield Wall, Retaliation, and Recklessness no longer share a cooldown. With the earlier Revenge and Shield Slam changes, protection has been compensated."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Sept 30 deep dive: protection gets 5 rage on some blocks and on some dodges and parries; Rend and Thunder Clap scale with attack power; Sunder stacks with a stronger Expose Armor."
     }
    ]
   },
   {
    "id": "warrior-rage",
-   "ask": "Ask for the missing half, in their own terms: compensation for arms and fury. Candidates in rough order of scope: a shorter, weaker Recklessness; Rend ticks that generate rage; a small rage bonus on crits; rage from Deep Wounds; an instant Slam proc; a medium-cooldown generator. The classes episode of the podcast is the place to raise it.",
-   "blizzard": "Normalization is deliberate: Greenfield wrote during Season of Discovery that rage should be normalized with major compensating changes. Protection got those (cheaper Shield Block, rage on dodge and parry, cheaper Revenge and Shield Slam). Arms and fury haven't.",
+   "ask": "Retest arms once the rage bug fix ships. That's what's left.",
+   "blizzard": "Compensated, with a bug in the way: crit rage re-added, rage from damage ignores armor, a rage bug acknowledged with a fix hoped the week after crit rage. Recklessness stays 30 minutes by design.",
    "category": "Classes",
    "community": "Several white swings per Sunder with a one-hander, no rage from crits, little rage from taking hits in dungeons. One reply calls it Cataclysm-style normalized rage, reduced further. Bear druids report the same, so players expect a fix before launch. A separate prot thread asks Forever not to repeat Season of Discovery's mistakes. A longtime warrior's video analysis projects fury at about 400 rage a minute at 60, barely enough for Bloodthirst and Whirlwind, with arms at about half that and unable to keep Mortal Strike up. Recklessness is still a 30-minute cooldown.",
    "firstSeen": "2026-09-23",
    "fit": "compatible",
-   "lastChecked": "2026-09-30",
-   "owner": "",
+   "lastChecked": "2026-10-01",
+   "owner": "Kris Zierhut",
    "relayed": false,
    "sources": [
     {
@@ -2243,9 +2435,17 @@
     {
      "label": "Blizzard: Class deep dives, Hunter and Druid",
      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301515"
+    },
+    {
+     "label": "Blizzard: Class deep dives, Priest and Warrior",
+     "url": "https://worldofwarcraft.blizzard.com/en-us/news/24301514/world-of-warcraft-forever-class-deep-dives-priest-and-warrior"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ],
-   "status": "open",
+   "status": "change-coming",
    "title": "Warriors starved of rage",
    "type": "Design",
    "updates": [
@@ -2260,6 +2460,10 @@
     {
      "date": "2026-09-30",
      "note": "Sept 30 class video (via Wowhead): protection's rage from taking damage now scales with weapon speed and uses damage before mitigation; fury's Raging Blows cuts Cleave's cost; arms gets Weaponmaster and Spearing Strike but no rage source. The same day's druid deep dive gives bears rage on Enrage and on dodge. Tanks are being compensated; arms isn't yet."
+    },
+    {
+     "date": "2026-10-01",
+     "note": "Sept 30 deep dive: \"some bugs players are experiencing with Rage generation,\" root cause \"may take a couple weeks.\" Crits give rage again (75% more than normal hits); rage from taking damage is calculated as if at 50% armor and absorbs no longer reduce it; Improved Slam no longer delays the swing; Victory Rush at 20 and baseline Tactical Mastery. Podcast 2: an engineer is on the bug, fix hoped next week; Recklessness stays 30 minutes on purpose, chosen over a large warrior nerf."
     }
    ]
   },
@@ -3158,7 +3362,7 @@
    ],
    "name": "Josh Greenfield",
    "notes": "Answers on X, not the forums. Says plainly when a question belongs to someone else; he sent item drop quality to the systems designers. The podcast is the most direct route for feedback that isn't a bug.",
-   "onRecord": "The only developer who has answered beta feedback in public. On shared tagging: \"This is one of those things that we simply must hold the line on.\" Explained that base spell damage moved onto gear, with throughput meant to hold. Gave guild structure as the main reason for the GDKP ban. Co-presented the Found Photos panel. Starting a weekly podcast following Forever through beta and launch, covering player reception with developer guests. Posted Sept 21 that he had been fixing content held back from the beta. Launched the weekly WoW Forever Podcast on Sept 24 with Tim Jones. Said recent allies is working, the group-invite layer swap is a bug, and the team meets at 9am daily to triage beta reports. During Season of Discovery he wrote that if they did it over, they'd normalize rage and make major changes to warrior gameplay to compensate. Sept 26: grouped players get round-robin quest drops. Sept 27: updates coming soon on some big feedback items, unnamed; teased a mega dungeon (\"Hold our beer(s)\").",
+   "onRecord": "The only developer who has answered beta feedback in public. On shared tagging: \"This is one of those things that we simply must hold the line on.\" Explained that base spell damage moved onto gear, with throughput meant to hold. Gave guild structure as the main reason for the GDKP ban. Co-presented the Found Photos panel. Starting a weekly podcast following Forever through beta and launch, covering player reception with developer guests. Posted Sept 21 that he had been fixing content held back from the beta. Launched the weekly WoW Forever Podcast on Sept 24 with Tim Jones. Said recent allies is working, the group-invite layer swap is a bug, and the team meets at 9am daily to triage beta reports. During Season of Discovery he wrote that if they did it over, they'd normalize rage and make major changes to warrior gameplay to compensate. Sept 26: grouped players get round-robin quest drops. Sept 27: updates coming soon on some big feedback items, unnamed; teased a mega dungeon (\"Hold our beer(s)\"). Podcast 2 (Oct 1): Skyborne models and druid forms are being discussed \"a lot internally,\" with something more substantive hoped soon.",
    "order": 6,
    "role": "Senior Game Designer, WoW Classic; Forever's narrative point at the Deep Dive",
    "scope": "Classic team",
@@ -3194,6 +3398,10 @@
     {
      "label": "Greenfield on grouped quest drops",
      "url": "https://x.com/AggrendWoW/status/2103901772301717726"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ]
   },
@@ -3345,13 +3553,43 @@
      "id": "profession-qol",
      "strength": "possible",
      "why": "No profession designer is named, and profession systems sit nearest to his systems and items role."
+    },
+    {
+     "id": "spell-scaling",
+     "strength": "direct",
+     "why": "Explained the spell power curve and the hybrid target on podcast 2."
+    },
+    {
+     "id": "class-buttons-thin",
+     "strength": "direct",
+     "why": "Set the button count and damage budget the classes are built to."
+    },
+    {
+     "id": "emergent-tricks",
+     "strength": "direct",
+     "why": "Argued for removing the twisting tricks on podcast 2."
+    },
+    {
+     "id": "warrior-rage",
+     "strength": "direct",
+     "why": "Gave the rage bug timeline and the Recklessness reasoning."
+    },
+    {
+     "id": "raid-power-vertical",
+     "strength": "likely",
+     "why": "Owns rechecking tier sets before launch."
+    },
+    {
+     "id": "raid-auras",
+     "strength": "likely",
+     "why": "Raid-wide auras are under discussion on the class team."
     }
    ],
    "name": "Kris Zierhut",
    "notes": "\"Unsolve the solved content\" reaches coverage through Method's summary, not a transcript, so it is not quoted here.",
-   "onRecord": "\"So your first run through a dungeon is amazing.\" Presented the itemization pass at the Deep Dive, including removing disappointing epics and making rare spawns worth killing. With Mike Nuthals, argued Forever makes a separate WoW sequel unnecessary. Slated to appear on a later episode of the WoW Forever Podcast.",
+   "onRecord": "\"So your first run through a dungeon is amazing.\" Presented the itemization pass at the Deep Dive, including removing disappointing epics and making rare spawns worth killing. With Mike Nuthals, argued Forever makes a separate WoW sequel unnecessary. Slated to appear on a later episode of the WoW Forever Podcast. Podcast 2 (Oct 1), with Zirene: classes are built to a fixed damage budget tied to 2004-05 fight lengths, about 1% per talent point, three to four buttons under 10 seconds. Base spell damage was cut against a modeled gear curve. Hybrid DPS about 5% below pure DPS. \"If Rogues don't do the highest single-target damage, then why are there Rogues?\"",
    "order": 9,
-   "role": "Principal Game Designer, WoW Classic",
+   "role": "Principal Game Designer; runs class tuning with Zirene",
    "scope": "Classic team",
    "sources": [
     {
@@ -3373,12 +3611,16 @@
     {
      "label": "GameRant interview",
      "url": "https://gamerant.com/video/world-of-warcraft-forever-devs-explain-the-new-race-campfires-and-onyxias-return/"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ]
   },
   {
    "id": "aidan-moon",
-   "confidence": "reported",
+   "confidence": "confirmed",
    "discipline": "Class design",
    "handle": "Zirene",
    "likelyIssues": [
@@ -3431,13 +3673,28 @@
      "id": "pvp-crit-halved",
      "strength": "direct",
      "why": "Confirmed on X that the PvP crit reduction is a bug."
+    },
+    {
+     "id": "class-buttons-thin",
+     "strength": "direct",
+     "why": "Said after the podcast that the damage target was raised and things will be added back."
+    },
+    {
+     "id": "emergent-tricks",
+     "strength": "direct",
+     "why": "Designed Shifting Power to keep power shifting's payoff."
+    },
+    {
+     "id": "rogue-dual-wield-10",
+     "strength": "likely",
+     "why": "Described what rogues lost to the old damage target."
     }
    ],
    "name": "Aidan Moon",
    "notes": "His only known work is the serpent appearance on a druid item set, so class links beyond druids are loose.",
-   "onRecord": "Apparently the designer behind the serpent form. Added that each druid race gets its own snake color and that prowl gets its own slithering animation. Confirmed on Sept 29 that halved PvP crit damage is a bug that \"won't be staying.\"",
+   "onRecord": "Apparently the designer behind the serpent form. Added that each druid race gets its own snake color and that prowl gets its own slithering animation. Confirmed on Sept 29 that halved PvP crit damage is a bug that \"won't be staying.\" Podcast 2 (Oct 1): splits class work with Zierhut. Designed Shifting Power as power shifting's replacement and floated a timing-bonus version of seal twisting. Afterwards: the DPS target has changed, \"so we'll be adding things in again.\"",
    "order": 10,
-   "role": "Senior Game Designer, WoW Classic (per WoW Scroll)",
+   "role": "Senior Game Designer, class design (with Kris Zierhut)",
    "scope": "Classic team",
    "sources": [
     {
@@ -3451,6 +3708,10 @@
     {
      "label": "Zirene on X",
      "url": "https://x.com/Zirene/status/2104773811728195627"
+    },
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
     }
    ]
   },
@@ -3989,21 +4250,9 @@
   },
   {
    "id": "kristy-moret",
-   "order": 22,
-   "name": "Kristy Moret",
-   "handle": "",
-   "role": "Lead World Artist, World of Warcraft (per her X bio)",
-   "discipline": "Environment art",
-   "scope": "Unclear",
    "confidence": "reported",
-   "onRecord": "Fronted a Forever video Blizzard posted on Sept 29, talking about the game's world. Did BlizzCon 2023 interviews on retail world art.",
-   "sources": [
-    {
-     "label": "ScreenRant: BlizzCon 2023 interview",
-     "url": "https://screenrant.com/blizzcon-2023-world-warcraft-interview-maria-hamilton-kristy-moret/"
-    }
-   ],
-   "notes": "Her exact role on Forever isn't stated. The video itself hasn't been reviewed.",
+   "discipline": "Environment art",
+   "handle": "",
    "likelyIssues": [
     {
      "id": "fog-density",
@@ -4014,6 +4263,93 @@
      "id": "night-city-lighting",
      "strength": "possible",
      "why": "World art places city lighting."
+    }
+   ],
+   "name": "Kristy Moret",
+   "notes": "Her exact role on Forever isn't stated. The video itself hasn't been reviewed.",
+   "onRecord": "Fronted a Forever video Blizzard posted on Sept 29, talking about the game's world. Did BlizzCon 2023 interviews on retail world art.",
+   "order": 22,
+   "role": "Lead World Artist, World of Warcraft (per her X bio)",
+   "scope": "Unclear",
+   "sources": [
+    {
+     "label": "ScreenRant: BlizzCon 2023 interview",
+     "url": "https://screenrant.com/blizzcon-2023-world-warcraft-interview-maria-hamilton-kristy-moret/"
+    }
+   ]
+  },
+  {
+   "id": "harley-class-team",
+   "order": 23,
+   "name": "Harley",
+   "handle": "",
+   "role": "Class team (first name only)",
+   "discipline": "Class design",
+   "scope": "Forever",
+   "confidence": "reported",
+   "onRecord": "Named on the second WoW Forever Podcast.",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
+    }
+   ],
+   "notes": "Named on podcast 2 as part of the class team. Surname and title not given.",
+   "likelyIssues": [
+    {
+     "id": "class-buttons-thin",
+     "strength": "possible",
+     "why": "On the class team working inside the damage budget."
+    }
+   ]
+  },
+  {
+   "id": "kristen-class-team",
+   "order": 24,
+   "name": "Kristen",
+   "handle": "",
+   "role": "Class team (first name only)",
+   "discipline": "Class design",
+   "scope": "Forever",
+   "confidence": "reported",
+   "onRecord": "Named on the second WoW Forever Podcast.",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
+    }
+   ],
+   "notes": "Named on podcast 2 as part of the class team. Surname and title not given.",
+   "likelyIssues": [
+    {
+     "id": "class-buttons-thin",
+     "strength": "possible",
+     "why": "On the class team working inside the damage budget."
+    }
+   ]
+  },
+  {
+   "id": "mitch-qa",
+   "order": 25,
+   "name": "Mitch",
+   "handle": "",
+   "role": "QA (first name only)",
+   "discipline": "QA and support",
+   "scope": "Forever",
+   "confidence": "reported",
+   "onRecord": "Named on the second WoW Forever Podcast.",
+   "sources": [
+    {
+     "label": "WoW Forever Podcast, episode 2 (classes)",
+     "url": "https://www.youtube.com/watch?v=uDRcv_w85j8"
+    }
+   ],
+   "notes": "Named on podcast 2 from QA. Surname and title not given.",
+   "likelyIssues": [
+    {
+     "id": "class-bugs",
+     "strength": "possible",
+     "why": "Class bugs pass through QA."
     }
    ]
   }
@@ -4112,7 +4448,7 @@
   "PvP and battleground design. No dedicated designer named.",
   "Professions and economy design. No dedicated designer named.",
   "Narrative direction. No lead writer or narrative director named.",
-  "QA and support. Nobody named.",
+  "QA and support. Only a first name so far: Mitch, from QA, named on podcast 2.",
   "Leads not yet run down: Randy Jordan's role, whoever posts the known issues lists, and the unnamed source who confirmed the Auto Shot bug."
  ],
  "unowned": [
@@ -4205,5 +4541,5 @@
    "why": "No named owner for language or faction systems."
   }
  ],
- "exported": "2026-09-30"
+ "exported": "2026-10-01"
 }
